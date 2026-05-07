@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müsinözler | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-003/index.html">Cilt 10, Sayı 3 - Eylül 2019</a>
+    <span class="sep">›</span>
+    Müsinözler
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Müsinözler</h1>
+    <div class="article-authors-list"><span class="author-name">Ayşe Mine Gök</span><sup>1*</sup>, <span class="author-name">Burhan Engin</span><sup>1</sup>, <span class="author-name">Zekayi Kutlubay</span><sup>1</sup>, <span class="author-name">Server Serdaroğlu</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Müsinöz</span><span class="kw-tag">sklerödem adultorum</span><span class="kw-tag">skleromiksödem</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Mucinosis</span><span class="kw-tag">scleredema adultorum</span><span class="kw-tag">scleromyxedema</span></div>
+    <div class="article-dates"><span>Geliş: 13.01.2019</span><span>Kabul: 06.04.2019</span><span>Yayın: 24.09.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 83-89</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-83.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-83-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Musin, dermiste su ve tuz dengesini sürdürmede majör rol oynar ve dermal ekstrasellüler matriksin bir komponentidir ve normalde fibroblastlar tarafından az miktarda yapılır. Kütanöz müsinözler deride anormal miktarda musin birikimi olan heterojen bir grup hastalıktır. Bu yazıda müsinözler hakkında yol gösterici bilgiler verilmesi amaçlanmıştır.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-subtitle">Müsinözler</div>
+<div class="cb-content">Kütanöz müsinözler deride anormal miktarda, diffüz veya fokal musin birikimleri olan heterojen bir grup hastalıklardır (1).</div>
+<div class="cb-content">Musin dermal ekstrasellüler matriksin bir komponentidir ve normalde fibroblastlar tarafından az miktarda yapılır. Çok sayıda tekrarlayan polisakkarit ünitelerden oluşan kompleks karbonhidratlar olan asit glikozaminoglikanların, jele benzer amorf karışımıdırlar (1).</div>
+<div class="cb-content">Musin, dermiste su ve tuz dengesini sürdürmede majör rol oynar. Rutin histoloji ile, ya ayrılmış kollajen lifleri arasında mavi boyanan bir materyal ya da dermiste boş alanların varlığı, musin birikimlerinin varlığına iyi bir ipucudur. Doğrulamak için, alsiyan mavisi, kolloidal demir veya toluidin mavisi gibi özel boyalar uygulanabilir. Buna ilaveten, musin periyodik asit–Schiff negatiftir ve çok sık olarak hyalüronidaza duyarlıdır. Biyopsi kesitlerinin tam alkolde (formalinden çok) fiksasyonu belirlenmesini artırır. Son yıllarda, monoklonal antikorlar, heparan sülfat proteoglikanların belirlenmesinde kullanılmaktadır (1).</div>
+<div class="cb-subtitle">Sınıflandırma</div>
+<div class="cb-content">Kütanöz müsinözler, klinik olarak farklı lezyonlara yol açan, majör histolojik bulgusu musin depolanması olan; primer müsinöz ve musinin basitçe eşlik eden histolojik bir bulgu olduğu sekonder müsinöz olarak ikiye ayrılabilir. Primer müsinözler da dejeneratif-enflamatuvar formlar ve hamartomatöz-neoplastik tipler olarak ikiye ayrılabilir. Dejeneratif formlar da musinin klokalizasyonuna göre, dermal ve foliküler formlara ayrılırlar (1).</div>
+<div class="cb-subtitle">A) Primer Dejeneratif-enflamatuvar Müsinözler</div>
+<div class="cb-subtitle">a) Dermal müsinözler</div>
+<div class="cb-subtitle">I- Skleromiksödem=Jeneralize ve Sklerodermoid Liken Miksödematozus=Papüler Müsinöz</div>
+<div class="cb-section-title">Giriş</div>
+<div class="cb-content">Genellikle monoklonal gamopati ile ilişkili olarak ortaya çıkan jeneralize papüler ve sklerodermoid kütanöz erüpsiyon ile karakterize primer kütanöz müsinözdür (2).</div>
+<div class="cb-content">Etkilenen hastalar histolojik incelemede musin birikiminin, artmış fibroblast proliferasyonunun ve fibrozisin gösterildiği çok sayıda mumsu sert papül ve plaklara sahiptir.</div>
+<div class="cb-content">Sistemik bulgular kardiyovasküler, gastrointestinal, pulmoner, kas-iskelet sistemi, renal veya sinir sistemlerini içerebilir ve ciddi morbidite ve mortaliteye yol açabilir.</div>
+<div class="cb-content">Skleromiksödem, sınırlı alanları tutan balmumu kıvamında, sert papül ve plaklarla karakterize liken miksödematozusun bir formu olan lokal liken miksödematozustan ayırt edilmelidir.</div>
+<div class="cb-content">Skleromiksödemden farklı olarak, lokal liken miksödematozusta sklerotik özellikler, sistemik tutulum ve monoklonal gamopati yoktur.</div>
+<div class="cb-subtitle">Epidemiyoloji</div>
+<div class="cb-content">Skleromiksödem, genellikle ırk ve cinsiyet üstünlüğü göstermeyen 30-80 yaş arası orta yaşlı yetişkinleri etkileyen nadir bir hastalıktır (2).</div>
+<div class="cb-subtitle">Patogenez</div>
+<div class="cb-content">Skleromiksödemin patogenezi bilinmemektedir. Monoklonal gamopati ve altta yatan plazma hücre klonu ile ilişkisinin önemi tartışılmaktadır. Ana hipotez, deride glikozaminoglikan sentezini ve fibroblast proliferasyonunu uyardığı bilinen interlökin-1, TNF-alfa ve TGF-beta gibi dolaşımdaki sitokinlerin rol oynayabileceğidir (3-5).</div>
+<div class="cb-content">Birçok yazar, paraproteinlerin kendilerinin de proliferasyonu ve aşırı musin meydana getirmek için fibroblastları harekete geçiren otoantikorlar olarak hareket ederek patojenik olabileceğini öne sürmüşlerdir. Ancak, bu teorinin uygunluğu ile ilgili veriler çatışmaktadır. Skleromiksödemli hastalardan izole edilen serum bazı in vitro çalışmalarda fibroblast proliferasyonunu artırmış olsa da (6,7), bu çalışmalardan birinde serumdan saflaştırılmış immünoglobulinin fibroblast büyümesini uyarmadığını bulmuştur (6). Ayrıca, paraprotein seviyeleri genellikle hastalığın ciddiyeti, hastalığın ilerlemesi veya tedaviye verilen yanıtla ilişkili değildir (2).</div>
+<div class="cb-subtitle">Klinik Bulgular</div>
+<div class="cb-content">Hem deri ile ilgili hem de deri dışı bulguları içerir.</div>
+<div class="cb-content"><strong>Deri bulguları:</strong> Skleromiksödemin karakteristik deri bulgusu simetrik dağılım şekli gösteren 2 ila 3 mm arasında, sert, balmumu kıvamında, birbirine yakın, kubbe şeklinde veya düz tepeli el, ön kol, baş, boyun, üst gövde ve uylukları tutan papüllerdir (3,4). Papüller genellikle doğrusal bir şekilde dizilir ve çevresindeki deri parlak ve endüredir (yani sklerodermoid). Glabellada karakteristik aslan yüzüne benzer bir bulguya neden olan derin, uzunlamasına oluklar bulunur. İlgili alanlarda eritem, ödem ve kahverengimsi bir renk bozukluğu görülebilir; kaşıntı nadirdir. Skleromiksödem hastalarında kaş, aksiller ve kasık kıllarında seyrelme olabilir. Mukozalar korunmuştur. Durum ilerledikçe, deri sertleşmesi, sklerodaktili ve ağız ve eklemlerin motilitesinde azalma ile birlikte eritematöz ve infiltre plaklar ortaya çıkabilir. Proksimal interfalengeal eklemlerin üstünde, (deri kalınlaşmasına bağlı) kalkık kenarla çevrili merkezi depresyon görülebilir ve donut tatlısı işareti olarak adlandırılır. Sklerodermanın aksine telenjiektazi ve kalsinoz yoktur. Bununla birlikte, Raynaud fenomeni nadiren görülür (3).</div>
+<div class="cb-content"><strong>Deri dışı bulgular:</strong> Skleromiksödemli hastalarda, nörolojik, romatolojik, kardiyovasküler, gastrointestinal, pulmoner ve renal tutulumuna bağlı olarak çeşitli deri dışı bulgularla karşılaşılabilir.</div>
+<div class="cb-subtitle">İlişkili Olabilen Hastalıklar</div>
+<div class="cb-content">Skleromiksödem paraproteinemi ile ilişkilidir. Monoklonal gamopati genellikle lambda hafif zincirlerinin baskınlığına sahip IgG’dir, ancak IgG kappa baskınlığı da görülebilir (2,8,9). Paraproteinemi yokluğunda skleromiksemalı hastalar, hastalığın atipik bir formuna sahip olarak kabul edilir. Kemik iliği biyopsilerinde hafif, iyi huylu plazmositoz görülmesine rağmen, skleromiksödemli hastaların %10’undan azı multipl myeloma ilerler (5).</div>
+<div class="cb-subtitle">Histopatoloji</div>
+<div class="cb-content">Skelromiksödem aşağıdaki mikroskobik triad ile karakterizedir.</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Üst ve orta retiküler dermiste primer olarak hiyalüronik asitten oluşan yaygın bir musin birikimi,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Kollajen birikiminde artış,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;İrregüler sıralanmış fibroblastların belirgin bir şekilde çoğalması (10,11).</div>
+<div class="cb-subtitle">Tanı</div>
+<div class="cb-content">Skleromiksödem tanısı, aşağıdaki klinikopatolojik kriterlerin tanınmasına dayanır:</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Jeneralize papüler ve sklerodermoid erüpsiyonu,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Musin birikmesi, fibrozis ve fibroblast proliferasyonu veya daha nadiren interstisyel granülomatöz benzeri bir patern içeren mikroskobik triad,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Monoklonal gamopati,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Tiroid hastalığı yokluğu (11).</div>
+<div class="cb-subtitle">Ayırıcı Tanı</div>
+<div class="cb-content">Skleromiksödemin ayırıcı tanısında skleroderma (sistemik skleroz), sklerödem ve nefrojenik sistemik fibroz yer alır (12).</div>
+<div class="cb-subtitle">Tedavi</div>
+<div class="cb-content">Skleromiksödemin tedavisi yüz güldürücü olmayabilir (1). İntravenöz immünoglobulin ile sistemik tedavi, skleromiksödem hastaları için tercih edilen birinci basamak tedavi yöntemidir (13).</div>
+<div class="cb-subtitle">II- Liken Miksödematözün Lokalize Varyantları</div>
+<div class="cb-content">Liken miksödematözün lokalize varyantlarında, hastalarda birkaç alanla sınırlı, küçük, sert, balmumu kıvamında papüller veya papüllerin birleşmesi ile plaklar veya nodüller bulunur. Deri tek tutulan alandır ve bu varyantlar skleroz, paraproteinemi, sistemik tutulum veya tiroid hastalığı ile ilişkili değildir. Dört alt gruba ayrılır (1):</div>
+<div class="cb-content">-&nbsp; Ayrık papüler form,</div>
+<div class="cb-content">-&nbsp; Akral persistan papüler müsinöz,</div>
+<div class="cb-content">-&nbsp; Yenidoğanın deri müsinözü,</div>
+<div class="cb-content">-&nbsp; Saf nodüler form (1).</div>
+<div class="cb-content">HIV enfeksiyonu, toksik yağ ya da L-triptofan maruziyeti sonrasında ve hepatit C viral enfeksiyonu ile birlikte görülebilir (1).</div>
+<div class="cb-subtitle">Epidemiyoloji</div>
+<div class="cb-content">Lokalize liken miksödematozun özgün varyantlarının gerçek insidans ve prevalans oranı bilinmemektedir (1).</div>
+<div class="cb-subtitle">Klinik Bulgular</div>
+<div class="cb-content"><strong>Ayrık papüler liken miksödematöz: </strong>Sayıca birkaç taneden yüzlerceye varabilen, ekstremiteler ve gövdede simetrik, 2-5 mm’lik papüllerle karakterizedir (14). Tutulan deri endüredir ve yüz tutulmaz. Sistemik tutulum olmaksızın lezyonlar yavaş ilerler. Ancak nadiren spontan geriler (1).</div>
+<div class="cb-content"><strong>Akral persistan papüler müsinöz:</strong> Akral persistan papüler müsinöz, beyaz-deri renginde, 2 ila 5 mm boyutlarında, sert, balmumu kıvamında papüllerin, ellerin ekstansör yüzeyleri, bilek ve bazen de ön kollarla sınırlı tutulumun gözlendiği liken miksödematözün lokalize varyantlarından birisidir (5).</div>
+<div class="cb-content"><strong>Yenidoğanın deri müsinözü:</strong> Kolların üst kısmında (özellikle dirseklerde) ve gövdede, ser, opal papüller ortaya çıkar (11). Sistemik semptomlar da spontan rezolüsyon da izlenmez (1).</div>
+<div class="cb-content"><strong>Saf nodüler form</strong>: Ekstremiteler ve gövdede, çok az ya da hiç papüler komponenti olmayan multipl nodüllerle karakterizedir.</div>
+<div class="cb-subtitle">Tanı</div>
+<div class="cb-content">Lokalize liken miksödematozus tanısı, tutarlı klinik ve histolojik bulguların tespiti ve skleromiksödem veya diğer hastalıkları düşündüren bulguların bulunmamasına dayanılarak koyulur.</div>
+<div class="cb-content">Tanı kriterleri şunları içerir (3):</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Lokalize liken miksödematozun alt tiplerinden biri ile uyumlu papüler veya nodüler erüpsiyon,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Musin birikiminin histolojik bulguları ve değişken derecede fibroblast proliferasyonu,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Gamopatinin, tiroid hastalığının ve sistemik tutulumun yokluğu.</div>
+<div class="cb-subtitle">Patoloji</div>
+<div class="cb-content">Liken miksödematozun lokalize formlarında histolojik değişiklikler skleromiksödeme göre daha az karakteristiktir. Musin üst ve orta retiküler dermiste birikir ve fibroblast proliferasyonu değişkendir, fibrozis belirgin değildir ve hatta bazen hiç olmayabilir (1).</div>
+<div class="cb-subtitle">Ayırıcı Tanı</div>
+<div class="cb-content">Derinin histopatolojik incelemesi, lokalize liken miksödematozu, granuloma annulare, liken amiloidoz, liken planus ve diğer likenoid erüpsiyonlar, papüler elastoreksis ve erüptif kollajenomalar gibi benzer görünümlere sahip, çeşitli papüler erüpsiyonlardan ayırt etmede yardımcı olur (1).</div>
+<div class="cb-subtitle">Tedavi</div>
+<div class="cb-content">Lokalize liken miksödematöz tedavi gerektirmez ve “bekle ve gör” yöntemi önerilir (1).</div>
+<div class="cb-subtitle">III- Kendiliğinden İyileşen Kütanöz Müsinöz</div>
+<div class="cb-content">Önceleri lokalize liken miksödematozun bir alt tipi olarak düşünülmesine rağmen, kendi kendine iyileşen kütanöz müsinözü, primer dermal müsinözün farklı nadir bir formu olarak tanımlamak en doğrusu olacaktır (1). İlk olarak yaşları 1’den 15’e kadar değişen çocuklarda tanımlanmıştır (15). Aynı hastalık, daha sonraları birkaç yetişkinde de görülmüştür. Kendiliğinden iyileşen kütanöz müsinöz şu klinik bulgularla karakterizedir (1):</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Yüz, boyun, saçlı deri, abdomen ve bacaklarda, bazen lineer infiltre plaklar oluşturacak şekilde birleşen, multipl papüllerden oluşan akut bir erüpsiyon,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Periorbital şişlikle birlikte yüzde ve periartiküler bölgelerde müsinöz subkütan nodüller (1).</div>
+<div class="cb-content">Deri bulgularına sistemik semptomlar eşlik edebilir, fakat paraproteinemi kemik iliği plazmositozisi ve tiroid disfonksiyonu görülmez. Birkaç haftadan birkaç aya değişen periyotta spontan rezolüsyon karakteristiktir (1).</div>
+<div class="cb-subtitle">IV- Sklerödem=Buschke’nin Skleredema Adultorumu</div>
+<div class="cb-content">Sklerödem vücudun üst kısmının, musin birikimi ve kalınlaşmış dermise bağlı simetrik diffüz endurasyonudur (1).</div>
+<div class="cb-subtitle">Epidemiyoloji</div>
+<div class="cb-content">Sklerödemin kesin prevalansı bilinmemektedir. Sklerödem tüm ırkları etkiler ve cinsiyet farkı yoktur (16). Hem çocuklarda hem de yetişkinlerde sklerödem gelişebilir (17,18); bununla birlikte, sklerödem için yaş dağılımı hastalığın alt türüne göre değişir.</div>
+<div class="cb-subtitle">Etiyoloji</div>
+<div class="cb-content">Sklerödem öncelikle 3 sınıf bozuklukla ortaya çıkar: diabetes mellitus, enfeksiyon (genellikle üst solunum yollarında streptokok enfeksiyonu), monoklonal gamopati. Hastalığın en yaygın şekli olarak kabul edilen diabetes mellitus ile ilişkili skleredema, öncelikle yetişkinleri, özellikle orta yaşlı obez bireyleri etkiler (19). Buna karşılık, enfeksiyonla ilişkili sklerödem, ağırlıklı olarak genç yetişkinleri ve çocukları etkiler. Monoklonal gamopati ile ilişkili sklerödem, sklerödemin en az görülen şeklidir ve neredeyse sadece yetişkinlerde görülür.</div>
+<div class="cb-subtitle">Patogenez</div>
+<div class="cb-content">Sklerödem patogenezi büyük ölçüde bilinmemektedir. Diyabet ile ilişkili sklerödemde, kollajenin geri dönüşümsüz glikosilasyonun yanı sıra kollajenaz aktivitesindeki değişiklikler, kollajen ve musinin aşırı birikmesine neden olabilir (20). Ayrıca, hipoksi ve mikrovasküler hasara bağlı profibrotik etkiler öne sürülmüştür (21). Diyabet ile ilişkili olmayan sklerödemde, streptokok aşırı duyarlılık veya paraproteineminin doğrudan etkileri artmış kollajen üretimine yol açabilir.</div>
+<div class="cb-subtitle">Klinik Bulgular</div>
+<div class="cb-content">Sklerödemin klinik prezentasyonu ve seyri etiyolojiden etkilenir:</div>
+<div class="cb-content"><strong>Diabetes mellitus ile ilişkili sklerödem:</strong> Daha çok obez, orta yaşlı, insülin bağımlı diyabeti olan erkeklerde görülür (Skleröderma diyabetikorum) (1). Diabetes mellitus ile ilişkili sklerödem genellikle yavaş ilerler. Tipik olarak etkilenen bölgeler arasında boyun arkası, sırtın interskapuler bölgesi ve göğüs bulunurken, ekstremiteler genellikle korunur. Kronik olma eğilimindedir (16). Bu bölgelerde endurasyon sık görülür, deride portakal kabuğu görünümü vardır (1).</div>
+<div class="cb-content"><strong>Enfeksiyon Sonrası Sklerödem:</strong> Esas olarak, orta yaşlı kadınları tutarken, çocukları da etkileyebilir. Ateş, kırıklık ve üst solunum yolu enfeksiyonu öncülük eder (1). Ani bir başlangıçla karakterizedir. Sklerödem belirtileri, önceki enfeksiyondan birkaç hafta sonra başlamaya meyillidir (22,23). Serviko fasiyal bölgenin derisi, gövdeye ve proksimal üst ekstremiteye yayılacak şekilde aniden sertleşir. Yüz ifadesizleşir, dil ve farinks tutulumuna bağlı olarak ağzı açmak ve çiğnemek güçleşir (1). Baskın olarak servikofasiyal bölgeyi etkiler, ancak hastalığın daha sonraki bir aşamasında, gövde ve üst ekstremiteler de tutulabilir. Daha şiddetli formlarda, disfaji ve disfoniye yol açan ağız ve farenks tutulumu oluşabilir. Streptokok sonrası sklerödem sıklıkla birkaç ay sonra tam klinik gerileme gösterir (24).</div>
+<div class="cb-content"><strong>Monoklonal Gamopati ile İlişkili Sklerödem:</strong> Bu alt tipin klinik bulguları diabetes mellitus ile ilişkili sklerödeme çok benzerdir. Hastalık, yavaş başlangıçlı ve yavaş ilerlemeyle karakterize edilir; kendiliğinden gerileme genellikle oluşmaz (25,26).</div>
+<div class="cb-content">Çoğu hastada, sklerödem semptomları ve belirtileri deri ile sınırlı kalmaktadır. sklerödemin sistemik tutulumu nadirdir ve çoğunlukla ciddi hastalıkta görülür. Literatürde oküler (oküler kas palsisi), gastrointestinal (disfaji), solunum (disfoni), kas (miyozit) ve kardiyak semptomlar bildirilmiştir (16,17,27-29).</div>
+<div class="cb-subtitle">Histopatoloji</div>
+<div class="cb-content">Sklerödemin histopatolojik bulguları patognomonik değildir, ancak klinik bulgularla birlikte tespit edildiğinde tanı için değerlidir. Sklerödemde anahtar histopatolojik bulgular:</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Normal epidermis,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Kalınlaşmış retiküler dermis, değişken miktarda musin ile birbirinden ayrılmış gibi görünen belirgin kollajen demetlerinin şişmesi,</div>
+<div class="cb-content">•&nbsp;&nbsp; &nbsp;Fibroblast proliferasyonunun olmaması (30).</div>
+<div class="cb-subtitle">Ayırıcı Tanı</div>
+<div class="cb-content">Ayırıcı tanıda skleröderma, skleromiksödem düşünülmelidir (1).</div>
+<div class="cb-subtitle">Tedavi</div>
+<div class="cb-content">Streptokok enfeksiyonları ile ilişkili sklerödem, kendi kendini sınırladığından, tedavi gereksizdir. Diyabet ve monoklonal gamopati ile ilişkili sklerödemin regresyonu daha nadirdir ve özgün bir tedavisi yoktur. Hipergliseminin kontrolü deride hiçbir etki yapmaz. Psoralen ve ultraviyole A, sistemik steroid, siklofosfomid, siklosporin, faktör 13 enfüzyonu ve elektron-beam tedavilerinin yararlı olduğu bildirilmiştir (1).</div>
+<div class="cb-subtitle">V- Bozulmuş Tiroid Fonksiyonu ile İlişkili Müsinözler</div>
+<div class="cb-subtitle">1) Lokalize Miksödem</div>
+<div class="cb-content">Genellikle hipertiroidizm (en sıklıkla Graves hastalığına bağlı) ile ilişkilidir fakat tiroid hastalığı tedavisinin arkasından da ortaya çıkabilir. Ekzoftalmusu olan Graves’li hastalarda olmayanlara göre daha fazla görülür (1).</div>
+<div class="cb-subtitle">Patogenez</div>
+<div class="cb-content">Serumda salgılanan bir faktör fibroblastların musin üretimini uyarır, özellikle pretibial bölge daha duyarlı şekilde reaksiyon verir (31).</div>
+<div class="cb-subtitle">Klinik Bulgular</div>
+<div class="cb-content">Karakteristik olarak portakal kabuğu görünümündeki eritemli, deri renginde bazen mor-kahverengi veya sarımsı olabilen, balmumu kıvamında nodül veya plaklarla karakterizedir. Lezyonlar genellikle bacağın alt bölümleri anterolateral yüzüne ve ayaklara lokalizedir (1). Lezyonlar kaşıntılı bazen ağrılıdır (31).</div>
+<div class="cb-subtitle">Histopatoloji</div>
+<div class="cb-content">Kollajen bantlarını ayıran musin depolanması, elastik liflerde azalma, lenfosittik infiltrasyon epidermiste hiperkeratoz ve papillamatoz bulunur (31).</div>
+<div class="cb-subtitle">Ayırıcı Tanı</div>
+<div class="cb-content">Liken simpleks kronikus, hipertrofik liken planus, lenfödem, venöz hipertansiyon gibi diğer nedenlerle oluşan elefantiazis ayırıcı tanıda akla gelmeli (17).</div>
+<div class="cb-subtitle">Tedavi</div>
+<div class="cb-content">Topikal steroidlerin oklüzyon veya intralezyoner injeksiyonları tercih edilebilir (31). Eşlik eden hipertiroidizmin tedavisi kütanöz lezyonları iyileştirmez ve sıklıkla lokalize miksödem tedavi başladıktan sonra ortaya çıkar. Spontan olarak düzelme gösterebilir (1).</div>
+<div class="cb-subtitle">2) Jeneralize Miksödem</div>
+<div class="cb-content">Hipotiroidi sonucunda musinin yıkımında bozukluk oluşur ve genel hipotiroidik semptomlarla birlikte deride parlaklık, soğukluk, kuruluk, mumsu bir görünüm vardır (31). Histopatolojik incelemede; esas olarak perivasküler ve perifoliküler musin depolanmaları görülür. Fibroblastlar sayıca artmaz, elastik lifler azalmıştır (1). Primer hipotiroidide görülen miksödem sekonder hipotiroidide gözlenmez. Tedavide tiroid hormonu replasmanı esastır (31).</div>
+<div class="cb-subtitle">VI- Retiküler Eritematöz Müsinöz</div>
+<div class="cb-content">Retiküler eritematöz müsinöz, nadir görülen, kronik ve kalıcı bir durumdur.</div>
+<div class="cb-content">Sırt veya göğsün orta hattında eritemli, papüler veya plak benzeri erüpsiyon olarak tanımlanır. Papüller genellikle retiküler veya ağ benzeri bir yapıya sahiptir. Genç ve orta yaşlı kadınlarda daha sık görülse de, erkekleri ve çocukları da etkileyebilir. Tüm dünyada görülür ve güneş ışığı nedensel veya tetikleyici bir faktör olabilir. Virüsler de nedensel bir rol oynayabilir, ancak bu tartışmalıdır ve literatürde iyi bir şekilde belgelenmemiştir. Lezyonlar hafif kaşıntılı olabilir ve nadiren telanjiektaziler bulunabilir. Güneş ışınlarına maruz kalma genellikle döküntüleri kötüleştirir, ancak zaman zaman yararlı olduğu bildirilmiştir. Genel olarak, sistemik hastalıklar veya anormal laboratuvar testleri ile ilişkili değildir. Özellikle sistemik lupus eritematozus, diabetes mellitus ve idiyopatik trombositopenik purpura gibi otoimmün hastalıklar ile ilişkilendirilmiştir. Hastalarda meme, akciğer ve kolon karsinomu, miksödem, hipotiroidi, Hashimoto tiroiditi, monoklonal gamopati ve HIV enfeksiyonu gibi diğer durumlar bildirilmiştir. Oral kontraseptifler, menstruasyon, hamilelik, ısı, x ışını tedavisi ve terleme lezyonları şiddetlendirebilir (32). Histopatolojik incelemede; epidermis normaldir, üst dermiste perivasküler ve bazen de perifoliküler T-hücre infiltrasyonu yanı sıra az miktarda interstisyel musin birikimi görülür. Genellikle direkt immünofloresan inceleme negatiftir, fakat nadiren, dermo-epidermal bileşkede granüler tarzda IgM, IgA ve C3 birikimi görülmektedir (1). Ayırıcı tanıya; lupus eritematozus, seboreik dermatit ve diğer dermal müsinözler alınmalıdır (32). Tedavide antimalaryaller, geniş spektrumlu güneş koruyucuları vb. kullanılabilir (1).</div>
+<div class="cb-subtitle">VII- Kütanöz Lupus Müsinöz</div>
+<div class="cb-content">Sistemik lupus eritematozuslu hastaların yaklaşık %1-22’sinde sırt veya göğüs ön yüzde gözlenen deri renginde bazen plak yapan papüllerdir. Bazen ortada çöküklük ve pigmentasyon görülebilir. Hastalığın şiddeti ile paralel bir seyir izleyebilir. Güneş lezyonları artırır. Tedavide sistemik lupus eritematozusun tedavisi yapılır (31).</div>
+<div class="cb-subtitle">VIII- Kütanöz Fokal Müsinöz</div>
+<div class="cb-content">Tipik olarak, orta yaşlı yetişkinlerde her iki cinsiyeti de etkileyen çoğunlukla yüz, gövde veya ekstremitelerdeki asemptomatik soliter papül veya nodül olarak ortaya çıkar. Eksizyon tercih edilen tedavi yöntemidir (33).</div>
+<div class="cb-subtitle">b) Primer foliküler müsinözler</div>
+<div class="cb-content">Musin iki ayrı primer hastalıkta foliküler epitelde birikir: Pinkus foliküler müsinöz ve ürtiker benzeri foliküler müsinöz.</div>
+<div class="cb-content"><strong>Primer foliküler müsinöz:</strong> Aşikar olarak lenfomayla ilişkisiz olan, hastalığın idiyopatik benign bir formudur. Klinik olarak, çocuklar ve genç erişkinlerde akut ve subakut erüpsiyon olarak karşımıza çıkar ve bir veya birkaç pembe plak (bazen skuamı da bulunan) veya gruplaşmış foliküler papüllerden oluşan plaklarla karakterizedir. Lezyonlar yüz ve saçlı deride sınırlı olup, alopesiyle birliktedir. Histopatolojik incelemede: musin foliküler epitelde, yağ bezlerinde birikerek keratinozitler arasındaki bağlantıyı koparır. Daha ileri lezyonlarda, foliküller, musin, enflamatuvar hücreler ve bozulmuş keratinositler içeren kistik boşluklara dönüşür. Ayırıcı tanıya mikozis fungoidesle ilişkili foliküler müsinöz alınmalıdır. Özel bir tedavisi yoktur (1).</div>
+<div class="cb-content"><strong>Ürtiker benzeri foliküler müsinöz:</strong> Esas olarak orta yaşlı erkeklerde görülen, çok nadir bir hastalıktır. Baş ve boyunda, eritematöz, seboreik bir zeminde, kaşıntılı ürtikeryal papül ve nodüller ortaya çıkar. Lezyonlar gerilerken, kırmızı maküller birkaç hafta kalır. Birkaç aydan 15 yıla kadar süren bir periyotta, irregüler olarak dalgalanma ve solmalar gösterir. İlişkili hiçbir sistemik hastalık yoktur. Tedavide antimalaryaller ve dapson yararlı bulunmuştur (1).</div>
+<div class="cb-subtitle">B) Primer Hamartomatöz-neoplastik Müsinözler</div>
+<div class="cb-subtitle">a) Müsinöz nevüs</div>
+<div class="cb-content">Müsinöz nevüs, bir kütanöz müsinöz veya bağ dokusu nevüsü olarak sınıflandırılan nadir görülen bir antitedir. Tek taraflı veya zosteriform bir şekilde büyüyen grube papüller ve plaklar olarak ortaya çıkar (34). Nevüs genellikle doğumda veya erken yetişkinlik döneminde gövde üzerinde gelişir (35,36).</div>
+<div class="cb-content">Anahtar histopatolojik özellik, yüzeyel dermiste bant benzeri bir musin birikimidir (34).</div>
+<div class="cb-subtitle">b) Anjiyo-miksoma</div>
+<div class="cb-content">Kütanöz miksoma, edinsel benign bir neoplazmdır. “Anjiyomiksoma” ve “miksoma” terimleri sinonimdir. Bu tümörler, herhangi bir sistemik anomali olmaksızın soliter veya multipldır. Multipl olduklarında Carney kompleksinin (kütanöz miksomalar, kardiyak miksoma, çok sayıda lentigo, çok sayıda mavi nevus, endokrin aşırı aktivite) bir belirtisi olabilirler (1).</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Rongioletti F. Mucinoses. In: Dermatology. Ed. Bolognia JL, Schaffer JV, Cerroni L. 4th ed. China, Elsevier, p.742-753.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Rongioletti F, Merlo G, Cinotti E, et al. Scleromyxedema: a multicenter study of characteristics, comorbidities, course, and therapy in 30 patients. J Am Acad Dermatol 2013; 69: 66-72.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Rongioletti F, Rebora A. Mucinoses. In: Dermatology, Bolognia J, Jorizzo JL, Schaffer JV, et al. 3rd ed, Philadelphia, Elsevier, 2012.p.687.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Rongioletti F. Lichen myxedematosus (papular mucinosis): new concepts and perspectives for an old disease. Semin Cutan Med Surg 2006; 25: 100-104.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Cokonis Georgakis CD, Falasca G, Georgakis A, Heymann WR. Scleromyxedema. Clin Dermatol 2006; 24: 493-497.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Harper RA, Rispler J. Lichen myxedematosus serum stimulates human skin fibroblast proliferation. Science 1978; 199: 545-547.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Ferrarini M, Helfrich DJ, Walker ER, Medsger TA Jr, Whiteside TL. Scleromyxedema serum increases proliferation but not the glycosaminoglycan synthesis of dermal fibroblasts. J Rheumatol 1989; 16: 837-841.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Dinneen AM, Dicken CH. Scleromyxedema. J Am Acad Dermatol 1995; 33: 37-43.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Blum M, Wigley FM, Hummers LK. Scleromyxedema: a case series highlighting long-term outcomes of treatment with intravenous immunoglobulin (IVIG). Medicine (Baltimore) 2008; 87: 10-20.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Rongioletti F, Rebora A. Cutaneous mucinoses: microscopic criteria for diagnosis. Am J Dermatopathol 2001; 23: 257-267.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Rongioletti F, Rebora A. Updated classification of papular mucinosis, lichen myxedematosus, and scleromyxedema. J Am Acad Dermatol 2001; 44: 273-281.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Nashel J, Steen V. Scleroderma mimics. Curr Rheumatol Rep 2012; 14: 39-46.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Knobler R, Moinzadeh P, Hunzelmann N, et al. European dermatology forum S1-guideline on the diagnosis and treatment of sclerosing diseases of the skin, Part 2: Scleromyxedema, scleredema and nephrogenic systemic fibrosis. J Eur Acad Dermatol Venereol 2017; 31: 1581-1594.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sulit DJ, Harford R, O’Neill JT. Discrete papular form of lichen myxedematosus: a case report and review of the literature. Cutis 2005; 75: 105-112.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Cowen EW, Scott GA, Mercurio MG. Self-healing juvenile cutaneous mucinosis. J Am Acad Dermatol 2004; 50(5 Suppl): S97-100.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Boin F, Hummers LK. Scleroderma-like fibrosing disorders. Rheum Dis Clin North Am 2008; 34: 199-220.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Isaac A, Costa I, Leal I. Scleredema of Buschke in a child with cardiac involvement. Pediatr Dermatol 2010; 27: 315-317.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Nagi A, Memon IA. Scleredema of Buschke in pediatric age group. J Coll Physicians Surg Pak 2005; 15: 311-312.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Rongioletti F, Kaiser F, Cinotti E, et al. Scleredema. A multicentre study of characteristics, comorbidities, course and therapy in 44 patients. J Eur Acad Dermatol Venereol 2015; 29: 2399-2404.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Haustein UF. Scleroderma-like lesions in insulin-dependent diabetes mellitus. J Eur Acad Dermatol Venereol 1999; 13: 50-53.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Varga J, Gotta S, Li L, Sollberg S, Di Leonardo M. Scleredema adultorum: case report and demonstration of abnormal expression of extracellular matrix genes in skin fibroblasts in vivo and in vitro. Br J Dermatol 1995; 132: 992-999.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Kurtoğlu S, Yüksel S, Gündüz Z, et al. Use of high-dose intravenous corticosteroid treatment in a child with scleredema. J Emerg Med 2004; 26: 245-246.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Venencie PY, Powell FC, Su WP, Perry HO. Scleredema: a review of thirty-three cases. J Am Acad Dermatol 1984; 11: 128-134.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Cron RQ, Swetter SM. Scleredema revisited. A poststreptococcal complication. Clin Pediatr (Phila) 1994; 33: 606-610.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Beers WH, Ince A, Moore TL. Scleredema adultorum of Buschke: a case report and review of the literature. Semin Arthritis Rheum 2006;35:355.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Kövary PM, Vakilzadeh F, Macher E, Zaun H, Merk H, Goerz G. Monoclonal gammopathy in scleredema. Observations in three cases. Arch Dermatol 1981; 117: 536-539.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Ioannidou DI, Krasagakis K, Stefanidou MP, Karampekios S, Panayiotidis J, Tosca AD. Scleredema adultorum of Buschke presenting as periorbital edema: a diagnostic challenge. J Am Acad Dermatol 2005; 52: 41-44.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Paz RA, Badra RE, Martí HM, Maxit MJ. [Systemic Buschke’s scleredema with cardiomyopathy, monoclonal IgG kappa gammopathy and amyloidosis. Case report with autopsy]. Medicina (B Aires) 1998; 58: 501-503.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Wright RA, Bernie H. Scleredema adultorum of Buschke with upper esophageal involvement. Am J Gastroenterol 1982; 77: 9-11.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Weedon D. Cutaneous mucinoses. In: Weedon’s Skin Pathology. 3rd ed. China, Elsevier, 2010.p.353.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Ukşal Ü. Metabolik ve beslenme bozukluklarına bağlı hastalıklar. Dermatoloji. Ed. Tüzün Y, Serdaroğlu S, Aksungur VL, Gürer MA, Oğuz O. 3rd ed. İstanbul, Nobel tıp kitabevleri, 2008.p.1235-1284.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Thareja S, Paghdal K, Lien MH, Fenske NA. Reticular erythematous mucinosis--a review. Int J Dermatol 2012; 51: 903-909.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Gutte R, Garg G, Kharkar V, Khopkar U. Asymptomatic nodule over the shin. Cutaneous focal mucinosis (CFM). Indian J Dermatol Venereol Leprol 2012; 78: 123</div>
+<div class="ref-item"><span class="ref-number">34.</span>Lee MY, Byun JY, Choi HY, Choi YW. Mucinous Nevus. Ann Dermatol 2018; 30: 465-467.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Cobos G, Braunstein I, Abuabara K, Chu EY, James W. Mucinous nevus: report of a case and review of the literature. JAMA Dermatol 2014; 150: 1018-1019.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Tardío JC, Granados R. The cellular component of the mucinous nevus consists of CD34-positive fibroblasts. J Cutan Pathol 2010; 37: 1019-1020.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Mucin plays a major role in maintaining the balance of water and salt in the dermis and is a component of the dermal extracellular matrix and is normally performed in small amounts by fibroblasts. Cutaneous mucinosis is a heterogeneous group of diseases with abnormal accumulation of mucin in the skin. In this article, it is aimed to give information about musinosis.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Rongioletti F. Mucinoses. In: Dermatology. Ed. Bolognia JL, Schaffer JV, Cerroni L. 4th ed. China, Elsevier, p.742-753.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Rongioletti F, Merlo G, Cinotti E, et al. Scleromyxedema: a multicenter study of characteristics, comorbidities, course, and therapy in 30 patients. J Am Acad Dermatol 2013; 69: 66-72.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Rongioletti F, Rebora A. Mucinoses. In: Dermatology, Bolognia J, Jorizzo JL, Schaffer JV, et al. 3rd ed, Philadelphia, Elsevier, 2012.p.687.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Rongioletti F. Lichen myxedematosus (papular mucinosis): new concepts and perspectives for an old disease. Semin Cutan Med Surg 2006; 25: 100-104.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Cokonis Georgakis CD, Falasca G, Georgakis A, Heymann WR. Scleromyxedema. Clin Dermatol 2006; 24: 493-497.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Harper RA, Rispler J. Lichen myxedematosus serum stimulates human skin fibroblast proliferation. Science 1978; 199: 545-547.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Ferrarini M, Helfrich DJ, Walker ER, Medsger TA Jr, Whiteside TL. Scleromyxedema serum increases proliferation but not the glycosaminoglycan synthesis of dermal fibroblasts. J Rheumatol 1989; 16: 837-841.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Dinneen AM, Dicken CH. Scleromyxedema. J Am Acad Dermatol 1995; 33: 37-43.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Blum M, Wigley FM, Hummers LK. Scleromyxedema: a case series highlighting long-term outcomes of treatment with intravenous immunoglobulin (IVIG). Medicine (Baltimore) 2008; 87: 10-20.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Rongioletti F, Rebora A. Cutaneous mucinoses: microscopic criteria for diagnosis. Am J Dermatopathol 2001; 23: 257-267.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Rongioletti F, Rebora A. Updated classification of papular mucinosis, lichen myxedematosus, and scleromyxedema. J Am Acad Dermatol 2001; 44: 273-281.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Nashel J, Steen V. Scleroderma mimics. Curr Rheumatol Rep 2012; 14: 39-46.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Knobler R, Moinzadeh P, Hunzelmann N, et al. European dermatology forum S1-guideline on the diagnosis and treatment of sclerosing diseases of the skin, Part 2: Scleromyxedema, scleredema and nephrogenic systemic fibrosis. J Eur Acad Dermatol Venereol 2017; 31: 1581-1594.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sulit DJ, Harford R, O’Neill JT. Discrete papular form of lichen myxedematosus: a case report and review of the literature. Cutis 2005; 75: 105-112.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Cowen EW, Scott GA, Mercurio MG. Self-healing juvenile cutaneous mucinosis. J Am Acad Dermatol 2004; 50(5 Suppl): S97-100.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Boin F, Hummers LK. Scleroderma-like fibrosing disorders. Rheum Dis Clin North Am 2008; 34: 199-220.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Isaac A, Costa I, Leal I. Scleredema of Buschke in a child with cardiac involvement. Pediatr Dermatol 2010; 27: 315-317.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Nagi A, Memon IA. Scleredema of Buschke in pediatric age group. J Coll Physicians Surg Pak 2005; 15: 311-312.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Rongioletti F, Kaiser F, Cinotti E, et al. Scleredema. A multicentre study of characteristics, comorbidities, course and therapy in 44 patients. J Eur Acad Dermatol Venereol 2015; 29: 2399-2404.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Haustein UF. Scleroderma-like lesions in insulin-dependent diabetes mellitus. J Eur Acad Dermatol Venereol 1999; 13: 50-53.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Varga J, Gotta S, Li L, Sollberg S, Di Leonardo M. Scleredema adultorum: case report and demonstration of abnormal expression of extracellular matrix genes in skin fibroblasts in vivo and in vitro. Br J Dermatol 1995; 132: 992-999.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Kurtoğlu S, Yüksel S, Gündüz Z, et al. Use of high-dose intravenous corticosteroid treatment in a child with scleredema. J Emerg Med 2004; 26: 245-246.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Venencie PY, Powell FC, Su WP, Perry HO. Scleredema: a review of thirty-three cases. J Am Acad Dermatol 1984; 11: 128-134.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Cron RQ, Swetter SM. Scleredema revisited. A poststreptococcal complication. Clin Pediatr (Phila) 1994; 33: 606-610.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Beers WH, Ince A, Moore TL. Scleredema adultorum of Buschke: a case report and review of the literature. Semin Arthritis Rheum 2006;35:355.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Kövary PM, Vakilzadeh F, Macher E, Zaun H, Merk H, Goerz G. Monoclonal gammopathy in scleredema. Observations in three cases. Arch Dermatol 1981; 117: 536-539.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Ioannidou DI, Krasagakis K, Stefanidou MP, Karampekios S, Panayiotidis J, Tosca AD. Scleredema adultorum of Buschke presenting as periorbital edema: a diagnostic challenge. J Am Acad Dermatol 2005; 52: 41-44.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Paz RA, Badra RE, Martí HM, Maxit MJ. [Systemic Buschke’s scleredema with cardiomyopathy, monoclonal IgG kappa gammopathy and amyloidosis. Case report with autopsy]. Medicina (B Aires) 1998; 58: 501-503.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Wright RA, Bernie H. Scleredema adultorum of Buschke with upper esophageal involvement. Am J Gastroenterol 1982; 77: 9-11.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Weedon D. Cutaneous mucinoses. In: Weedon’s Skin Pathology. 3rd ed. China, Elsevier, 2010.p.353.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Ukşal Ü. Metabolik ve beslenme bozukluklarına bağlı hastalıklar. Dermatoloji. Ed. Tüzün Y, Serdaroğlu S, Aksungur VL, Gürer MA, Oğuz O. 3rd ed. İstanbul, Nobel tıp kitabevleri, 2008.p.1235-1284.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Thareja S, Paghdal K, Lien MH, Fenske NA. Reticular erythematous mucinosis--a review. Int J Dermatol 2012; 51: 903-909.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Gutte R, Garg G, Kharkar V, Khopkar U. Asymptomatic nodule over the shin. Cutaneous focal mucinosis (CFM). Indian J Dermatol Venereol Leprol 2012; 78: 123</div>
+<div class="ref-item"><span class="ref-number">34.</span>Lee MY, Byun JY, Choi HY, Choi YW. Mucinous Nevus. Ann Dermatol 2018; 30: 465-467.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Cobos G, Braunstein I, Abuabara K, Chu EY, James W. Mucinous nevus: report of a case and review of the literature. JAMA Dermatol 2014; 150: 1018-1019.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Tardío JC, Granados R. The cellular component of the mucinous nevus consists of CD34-positive fibroblasts. J Cutan Pathol 2010; 37: 1019-1020.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

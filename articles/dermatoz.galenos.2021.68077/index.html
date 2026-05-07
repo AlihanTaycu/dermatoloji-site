@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oksidatif Stres ve Yaşlanma | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2020-011-003/index.html">Cilt 11, Sayı 3 - Eylül 2020</a>
+    <span class="sep">›</span>
+    Oksidatif Stres ve Yaşlanma
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Oksidatif Stres ve Yaşlanma</h1>
+    <div class="article-authors-list"><span class="author-name">Ali Tanakol</span><sup>1*</sup>, <span class="author-name">Tuğba Kevser Uzunçakmak</span><sup>1</sup>, <span class="author-name">Zekayi Kutlubay</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıklar Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Yaşlanma</span><span class="kw-tag">oksidatif stres</span><span class="kw-tag">antioksidanlar</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Aging</span><span class="kw-tag">oxidative stress</span><span class="kw-tag">antioxidants</span></div>
+    <div class="article-dates"><span>Geliş: 18.12.2020</span><span>Kabul: 08.01.2021</span><span>Yayın: 16.03.2021</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 31-35</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-11-31.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-11-31-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Yaşlanma organizmada birçok değişiklikle karakterize, oldukça karmaşık ve anlaşılması zor bir süreçtir. Çeşitli teorilerle bu süreç açıklanmaya çalışılsa da bu yaklaşımları birbirinden ayrı düşünmemek gerekir. Harman tarafından 1956 yılında ortaya atılan serbest radikal teorisi ve sonrasında mitokondri merkezli olarak bu teorinin düzenlenmesi kabul görmüştür. Patolojik düzeylerde reaktif oksijen ürünlerinin yarattığı hasara karşı antioksidan savunma sistemlerinin reaktif oksijen ürünleriyle bir denge içinde çalıştığı gösterilmiştir. Oksidatif stresin bu dengenin bozulması sonucu ortaya çıktığı gösterilmiştir. Oksidatif strese bağlı yaşlanma dışında çeşitli hastalıkların ortaya çıktığı gösterilmiştir. Fizyolojik dozlarda oluşan reaktif oksijen ürünlerinin ise çeşitli hastalıklara karşı organizmayı koruyabileceği bildirilmiştir. Günümüzde organizmada meydana gelen oksidatif hasar belli düzeylerde ölçülebilmekte ve bu hasar mekanizması bazı hastalıklarda gösterilebilmektedir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Yaşlanma bireyin organizmasında fiziksel görünüm ve işlevinde kolayca tanımlanabilen, karakteristik değişikliklerle ilişkili kaçınılmaz ve geri dönüşü olmayan bir süreçtir (1). Dünya Sağlık Örgütü (DSÖ) tarafından kabul edilen yaşlılık tanımı takvim yaşı olarak değerlendirildiğinde 65 yaşın başlangıcıdır. Buradan yola çıkarak yaşlılık 3 evreye ayrılmıştır: 65-75 yaş arası erken yaşlılık evresi, 75-85 yaş arası orta yaşlılık evresi, 85 yaş ve üstü ileri yaşlılık evresi olarak kabul edilmiştir (2). Ayrıca yaşlılığın daha iyi anlaşılabilmesi için biyolojik, sosyal, ekonomik, fizyolojik, psikolojik ve toplumsal açılardan tanımlamaları yapılmıştır (2). İnsanların daha uzun ve iyi yaşama arzusu, yaşlanmanın nedenlerini araştırma, yaşlanmanın ve yaşlanmayla ilişkilendirilen kanser, tip 2 diyabet, kardiyovasküler hastalıklar ve nörodejeneratif hastalıklar gibi patolojilerin tedavi edilmesi ve ortaya çıkardığı şikayet ve bulguları engelleme ihtiyacını ortaya çıkarmıştır (3). DSÖ’ye göre 2010 yılında tahmin edilen 65 yaş ve üzeri nüfus, dünya nüfusunun %8’i olan 524 milyon iken; 2050 yılında bu sayının dünya nüfusunun %16’sı olan 1,5 milyar olması beklenmektedir (4).</div>
+<div class="cb-content">Biyolojik yaşlanma mekanizması oldukça karmaşıktır. Biyolojik yaşlanma için senescence terimi kullanılmaktadır. Bu kavram 1965 yılında Hayflick tarafından in vitro diploid hücre suşlarının sınırlı yaşam süresinin hücresel düzeyde yaşlanmanın bir ifadesi olabileceği hipotezi olarak ortaya atılmıştır (5). Bugün için senescence hücre yaşlanmasının açıklanmasında kullanılan yolaklardan biridir. Yaşlanma biyolojisinin tek bir teoriyle açıklanabilmesi mümkün olmadığından dolayı sürecin anlaşılabilirliğini artırmak amacıyla yaşlanma teorileri dış etkenler (gelişimsel-kalıtsal) ve iç etkenler (stokastik, dış etkenler) olarak iki ana başlıkta toplanabilir (6):</div>
+<div class="cb-content">a) Dış Etkenler (Stokastik):</div>
+<div class="cb-content">1. Somatik mutasyon ve DNA tamir teorileri2. Ölümcül hata (error-catastrophe) teorisi3. Proteinlerin değişikliğe uğraması teorisi4. Serbest radikal (oksidatif stres)/mitokondriyal DNAb) İç Etkenler (Gelişimsel-kalıtsal):1. Uzun yaşam (longevity) genleri2. İvmelenmiş yaşlılık sendromları3. Nöroendokrin teori4. İmmünolojik teori5. Hücresel yaşlılık (senescence) teorisi6. Hücre ölümü teorisi (6)</div>
+<div class="cb-content">Bu teorilerin ilk ortaya atılanlarından birisi de yaşlanmada serbest radikal teorisidir. Denham Harman tarafından 1956’da yayınlanan makalede organizmalarda oksijen kullanılan normal metabolik süreçlerde oluşan serbest oksijen radikallerinin yaşlanma sürecinde rol aldığı belirtilmiştir (7,8). Harman 1972 yılında hücre içi reaktif oksijen ürünlerinin oluşumunda mitokondrinin baskın rolünü fark etmiş ve önerisini mitokondriyal serbest radikal yaşlanma teorisi olarak güncellemiştir (7). Mitokondri, ökaryot hücre sitoplazmasında enerjinin yaklaşık %90’ının oksidatif fosforilasyon ve elektron transport zinciri ile adenozin trifosfat olarak üretildiği dinamik bir organeldir (9). Mitokondrideki oksijen metabolizmasının doğal ürünü olarak reaktif oksijen ürünleri oluşur. Bu ürünler moleküler oksijenden üretilen dış orbitallerinde tek sayıda ortaklanmamış elektron taşıyan moleküllerdir. Bu serbest radikaller birçok makromolekül, mitokondriyal ve DNA ile etkileşime girerek hücrede oksidatif strese neden olur (9). Nükleer DNA’dan farklı olarak mitokondriyal DNA her hücrede bulunur ve elektron transport zincirine yakındır. Ayrıca sınırlı onarım mekanizmalarına sahip olması mitokondriyal DNA’yı oksidatif stres hasarına karşı oldukça duyarlı yapar (10). Mitokondriyal elektron transport zincirinde üretilen reaktif oksijen ürünleri mitokondriyal DNA ürünlerine bağlı disfonksiyonel mitokondriyal alt birimlerin oluşmasına neden olur. Sonrasında işlevsiz mitokondri reaktif oksijen ürünlerinin daha fazla sızıntısına neden olarak mitokondriyal DNA hasarını artırır (9). Ayrıca bu kısır döngü teorisini destekleyen çeşitli çalışmalarda mitokondriyal DNA mutasyonlarının yaşlanmayla ilgili olduğunu ve yaşla beraber mtDNA hasarının arttığı gösterilmiştir (10). Yapılan başka bir çalışmada yaş artışıyla beraber kompleks II ve kompleks IV düzeylerindeki değişim incelenmiş ve kompleks II akitivitesinin, transkripsiyonunun ve protein düzeylerinin azaldığı gözlemlenirken kompleks IV’de herhangi bir değişiklik saptanmamıştır (9).</div>
+<div class="cb-content">Reaktif oksijen ürünleri düşük düzeylerde hücre sinyalinde ve homeostazisde önemli rollere sahiptir. Bu durumla ilişkili olarak mitohormezis kavramı ortaya atılmış olup reaktif oksijen ürünlerinin düşük düzeylerde pozitif bir cevap oluşturduğu yüksek konsantrasyonlarda ise hücresel hasarı artırdığı gözlemlenmiştir (9). Yapılan çeşitli çalışmalarda bu durum bildirilmiştir. Fiziksel egzersiz sırasında subpatojenik dozda fizyolojik düzeylerde üretilen reaktif oksijen ürünleri kardiyovaksüler hastalıklara karşı koruyucu cevaplar üretilmediği gösterilmiş, öte yandan patolojik düzeylerde reaktif oksijen ürünlerinin diyabet ile ilişkili aterosklerozu hızlandırdığı bildirilmiştir. Fizyolojik düzeylerde hidrojen peroksit gibi reaktif oksijen ürünlerinin egzersize bağlı endotelyal nitrik oksit sentaz upregülasyonunda rol oyandığı tespit edilmiştir (11).</div>
+<div class="cb-content">Yapılan hayvan deneylerinde kontrollü iskemik hasarlarda pozitif oksidatif stres oluşturularak adaptif profilaktik cevaplar oluşturulabileceği gösterilmiştir. Ayrıca pozitif oksidatif stres için protein ve lipid oksidasyon ürünlerinden örnekler de mevcuttur.</div>
+<div class="cb-content">Lipid peroksidasyonunun olumlu etkisine örnek olarak oksidize hemoglobin-düşük yoğunluklu protein (LDL) kompleksinin hemooksijenaz 1 ekspresyonunu artırması verilebilir. Ayrıca beyinde endojen olarak oksidasyonla oluşan 24-S-hidroksikolesterolün karaciğer X reseptör hedef genlerinin sentezini artırarak 7-keto kolesterolün hücresel toksisitesine karşı nöronal koruma sağlaması lipid peroksidasyon ürünlerinin pozitif oksidatif stresine başka bir örnektir (12).</div>
+<div class="cb-content">Proteinlerin pozitif oksidatif değişiklikleri arasında ise geri dönüşümlü disülfid yapıları, S-glutatyonilasyon, S-sülfonasyon, S-nitrozilasyon bulunmaktadır (12).</div>
+<div class="cb-content">Protein oksidasyon ürünlerinin pozitif etkilerini gösteren çeşitli çalışmalar yapılmıştır. Kompleks 1 alt ünitesi olan ND3’ün S-nitrozilasyonunun kardiyomiyositeleri kardiyak iskemik reperfüzyon hasarına karşı koruyabileceği; Parkinson hastalığında DJ-1 genlerindeki mutasyonların sentezlenen DJ-1 proteinindeki S-sistein sülfonasyonunu engelleyerek DJ-1’in parkinsondaki nöroprotektif etkilerini engelleyebileceği bildirilmiştir (12).</div>
+<div class="cb-content">Reaktif oksijen ürünlerinin bu ikili etkisi oksidatif ve antioksidan sistemlerin etkileşimiyle ilgili olabilir fakat bu mekanizmalar büyük ölçüde bilinmemektedir (11). Ayrıca serbest radikal teorisini yaşlanma ile ilgili diğer teorileri dışlayarak düşünmemek gerekir.</div>
+<div class="cb-content">Oksidatif stres oksidan ve antioksidan sistemler arasındaki dengesinin sağlanamadığı durumlarda ortaya çıkar. Oksidan maddelerin iki ana kaynağından biri olan reaktif oksijen ürünleri arasında başlıca hidroksil radikali&nbsp;&nbsp;&nbsp; <sub>•</sub>OH, süperoksit anyonu O<sub>2•</sub><sup>−</sup>, hidroperoksil radikali HO<sub>2•</sub>, tekli oksijen <sup>1</sup>O<sub>2 </sub>, hidrojen peroksit H<sub>2</sub>0<sub>2</sub> yer alır ve&nbsp; endojen ve eksojen kaynaklara bağlı olarak üretilebilmektedir (13).</div>
+<div class="cb-content"><strong>Eksojen Kaynaklar</strong></div>
+<div class="cb-content">Ultraviyole radyasyon, iyonize radyasyon, tütün maruziyeti, kemoterapötikler, çevresel toksinler ve diğer kirleticiler DNA hasarına ve mitokondriyal sitozolik reaktif oksijen türlerinin oluşumuna neden olurlar. Özellikle eksojen reaktif oksijen türlerinin üretimine neden olan kaynaklar deri yaşlanması üzerinde etkilidirler (14).</div>
+<div class="cb-content"><strong>Endojen Kaynaklar</strong></div>
+<div class="cb-content">Reaktif oksijen türlerinin çoğu hücre içinde çeşitli hücre bölümlerinde farklı enzimlerle üretilir. Hücre içi reaktif oksijen ürünlerinin %90’ı mitokondrinin iç membranında bulunan elektron transport zinciri tarafından oluşturulur (14). Diğer yollar arasında ksantin oksidaz gibi peroksizomal enzimlerin aktivitesi, yağ asitlerinin beta oksidasyonu, endozplazmik retikulumda elektronların NADPH’den sitokrom p450’ye geçiş süreci, NADPH oksidaz ve demirin aracılık ettiği Fenton ve Haber Weiss reaksiyonları bulunmaktadır (14).</div>
+<div class="cb-content">Oluşan serbest radikallere karşı biyolojik sistemlerin korunması için eksojen ve endojen antioksidan mekanizmalar mevcuttur.</div>
+<div class="cb-content">Endojen antioksidan sistem enzimatik ve enzimatik olmayan yolaklar içerir. Enzimatik yolakta görevli başlıca elemanlar, süperoksit dismutaz, katalaz, glutatyon peroksidaz, glutatyon-S- tranferaz ve glukoz-6-fosfat dehidrojenazdır. Enzimatik olmayan antioksidanların en önemlileri albümin ve ürik asit olup toplam antioksidan kapasitenin %85’inden sorumludurlar. Bilirubin, a-tokoferol (vitamin E), b- karoten diğer önemli antioksidanlardır (15).</div>
+<div class="cb-content">Endojen antioksidanların ekspresyonu başlıca nükleer faktör eritroid 2-ilişkili faktör 2 (Nrf2)-kelch-benzeri ECH-ilişkili protein 1 (Keap 1) yolağı tarafından düzenlenir. Bu yolak antioksidanları kodlayan genlerin promotor bölgesinde bulunan antioksidan cevap elemanı (ARE) aracılığıyla antioksidanların transkripsiyonuna aracılık eder. Oksidatif stresin olmadığı durumlarda Nrf2, Keap 1 proteini tarafından inaktive edilirken, oksidatif stres durumunda Nrf2, Keap 1 proteininden ayrılarak nükleusta ARE bölgesine bağlanarak antioksidan üretimi yapan genlerin ekspresyonunu uyarır. Bu önemli özelliğinden dolayı Nrf2 oksidatif stres tedavisinde potansiyel bir tedavi hedefi olarak araştırılmaktadır. Nrf2’nin kronik obstrüktif akciğer hastalığında, karaciğer hastalıklarında, nörodejeneratif hastalıklarda ve diğer oksidatif stres ile ilişkili hastalıklarda potansiyel bir tedavi hedefi olarak kullanılabileceği düşünülmüştür (16).</div>
+<div class="cb-content">Ekzojen antioksidanlar arasında askorbik asit (vitamin C), a-tokoferol (vitamin E), fenolik antioksidanlar, selenyum, çinko ve asetilsistein gibi çeşitli ilaçlar vardır (15).</div>
+<div class="cb-content">Bu iki sistem arasındaki redoks dengesinin sağlanamadığı durumlarda makromoleküllerde oksidatif hasar meydana gelir. Yaşlanmanın ana moleküler özelliği makromoleküllerde meydana gelen zamana bağlı hasarların birikimdir (8).</div>
+<div class="cb-content">Oksidatif stres hücre membranları ve diğer lipid içeren yapılara hasar verir. Lipidlerin moleküler oksijenle etkileşime geçmesiyle lipid peroksil radikali oluşur. Sonrasında lipid peroksil başka bir yağ asidiyle etkileşir ve lipid hidroperoksit molekülü oluşur. Sonrasında bu molekül başka yağ radikalleri veya kendisiyle etkileşime girerek çeşitli lipid radikalleri oluşturur. Bu döngüye lipid peroksidasyonu zincir reaksiyonu da denilmektedir. Oluşan bu radikaller hücre zarına zarar verir (13). Lipid peroksidasyonunun son ürünleri olan malondialdehid, 4-hidroksi-2-nonenol ve F2-izoprostanlar biyolojik sistemde birikirler (17).</div>
+<div class="cb-content">Reaktif oksijen moleküllerinin bir başka hedefi DNA bazlarıdır. En çok saptanan oksidasyon ürünü 8-hidroksi-2-deoksiguanozindir (8). DNA bazları dışında DNA polimeraz aktivitesi de etkilenebilir. Oksidatif stres sitoplazmik nükleer sinyal transdüksiyon yolaklarını da aktifleyebilir (18). Reaktif oksijen ürünleri, p21 gen transaktivasyonu ve p53 stabilizasyonuyla DNA hasar cevap yolağını tetikleyerek hücre siklusunun durmasına sebep olur. DNA hasarının devamında p38/MAPK yolağı aracılığıyla p16 aktive olur ve nükleer lamin B1 azalır. Kromatin yeniden düzenlenmesi, yüksek yoğunluklu kromatin bölgelerinin oluşumuyla birlikte uyarıldığında senescence ile ilişkili heterokromatin odakları olarak adlandırılır. Senescence-spesifik proenflamatuvar sekretom bu bölgelerle yakın ilişki içerisindedir ve reaktif oksijen ürünleriyle birlikte DNA hasar cevabı aracılığıyla hücresel yaşlanmayı artırır (19).</div>
+<div class="cb-content">Proteinlerin karbonil türevleri aminoasitlerin oksidatif hasarıyla direkt veya karbonhidrat ve lipidlerin reaktif karbonil parçalarının sekonder reaksiyonlarıyla dolaylı olarak meydana gelir (18). Glikasyon ve lipoksidasyon son ürünleri, karbonil eklerini lizin sistein ve histidinden meydana getirir. Oksidatif hasar, proteinlerin fonksiyonlarında ve yapısal etkinliğinde kayıplara neden olur. Protein karbonilleri yaşlanmayla ve çeşitli patolojik durumlarda dokularda saptanabilir (18). Yapılan çalışmalarda stres rezistans proteinler (Hsp60p ve Hsp70p) ve glukoz metabolizmasında sorumlu enzimlerin yaşlı hücrelerde karbonillenerek biriktiği gösterilmiştir (20).</div>
+<div class="cb-content">Reaktif oksijen ürünlerinin yarı ömrü kısa olduğundan organizmada meydana gelen oksidatif hasar tespiti hasarın meydana getirdiği moleküler modifikasyonların tespiti üzerinden gerçekleşir. Yüksek performanslı likid kromatografi, mass spektrometri, ve antikor kullanımıyla 8‐hidroksi‐2’‐deoksiguanozin or 8‐oxo‐7, 8‐dihdro‐2’‐deoksiguanozin tespiti DNA hasarında karsinogenez ve oksidatif stres belirteci olarak tespit edilebilir. İdrarda tespit edilen metabolitler vücudun DNA onarım düzeyi için bir göstergedir (21).</div>
+<div class="cb-content">Malondialdehit, tiyobarbiturik reaktif asit maddeleri, lipid hidroperoksidaz, konjuge dienler, 4‐hidroksinonenal ve F<sub>2</sub>‐isoprostanlar (8‐epiPGF<sub>2</sub>) lipid peroksidasyon hasar belirteçleridir. Bunlar immünoblot, immünositokimyasal, enzime bağlı immünosorbent test, mass spektrometri gibi çeşitli yöntemlerle saptanabilir (21).</div>
+<div class="cb-content">Protein karbonilasyonu ise 2, 4-dinitrofenilhidrazin ile kimyasal olarak birleştirilmesi sonrasında antikorlar kullanılarak tespit edilebilir (21).</div>
+<div class="cb-content">Uzun süren ve kontrolsüz oksidatif stres, yaşlanma dışında kronik ve dejeneratif hastalıklara sebep olabilir. DNA’nın eksojen ve endojen yollarla oluşan oksidatif hasarı sonrasında kanser dışında kardiyovasküler hastalıkların gelişiminde de oksidatif stres etkilidir. Dolaşımdaki LDL reaktif oksijen ürünleriyle oksidize olarak köpük hücre yapısıyla yağ birikimine ve aterosklerotik plaklara sebep olduğu gösterilmiştir. Çeşitli çalışmalar oksidatif stresin ateroskleroz, iskemi, hipertansiyon, kardiyomiyopati, kardiyak hipertrofi ve konjestif kalp yetmezliğinde rolü olduğunu göstermiştir (22).</div>
+<div class="cb-content">Oksidatif stresin Parkinson, Alzheimer, amyotrofik lateral skleroz, multipl skleroz, depresyon ve hafıza kaybı gibi çeşitli nörolojik patolojilerde rol oynadığı gösterilmiştir. Alzheimer hastalığının oluşması ve ilerlemesinden sorumlu nörodejenarasyonla ilişkili b-amiloid peptidinin serbest radikal etkisiyle oluştuğu bildirilmiştir (22).</div>
+<div class="cb-content">Kronik obstrüktif akciğer hastalığının oluşmasında lokal ve sistemik kronik enflamasyondan sorumlu olan oksidatif stres sorumlu tutulmuştur. Romatoid artrit hastalarında sinoviyal sıvıda artmış izoprostan ve prostaglandin seviyeleri hastalığın başlangıcı ve ilerlemesinde serbest radikal hasarının önemini göstermektedir (22).</div>
+<div class="cb-content">Oksidatif stresin zarar verdiği bir başka organ böbreklerdir. Glomerülonefrit, tübülointerstisyel nefrit, renal yetmezlik, proteinüri ve üremi oluşumunda oksidatif stresin rol oynadığı bildirilmiştir. Stres durumunda reaktif oksijen ürünleri enflamatuvar hücreleri ve proenflamatuvar sitokin üretimini uyarır. Enflamasyonun erken evresinde TNF-a, IL-1b gibi mediyatörler ve NF-kB transkripsiyonel faktör olarak rol oynar. İleriki evrelerde TGF- beta üretiminin artışıyla ekstrasellüler matriks sentezi uyarılır. Sonuç olarak erken iltihabi yanıtı ve doku fibrozisini organ yetmezliği izler. Çeşitli ilaçların ve metallerin de serbest radikal miktarını artırarak bu hasara sebep olabileceği belirtilmiştir (22). Ayrıca oksidatif hasarın sarkopeni ve diyabet gibi durumlarda rol aldığı bildirilmiştir (15).</div>
+<div class="cb-section-title">Sonuç</div>
+<div class="cb-content">Yaşlanma şu anki bilgilerimizle kaçınılmaz ve anlaşılması oldukça zor bir süreçtir. Oksijen kullanan ökaryotik hücrelerin maruz kaldığı oksidatif stres, organizmalarda eksojen ve endojen yolaklarla reaktif oksijen ürünleri üretir. Bu ürünler belli düzeyin üzerinde bir süre sonra hücreye zarar vermeye başlar. Patolojik düzeylerde reaktif oksijen ürünlerinin verdiği hasara karşı eksojen veya endojen olabilen antioksidan sistemler devreye girer. Bu sistemler arasındaki dengenin yönüne göre hücre işlevlerine devam eder veya bozulma sürecine geçer. Yaşlanma sürecini şu an için tamamen ortadan kaldıramasak da, yaşlanmayı geciktirmek veya kaliteli, sağlıklı bir şekilde yaşlanmak için oksidatif stres maruziyetini azaltacak sigara, kötü beslenme, sedanter yaşam ve çevre kirliliği gibi çeşitli çevresel faktörlerden uzaklaşmak ve/veya antioksidanların doğru kullanımına yönelmek uygun bir seçenek olarak karşımıza çıkmaktadır. Ayrıca çeşitli hastalıklarda oksidatif stresin rolünün daha iyi anlaşılması ve oksidatif hasarın vücuda verdiği zararların ölçümü, ileride geliştirilecek tedaviler ve bu tedavilerin takibi açısından oldukça önemlidir.</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Hou Y, Dan X, Babbar M, et al. Ageing as a risk factor for neurodegenerative disease. Nat Rev Neurol 2019; 15: 565-581.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Tümerdem Y. Real age. Turk J Geriatr 2006; 9: 195-196.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Luo J, Mills K, le Cessie S, Noordam R, van Heemst D. Ageing, age-related diseases and oxidative stress: What to do next. Ageing Res Rev 2020; 57: 100982.</div>
+<div class="ref-item"><span class="ref-number">4.</span>WHO; US National Institute on Aging; National Institutes of Health; (2011), Global Health and Ageing. Available from: https://www.who.int/ageing/publications/ global_health/en/.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Kuilman T, Michaloglou C, Mooi WJ, Peeper DS. The essence of senescence. Genes Dev 2010; 24: 2463-2479.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Nalbant S. The biology of aging. Turk J Phys Med Rehabil 2006; 52 (Suppl A): 12-17.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Benz CC, Yau C. Ageing, oxidative stress and cancer: Paradigms in parallax. Nat Rev Cancer 2008; 8: 875-879.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Karasu, Ç. Theories of biological aging: role of oxidative stres. Turkiye Klinikleri J Med Sci 2008; 28(Suppl 1): 1-11.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Birch‐Machin M, Bowman A. Oxidative stress and ageing. Br J Dermatol 2016; 175: 26‐29.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Hudson L, Bowman A, Rashdan E, Birch-Machin MA. Mitochondrial damage and ageing using skin as a model organ. Maturitas 2016; 93: 34-40.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Rosenfeldt F, Wilson M, Lee G, et al. Oxidative stress in surgery in an ageing population: pathophysiology and therapy. Exp Gerontol 2013; 48: 45-54.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Yan L-J. Positive oxidative stress in aging and aging-related disease tolerance. Redox Biol 2014; 2: 165-169.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Patlevič P, Vašková J, Švorc P Jr, Vaško L, Švorc P. Reactive oxygen species and antioxidant defense in human gastrointestinal diseases. Integr Med Res 2016; 5: 250-258.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Pole A, Dimri M, Dimri G. Oxidative stress, cellular senescence and ageing. AIMS Mol Sci 2016; 3: 300-324.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Liguori I, Russo G, Curcio F, et al. Oxidative stress, aging, and diseases. Clin Interv Aging 2018; 13: 757-772.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Kandola K, Bowman A, Birch-Machin MA. Oxidative stress-a key emerging impact factor in health, ageing, lifestyle and aesthetics. Int J Cosmet Sci 2015; 37: 1-8.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Kregel KC, Zhang HJ. An integrated view of oxidative stress in aging: basic mechanisms, functional effects, and pathological considerations. Am J Physiol 2007; 292: R18-R36.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Mateos R, Bravo L. Chromatographic and electrophoretic methods for the analysis of biomarkers of oxidative damage to macromolecules (DNA, lipids, and proteins). J Sep Sci 2007; 30: 175-191.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Bu H, Wedel S, Cavinato M, Jansen-Dürr P. MicroRNA regulation of oxidative stress-induced cellular senescence. Oxid Med Cell Longev 2017; 2017: 2398696.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Aung-Htut MT, Ayer A, Breitenbach M, Dawes IW. Oxidative stresses and ageing. Subcell Biochem 2012; 57: 13-54.</div>
+<div class="ref-item"><span class="ref-number">21.</span>McMurray F, Patten DA, Harper ME. Reactive oxygen species and oxidative stress in obesity‐recent findings and empirical approaches. Obesity (Silver Spring) 2016; 24: 2301-2310.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Pizzino G, Irrera N, Cucinotta M, et al. Oxidative stress: harms and benefits for human health. Oxid Med Cell Longev 2017; 2017: 8416763.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Ageing is characterized by many changes in the organism and very complex difficult process to understand. Although this process is tried to be explained with various theories, these approaches should not be considered separately from each other. The free radical theory put forward by Harman in 1956 and later the arrangement of this theory centered on the mitochondria were accepted. Antioxidant defense systems have been shown to work in balance with reactive oxygen products against the damage caused by reactive oxygen products at pathological levels. It has been shown that oxidative stress arises as a result of the disturbance of this balance. It has been shown that various diseases other than aging due to oxidative stress occur. It has been reported that reactive oxygen products formed in physiological doses can protect the organism against various diseases. Today, oxidative damage in the organism can be measured at certain levels and this damage mechanism can be shown in some diseases.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Hou Y, Dan X, Babbar M, et al. Ageing as a risk factor for neurodegenerative disease. Nat Rev Neurol 2019; 15: 565-581.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Tümerdem Y. Real age. Turk J Geriatr 2006; 9: 195-196.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Luo J, Mills K, le Cessie S, Noordam R, van Heemst D. Ageing, age-related diseases and oxidative stress: What to do next. Ageing Res Rev 2020; 57: 100982.</div>
+<div class="ref-item"><span class="ref-number">4.</span>WHO; US National Institute on Aging; National Institutes of Health; (2011), Global Health and Ageing. Available from: https://www.who.int/ageing/publications/ global_health/en/.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Kuilman T, Michaloglou C, Mooi WJ, Peeper DS. The essence of senescence. Genes Dev 2010; 24: 2463-2479.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Nalbant S. The biology of aging. Turk J Phys Med Rehabil 2006; 52 (Suppl A): 12-17.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Benz CC, Yau C. Ageing, oxidative stress and cancer: Paradigms in parallax. Nat Rev Cancer 2008; 8: 875-879.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Karasu, Ç. Theories of biological aging: role of oxidative stres. Turkiye Klinikleri J Med Sci 2008; 28(Suppl 1): 1-11.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Birch‐Machin M, Bowman A. Oxidative stress and ageing. Br J Dermatol 2016; 175: 26‐29.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Hudson L, Bowman A, Rashdan E, Birch-Machin MA. Mitochondrial damage and ageing using skin as a model organ. Maturitas 2016; 93: 34-40.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Rosenfeldt F, Wilson M, Lee G, et al. Oxidative stress in surgery in an ageing population: pathophysiology and therapy. Exp Gerontol 2013; 48: 45-54.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Yan L-J. Positive oxidative stress in aging and aging-related disease tolerance. Redox Biol 2014; 2: 165-169.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Patlevič P, Vašková J, Švorc P Jr, Vaško L, Švorc P. Reactive oxygen species and antioxidant defense in human gastrointestinal diseases. Integr Med Res 2016; 5: 250-258.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Pole A, Dimri M, Dimri G. Oxidative stress, cellular senescence and ageing. AIMS Mol Sci 2016; 3: 300-324.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Liguori I, Russo G, Curcio F, et al. Oxidative stress, aging, and diseases. Clin Interv Aging 2018; 13: 757-772.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Kandola K, Bowman A, Birch-Machin MA. Oxidative stress-a key emerging impact factor in health, ageing, lifestyle and aesthetics. Int J Cosmet Sci 2015; 37: 1-8.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Kregel KC, Zhang HJ. An integrated view of oxidative stress in aging: basic mechanisms, functional effects, and pathological considerations. Am J Physiol 2007; 292: R18-R36.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Mateos R, Bravo L. Chromatographic and electrophoretic methods for the analysis of biomarkers of oxidative damage to macromolecules (DNA, lipids, and proteins). J Sep Sci 2007; 30: 175-191.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Bu H, Wedel S, Cavinato M, Jansen-Dürr P. MicroRNA regulation of oxidative stress-induced cellular senescence. Oxid Med Cell Longev 2017; 2017: 2398696.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Aung-Htut MT, Ayer A, Breitenbach M, Dawes IW. Oxidative stresses and ageing. Subcell Biochem 2012; 57: 13-54.</div>
+<div class="ref-item"><span class="ref-number">21.</span>McMurray F, Patten DA, Harper ME. Reactive oxygen species and oxidative stress in obesity‐recent findings and empirical approaches. Obesity (Silver Spring) 2016; 24: 2301-2310.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Pizzino G, Irrera N, Cucinotta M, et al. Oxidative stress: harms and benefits for human health. Oxid Med Cell Longev 2017; 2017: 8416763.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

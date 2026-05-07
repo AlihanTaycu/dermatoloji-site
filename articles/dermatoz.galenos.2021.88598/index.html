@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alopesi Areata: Güncel Gözden Geçirme | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2020-011-004/index.html">Cilt 11, Sayı 4 - Aralık 2020</a>
+    <span class="sep">›</span>
+    Alopesi Areata: Güncel Gözden Geçirme
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Alopesi Areata: Güncel Gözden Geçirme</h1>
+    <div class="article-authors-list"><span class="author-name">Ali Türkay</span><sup>1*</sup>, <span class="author-name">Tuğba Kevser Uzunçakmak</span><sup>2</sup>, <span class="author-name">Burhan Engin</span><sup>2</sup>, <span class="author-name">Server Serdaroğlu</span><sup>2</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Niğde Bor Devlet Hastanesi, Deri ve Zührevi Hastalıkları Kliniği, Niğde, Türkiye</div><div class="affil-item"><sup>2</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Alopesi areata</span><span class="kw-tag">patogenez</span><span class="kw-tag">bulguları</span><span class="kw-tag">tedavi</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Alopecia areata</span><span class="kw-tag">pathogenesis</span><span class="kw-tag">findings</span><span class="kw-tag">treatment</span></div>
+    <div class="article-dates"><span>Geliş: 15.11.2020</span><span>Kabul: 15.01.2021</span><span>Yayın: 17.03.2021</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 39-51</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-11-39.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-11-39-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Alopesi areata (AA), sık görülen, skatris bırakmayan, saç foliküllerini ve bazen tırnakları da etkileyebilen, organa özgü, otoimmün, kronik enflamatuvar bir hastalıktır. Hastalığın gidişatı <p>öngörülemez olup, hastaların %80’inde kendiliğinden düzelmeler ve herhangi bir zamanda relaps görülebilir. Oluşum mekanizması tam olarak aydınlatılmamış olmakla birlikte, genetik yatkınlığı olan bireylerde, çevresel etkenlerle tetiklenen T-hücre aracılı otoimmün bir hastalık olduğu düşünülmektedir. Tüm dünyada %0,1-0,2 oranında görülüp, yaşam boyu gelişme riski ise %1,7 olarak bildirilmektedir. Her iki cinsiyette de eşit sıklıkta görülür ve erken yaşlarda daha sık olduğu görülür. Etkilenmiş bireylerde AA aile öyküsü birçok çalışmada %10-20 arasında bulunmuştur. AA’lı hastaların %20’sini çocuk hastalar oluşturur ve tüm hastaların %50’si ilk ataklarını 20 yaş altında yaşarlar. Yaşam boyu nüks oranı ise %50 kadardır.</p>
+<p>AA’nın otoimmün bir hastalık olduğunu destekleyen bulgulardan biri de eşlik eden diğer otoimmün hastalıklardır. Literatürde bugüne kadar yayınlanan birçok çalışmada otoimmün tiroidit, atopi, vitiligo, psoriasis, lupus eritematosus, romatoid artrit, otoimmün poliglandüler sendrom tip 1, çölyak hastalığı, tip 1 diabetes mellitus, myastenia gravis, Addison hastalığı, pernisiyöz anemi, otoimmün hepatit, liken planus, bazı psikiyatrik bozukluklar, Cronkhite-Canada ve Down sendromu gibi otoimmün ve çeşitli diğer birçok hastalığın AA’ya eşlik ettiği gösterilmiştir.</p>
+<p>AA için tanımlanmış kötü prognostik faktörler; erken başlangıç yaşı, pozitif aile öyküsü, hastada atopi, otoimmün hastalıkların, tırnak tutulumunun varlığı, ofiyazis, yaygın tutulumun saptanması ve beş yıldan uzun süreli hastalık öyküsüdür.</p>
+<p>AA nüksler ve iyileşme ataklarıyla seyreden hastalık, kıl foliküllerinin T lenfosit aracılıklı organa özgü otoimmün reaksiyonu sonucu meydana gelir. Tedavisi için çok az kanıta dayalı veri mevcut olup, tedavi yaklaşımları genel olarak olgu serilerine ve klinik deneyimlere dayanır. Çoğu tedavi seçenekleri palyatiftir. Tedavi planlamasında hastalığın yaygınlığı, süresi, hastanın yaşı, cinsiyeti, gebelik ve emzirme durumları ve ilaçlara uyumu gibi faktörler göz önünde bulundurulur. Bu bilgiler ışığında AA tedavi şemaları geliştirilmiştir.</p></div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-content">Alopesi areata (AA) sık görülen, skatris bırakmayan, saç foliküllerini ve bazen tırnakları da etkileyebilen, organa özgü, otoimmün, kronik enflamatuvar bir hastalıktır (1-3). Hastalığın gidişatı öngörülemez olup, nüksler ve iyileşme ataklarıyla seyreder ve kıl foliküllerine karşı T lenfosit aracılıklı organa özgü otoimmün reaksiyon sonucu meydana gelir(1,2,4-6). Otoimmün bir hastalık olarak kabul edilen AA’ya diğer birçok otoimmün hastalık da eşlik edebilir (2,6-10).</div>
+<div class="cb-content">Tüm dünyada %0,1-0,2 oranında görülen AA’nın yaşam boyu gelişme riski ise %1,7’dir (9,11). Erken yaşlarda daha sık olduğu bildirilmektedir (2,10,12). AA aile öyküsü birçok çalışmada %10-20 arasında bulunmuştur ve hastaların %20’sini çocuk hastalar oluşturur (11,13,14).</div>
+<div class="cb-content">Erken başlangıç yaşı, pozitif aile öyküsü, atopi varlığı, diğer otoimmün hastalıkların, tırnak tutulumunun bulunması, ofiyazis, yaygın tutulumun saptanması ve beş yıldan uzun süreli hastalık öyküsü gibi birçok negatif prognostik faktör tanımlanmıştır (2,6,13). AA tedavisi için çok az kanıta dayalı veri mevcut olup, tedavi yaklaşımları genel olarak olgu serilerine ve klinik deneyimlere dayanır. Hastalığın doğal seyrini tam olarak değiştirecek bir tedavi şu an için bulunmamakta olup, tüm tedavi seçenekleri palyatif olup, o an için bulunan durumu kontrol etmeye yöneliktir ve hastalığın kendisini tam olarak tedavi edememektedir (2,13,15). Tedavi planlamasında, genellikle hastalığın yaygınlığı ve hastanın yaşı göz önünde bulundurulsa da; hastalığın süresi, tutulan bölgenin özellikleri, hastanın cinsiyeti, gebelik ve emzirme durumlarının yanında, ilaçlara uyum da dikkate alınmalıdır (16).</div>
+<div class="cb-content"><strong>Tarihçe</strong></div>
+<div class="cb-content">“Alopesi” terimi tarihte ilk kez Hipokrat tarafından kullanılmış olup, AA’nın tanımlanması M.Ö. 1500-2500’lü yıllara uzanan eski Mısır Ebers papürüslerine dayanır (17). İlk kez Romalı hekim, bilim adamı Aulus Cornelius Celsus (M.Ö. 25-M.S. 50) tarafından ilki “alopecia” olarak tanımlanan saç ve sakalda görülebilen belli bir formda olmayan dökülme, ikincisi başın arka tarafından başlayıp, kulaklara doğru yayılan “ofiasis” şeklinde iki tip saç dökülme tanımlanması yapılmıştır (11). “Alopecia celci, Alopecia circumscripta, Johnstone’s alopecia, Porrigo decalvans, Tinea decalvans, Wilson’s accidental baldness, Hutsinson alopecia circumscripta, Sabouraud’s pelade, Celsus vitiligo, Vitiligo capitis, Teigne pelade, Pelade decalvant” gibi çok çeşitli adlandırmalar yapılmış olup, hastalığın adı olarak Sauvage’nin 1763 yılında kullandığı “alopesi areata” terimi günümüzde kullanılmaktadır (11,17).</div>
+<div class="cb-content"><strong>Epidemiyoloji</strong></div>
+<div class="cb-content">AA ırk, cins ve yaş ayrımı olmaksızın herkeste görülebilir olmakla birlikte coğrafik, etnik ve bireyler arası immünogenetik farklılıklardan dolayı, insidansı çalışmalarda farklılıklar göstermektedir (6,9). Normal popülasyon ile yapılmış bir çalışmada AA insidansı %0,1-0,2 ve bir bireyin yaşam boyu AA geliştirme riski ise yaklaşık %1,7 olarak bildirilmiştir (2,11). Herhangi bir yaşta başlayabilir, yirmili ve kırklı yaşlarda zirve yapar. Her iki cinsiyet eşit olarak etkilenir (12,18,19) ancak kadınlarda ya da erkeklerde daha fazla görüldüğünü bildiren çalışmalar da mevcuttur (20,21). AA’lı hastaların %50’si ilk ataklarını 20 yaş altında yaşarlar ve tüm hastaların %20’sini çocuk hastalar oluşturur (10,13). Çocukluk çağındaki dermatozların %6,7’sini oluşturan AA, çocukluk çağında en sık görülen üçüncü deri hastalığıdır (22). Yaşam boyu nüks etme oranı ise %50’dir (14). Mevsimsel alevlenmeler çok net olmamakla birlikte çalışmalarda yılın soğuk aylarında AA’da alevlenmelerin daha fazla olduğu bulunmuştur (23). AA çoğu hastada sporadik olarak ortaya çıkmakla birlikte, aile öyküsü genel %10-20 aralığında bildirilmektedir (2,11,24,25). Erken başlangıçlı hastalıkta pozitif aile öyküsü daha yüksektir (26). Otuz yaş öncesi başlangıçlı AA’da aile öyküsü %37 iken, 30 yaş sonrası başlangıçlılarda %7,1 olarak bildirilmiştir (11).</div>
+<div class="cb-content"><strong>Etiyoloji ve Patogenez</strong></div>
+<div class="cb-content">AA’nın etiyopatogenezi hala tam olarak aydınlatılamamıştır (6,7). Genetik yapı, özgül olmayan immün ve organa özgü otoimmün reaksiyonlar üzerinde en fazla durulan konular olmuştur. Hastalığa neden olan anahtar immünolojik faktörün kıl folikülünün immün ayrıcalığını kaybetmesi sonucu aktive olmuş T-hücre aracılıklı immünitenin özellikle kıl bulbar çıkıntı bölgesindeki hücrelere saldırması olduğu düşünülmektedir (27).</div>
+<div class="cb-content">Kıl oluşumunda ve yenilenmesinde; matriks hücreleri ve özellikle kök hücrelerinin de bulunduğu foliküler bulbar bölgedeki keratinositler ve melanositler önemli rol oynarlar (27). AA lezyonlarında, melanositlerin normal dağılım ve yapısal özelliklerinde değişiklikler ve kıl folikülü bulbusundaki melanositlerin aktif olarak tutulduğu gösterilmiştir (28). AA’daki enflamatuvar atağın ana hedefi, anagen fazdaki kıl matriksinin hızlı prolifere olan keratinositler ve pigment üreten melanositlerdir (29).</div>
+<div class="cb-content">Büyüme fazındaki (anagen) kıl folikülünün, prematür olarak proliferasyon görülmeyen involüsyon (katagen) ve istirahat (telogen) fazlarına kısa sürede geçmesi sonucu, ani kıl dökülmesi ve tekrar kıl büyümesinin inhibisyonu meydana gelir (30). Subakut evrede katagen ve telogen kıllar izlenir ve bu dönemde katagen/telogen oranı foliküllerin %50’sinden fazlasını oluşturmaktadır. Kronik evrede belirgin foliküler minyatürizasyon mevcut olup terminal/vellüs kıl folikül oranı 1:1’e gibidir (30).</div>
+<div class="cb-content"><strong>Genetik Faktörler</strong></div>
+<div class="cb-content">Hastalarda pozitif aile öyküsü %10-20 hatta bazı yayınlarda %51,6’ya kadar da yüksek oranlarda bildirilmiştir (2,11,18,20,25,31). İkizlerde yapılan bir çalışmada, 19 monozigotik ikizde AA bulunma oranı %42 tespit edilirken, dizigotik 31 ikizde sadece %10 olarak bulunmuştur (32). İyi bilinen genetik hastalıklar ile AA ilişkisine bakıldığında; Down sendromlu hastalarda sıklık %6-8,9 oranında bildirilmiştir (33). Down sendromu 21. kromozomla ilişkili olup, interferon (INF) bağımlı p78 protein (MXA) gen bölgesi olan MX-1’i barındırır ve bu proteinin AA’lı hastalarda anagen foliküllerinde ekspresyonunun arttığı gösterilmiştir (34).</div>
+<div class="cb-content">Kıl folikülleri, gözün ön kamarası, testis gibi immünolojik ayrıcalıklı bölge özelliğine sahip olup (11), proksimal foliküler epitelyumunda temel doku uyumluluk kompleksi (major histocompatibility complex - MHC) sınıf I ve sınıf II ekspresyonu yoktur veya çok azdır (35). AA’lı insanların ve C3H/HeJ farelerin foliküler epitelyumunda MHC sınıf I ve sınıf II ekspresyonunun olması, immünolojik ayrıcalıklı bölge olma özelliğinin kaybolduğunu göstergesidir (36). Yapılan birçok çalışmada AA’lı hastaların kıl foliküllerinde belirgin HLA gen eskpresyonu artışının olduğu gösterilmiştir (37). HLA sınıf II genleriyle, özellikle HLA-DR4, DR5 ve DQ3 ile olan ilişkisi gösterilmiş ve patogenezde HLA sınıf I genlerine göre daha ön planda olduğu vurgulanmıştır (34,38). HLA DR4, DR11, DQ7 ile erken başlangıç, hastalığın şiddeti ve artmış ailesel insidans arasında anlamlı ilişki gösterilmiş, DRB1*0401 (DR4), HLA-DQB1*0301 (DQ7) allellerinin şiddetli, uzun süren alopesi totalis (AT) ve alopesi universalis (AU) ile ilişkili olabileceği gösterilmiştir (25,39). HLA-DQB1*03 alleli diğerleri arasında belki de en önemli AA belirleyicisi olma potansiyeli taşımaktadır (40). AA ilişkili birinci geniş genom çalışmasında AA ilişkili T lenfositlerin aktivasyonunda ve düzenlenmesinde rol oynayan sekiz gen lokusu [HLA bölgesi, UL16-bağlayıcı protein gen demeti, sitotoksik T lenfosit antijeni-4 (CTLA-4), interlökinler (IL-2/IL-21, IL-2RA), doğal öldürücü hücre grup 2 D üyesi (NKG2D) ve Eos ligand geni, Ikaros çinko parmak ailesi 4 (IKZF-4)] tespit edilmiştir (41). İkinci geniş genom çalışmasında ise riskli gen lokusu sayısını on altı olarak tanımlanmıştır (42,43).</div>
+<div class="cb-content"><strong>Otoimmünite</strong></div>
+<div class="cb-content">Aktif hastalık döneminde, foliküler epitelyumda CD8+, folikül çevresinde CD4+ T lenfositlerin bulunduğu peribulbar lenfosit ve antijen sunan hücre infiltrasyonunun bulunması, deri ve immün sistemde proenflamatuvar değişikliklerin oluşması, periferik kanda kıl folikülüne karşı oluşmuş spesifik IgG antikor düzeyinin sağlıklı bireylerden daha yüksek olması, kıl folikülü çevresinde immünglobulin ve kompleman birikiminin saptanması, otoimmün tiroid hastalığı ve vitiligo gibi birçok otoimmün hastalıkla birliktelik gösterip, HLA ilişkisinin bulunması, immünosüpresif ve immünostimülatörler gibi immünomodülatör tedaviye cevap vermesi otoimmün etiyopatogenezi destekleyen bulgulardandır (20,42,44).</div>
+<div class="cb-content">Saç folikülleri immün olarak korunan (immün ayrıcalıklı) bir bölge olup, MHC sınıf I, MHC sınıf II ve ICAM-1 ekspresyonları yoktur veya çok azdır (1). Sağlıklı anagen fazdaki kıl folikülü a-MSH, TGF-b ve IGF-1 gibi immün baskılayıcı sitokinler salgılayarak immünolojik ayrıcalıklı bölge olma özelliğini korur (1,11). Anagen kıl bulbusunun immün ayrıcalığının bozulması AA patogenezinde anahtar rol oynamaktadır (45).</div>
+<div class="cb-content">Kıl folikülü immün ayrıcalığının kaybolması ile, folikül hücrelerinde a-MSH, TGF-b gibi immün baskılayıcılarında azalma ve MHC sınıf I ilişkili polipeptid sekans A’nın (MICA) ekspresyonunda artış meydana gelerek, doğal öldürücü hücrelerin aktivasyonuna ve lokal INF-gama (INF-g) ve IL-15 artışına neden olurak JAK sinyalizasyon yolu aktive edilir. Bu yolağın AA’da önemi, JAK inhibitörlerinin tedavideki etkinlikleriyle de destek bulmuştur (46).</div>
+<div class="cb-content"><strong>Humaral İmmünite</strong></div>
+<div class="cb-content">AA’da otoantikorların rolü ve varlığı tartışmalı bir konudur. Daha önce yapılmış birçok çalışmada, AA’lı hastalarda organ spesifik veya organ spesifik olmayan otoantikorların sağlıklı bireylere göre daha yüksek oranda bulunduğu saptanmıştır (47). Foliküler yapılara karşı da dolaşan otoantikorlar bildirilse de hangi foliküler yapıların tam olarak hedef alındığına dair bulgular çok sınırlıdır (1).</div>
+<div class="cb-content"><strong>Hücresel İmmünite</strong></div>
+<div class="cb-content">AA için genetik yatkınlığı bulunan bireylerde INF-g’nin kıl foliküllerinde, MHC proteinlerinin, doğal öldürücü (NK) hücre aktivatör ligandlarının (MICA, ULBP3) up-regülasyona neden olarak immün ayrıcalığın kaybolmasına ve CD8+ hücrelerin saldırısını tetiklediği düşünülmektedir (11). AA’da CD8+ T-hücrelerin rolünü gösteren diğer bir kanıt ise AIDS ve CD4+ T-hücre yetmezliğinde AA gelişebilmesidir (48).</div>
+<div class="cb-content">Th1 hücresel yanıtının Th2 yanıtına oranla patogenezde daha etkin rolü olmakla birlikte, özellikle kronik süreçte Th2 etkileri ön plandadır (49). Hastalığın Th1 ve Th2 fonksiyonlarında baskılama yapan, T regülatuvar hücrelerden olan CD4+/CD25+ hücrelerde eksiklik ile ilişkili olduğunu gösteren çalışmalar mevcuttur (50).</div>
+<div class="cb-content"><strong>Oksidatif Stres</strong></div>
+<div class="cb-content">Antioksidanlar, serbest radikallerin oluşumunu engelleyerek veya mevcut radikalleri ortadan kaldırarak hücrenin zarar görmesini engelleyen moleküllerdir. Oksidatif hasarın belirteci olan lipid peroksidasyonun ürünlerinden malondialdehit ve süperoksit dismutazın antioksidan aktivite düzeylerinin AA hastalarında yüksek olduğu saptanmıştır (24). Ayrıca hasta grubunda malondialehit, nitrit oksit, ksantin oksidaz değerleri kontrol grubuna göre anlamlı olarak yüksek ve süper oksit dismutaz ise düşük izlenmiştir, bu sonuçlar oksidatif hasarın göstergesi olarak kabul edilmiştir (51).</div>
+<div class="cb-content"><strong>Emosyonel Stres ve Psikolojik Bozukluklar</strong></div>
+<div class="cb-content">Hastalığın şiddetli bir psikolojik stresten sonra başlaması ve bu yönde öykü olması sık gözlenen bir bulgudur. Deneysel olarak akut stresin ve kortikotropin salgılayıcı hormonun, mast hücre degranülasyonunu ve vasküler geçirgenliği artırdığı ortaya konmuştur (6). Akut emosyonel stresin, kıl folikülü çevresinde bulunan b-kortikotropin serbestleştirici hormon tip 2 reseptörünü aktive ederek, lokal enflamasyona ve buna bağlı olarak saç dökülmesine yol açtığı düşünülmektedir ve birçok çalışmada AA’lı hastalarda anksiyete ve depresyonun yüksek prevelansta olduğu gösterilmiştir (52).</div>
+<div class="cb-content"><strong>Çevresel ve Diğer Faktörler</strong></div>
+<div class="cb-content">AA’nın monozigot ikizlerde dizigotik ikizlerden anlamlı ölçüde daha sıklıkta gözlenmesi, hastalığın patogenezinde genetiğin yanında çevresel faktörlerin de rol oynayabileceğini göstermektedir (32). Hastalığı tetikleyen çevresel faktörler tam olarak bilinmemekle birlikte; hormonal değişiklikler, enfeksiyonlar, aşılar, çeşitli ilaçlar, fiziksel, ruhsal travmalar olası tetikleyiciler olarak ön görülmüştür (53).</div>
+<div class="cb-content">C3H/HeJ fare deneylerinde, yüksek soya yağı içerikli diyetin, AA oluşmasına karşı dirence neden olduğu gösterilmiştir (54). AA oluşturulmuş farelere zengin soya yağı içeren diyet verildiğinde, tekrar kıl çıkışının, soya yağı almayanlara oranla anlamlı olarak yüksek olduğu gözlemlenmiş. Soya yağının, östrojen bağımlı mekanizmalarla ve/veya enflamatuvar aktivite üzerine etkisi ile belki de barsak mikrobiyatasının olumlu yönde gelişmesine neden olması dolayısı ile bu etkisi ortaya çıkmaktadır (55).</div>
+<div class="cb-content">AA tanılı hastalarda 25-hidroksivitamin D düzeyi anlamlı olarak düşük bulunmuş ve düşüklüğün hastalığının şiddetiyle negatif ilişkili olduğu bildirilmiştir (56).</div>
+<div class="cb-content"><strong>Klinik Özellikler</strong></div>
+<div class="cb-content">AA ani, hızlı, tipik olarak 1-5 cm çapında yuvarlak veya oval yama tarzında tam saç kaybı ile giden genellikle saçlı deride, sakal bölgesinde, kaş ve kirpiklerde daha nadiren de diğer vücut bölgelerinde tam veya kısmi kıl kaybı ile karakterizedir (6,8).</div>
+<div class="cb-content">Alopesik bölgedeki deri genellikle asemptomatik ve normal görünümdedir, enflamasyon bulguları görülmez ancak bazen hafif eritem eşlik edebilir. Genelde sübjektif yakınmalar olmaz iken, bazen hastalar yeni alopesik alan oluşumundan önce söz konusu yerlerde parestezi, pruritus, duyarlılık, yanma ve hassasiyet tarif edebilmektedir (7,12,25).</div>
+<div class="cb-content">Karakteristik bulguları arasında ünlem işareti saçlar ve siyah noktalar vardır. Özellikle aktif dönemde lezyon sınırında bulunan, dermoskopi ile daha iyi seçilebilen kısa, kolaylıkla çekilebilen, ünlem işaretini andıran, distali proksimaline göre daha geniş künt uçlu, daha önce folikül içinde kırılmış (siyah nokta) saçların dışarı itilmesi sonucu meydana gelirler (2). Siyah nokta, kırık saç, sarı nokta ve kısa küme halinde vellüs tipi kıllar diğer dermoskopik bulgulardır (2,7). Foliküler yoğunluk normaldir ve folikül açıklıkları kaybolmamıştır, minyatürize kıl folikülleri görülür ve aktif ve büyüyen lezyonların periferinde hafif çekme testi pozitiftir (25). AA başlangıçta beyaz saçları tutmayabilir. Dolayısı ile hastalar hızlı bir şekilde saçlarının beyazlamasından şikayetçi olabilirler. Hastalığın süresi uzadıkça beyaz saçlar da tutulur. Kendiliğinden veya tedavi ile saçlar tekrar çıkarken, başlangıçta kıl şaftları ince ve pigmentsizdir. Bu yüzden sarı veya beyaz renkli görülürler. Ancak zamanla normal yapı ve renge kavuşurlar (11).</div>
+<div class="cb-content">AA sınıflandırılması tutulma paterni ve yaygınlığına göre çeşitli şekillerde yapılmıştır:</div>
+<div class="cb-content">Tutulum yaygınlığına göre:</div>
+<div class="cb-content">1. AA: Kıllarında kısmi kayıp,</div>
+<div class="cb-content">2. AT: Kılların tamamının (%100) döküldüğü durum,</div>
+<div class="cb-content">3. AU: Tüm vücut kıllarında %100 kayıp.</div>
+<div class="cb-content">Dökülme şekline göre:</div>
+<div class="cb-content">1. Plak tip; en sık görülen, yuvarlak veya oval alopesik alanlarla karakterizedir.</div>
+<div class="cb-content">2. Ofiyazis tip; paryetal, temporal ve oksipital bölgenin tutulduğu bant tarzı dökülmedir.</div>
+<div class="cb-content">3. Ofiyazis inversus (sisaipho) tip; saç sınırının korunup, merkezinin döküldüğü tiptir.</div>
+<div class="cb-content">4. Retiküler tip; retiküler tarzda dökülme vardır.</div>
+<div class="cb-content">5. Diffüz tip; tüm saçlı deride saç yoğunluğunda yaygın azalma vardır (6,13).</div>
+<div class="cb-content">Hastaların %5’i AT’ye dönüşürken, AU sıklığı %1 olarak tespit edilmiştir (2). Erkek hastalar tek bulgu olarak sadece sakal tutulumu ile başvurabilirler.</div>
+<div class="cb-content">Belli başlı çalışmalarda AA’da tırnak tutulumu %2-44 arasındadır ve tırnak tutulumun çocuk hastalarda ve şiddetli AA’da daha sık görüldüğü bildirilmektedir (6). Tırnak tutulumu saç dökülmesinden önce, birlikte veya sonrasında ortaya çıkabilmektedir. En sık görülen tırnak değişikliği yüksük tırnaktır. Trakionişi, onikoreksis, lökonişi, Beau çizgisi, mat tırnak, lunulada kırmızı noktalanma, onikolizis, ve onikomadezis de görülebilmektedir (57).</div>
+<div class="cb-content"><strong>Tanı</strong></div>
+<div class="cb-content">Tanı için genellikle fizik muayene yeterli olmaktadır. Dermatoskopik inceleme tanıya yardımcı bir yöntemdir. Diffüz AA’nın telogen effluvium ve androgenetik alopesiden ayrımı zor olabileceği gibi, tanıda şüphe bulunduğunda, biyopsi ile histopatolojik incelemeye başvurulabilir (10,13,25).</div>
+<div class="cb-content">Dermatoskopik, trikoskopik muayene kesin tanı koydurucu olmayıp, tanıya yardımcıdır. Dermatoskopik olarak AA lezyonlarında sarı noktalar, siyah noktalar, ünlem işareti saçlar, kısa vellüs saçlar, domuz kuyruğu saçlar, incelen saçlar, kırık saçlar ve moniletriks benzeri saçlar gibi bulgular izlenebilmektedir. Aktif evrede lezyonun kenarındaki saçlar hafif çekme testi ile rahatlıkla ele gelebilir (58). Sarı benekler ve vellüs kıllar uzun süreli hastalıkla, siyah benekler, ünlem saçlar ve kırık saçlar ise hastalık aktivitesi ile ilişkili bulunmuştur. AA’da trikogramda, telogen kıllarda artış görülür (59).</div>
+<div class="cb-content">AA’da tanı koydurucu laboratuvar testi olmayıp, hastalığa eşlik eden diğer morbiditeler açısından, tiroid, serum demir ve vitamin eksikliklerini ortaya koyabilecek testlere başvurulabilir (2).</div>
+<div class="cb-content">Hastalık şiddetinin ve yaygınlığının belirlenmesi:</div>
+<div class="cb-content">AA şiddetini belirlemek amacıyla SALT skoru tanımlanmıştır, her bir bölge için belirlenen saç kaybı yüzdesi o bölgenin saçlı deride temsil ettiği alan katsayısı ile çarpıldıktan sonra her bölge için elde edilen rakamlar toplanarak SALT skoru hesaplanmaktadır (60).</div>
+<div class="cb-content">SALT skoru = [(saç kaybı yüzdesi) sağ yan x 18] + [(saç kaybı yüzdesi) sol yan x18] + [(saç kaybı yüzdesi) üst x 40] + [(saç kaybı yüzdesi) arka x 24]</div>
+<div class="cb-content"><strong>Histopatoloji</strong></div>
+<div class="cb-content">AA’da histopatolojik değişiklikler o andaki atağın evresine bağlıdır (61). Histopatolojik inceleme için hem horizontal hem vertikal punch biyopsi almak en doğru yaklaşımdır (43). Tek bir biyopsi alınacaksa horizontal kesitler tercih edilmelidir. Akut evrede; anagen foliküller çevresinde, saç matriks keratinositlerine uzanan, arı kovanı şeklinde peribulber CD8+ ve CD4+ T lenfosit infiltrasyonu izlenir, aktif lezyonlarda CD4/CD8 oranı yüksektir. Bu lenfositler, kıl matriks hücrelerinde disorganizasyona ve apopitozise neden olurlar. Meydana gelen dejenerasyon sonucunda melanin kaçışına ve foliküler epiteliyum, dermal papilla, foliküler stelada (fibrovasküler yollar) pigment depolanması olur (43).</div>
+<div class="cb-content">Lezyonlu deride plazma hücreleri ile AA’nın her aşamasında artmış miktarda eozinofil infiltrasyonu bulunur, etkilenen kıl folikülün içinde ve çevresinde ödem, mikrovezikülasyon, apopitoz, nekroz, vakuoler dejenerasyon da izlenebilir (30).</div>
+<div class="cb-content">Subakut evrede, karakteristik olarak azalmış anagen, artmış telogen ve katagen kıllar vardır. Folikül katagen fazdan telogene ilerledikçe gerileyen enflamatuvar infiltrat bazı olgularda görülemeyebilir. Özellikle ileri evrelerde peribulbar infiltrasyonda artmış langerhans hücre sayıları dikkat çekmektedir (62).</div>
+<div class="cb-content">Kronik dönemde kıl foliküllerinin çoğu telogen fazda olup, belirgin minyatürizasyon da görülebilir (43).</div>
+<div class="cb-content">İyileşme döneminde anagen saçların sayısında artış, telogen kıllarda ise azalma gözlenir. Erken anagen dönemde tam olmayan melanosit aktivasyonuyla oluşan kıl şaftı pigmentsizdir. Tam iyileşme durumunda peribulbar infiltrat kaybolur (10,43).</div>
+<div class="cb-content"><strong>Ayırıcı Tanı</strong></div>
+<div class="cb-content">Çocuklarda, tinea kapitis ve trikotilomani ayırıcı tanıda özellikle düşünülmelidir (11). Dermatoskopik incelemede; foliküler infindibulumda peteşiler, kanca, alev, sarmal kıllar, trikoptilozis görülmesi trikotilomani lehine olan bulgulardır (58).</div>
+<div class="cb-content">Diffüz AA olgularında ayrıcı tanıda telogen effluvium ve androgenetik alopesi akla gelmelidir (13). Anagen effluvium, gevşek anagen saç sendromu da ayırıcı tanıya girebilen hastalıklardandır (63).</div>
+<div class="cb-content">Sekonder sifilizde farklı şekillerde saç dökülmesi izlenebilir. En karakteristik formu güve yeniği görünümünde yamalardır. Sekonder sifilizin diğer mukoza ve deri lezyonları açısından hasta ayrıntılı bir şekilde muayene edilmeli ve AA ile ayırımında serolojik testlere başvurulmalıdır (13).</div>
+<div class="cb-content">AA skatris yapmayan bir hastalık olmasına rağmen bazen skatris yapan diğer hastalıklarla ayrıcı tanısının yapılması gerekebilir. Skatrisyel alopesilerde folikül açıklık kaybı veya atrofi ön plandadır. Enflamasyon sık olmakla birlikte her zaman bulunmayabilir. Tanıda en değerli yöntem histopatolojik doğrulamadır. Liken plano pilaris, santral sentrifugal skatrisyel alopesi, psödopelad, diskoid lupus, frontal fibrozan alopesi özellikle erken dönemlerde ayırıcı tanıya girebilen alopesik hastalıklardandır (63,64).</div>
+<div class="cb-content">Bunlar dışında aplazia kutis ve gelişimsel kıl folikül anomalisine bağlı gelişen, frontotemporal bölgede vellüs kıllar içeren alopesik yamalar ile karakterize angular alopesi de özellikle AA’lı çocuklarda ayrıcı tanıya girebilir (25).</div>
+<div class="cb-content"><strong>Eşlik Edebilen Hastalıklar</strong></div>
+<div class="cb-content">AA’nın diğer otoimmün hastalıklar ile artmış birlikteliği birçok kez bildirilmiştir. Birlikteliğin sebep-sonuç ilişkisi henüz tam olarak ortaya konamamış olup, ilişki birlikte görülme sıklığıdır (65). Ikeda (66), literatürde ilk kez komorbiditeler açısından AA’yı eşlik eden hastalıklar açısından dört grupta sınıflamıştır. Sınıflandırmanın tarihsel değeri olmakla birlikte, birçok araştırmacı tarafından kabul görmemektedir.</div>
+<div class="cb-content">AA’nın başlama yaşı ile eşlik eden hastalıkların sıklığında değişiklikler tespit edilmiştir. On yaş öncesi başlayan AA’da atopik dermatit sıklığı artarken, 60 yaş sonrasında ise tiroid hastalıkları daha sık görülmektedir (67).</div>
+<div class="cb-content">Atopik dermatit, astım ve alerjik rinit gibi atopik hastalıkları olanlarda AA sıklığının arttığı birçok epidemiyolojik çalışmada tanımlanmıştır ve atopik dermatit varlığı ile AT ve AU gibi daha ciddi seyreden AA sıklığının arttığı gösterilmiştir (43).</div>
+<div class="cb-content">Otoimmün tiroid hastalıkları, AA’da en sık rastlanan otoimmün hastalıklardır, insidansı çeşitli yayınlarda farklı oranlarda yüksek olarak raporlanmıştır (20,29). Seyrafi ve ark. (68) AA’lı hastaların %8,9’unda tiroid fonksiyon anormallikleri ve %51,4’ünde ise pozitif otoantikorlar saptamıştır. 2018’de yapılan bir meta-analizde; otoimmün tiroid hastalıkları sıklığı %13,9 (Graves hastalığı %1,4 ve Hashimato tiroiditi %2,9) ve tiroid disfonksiyonları (subklinik hipotiroidi %10,4 ve subklinik hipertiroidi %5,7) %12,5 olarak genel topluma göre belirgin yüksek sıklıkta bulunmuştur (69).</div>
+<div class="cb-content">Vitiligonun AA ile birlikteliği, çokça çalışılmış olup, özellikle immünoterapi bazlı AA tedavileri sonucunda da hem tedavi bölgesinde hem de uzak tutulmayan bölgelerde vitiligo ortaya çıkabilmektedir (70). AA’da vitiligo sıklığı %3-8 iken, AA olmayan popülasyonunda vitiligo prevalansı %1 olarak bildirilmektedir (13).</div>
+<div class="cb-content">AA hastalarının yakın akrabalarında tip 1 diyabet riski artmışken, hastaların kendilerinde bu riskte artış gözlenememiştir, diyabet ilişkisini araştıran birçok çalışma bulunmaktadır (20,29). Bir meta-analizde hastalarda tip 1 diyabet düşük olarak saptanırken, hiperinsülinemi ve metabolik sendrom sıklığı daha yüksek bulunmuştur (69). AA’nın, otoimmün regülatör gen mutasyonuna bağlı oluşan, otoimmün poliendokrinopati sendromun bir bulgusu olarak ortaya çıkabileceği ve bu hastalarda ek olarak tip 1 diabetes mellitus, Addison hastalığı, hipoparatiroidizm, mukokütanöz kandidiazis, kronik atrofik gastrit, penisiyöz anemi, otoimmün hepatit, vitiligo ve hipogonadizm de görülebilir (71-73). Poliglandüler otoimmün sendrom tip 1 tanılı hastaların %33’ünde AA saptanmıştır (72).</div>
+<div class="cb-content">Down sendromunda, AA sıklığını %6 olarak artmış olduğu bildirilmiştir (33). Romatoid artrit, psoriasis, lupus eritematosus, çölyak hastalığı, ülseratif kolit, multipl skleroz gibi diğer otoimmün hastalıkların da AA ile birlikteliklerinin arttığını bildiren kimi çalışmalar mevcuttur (20,69). Bu hastalıkların daha fazla AT ve AU gibi yaygın hastalıklarla daha fazla ilişkili olduğu raporlanmıştır (20).</div>
+<div class="cb-content">Hematolojik ve biyokimyasal parametrelere AA’lı hastalarda bakılmış, anemi sıklığının yüksek olduğunun özellikle demir eksikliği ön planda iken, pernisiyöz anemi ile anlamlı bir korelasyon bulunamamış (69). Birçok çalışmada serum D vitamin düzeyi düşük bulunurken, D vitamini serum düzeyi ile AA hastalık şiddetini ters korele olarak bildiren yazarlarda mevcuttur (73).</div>
+<div class="cb-content">AA’ya literatürde eşlik edebildiği belirtilen hastalık ve bozuklukların genel özeti <a class="xref" data-type="table" data-target="table-1">Tablo 1</a>’de verilmiştir (2,8,73).</div>
+<div class="cb-content"><strong>Tedavi</strong></div>
+<div class="cb-content">Hastalığın doğal seyrini tam olarak değiştirecek mutlak kabul görmüş bir tedavi şu an için bulunmamaktadır. Tüm tedavi seçenekleri palyatif olup, o an için bulunan durumu kontrol etmeye yöneliktir ve hastalığın kendisini tedavi edememektedir (2,13,15). Sınırlı yama tarzı AA’sı olan hastaların tedavisiz izlemi de mümkündür, bu tip hastaların bir yıl içinde spontan remisyon oranları %80 olarak bildirilmiştir (11). Tedavi planlamasında, genellikle hastalığın yaygınlığı ve hastanın yaşı göz önünde bulundurulsa da; hastalığın süresi, tutulan bölgenin özellikleri, hastanın cinsiyeti, gebelik ve emzirme durumlarının yanında, ilaçlara uyum da dikkate alınmalıdır (16). Bu bilgiler ışığında tedavi şemaları geliştirilmiştir (<a class="xref" data-type="figure" data-target="figure-1">Şekil 1</a>) (2,43).</div>
+<div class="cb-content"><strong>Lokal Tedaviler</strong></div>
+<div class="cb-content"><strong>İntralezyonel Kortikosteroid</strong></div>
+<div class="cb-content">Saçlı deri tutulumu %50’den az olan, yetişkin hastalarda ilk tercih edilen tedavi seçeneğidir (6,7). Triamsinolon asetonid, saçlı deride 5 mg/mL (2,5-10 mg/mL, maksimum 3 mL/gün), kaş ve sakalda 2,5 mg/mL (0,5 mL her bir kaş için) konsantrasyonunda, 1 cm’lik aralıkla, 30 gauge iğne ile 0,1 mL miktarında orta demise intradermal, olarak uygulanır. Enjeksiyonlar 4-6 haftada bir tekrarlanmalıdır. İyileşme genellikle 4-8 haftada başlar, 4 ay içinde etki görülmezse tedavinin kesilmesi düşünülmelidir (2,13,25). Cevapsızlık hastanın saçlı derisindeki glukokortikoid reseptörlerini aktive eden “thioredoksin redüktaz” enzim eksikliği ile açıklanabilir. On yaş altı çocuklarda enjeksiyon yerinde lokalize ağrı olabileceğinden intralezyonel kortikosteroid enjeksiyonu pek tercih edilmez (7). Sık görülen yan etki minimal geçici atrofi olup, birkaç ay içinde kendiliğinden düzelmesi beklenir (6,11). Ayrıca kaş bölgesinde göze yakın kullanıldığında katarakt ve göz içi basıncını artırma riski vardır (74).</div>
+<div class="cb-content"><strong>Topikal Kortikosteroidler</strong></div>
+<div class="cb-content">Topikal kortikosteroidler hem çocuklarda hem de erişkinlerde birinci basamak tedavi olsalar da Gıda ve İlaç İdaresi (FDA) tarafından onay almamıştır ancak enjeksiyon yapılamayan sınırlı hastalığı bulunan çocuk hastalarda oldukça pratik bir tedavi seçeneğidir. Kortikosteroid enjeksiyonu ile karşılaştırıldığında daha az etkili olup, %30-50 beklenen cevap ve %63 kadar relaps oranları bildirilmiştir (74). Potens ve orta potens kortikosteroidler çocuklarda tercih edilirken, süper potensli olanlar erişkinlerde kullanılabilir (2). Sınıf I kortikosteroidler oklüzyonlu uygulamada, sınıf II kortikosteroidler ise minoksidil ile kombinasyonunda daha etkili olduğu bildirilmiştir (2,75). Tedaviye cevap için yüksek potensli kortikosteroidler devamlı olarak en az üç ay kullanılmalıdır (11).</div>
+<div class="cb-content"><strong>Minoksidil</strong></div>
+<div class="cb-content">Minoksidilin vazodilatasyon, anjiyogenezis ve potasyum kanalını açma etkilerinin yanında, foliküler DNA sentezini stimüle eder, foliküler keratinositlerin proliferasyonu ve diferansiyasyonu üzerine in vitro olarak direkt etkisi de mevcuttur. Etki mekanizması tam olarak bilinmemektedir (6). Kıl folikülünün morfolojisini normalleştirdiği, anagen süreyi uzattığı ve minyatürize foliküllerin anagen foliküllere dönüşümünü uyardığı gösterilmiştir (76).</div>
+<div class="cb-content">Minoksidilin en etkili formu %5’lik solüsyonudur. %5’lik solüsyonu günde iki kez, genellikle 3 ay ile 1 yıl içinde %20-45 arasında değişen derecelerde yanıt gözlenebilmektedir (6). Çocuklarda erişkinlere göre daha iyi yanıt alınmaktadır (12). Minoksidil tek ilaç olarak tercih edilmeyip genelde diğer tedavilerle kombine olarak kullanılır (74).</div>
+<div class="cb-content"><strong>Topikal İrritanlar</strong></div>
+<div class="cb-content">Antralin (ditranol), tazaroten, azeleik asit AA tedavisinde irritan madde olarak kullanılmakta olup, en çok tercih edileni antralindir (25). Antralin ile kısa süreli kontakt terapi, AA olgularında alternatif bir tedavi olarak kullanılmaktadır. Antralinin etki mekanizması tam olarak bilinmemekle birlikte tedavi bölgesinde TNF-a ve TNF-b ekspresyonunu azalttığı gösterilmiş ve TNF a/b ve INF-g gibi sitokinlerin üretimini engelleyerek ve immünomodülatör etkisiyle saç büyümesini düzenler (77). Langerhans hücreleri üzerine toksik etkisi gösterilmiş olup, dermisteki T lenfositlerin sayısını da azaltır (78). Antralinin %0,5 veya 1’lik konsantrasyonlarda başlanır, tolere edilebilen kontakt dermatit tablosu oluşturulana kadar ilacın uygulama süresi arttırılır, tedaviye cevap üç ay içinde beklenir (6,13).</div>
+<div class="cb-content"><strong>Topikal İmmünoterapi</strong></div>
+<div class="cb-content">Kontakt immünoterapi, AA için en etkili ve en iyi dokümente edilen tedavi seçeneklerinden biridir. FDA onaylı olmamakla birlikte kronik ciddi AA’da etkili ve güvenlidir (2,10,11). Etkinliği literatürde çok değişik oranlarda bildirilmekte olup, geniş serilerde %22-68, %17-75 arasında sıklıkta raporlanmıştır (2,3). Tedaviye en düşük cevap özellikle AT ve AU’da gözlenmektedir (2). Güçlü alerjenik özelliği olan maddelerin etkilenmiş deri bölgesine uygulanması sonucunda hafif kontakt ekzema oluşturma amaçlanır (11). Squarik Asit Di Butil Ester (SADBE), difensipron (DPCP) ve ilk kullanılan fakat sonrasında mutajenik etkisinin ortaya çıkmasıyla tedavi seçenekleri arasından çıkarılan dinitroklorobenzen bilinen ve etkinliği gösterilmiş olan kontakt alerjenlerdir (7). İmmünomodülatör etkilerine bağlı olarak; peribulbar CD4+/CD8+ lenfosit oranında azalmaya, perifoliküler bölgedeki T-lenfositlerin interfoliküler alanlara ve dermis doğru yer değiştirmesine neden olur (2,79). DPCP’nin aksine SADBE tedavisi öncesinde sensitizasyon gerekli değildir. Konsantrasyon artışı her hafta veya 2 haftada bir tedricen yapılır (80). SADBE ile hastaların %29-87’sinde iyi sonuçlar alındığı bildirilmiştir (6). Ciddi dermatit gelişimi sonrası doz bir veya iki önceki konsantrasyona düşürülerek veya atlanarak uygulamaya devam edilebilir. Topikal immünoterapilerin gebelikte ve emzirme döneminde kullanılması önerilmez (26).</div>
+<div class="cb-content"><strong>Kalsinörin İnhibitörleri</strong></div>
+<div class="cb-content">Takrolimus bir topikal kalsinörin inhibitörüdür. T-hücre aktivasyonu sonrası oluşan IL-2, INF-g ve TNF-a gibi bazı sitokinlerin transkripsiyonunu inhibe eder (7). Pimekrolimus ise bir askomisin makrolaktam derivesidir, takrolimusa benzer şekilde anti-enflamatuvar ve immünomodülatör etki gösterir (81).</div>
+<div class="cb-content">Bu ajanların tedavideki etkinlikleri tartışmalıdır. Yama tarzı AA’sı bulunan hastalarda %0,05 klobetazol propiyonat ile %1 pimekrolimus tedavisi karşılaştırıldığı bir çalışmada etkinlikler açısından aralarında fark saptanmamıştır (82).</div>
+<div class="cb-content"><strong>Prostoglandin Analogları </strong></div>
+<div class="cb-content">Latanoprost bir prostaglandin F2a analoğu, bimatoprost ise bir sentetik prostamide F2a analoğu olup her iki madde de glokom tedavisinde kullanılmaktadır. Glokom tedavisi sırasında yan etki olarak kirpiklerde pigmentasyon artışı, kalınlaşma ve kirpik sayısında artışa neden olduğu bildirilmiş, bu nedenle kaş ve kirpik alopesisinde kullanılabileceği düşünülmüştür. Literatürde kısmi etkili veya etkisiz olduklarına dair bildirimler olup, etkinlikleri tam olarak henüz kabul görmemiştir fakat adjuvan ajan olarak kaş ve kirpik AA’da tedaviye eklenebileceği yönünde tavsiye vardır (2).</div>
+<div class="cb-content"><strong>Sistemik Tedaviler </strong></div>
+<div class="cb-content"><strong>Sistemik Kortikosteroidler</strong></div>
+<div class="cb-content">Sistemik kortikosteroidler, anti-enflamatuvar etkileri nedeniyle AA tedavisinde kullanılan ajanlardır. Etkili bir tedavi yöntemi olmasına rağmen, yan etki profili, ilacın kesilmesi ile nüks sıklığı ve uzun süreli tedavi gerektirmesi kullanımını kısıtlamaktadır. Saç dökülmesi %50’den fazla olan hızlı ilerleme gösteren çok odaklı hastalarda kullanımı önerilmektedir (6). Yüksek doz pulse steroid tedavisi AA’da %60 etkili olmakla birlikte, ofiyazis ve kronik AT/AU gibi formlarda etkinliği zayıftır. Ayrıca ilacın kesilmesi ile relapslar fazla olup, çocuklardaki uzun dönem olumlu sonuçları da çok düşüktür (10). Metilprednizolon kullanım dozu yetişkinler için 0,5-1 mg/kg/gün ve çocuklar için 0,1-1 mg/kg/gündür. Tedavi süresi 1-6 ay arası değişir (12). Pulse steroid tedavisinin yan etkileri ve nüks oranının daha az olduğu ve daha kolay tolere edilebildiği bildirilmektedir (6,7).</div>
+<div class="cb-content"><strong>Fototerapiler</strong></div>
+<div class="cb-content">Psoralen ve ultraviyole A (PUVA) tedavisinin T-hücre fonksiyonunu ve antijen sunumunu etkilediği, langerhans hücrelerini azaltarak kıl folikülüne karşı gelişmiş olan lokal immünolojik atağı inhibe ederek etki gösterdiği düşünülmektedir (2,6).</div>
+<div class="cb-content">PUVA tedavisi için yaygın tutulumu olan hastaların seçilmesi ve 30-80 tedavi seansı önerilmektedir (26). Tedaviye cevap oranı %20-73 arasında değişmekle birlikte tedavi kesildikten sonraki nüks oranı da yüksektir (83). Çocuklarda kullanım kısıtlılığına neden olur ve uzun dönemde kıllar çıktıkça ışınların deriye ulaşması zorlaştığından tedavi etkinliği azalabilir (84). Literatürde dBUV-B, UVA-1 ile yapılmış çalışmalar da mevcut olup, AA’da etkinlikleri tam olarak ortaya konamamıştır (85).</div>
+<div class="cb-content">Excimer lazer immünomodülatör etkisinden dolayı psoriasis ve vitiligoda kullanıldığı gibi AA’da da tedavide denenmiştir. Çocuklarda ve erişkinlerde yapılan iki çalışmada sırasıyla %60 ve %41,5 oranlarında sınırlı AA’da saç çıkma oranları tespit edilirken, AT/AU’da başarılı bulunmamıştır (86).</div>
+<div class="cb-content"><strong>Siklosporin</strong></div>
+<div class="cb-content">İmmünosüpresan bir ilaç olup T helper hücreleri ve INF-g’yı baskılamakta, perifoliküler lenfositik infiltrasyonu azalttığı ve CD4/CD8 oranında azalmaya neden olduğu da gösterilmiştir (7,73). Sık görülen yan etkilerinden biri hipertrikoz olması araştırmacıları AA tedavisinde etkili olabileceğini düşündürmüştür (73). Bazı yazarlarca yan etkileri ve tedavi sonrası sık görülen nüksler nedeniyle siklosporinin kullanımı tavsiye edilmemektedir (2,7,10).</div>
+<div class="cb-content"><strong>Metotreksat</strong></div>
+<div class="cb-content">Folik asit antagonisti olan metotreksatın immünosüpresan ve anti-enflamatuvar etkileri bulunmaktadır. Özellikle şiddetli ve tedaviye dirençli AA’da kortikosteroid ile kombine veya monoterapi olarak kullanılabilmektedir (87).</div>
+<div class="cb-content"><strong>Sülfasalazin</strong></div>
+<div class="cb-content">Hem immünosüpresif hem immünomodülatör etkisi olup, T-hücre proliferasyonunu, NK hücre aktivasyonunu, sitokin ve antikor üretimini inhibe ederek etki gösterir (87).</div>
+<div class="cb-content"><strong>Biyolojik Tedaviler</strong></div>
+<div class="cb-content">AA T-hücre aracılı bir otoimmün hastalık olduğu kabul edildiğinden tedavide T-hücreleri azaltarak, T-hücre aktivasyonunu ve enflamatuvar sitokinleri inhibe ederek etki gösteren birçok biyolojik ajan denenmiştir (7). Literatürde AA hastalarında adalimumab, infliksimab, etanersept ve efalizumab gibi biyolojik ajanlarla yapılan çalışmalarda doğrulanabilir etkili sonuçlar elde edilememiştir, ayrıca romatoid artrit ve psoriasis tedavisi için, anti TNF-a tedavisi alan hastalarda AA geliştiği olgu raporları da bildirilmiştir (88). Bu bulgular TNF-a’nın AA mekanizmasında temel bir rolü oynamadığını da düşündürmektedir (7).</div>
+<div class="cb-content"><strong>JAK İnhibitörleri</strong></div>
+<div class="cb-content">Janus kinaz yolağının AA gelişim mekanizmasında rol oynayabileceğini destekler veriler mevcuttur (2) INF-a, IL-2 ve IL-15, AA’daki otoreaktif CD8+ T-hücre infiltrasyonunda belirgin rol oynarlar. Bu sitokinlerin sinyal yolakları JAK-1, JAK-2 ve JAK-3 üzerindendir. Bu reseptörlerin inhibisyonu AA’da düzelmeye neden olabilir (2).</div>
+<div class="cb-content">%40’tan fazla saç kaybı olan 90 AA’lı hastaya tofasitinib verilerek yapılan bir çalışmada, AT/AU’lu hastaların %77’si klinik olarak tedaviye cevap vermiş, bunların %58’inde %50’den fazla SALT skorunda 4-18 ay içinde düzelme görülmüş. AA’lı hastalar ise AT/AU’ya göre tofasitinib tedavisine SALT skorunda daha fazla düzelme görülmüş ve hastalık süresi 10 yılın üzerinde olanlarda tedaviye cevap daha düşük bulunmuştur (89).</div>
+<div class="cb-content">Topikal tofasitinib ve ruxolitinib ile yapılan çalışmalar da mevcuttur. Craiglow ve ark. (90) topikal tedavilere dirençli AU tanılı hastada günde 2 kere kullandıkları %0,6’lık topikal ruxolitinib ile başarılı sonuç bildirmişlerdir. Çalışmalar halen devam etmekte olmasına karşın JAK inhibitörlerinin AA’da etkin olarak kullanılabileceği ve umut vadeden bir tedavi seçeneği olduğu düşünülmektedir.</div>
+<div class="cb-content"><strong>Diğer Tedaviler</strong></div>
+<div class="cb-content">AA’nın halihazırda etiyolojiye yönelik kesin ve tam tedavisinin henüz olmamasından dolayı, süregelen zaman içinde hastalığın aydınlatılabilen oluşum mekanizma basamaklarını hipotetik olarak hedef alan birçok ilaç ve tedavi yöntemi denenmiş ve denemektedir. İzoprinozin, timopentin, fumarik asit esterleri, nitrojen mustard, plakuenil, akupunktur, timektomi, kriyoterapi, aromaterapi, dapson, fotodinamik tedavi, beksaroten, kapsaisin bunlardan bazılarıdır (73,74).</div>
+<div class="cb-content">Azatioprin özellikle dirençli AA hastalarında denenmiş, pürin antagonisti olup, hücre siklusunun sentez fazını bloke ederek sitotoksik etki ve immüniteyi baskılayarak etki gösterir (91). Literatürde yeterli veri olmamakla beraber azotiopürinin alternatif bir tedavi seçeneği olarak kullanılabileceği düşünülmektedir.</div>
+<div class="cb-content">Statinler kolesterol düşürücü etkileri yanı sıra güçlü lenfosit modülatör etkileri olan ajanlardır. Simvastatinin lökosit ve endotel hücrelerinin yüzeyindeki adhezyon moleküllerinde “down regülasyon”a yol açarak kıl folikülünde immün ayrıcalığın kaybolmasını önlediği düşünülmektedir (92). Simvastatinin immünomodülatör ve anti-enflamatuvar etkisini artırdığı düşünülen ezitimibin ile kombine edilerek AA’lı hastalarda kullanıldığı çalışmalarda %20-70 kadar başarılı sonuçlar ancak yüksek relaps oranları elde edilmiştir (93).</div>
+<div class="cb-content">Feksofenadinin gibi antihistaminik olan ajanların, atopisi bulunan AA hastalarında özellikle immünoterapi ile birlikte verildiğinde başarılı cevabı artırdığını bildiren çalışmalar vardır (94).</div>
+<div class="cb-content">Trombositten zengin plazma (PRP), otolog trombositlerce zenginleştirilmiş ve konsantre edilmiş hastanın kendi kan plazmasıdır. PRP; trombosit kaynaklı büyüme faktörü, TGF-b, fibroblast büyüme faktörü, IGF-1/2, vasküler endotelyal büyüme faktörü, EGF, IL-8, keratinosit büyüme faktörü gibi faktörlerce ve sitokinlerce zengindir. Bazı çalışmalarda PRP’nin iyi kozmetik sonucu veren, yan etkisi olmayan ve ayrıca hücre proliferasyonunu da en fazla uyaran tedavi yöntemi olarak raporlanmış ve başka çalışmalarla da desteklenmesi halinde AA’da iyi bir alternatif tedavi yöntemi olabileceği vurgulanmıştır (73).</div>
+<div class="cb-content">Rekombinant IL-2; regülatör T-hücre inhibitör etkisi dolayısıyla AA tedavisinde de kullanılabileceği ön görülmüştür. IL-2 tedavisinin ciddi yan etkileri olmakla birlikte, AA’da gelecekte bir tedavi seçeneği olabilir (95).</div>
+<div class="cb-content"><strong>Psikososyal Destek</strong></div>
+<div class="cb-content">AA’da jeneralize anksiyete, uyum bozuklukları ve depresyon gibi psikiyatrik bozukluklar sık görülmektedir (96). AA’da psikiyatrik hastalıkların tedavisine yönelik yayınlar literatürde sınırlı sayıdadır.</div>
+<div class="cb-content">Bazı çalışmalarda AA’lı hastalarda depresyon tedavisi ile plaseboya göre daha anlamlı sonuçlar elde edildiği öne sürülmüş, intralezyonel triamsinolon asetonid ile depresyon tedavisi verilenlere karşılaştırıldığında her iki grup arasında alopesik yamaların boyutları açısından fark saptanmaz iken, tedavi kesildikten sonraki 6 ay içerisinde triamsinolon injeksiyonu yapılan %66,7 hastada nüks olurken, kombine tedavi alan hastaların sadece %20’sinde hastalığın tekrarladığı gözlenmiştir (97).</div>
+<div class="cb-content">Psikososyal desteğin bir diğer formu da peruk ve saç ekleri kullanma, özellikle kaş bölgesine uygulanabilen dövme veya kalıcı makyajlar da hastanın kendini daha iyi hissetmesine neden olabilen yaklaşımlardandır. Bu tür kamuflaj metotları kullanılan tüm medikal tedavi seçenekleri ile birlikte kullanılabilir (2,74).</div>
+<div class="cb-content"><strong>Prognoz</strong></div>
+<div class="cb-content">Hastalığın otoimmün doğası neticesinde AA, kronik ve rekürren olmaya meyillidir (73). Spontan remisyon oranı yama AA’da 6-12 ay içinde %30-50 iken hastaların %66’sında beş yıl içinde tam saç çıkışı gözlenir. AA’da toplam relaps insidansı %85 olup, 20 yıl takip edilen hastalarda %100’e yakındır. Erken başlangıçlı AA’nın AT’ye ilerleme riski daha yüksektir, çocukluk döneminde başlayan AA %50 AT’ye ilerlerken, erişkinde bu oran %25 kadar bildirilmiştir (11,73).</div>
+<div class="cb-content">Bazı faktörlerin, saç çıkışını olumsuz etkilediği, hastalığın progresif ve tedaviye daha dirençli olmasıyla ilişkili olduğu bilinmektedir. AT ve AU gibi yaygın klinik formlarda saç çıkma olasılığı lokalize veya hafif formlara göre daha az olduğu bildirilmiştir (43). Diffüz AA ve yeni tanımlanmış total alopesi formları ise iyi prognoza sahiptir (2). Diğer kötü prognostik faktörler arasında ise ofiyazik tip, tırnak tutulumu, aile öyküsü, atopi, trizomi 21, eşlik eden otoimmün hastalıkların varlığı ve uzun süreli hastalık (5 yıl) bulunmasıdır (<a class="xref" data-type="table" data-target="table-2">Tablo 2</a>) (2,8,10).</div><div class="figures-section"><div class="figure-block"><img src="Dermatoz-11-39-g1.png" alt="Dermatoz-11-39-g1.png"></div><div class="figure-block"><img src="Dermatoz-11-39-g2.png" alt="Dermatoz-11-39-g2.png"></div><div class="figure-block"><img src="Dermatoz-11-39-g3.png" alt="Dermatoz-11-39-g3.png"></div></div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Gilhar A, Kalish RS. Alopecia Areata: A tissue specific autoimmune disease of the hair follicle. Autoimmun Rev 2006; 5: 64-69.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Otberg N, Shapiro J. Alopecia areata. In: Kang S, Amagai M, Bruckner AL, et al, editors. Fitzpatrick’s dermatology in general medicine. 9th ed. New York: McGraw-Hill Education; 2019: 1517-1523.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Serdaroğlu S, Gürkan A. Alopesi areata. İçinde: Tüzün Y, Serdaroğlu S, Erdem C, Özpoyraz M, Önder M, Öztürkcan S, editörler. Dermatolojide tedavi. İstanbul: Nobel Tıp Kitapevi; 2010: 58-62.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Villasante Fricke AC, Miteva M. Epidemiology and burden of alopecia areata: a systematic review. C. 8, Clin Cosmet Investigatig Dermatol 2015; 8: 397-403.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Islam N, Leung PSC, Huntley AC, Eric Gershwin M. The autoimmune basis of alopecia areata: A comprehensive review. C. 14, Autoimmun Rev 2015: 81-89.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Madani S, Shapiro J. Alopecia areata update. J Am Acad Dermatol 2000; 42: 549-566; quiz 567-570.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Wasserman D, Guzman-Sanchez DA, Scott K, McMichael A. Alopecia areata. Int J Dermatol 2007; 46: 121-131.</div>
+<div class="ref-item"><span class="ref-number">8.</span>James WD, Elston D, Treat JR, Rosenbach MA, Neuhaus I. Diseases of the Skin Appendages. In: Andrews’ diseases of the skin: clinical dermatology. 13th ed. Philadelphia: Elsevier; 2019: 750-752.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Safavi KH, Muller SA, Suman VJ, Moshell AN, Melton LJ. Incidence of alopecia areata in Olmsted County, Minnesota, 1975 Through 1989. Mayo Clin Proc 1995; 70: 628-633.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Iorrizzo M, Tosti A. Alopecia areata and alopecia areata incognita. In: Miteva M, editor. Alopecia. 1st ed. Missouri: Elsevier; 2019: 59-69.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Andrew G. Messenger, Rodney D. Sinclair, Paul Farrant DAR de B. Alopecia areata. In: Griffiths C, Barker J, Bleiker T, Robert Chalmers DC, editors. Rook’s Textbook of Dermatology. 9th ed. Oxford: Wiley‐Blackwell; 2016: 2265-2342.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Serdaroğlu S, Oğuz O. Saç hastalıkları. İçinde: Yalçın T, Gürer M, Serdaroğlu S, Aksungur V, editörler. Dermatoloji. 3. baskı. İstanbul: Nobel Tıp Kitapevi; 2008: 1295-1344.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Alkhalifah A, Alsantali A, Wang E, McElwee KJ, Shapiro J. Alopecia areata update: part I. Clinical picture, histopathology, and pathogenesis. J Am Acad Dermatol 2010; 62: 177-188, quiz 189-190.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Balevi Ş. Alopecia areata. Turkiye Klin J Int Med Sci 2006; 2: 15-18.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Shapiro J. Dermatologic therapy: Alopecia areata update. Dermatol Ther 2011; 24: 301.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Aktaş E, Aykol D. Aproaches in the treatment of alopecia areata. Turkderm 2005; 39: 20-27</div>
+<div class="ref-item"><span class="ref-number">17.</span>Sehgal VN, Jain S. Alopecia areata: past perceptions. Int J Dermatol 2002; 41: 189-190.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Nanda A, Al-Fouzan AS, Al-Hasawi F. Alopecia areata in children: a clinical profile. Pediatr Dermatol 2002; 19: 482-485.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Agre K, McCarthy Veach P, Bemmels H, Wiens K, LeRoy BS, Hordinsky M. Familial implications of autoimmune disease: Recurrence risks of alopecia areata and associated conditions in first-degree relatives. J Genet Couns 2020; 29: 35-43.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Goh C, Finkel M, Christos PJ, Sinha AA. Profile of 513 patients with alopecia areata: associations of disease subtypes with atopy, autoimmune disease and positive family history. J Eur Acad Dermatol Venereol 2006; 20: 1055-1060.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Kavak A, Yeşildal N, Parlak AH, et al. Alopecia areata in Turkey: demographic and clinical features. J Eur Acad Dermatol Venereol 2008; 22: 977-981.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Dilek N, Saral Y, Dilek R, Yüksel D, Ataseven A. Clinical, demographic and laboratory features of children with alopecia areata. Turk J Dermatol 2014; 3: 137-140.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Putterman E, Castelo-Soccio L. Seasonal patterns in alopecia areata, totalis, and universalis. J Am Acad Dermatol 2018; 79: 974-975.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Alzolibani AA. Epidemiologic and genetic characteristics of alopecia areata (part 1). Acta Dermatovenerol Alp Panonica Adriat 2011; 20: 191-198.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Sperling LC, Sinclair RD, El Shabrawi-Caelen L. Alopecias. In: Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 4th ed. Philadelphia: Elsevier; 2018: 1171-1174.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Oya O. Alopesi areata. İçinde: Tüzün Y, Gürer MA, Serdaroğlu S, Oğuz O, Aksungur V, editörler. Dermatoloji. 3. baskı. İstanbul: Nobel Tıp Kitapevi; 2008: 1318-1324.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Messenger AG, McKillop J, Farrant P, McDonagh AJ, Sladden M. British Association of Dermatologists’ guidelines for the management of alopecia areata 2012. Br J Dermatol 2012; 166: 916-926.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Önder M, Özsoy E, Tüzün Y, ve ark. Pediyatrik dermatoloji’de alopesi areata. İstanbul: Nobel Tıp Kitapevi; 2005: 501-508.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Chu SY, Chen YJ, Tseng WC, et al. Comorbidity profiles among patients with alopecia areata: the importance of onset age, a nationwide population-based study. J Am Acad Dermatol 2011; 65: 949-956.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Whiting DA. Histopathologic features of alopecia areata: a new look. Arch Dermatol 2003; 139: 1555-1559.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Shellow WV, Edwards JE, Koo JY. Profile of alopecia areata: a questionnaire analysis of patient and family. Int J Dermatol 1992; 31: 186-189.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Rodriguez TA, Fernandes KE, Dresser KL, Duvic M, National Alopecia Areata Registry. Concordance rate of alopecia areata in identical twins supports both genetic and environmental factors. J Am Acad Dermatol 2010; 62: 525-527.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Du Vivier A, Munro DD. Alopecia areata, autoimmunity, and down’s syndrome. Br Med J 1975; 1: 191-192.</div>
+<div class="ref-item"><span class="ref-number">34.</span>McDonagh AJG, Tazi-Ahnini R. Epidemiology and genetics of alopecia areata. Clin Exp Dermatol 2002; 27: 405-409.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Paus R, Christoph T, Müller-Röver S. Immunology of the hair follicle: a short journey into terra incognita. J Investig Dermatol Symp Proc 1999; 4: 226-234.</div>
+<div class="ref-item"><span class="ref-number">36.</span>McDonagh AJG, Snowden JA, Stierle C, Elliott K, Messenger AG. HLA and ICAM-1 expression in alopecia areata in vivo and in vitro: the role of cytokines. Br J Dermatol 1993; 129: 250-256.</div>
+<div class="ref-item"><span class="ref-number">37.</span>McElwee KJ, Tobin DJ, Bystryn JC, King LE, Sundberg JP. Alopecia areata: an autoimmune disease? Exp Dermatol 1999; 8: 371-379.</div>
+<div class="ref-item"><span class="ref-number">38.</span>Arca E, Kurumlu Z. Alopesi areatada etyopatogenez, klinik ve tanı. Dermatose 2003; 2: 83-89.</div>
+<div class="ref-item"><span class="ref-number">39.</span>Colombe BW, Price VH, Khoury EL, Lou CD. HLA class II alleles in long-standing alopecia totalis/alopecia universalis and long-standing patchy alopecia areata differentiate these two clinical groups. J Invest Dermatol 1995; 104(Suppl 5): 4S-5S. doi: 10.1038/jid.1995.28.</div>
+<div class="ref-item"><span class="ref-number">40.</span>Barahmani N, De Andrade M, Slusser JP, et al. Human leukocyte antigen class II alleles are associated with risk of alopecia areata. J Invest Dermatol 2008; 128: 240-243.</div>
+<div class="ref-item"><span class="ref-number">41.</span>Petukhova L, Duvic M, Hordinsky M, et al. Genome-wide association study in alopecia areata implicates both innate and adaptive immunity. Nature 2010; 466: 113-117.</div>
+<div class="ref-item"><span class="ref-number">42.</span>Betz RC, Petukhova L, Ripke S, et al. Genome-wide meta-analysis in alopecia areata resolves HLA associations and reveals two new susceptibility loci. Nat Commun 2015; 6: 5966.</div>
+<div class="ref-item"><span class="ref-number">43.</span>Strazzulla LC, Wang EHC, Avila L, et al. Alopecia areata: disease characteristics, clinical evaluation, and new perspectives on pathogenesis. J Am Acad Dermatol 2018; 78: 1-12.</div>
+<div class="ref-item"><span class="ref-number">44.</span>Kalish RS, Gilhar A. The immunology of alopecia areata and potential application to novel therapies. Dermatol Ther 2001; 14: 322-328.</div>
+<div class="ref-item"><span class="ref-number">45.</span>Gilhar A, Etzioni A, Paus R. Review: alopecia areata. N Engl J Med 2012; 366: 1515-1525.</div>
+<div class="ref-item"><span class="ref-number">46.</span>Xing L, Dai Z, Jabbari A, et al. Alopecia areata is driven by cytotoxic T lymphocytes and is reversed by JAK inhibition. Nat Med 2014; 20: 1043-1049.</div>
+<div class="ref-item"><span class="ref-number">47.</span>McDonagh AJ, Messenger AG. Alopecia areata. Clin Dermatol 2001; 19: 141-147.</div>
+<div class="ref-item"><span class="ref-number">48.</span>Cho M, Cohen PR, Duvic M. Vitiligo and alopecia areata in patients with human immunodeficiency virus infection. South Med J 1995; 88: 489-491.</div>
+<div class="ref-item"><span class="ref-number">49.</span>Teraki Y, Imanishi K, Shiohara T. Cytokines in alopecia areata: contrasting cytokine profiles in localized form and extensive form (alopecia universalis). Acta Derm Venereol 1996; 76: 421-423.</div>
+<div class="ref-item"><span class="ref-number">50.</span>Costantino CM, Baecher-Allan CM, Hafler DA. Human regulatory T cells and autoimmunity. Eur J Immunol 2008; 38: 921-924.</div>
+<div class="ref-item"><span class="ref-number">51.</span>Koca R, Armutcu F, Altinyazar C, Gürel A. Evaluation of lipid peroxidation, oxidant/antioxidant status, and serum nitric oxide levels in alopecia areata. Med Sci Monit 2005; 11: 296-299.</div>
+<div class="ref-item"><span class="ref-number">52.</span>Huang KP, Mullangi S, Guo Y, Qureshi AA. Autoimmune, atopic, and mental health comorbid conditions associated with alopecia areata in the United States. JAMA Dermatol 2013; 149: 789-794.</div>
+<div class="ref-item"><span class="ref-number">53.</span>Rodriguez TA, Duvic M. Onset of alopecia areata after Epstein-Barr virus infectious mononucleosis. J Am Acad Dermatol 2008; 59: 137-139.</div>
+<div class="ref-item"><span class="ref-number">54.</span>McElwee KJ, Niiyama S, Freyschmidt-Paul P, et al. Dietary soy oil content and soy-derived phytoestrogen genistein increase resistance to alopecia areata onset in C3H/HeJ mice. Exp Dermatol 2003; 12: 30-36.</div>
+<div class="ref-item"><span class="ref-number">55.</span>Campbell AW. Autoimmunity and the gut, Autoimmune Dis Hindawi Publishing Corporation. 2014; 2014: 152428 doi: 10.1155/2014/152428</div>
+<div class="ref-item"><span class="ref-number">56.</span>Bhat YJ, Latif I, Malik R, et al. Vitamin D level in alopecia areata. Indian J Dermatol 2017; 62: 407-410.</div>
+<div class="ref-item"><span class="ref-number">57.</span>Kasumagic-Halilovic E, Prohic A. Nail changes in alopecia areata: frequency and clinical presentation. J Eur Acad Dermatol Venereol 2009; 23: 240-241.</div>
+<div class="ref-item"><span class="ref-number">58.</span>Abraham LS, Torres FN, Azulay-Abulafia L. Dermoscopic clues to distinguish trichotillomania from patchy alopecia areata. An Bras Dermatol 2010; 85: 723-726.</div>
+<div class="ref-item"><span class="ref-number">59.</span>Inui S, Nakajima T, Nakagawa K, Itami S. Clinical significance of dermoscopy in alopecia areata: analysis of 300 cases. Int J Dermatol 2008; 47: 688-693.</div>
+<div class="ref-item"><span class="ref-number">60.</span>Olsen EA, Hordinsky MK, Price VH, et al. Alopecia areata investigational assessment guidelines--Part II. National Alopecia Areata Foundation. J Am Acad Dermatol 2004; 51: 440-447.</div>
+<div class="ref-item"><span class="ref-number">61.</span>Igarashi R, Morohashi M, Takeuchi S, Sato Y. Immunofluorescence studies on complement components in the hair follicles of normal scalp and of scalp affected by alopecia areata. Acta Derm Venereol 1981; 61: 131-135.</div>
+<div class="ref-item"><span class="ref-number">62.</span>Kohchiyama A, Hatamochi A, Ueki H. Increased number of OKT6-positive dendritic cells in the hair follicles of patients with alopecia areata. Dermatologica 1985; 171: 327-331.</div>
+<div class="ref-item"><span class="ref-number">63.</span>Amin SS, Sachdeva S. Alopecia areata: a review. J Saudi Soc Dermatology Dermatologic Surg 2013; 17: 37-45.</div>
+<div class="ref-item"><span class="ref-number">64.</span>Rakowska A, Slowinska M, Olszewska M, Rudnicka L. New trichoscopy findings in trichotillomania: flame hairs, V-sign, hook hairs, hair powder, tulip hairs. Acta Derm Venereol 2014; 94: 303-306.</div>
+<div class="ref-item"><span class="ref-number">65.</span>Hordinsky M, Ericson M. Autoimmunity: alopecia areata. J Investig Dermatol Symp Proc 2004; 9: 73-78.</div>
+<div class="ref-item"><span class="ref-number">66.</span>Ikeda T. A new classification of alopecia areata. Dermatologica. 1965; 131: 421-445.</div>
+<div class="ref-item"><span class="ref-number">67.</span>Lee NR, Kim BK, Yoon NY, Lee SY, Ahn SY, Lee WS. Differences in comorbidity profiles between early-onset and late-onset alopecia areata patients: A retrospective study of 871 Korean patients. Ann Dermatol 2014; 26: 722-726.</div>
+<div class="ref-item"><span class="ref-number">68.</span>Seyrafi H, Akhiani M, Abbasi H, Mirpour S, Gholamrezanezhad A. Evaluation of the profile of alopecia areata and the prevalence of thyroid function test abnormalities and serum autoantibodies in Iranian patients. BMC Dermatol 2005; 5: 11.</div>
+<div class="ref-item"><span class="ref-number">69.</span>Lee S, Lee H, Lee CH, Lee WS. Comorbidities in alopecia areata: a systematic review and meta-analysis. J Am Acad Dermatol 2019; 80: 466-477.</div>
+<div class="ref-item"><span class="ref-number">70.</span>Quaresma MV, Rezende TV de, Maximiliana Maia C, C Poggi B, Luzio P, Paludo P. Vitiligo as a consequence of the use of diphencyprone in the treatment of alopecia areata. Glob Dermatol 2015; 2: 159-160.</div>
+<div class="ref-item"><span class="ref-number">71.</span>Nagamine K, Peterson P, Scott HS, et al. Positional cloning of the APECED gene. Nat Genet 1997; 17: 393-398.</div>
+<div class="ref-item"><span class="ref-number">72.</span>Collins SM, Dominguez M, Ilmarinen T, Costigan C, Irvine AD. Dermatological manifestations of autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy syndrome. Br J Dermatol 2006; 154: 1088-1093.</div>
+<div class="ref-item"><span class="ref-number">73.</span>Trüeb RM, Dias MFRG. Alopecia areata: a comprehensive review of pathogenesis and management. Clin Rev Allergy Immunol 2018; 54: 68-87.</div>
+<div class="ref-item"><span class="ref-number">74.</span>Spano F, Donovan JC. Alopecia areata: Part 2: treatment. Canadian family physician Medecin de famille canadien. 2015; 69: 757-761.</div>
+<div class="ref-item"><span class="ref-number">75.</span>Charuwichitratana S, Wattanakrai P, Tanrattanakorn S. Randomized double-blind placebo-controlled trial in the treatment of alopecia areata with 0.25% desoximetasone cream. Arch Dermatol 2000; 136: 1276-1277.</div>
+<div class="ref-item"><span class="ref-number">76.</span>Buhl AE. Minoxidil’s action in hair follicles. J Investig Dermatol 1991; 96: 73S-74S.</div>
+<div class="ref-item"><span class="ref-number">77.</span>Tang L, Cao L, Sundberg JP, Lui H, Shapiro J. Restoration of hair growth in mice with an alopecia areata-like disease using topical anthralin. Exp Dermatol 2004; 13: 5-10.</div>
+<div class="ref-item"><span class="ref-number">78.</span>Tang L, Cao L, Pelech S, Lui H, Shapiro J. Cytokines and signal transduction pathways mediated by anthralin in alopecia areata-affected Dundee experimental balding rats. J Investig Dermatol Symp Proc 2003; 8: 87-90.</div>
+<div class="ref-item"><span class="ref-number">79.</span>Shapiro J, Sundberg JP, Bissonnette R, et al. Alopecia areata-like hair loss in C3H/HeJ mice and DEBR rats can be reversed using topical diphencyprone. J Investig Dermatol Symp Proc 1999; 4: 239.</div>
+<div class="ref-item"><span class="ref-number">80.</span>Yoshimasu T, Furukawa F. Modified immunotherapy for alopecia areata. Autoimmun Rev 2016; 15: 664-667.</div>
+<div class="ref-item"><span class="ref-number">81.</span>Rigopoulos D, Gregoriou S, Korfitis C, et al. Lack of response of alopecia areata to pimecrolimus cream. Clin Exp Dermatol 2007; 32: 456-457.</div>
+<div class="ref-item"><span class="ref-number">82.</span>Ucak H, Kandi B, Cicek D, Halisdemir N, Dertlıoğlu SB. The comparison of treatment with clobetasol propionate 0.05% and topical pimecrolimus 1% treatment in the treatment of alopecia areata. J Dermatolog Treat 2012; 23: 410-420.</div>
+<div class="ref-item"><span class="ref-number">83.</span>Bolduc C, Shapiro J. The treatment of alopecia areata. Dermatol Ther 2001; 14: 306-316.</div>
+<div class="ref-item"><span class="ref-number">84.</span>Baykal C. Saç ve kıl hastalıkları. İçinde: Baykal C, editör. Dermatoloji atlası. 3rd ed. İstanbul: Nobel Tıp Kitapevi; 2012: 676-692.</div>
+<div class="ref-item"><span class="ref-number">85.</span>Bayramgürler D, Demirsoy EO, Aktürk AŞ, Kiran R. Narrowband ultraviolet B phototherapy for alopecia areata. Photodermatol Photoimmunol Photomed 2011; 27: 325-327.</div>
+<div class="ref-item"><span class="ref-number">86.</span>Al-Mutairi N. 308-nm excimer laser for the treatment of alopecia areata in children. Pediatr Dermatol 2009; 26: 547-550.</div>
+<div class="ref-item"><span class="ref-number">87.</span>Gupta AK, Carviel J, Abramovits W. Treating Alopecia areata: current practices versus new directions. Am J Clin Dermatol; 2017; 18: 67-75.</div>
+<div class="ref-item"><span class="ref-number">88.</span>Fabre C, Dereure O. Worsening alopecia areata and de novo occurrence of multiple halo nevi in a patient receiving infliximab. C. 216, Dermatology 2008.; 216: 185-186.</div>
+<div class="ref-item"><span class="ref-number">89.</span>Liu LY, Craiglow BG, Dai F, King BA. Tofacitinib for the treatment of severe alopecia areata and variants: a study of 90 patients. J Am Acad Dermatol 2017; 76: 22-28.</div>
+<div class="ref-item"><span class="ref-number">90.</span>Craiglow BG, Tavares D, King BA. Topical ruxolitinib for the treatment of alopecia universalis. JAMA Dermatol 2016; 152: 490-491.</div>
+<div class="ref-item"><span class="ref-number">91.</span>Vañó-Galván S, Hermosa-Gelbard Á, Sánchez-Neila N, et al. Treatment of recalcitrant adult alopecia areata universalis with oral azathioprine. J Am Acad Dermatol 2016; 74: 1007-1008.</div>
+<div class="ref-item"><span class="ref-number">92.</span>Namazi MR. Statins: novel additions to the dermatologic arsenal? Exp Dermatol 2004; 13: 337-339.</div>
+<div class="ref-item"><span class="ref-number">93.</span>Lattouf C, Jimenez JJ, Tosti A, et al. Treatment of alopecia areata with simvastatin/ezetimibe. J Am Acad Dermatol 2015; 72: 359-361.</div>
+<div class="ref-item"><span class="ref-number">94.</span>Inui S, Nakajima T, Toda N, Itami S. Fexofenadine hydrochloride enhances the efficacy of contact immunotherapy for extensive alopecia areata: Retrospective analysis of 121 cases. J Dermatol 2009; 36: 323-327.</div>
+<div class="ref-item"><span class="ref-number">95.</span>Castela E, Le Duff F, Butori C, et al. Effects of low-dose recombinant interleukin 2 to promote T-regulatory cells in alopecia areata. JAMA Dermatol 2014; 150: 748-751.</div>
+<div class="ref-item"><span class="ref-number">96.</span>Ruiz-Doblado S, Carrizosa A, García-Hernández MJ. Alopecia areata: psychiatric comorbidity and adjustment to illness. Int J Dermatol 2003; 42: 434-437.</div>
+<div class="ref-item"><span class="ref-number">97.</span>Abedini H, Farshi S, Mirabzadeh A, Keshavarz S. Antidepressant effects of citalopram on treatment of alopecia areata in patients with major depressive disorder. J Dermatolog Treat 2014; 25: 153-155.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content"><p>Alopecia areata (AA) is a common, non-scarring, organ-specific, autoimmune, chronic inflammatory disease that can affect hair follicles and sometimes nails. The course of the disease is unpredictable, spontaneous recovery and relapse can be seen in 80% of the patients. Although the formation mechanism of AA has not been fully elucidated, It is thought that it is a T cell-mediated autoimmune disease triggered by certain environmental factors in individuals with genetic predisposition. The lifetime development risk of AA is 0.1-0.2%, all over the world 1.7%. It occurs equally in both sexes, has been reported to be more common in early ages. AA family history in affected individuals has been found between 10-20%. 20% of patients are children and 50% of all patients experience their first attack under the age of 20. Lifetime recurrence rate is estimated as 50%.</p>
+<p>One of the finding that supports AA is an autoimmune disease is other accompanying autoimmune diseases such as thyroiditis, atopy, vitiligo, psoriasis, lupus erythematosus, celiac disease, diabetes mellitus, myasthenia gravis, Addison’s disease, pernicious anemia, autoimmune hepatitis, lichen planus and Down syndrome like genetic diseases.</p>
+<p>Poor prognostic factors are early onset age, positive family history, atopy, autoimmune diseases, nail involvement in the patient, ophiasis, diffuse involvement and disease over five years.</p>
+<p>The disease which may be progresive, show relapses and recovery attacks, occurs as a result of the organ-specific autoimmune reaction of the hair follicles mediated by T lymphocyte. Few evidence-based datas are available for treatment and treatment approaches are generally based on case series and clinical experience. Most of the treatments are palliative. Factors such as extent and duration of the disease, age and gender, pregnancy and breastfeeding conditions and compliance with drugs are important in treatment planning. According to those information, AA treatment schemes have been developed.</p></div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Gilhar A, Kalish RS. Alopecia Areata: A tissue specific autoimmune disease of the hair follicle. Autoimmun Rev 2006; 5: 64-69.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Otberg N, Shapiro J. Alopecia areata. In: Kang S, Amagai M, Bruckner AL, et al, editors. Fitzpatrick’s dermatology in general medicine. 9th ed. New York: McGraw-Hill Education; 2019: 1517-1523.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Serdaroğlu S, Gürkan A. Alopesi areata. İçinde: Tüzün Y, Serdaroğlu S, Erdem C, Özpoyraz M, Önder M, Öztürkcan S, editörler. Dermatolojide tedavi. İstanbul: Nobel Tıp Kitapevi; 2010: 58-62.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Villasante Fricke AC, Miteva M. Epidemiology and burden of alopecia areata: a systematic review. C. 8, Clin Cosmet Investigatig Dermatol 2015; 8: 397-403.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Islam N, Leung PSC, Huntley AC, Eric Gershwin M. The autoimmune basis of alopecia areata: A comprehensive review. C. 14, Autoimmun Rev 2015: 81-89.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Madani S, Shapiro J. Alopecia areata update. J Am Acad Dermatol 2000; 42: 549-566; quiz 567-570.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Wasserman D, Guzman-Sanchez DA, Scott K, McMichael A. Alopecia areata. Int J Dermatol 2007; 46: 121-131.</div>
+<div class="ref-item"><span class="ref-number">8.</span>James WD, Elston D, Treat JR, Rosenbach MA, Neuhaus I. Diseases of the Skin Appendages. In: Andrews’ diseases of the skin: clinical dermatology. 13th ed. Philadelphia: Elsevier; 2019: 750-752.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Safavi KH, Muller SA, Suman VJ, Moshell AN, Melton LJ. Incidence of alopecia areata in Olmsted County, Minnesota, 1975 Through 1989. Mayo Clin Proc 1995; 70: 628-633.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Iorrizzo M, Tosti A. Alopecia areata and alopecia areata incognita. In: Miteva M, editor. Alopecia. 1st ed. Missouri: Elsevier; 2019: 59-69.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Andrew G. Messenger, Rodney D. Sinclair, Paul Farrant DAR de B. Alopecia areata. In: Griffiths C, Barker J, Bleiker T, Robert Chalmers DC, editors. Rook’s Textbook of Dermatology. 9th ed. Oxford: Wiley‐Blackwell; 2016: 2265-2342.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Serdaroğlu S, Oğuz O. Saç hastalıkları. İçinde: Yalçın T, Gürer M, Serdaroğlu S, Aksungur V, editörler. Dermatoloji. 3. baskı. İstanbul: Nobel Tıp Kitapevi; 2008: 1295-1344.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Alkhalifah A, Alsantali A, Wang E, McElwee KJ, Shapiro J. Alopecia areata update: part I. Clinical picture, histopathology, and pathogenesis. J Am Acad Dermatol 2010; 62: 177-188, quiz 189-190.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Balevi Ş. Alopecia areata. Turkiye Klin J Int Med Sci 2006; 2: 15-18.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Shapiro J. Dermatologic therapy: Alopecia areata update. Dermatol Ther 2011; 24: 301.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Aktaş E, Aykol D. Aproaches in the treatment of alopecia areata. Turkderm 2005; 39: 20-27</div>
+<div class="ref-item"><span class="ref-number">17.</span>Sehgal VN, Jain S. Alopecia areata: past perceptions. Int J Dermatol 2002; 41: 189-190.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Nanda A, Al-Fouzan AS, Al-Hasawi F. Alopecia areata in children: a clinical profile. Pediatr Dermatol 2002; 19: 482-485.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Agre K, McCarthy Veach P, Bemmels H, Wiens K, LeRoy BS, Hordinsky M. Familial implications of autoimmune disease: Recurrence risks of alopecia areata and associated conditions in first-degree relatives. J Genet Couns 2020; 29: 35-43.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Goh C, Finkel M, Christos PJ, Sinha AA. Profile of 513 patients with alopecia areata: associations of disease subtypes with atopy, autoimmune disease and positive family history. J Eur Acad Dermatol Venereol 2006; 20: 1055-1060.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Kavak A, Yeşildal N, Parlak AH, et al. Alopecia areata in Turkey: demographic and clinical features. J Eur Acad Dermatol Venereol 2008; 22: 977-981.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Dilek N, Saral Y, Dilek R, Yüksel D, Ataseven A. Clinical, demographic and laboratory features of children with alopecia areata. Turk J Dermatol 2014; 3: 137-140.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Putterman E, Castelo-Soccio L. Seasonal patterns in alopecia areata, totalis, and universalis. J Am Acad Dermatol 2018; 79: 974-975.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Alzolibani AA. Epidemiologic and genetic characteristics of alopecia areata (part 1). Acta Dermatovenerol Alp Panonica Adriat 2011; 20: 191-198.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Sperling LC, Sinclair RD, El Shabrawi-Caelen L. Alopecias. In: Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 4th ed. Philadelphia: Elsevier; 2018: 1171-1174.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Oya O. Alopesi areata. İçinde: Tüzün Y, Gürer MA, Serdaroğlu S, Oğuz O, Aksungur V, editörler. Dermatoloji. 3. baskı. İstanbul: Nobel Tıp Kitapevi; 2008: 1318-1324.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Messenger AG, McKillop J, Farrant P, McDonagh AJ, Sladden M. British Association of Dermatologists’ guidelines for the management of alopecia areata 2012. Br J Dermatol 2012; 166: 916-926.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Önder M, Özsoy E, Tüzün Y, ve ark. Pediyatrik dermatoloji’de alopesi areata. İstanbul: Nobel Tıp Kitapevi; 2005: 501-508.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Chu SY, Chen YJ, Tseng WC, et al. Comorbidity profiles among patients with alopecia areata: the importance of onset age, a nationwide population-based study. J Am Acad Dermatol 2011; 65: 949-956.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Whiting DA. Histopathologic features of alopecia areata: a new look. Arch Dermatol 2003; 139: 1555-1559.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Shellow WV, Edwards JE, Koo JY. Profile of alopecia areata: a questionnaire analysis of patient and family. Int J Dermatol 1992; 31: 186-189.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Rodriguez TA, Fernandes KE, Dresser KL, Duvic M, National Alopecia Areata Registry. Concordance rate of alopecia areata in identical twins supports both genetic and environmental factors. J Am Acad Dermatol 2010; 62: 525-527.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Du Vivier A, Munro DD. Alopecia areata, autoimmunity, and down’s syndrome. Br Med J 1975; 1: 191-192.</div>
+<div class="ref-item"><span class="ref-number">34.</span>McDonagh AJG, Tazi-Ahnini R. Epidemiology and genetics of alopecia areata. Clin Exp Dermatol 2002; 27: 405-409.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Paus R, Christoph T, Müller-Röver S. Immunology of the hair follicle: a short journey into terra incognita. J Investig Dermatol Symp Proc 1999; 4: 226-234.</div>
+<div class="ref-item"><span class="ref-number">36.</span>McDonagh AJG, Snowden JA, Stierle C, Elliott K, Messenger AG. HLA and ICAM-1 expression in alopecia areata in vivo and in vitro: the role of cytokines. Br J Dermatol 1993; 129: 250-256.</div>
+<div class="ref-item"><span class="ref-number">37.</span>McElwee KJ, Tobin DJ, Bystryn JC, King LE, Sundberg JP. Alopecia areata: an autoimmune disease? Exp Dermatol 1999; 8: 371-379.</div>
+<div class="ref-item"><span class="ref-number">38.</span>Arca E, Kurumlu Z. Alopesi areatada etyopatogenez, klinik ve tanı. Dermatose 2003; 2: 83-89.</div>
+<div class="ref-item"><span class="ref-number">39.</span>Colombe BW, Price VH, Khoury EL, Lou CD. HLA class II alleles in long-standing alopecia totalis/alopecia universalis and long-standing patchy alopecia areata differentiate these two clinical groups. J Invest Dermatol 1995; 104(Suppl 5): 4S-5S.</div>
+<div class="ref-item"><span class="ref-number">40.</span>Barahmani N, De Andrade M, Slusser JP, et al. Human leukocyte antigen class II alleles are associated with risk of alopecia areata. J Invest Dermatol 2008; 128: 240-243.</div>
+<div class="ref-item"><span class="ref-number">41.</span>Petukhova L, Duvic M, Hordinsky M, et al. Genome-wide association study in alopecia areata implicates both innate and adaptive immunity. Nature 2010; 466: 113-117.</div>
+<div class="ref-item"><span class="ref-number">42.</span>Betz RC, Petukhova L, Ripke S, et al. Genome-wide meta-analysis in alopecia areata resolves HLA associations and reveals two new susceptibility loci. Nat Commun 2015; 6: 5966.</div>
+<div class="ref-item"><span class="ref-number">43.</span>Strazzulla LC, Wang EHC, Avila L, et al. Alopecia areata: disease characteristics, clinical evaluation, and new perspectives on pathogenesis. J Am Acad Dermatol 2018; 78: 1-12.</div>
+<div class="ref-item"><span class="ref-number">44.</span>Kalish RS, Gilhar A. The immunology of alopecia areata and potential application to novel therapies. Dermatol Ther 2001; 14: 322-328.</div>
+<div class="ref-item"><span class="ref-number">45.</span>Gilhar A, Etzioni A, Paus R. Review: alopecia areata. N Engl J Med 2012; 366: 1515-1525.</div>
+<div class="ref-item"><span class="ref-number">46.</span>Xing L, Dai Z, Jabbari A, et al. Alopecia areata is driven by cytotoxic T lymphocytes and is reversed by JAK inhibition. Nat Med 2014; 20: 1043-1049.</div>
+<div class="ref-item"><span class="ref-number">47.</span>McDonagh AJ, Messenger AG. Alopecia areata. Clin Dermatol 2001; 19: 141-147.</div>
+<div class="ref-item"><span class="ref-number">48.</span>Cho M, Cohen PR, Duvic M. Vitiligo and alopecia areata in patients with human immunodeficiency virus infection. South Med J 1995; 88: 489-491.</div>
+<div class="ref-item"><span class="ref-number">49.</span>Teraki Y, Imanishi K, Shiohara T. Cytokines in alopecia areata: contrasting cytokine profiles in localized form and extensive form (alopecia universalis). Acta Derm Venereol 1996; 76: 421-423.</div>
+<div class="ref-item"><span class="ref-number">50.</span>Costantino CM, Baecher-Allan CM, Hafler DA. Human regulatory T cells and autoimmunity. Eur J Immunol 2008; 38: 921-924.</div>
+<div class="ref-item"><span class="ref-number">51.</span>Koca R, Armutcu F, Altinyazar C, Gürel A. Evaluation of lipid peroxidation, oxidant/antioxidant status, and serum nitric oxide levels in alopecia areata. Med Sci Monit 2005; 11: 296-299.</div>
+<div class="ref-item"><span class="ref-number">52.</span>Huang KP, Mullangi S, Guo Y, Qureshi AA. Autoimmune, atopic, and mental health comorbid conditions associated with alopecia areata in the United States. JAMA Dermatol 2013; 149: 789-794.</div>
+<div class="ref-item"><span class="ref-number">53.</span>Rodriguez TA, Duvic M. Onset of alopecia areata after Epstein-Barr virus infectious mononucleosis. J Am Acad Dermatol 2008; 59: 137-139.</div>
+<div class="ref-item"><span class="ref-number">54.</span>McElwee KJ, Niiyama S, Freyschmidt-Paul P, et al. Dietary soy oil content and soy-derived phytoestrogen genistein increase resistance to alopecia areata onset in C3H/HeJ mice. Exp Dermatol 2003; 12: 30-36.</div>
+<div class="ref-item"><span class="ref-number">55.</span>Campbell AW. Autoimmunity and the gut, Autoimmune Dis Hindawi Publishing Corporation. 2014; 2014: 152428</div>
+<div class="ref-item"><span class="ref-number">56.</span>Bhat YJ, Latif I, Malik R, et al. Vitamin D level in alopecia areata. Indian J Dermatol 2017; 62: 407-410.</div>
+<div class="ref-item"><span class="ref-number">57.</span>Kasumagic-Halilovic E, Prohic A. Nail changes in alopecia areata: frequency and clinical presentation. J Eur Acad Dermatol Venereol 2009; 23: 240-241.</div>
+<div class="ref-item"><span class="ref-number">58.</span>Abraham LS, Torres FN, Azulay-Abulafia L. Dermoscopic clues to distinguish trichotillomania from patchy alopecia areata. An Bras Dermatol 2010; 85: 723-726.</div>
+<div class="ref-item"><span class="ref-number">59.</span>Inui S, Nakajima T, Nakagawa K, Itami S. Clinical significance of dermoscopy in alopecia areata: analysis of 300 cases. Int J Dermatol 2008; 47: 688-693.</div>
+<div class="ref-item"><span class="ref-number">60.</span>Olsen EA, Hordinsky MK, Price VH, et al. Alopecia areata investigational assessment guidelines--Part II. National Alopecia Areata Foundation. J Am Acad Dermatol 2004; 51: 440-447.</div>
+<div class="ref-item"><span class="ref-number">61.</span>Igarashi R, Morohashi M, Takeuchi S, Sato Y. Immunofluorescence studies on complement components in the hair follicles of normal scalp and of scalp affected by alopecia areata. Acta Derm Venereol 1981; 61: 131-135.</div>
+<div class="ref-item"><span class="ref-number">62.</span>Kohchiyama A, Hatamochi A, Ueki H. Increased number of OKT6-positive dendritic cells in the hair follicles of patients with alopecia areata. Dermatologica 1985; 171: 327-331.</div>
+<div class="ref-item"><span class="ref-number">63.</span>Amin SS, Sachdeva S. Alopecia areata: a review. J Saudi Soc Dermatology Dermatologic Surg 2013; 17: 37-45.</div>
+<div class="ref-item"><span class="ref-number">64.</span>Rakowska A, Slowinska M, Olszewska M, Rudnicka L. New trichoscopy findings in trichotillomania: flame hairs, V-sign, hook hairs, hair powder, tulip hairs. Acta Derm Venereol 2014; 94: 303-306.</div>
+<div class="ref-item"><span class="ref-number">65.</span>Hordinsky M, Ericson M. Autoimmunity: alopecia areata. J Investig Dermatol Symp Proc 2004; 9: 73-78.</div>
+<div class="ref-item"><span class="ref-number">66.</span>Ikeda T. A new classification of alopecia areata. Dermatologica. 1965; 131: 421-445.</div>
+<div class="ref-item"><span class="ref-number">67.</span>Lee NR, Kim BK, Yoon NY, Lee SY, Ahn SY, Lee WS. Differences in comorbidity profiles between early-onset and late-onset alopecia areata patients: A retrospective study of 871 Korean patients. Ann Dermatol 2014; 26: 722-726.</div>
+<div class="ref-item"><span class="ref-number">68.</span>Seyrafi H, Akhiani M, Abbasi H, Mirpour S, Gholamrezanezhad A. Evaluation of the profile of alopecia areata and the prevalence of thyroid function test abnormalities and serum autoantibodies in Iranian patients. BMC Dermatol 2005; 5: 11.</div>
+<div class="ref-item"><span class="ref-number">69.</span>Lee S, Lee H, Lee CH, Lee WS. Comorbidities in alopecia areata: a systematic review and meta-analysis. J Am Acad Dermatol 2019; 80: 466-477.</div>
+<div class="ref-item"><span class="ref-number">70.</span>Quaresma MV, Rezende TV de, Maximiliana Maia C, C Poggi B, Luzio P, Paludo P. Vitiligo as a consequence of the use of diphencyprone in the treatment of alopecia areata. Glob Dermatol 2015; 2: 159-160.</div>
+<div class="ref-item"><span class="ref-number">71.</span>Nagamine K, Peterson P, Scott HS, et al. Positional cloning of the APECED gene. Nat Genet 1997; 17: 393-398.</div>
+<div class="ref-item"><span class="ref-number">72.</span>Collins SM, Dominguez M, Ilmarinen T, Costigan C, Irvine AD. Dermatological manifestations of autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy syndrome. Br J Dermatol 2006; 154: 1088-1093.</div>
+<div class="ref-item"><span class="ref-number">73.</span>Trüeb RM, Dias MFRG. Alopecia areata: a comprehensive review of pathogenesis and management. Clin Rev Allergy Immunol 2018; 54: 68-87.</div>
+<div class="ref-item"><span class="ref-number">74.</span>Spano F, Donovan JC. Alopecia areata: Part 2: treatment. Canadian family physician Medecin de famille canadien. 2015; 69: 757-761.</div>
+<div class="ref-item"><span class="ref-number">75.</span>Charuwichitratana S, Wattanakrai P, Tanrattanakorn S. Randomized double-blind placebo-controlled trial in the treatment of alopecia areata with 0.25% desoximetasone cream. Arch Dermatol 2000; 136: 1276-1277.</div>
+<div class="ref-item"><span class="ref-number">76.</span>Buhl AE. Minoxidil’s action in hair follicles. J Investig Dermatol 1991; 96: 73S-74S.</div>
+<div class="ref-item"><span class="ref-number">77.</span>Tang L, Cao L, Sundberg JP, Lui H, Shapiro J. Restoration of hair growth in mice with an alopecia areata-like disease using topical anthralin. Exp Dermatol 2004; 13: 5-10.</div>
+<div class="ref-item"><span class="ref-number">78.</span>Tang L, Cao L, Pelech S, Lui H, Shapiro J. Cytokines and signal transduction pathways mediated by anthralin in alopecia areata-affected Dundee experimental balding rats. J Investig Dermatol Symp Proc 2003; 8: 87-90.</div>
+<div class="ref-item"><span class="ref-number">79.</span>Shapiro J, Sundberg JP, Bissonnette R, et al. Alopecia areata-like hair loss in C3H/HeJ mice and DEBR rats can be reversed using topical diphencyprone. J Investig Dermatol Symp Proc 1999; 4: 239.</div>
+<div class="ref-item"><span class="ref-number">80.</span>Yoshimasu T, Furukawa F. Modified immunotherapy for alopecia areata. Autoimmun Rev 2016; 15: 664-667.</div>
+<div class="ref-item"><span class="ref-number">81.</span>Rigopoulos D, Gregoriou S, Korfitis C, et al. Lack of response of alopecia areata to pimecrolimus cream. Clin Exp Dermatol 2007; 32: 456-457.</div>
+<div class="ref-item"><span class="ref-number">82.</span>Ucak H, Kandi B, Cicek D, Halisdemir N, Dertlıoğlu SB. The comparison of treatment with clobetasol propionate 0.05% and topical pimecrolimus 1% treatment in the treatment of alopecia areata. J Dermatolog Treat 2012; 23: 410-420.</div>
+<div class="ref-item"><span class="ref-number">83.</span>Bolduc C, Shapiro J. The treatment of alopecia areata. Dermatol Ther 2001; 14: 306-316.</div>
+<div class="ref-item"><span class="ref-number">84.</span>Baykal C. Saç ve kıl hastalıkları. İçinde: Baykal C, editör. Dermatoloji atlası. 3rd ed. İstanbul: Nobel Tıp Kitapevi; 2012: 676-692.</div>
+<div class="ref-item"><span class="ref-number">85.</span>Bayramgürler D, Demirsoy EO, Aktürk AŞ, Kiran R. Narrowband ultraviolet B phototherapy for alopecia areata. Photodermatol Photoimmunol Photomed 2011; 27: 325-327.</div>
+<div class="ref-item"><span class="ref-number">86.</span>Al-Mutairi N. 308-nm excimer laser for the treatment of alopecia areata in children. Pediatr Dermatol 2009; 26: 547-550.</div>
+<div class="ref-item"><span class="ref-number">87.</span>Gupta AK, Carviel J, Abramovits W. Treating Alopecia areata: current practices versus new directions. Am J Clin Dermatol; 2017; 18: 67-75.</div>
+<div class="ref-item"><span class="ref-number">88.</span>Fabre C, Dereure O. Worsening alopecia areata and de novo occurrence of multiple halo nevi in a patient receiving infliximab. C. 216, Dermatology 2008.; 216: 185-186.</div>
+<div class="ref-item"><span class="ref-number">89.</span>Liu LY, Craiglow BG, Dai F, King BA. Tofacitinib for the treatment of severe alopecia areata and variants: a study of 90 patients. J Am Acad Dermatol 2017; 76: 22-28.</div>
+<div class="ref-item"><span class="ref-number">90.</span>Craiglow BG, Tavares D, King BA. Topical ruxolitinib for the treatment of alopecia universalis. JAMA Dermatol 2016; 152: 490-491.</div>
+<div class="ref-item"><span class="ref-number">91.</span>Vañó-Galván S, Hermosa-Gelbard Á, Sánchez-Neila N, et al. Treatment of recalcitrant adult alopecia areata universalis with oral azathioprine. J Am Acad Dermatol 2016; 74: 1007-1008.</div>
+<div class="ref-item"><span class="ref-number">92.</span>Namazi MR. Statins: novel additions to the dermatologic arsenal? Exp Dermatol 2004; 13: 337-339.</div>
+<div class="ref-item"><span class="ref-number">93.</span>Lattouf C, Jimenez JJ, Tosti A, et al. Treatment of alopecia areata with simvastatin/ezetimibe. J Am Acad Dermatol 2015; 72: 359-361.</div>
+<div class="ref-item"><span class="ref-number">94.</span>Inui S, Nakajima T, Toda N, Itami S. Fexofenadine hydrochloride enhances the efficacy of contact immunotherapy for extensive alopecia areata: Retrospective analysis of 121 cases. J Dermatol 2009; 36: 323-327.</div>
+<div class="ref-item"><span class="ref-number">95.</span>Castela E, Le Duff F, Butori C, et al. Effects of low-dose recombinant interleukin 2 to promote T-regulatory cells in alopecia areata. JAMA Dermatol 2014; 150: 748-751.</div>
+<div class="ref-item"><span class="ref-number">96.</span>Ruiz-Doblado S, Carrizosa A, García-Hernández MJ. Alopecia areata: psychiatric comorbidity and adjustment to illness. Int J Dermatol 2003; 42: 434-437.</div>
+<div class="ref-item"><span class="ref-number">97.</span>Abedini H, Farshi S, Mirabzadeh A, Keshavarz S. Antidepressant effects of citalopram on treatment of alopecia areata in patients with major depressive disorder. J Dermatolog Treat 2014; 25: 153-155.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

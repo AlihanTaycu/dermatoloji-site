@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dissemine İntravasküler Koagülasyon Olgusu | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2012-003-004/index.html">Cilt 3, Sayı 4 - Aralık 2012</a>
+    <span class="sep">›</span>
+    Dissemine İntravasküler Koagülasyon Olgusu
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Olgu Sunumu</div>
+    <h1>Dissemine İntravasküler Koagülasyon Olgusu</h1>
+    <div class="article-authors-list"><span class="author-name">Cengizhan EMRE</span><sup>1</sup>, <span class="author-name">Selma EMRE</span><sup>2</sup>, <span class="author-name">Alev AKDİKAN</span><sup>3</sup>, <span class="author-name">Şirin AYTAÇ</span><sup>4</sup>, <span class="author-name">Aslı BATUMAN</span><sup>3</sup>, <span class="author-name">Filiz Banu ETHEMOĞLU </span><sup>3</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Etlik İhtisas Eğititm ve Araştırma Hastanesi, Anesteziyoloji ve Reanimasyon Kliniği, Ankara</div><div class="affil-item"><sup>2</sup> Atatürk Eğitim ve Araştırma Hastanesi, Dermatoloji Kliniği, Ankara</div><div class="affil-item"><sup>3</sup> Yenimahalle Devlet Hastanesi, Anesteziyoloji ve Reanimasyon Kliniği, Ankara</div><div class="affil-item"><sup>4</sup> Yenimahalle Devlet Hastanesi, Gastroenteroloji Kliniği, Ankara</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Dissemine intravasküler koagülasyon</span><span class="kw-tag">malignite.</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Dissemine intravascular coagulation</span><span class="kw-tag">malignancy.</span></div>
+    
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 144-145</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-3-144.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-3-144-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Dissemine intravasküler koagülasyon (DİK), hemostatik dengenin bozulması ve yaygın damar içi pıhtılaşmanın uyarılması ile karakterize bir sendromdur. Her zaman tespit edilmese de altta yatan bir hastalıktan kaynaklanır. DİK bazen altta yatan hastalığın tanısından önce ortaya çıkabilir. Burada önceden bilinen bir malignitesi olmayan ve DİK tanısı konulan bir hasta sunulmaktadır.</div></div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Disseminated intravascular coagulation (DIC), is a syndrome charactherised by hemostatic inbalance and stimulation of widespread intravascular blood coagulation. Althought not always detected, it is caused by an underlying disease. Sometimes it may occur before the diagnosis of the underlying disease. A case with no previously known malignancy and was diagnosed DIC is presented here.</div></div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

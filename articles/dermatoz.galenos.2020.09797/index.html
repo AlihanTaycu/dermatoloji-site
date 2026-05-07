@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dermatolojide Kolşisin Kullanımı | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2020-011-003/index.html">Cilt 11, Sayı 3 - Eylül 2020</a>
+    <span class="sep">›</span>
+    Dermatolojide Kolşisin Kullanımı
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Dermatolojide Kolşisin Kullanımı</h1>
+    <div class="article-authors-list"><span class="author-name">Emel Eşer</span><sup>1*</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Midyat Devlet Hastanesi, Deri ve Zührevi Hastalıkları Kliniği, Mardin, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Dermatoloji</span><span class="kw-tag">kolşisin</span><span class="kw-tag">tedavi</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Dermatology</span><span class="kw-tag">colchicine</span><span class="kw-tag">treatment</span></div>
+    <div class="article-dates"><span>Geliş: 08.12.2020</span><span>Kabul: 22.12.2020</span><span>Yayın: 16.03.2021</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 27-30</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-11-27.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-11-27-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Kolşisin uzun yıllardır kullanılan etkili, kolay ulaşılabilen ve güvenilir ilaçlardandır. Antimitotik ve anti-enflamatuvar etkileri bulunmaktadır. Yapılan çalışmalarda kolşisinin dermatolojik hastalıklarda da etkili ve iyi tolere edilebilen bir ilaç olduğu vurgulanmıştır. Bu derlemede kolşisinin farmakolojik özellikleri, dermatolojide kullanım alanları, yan etkileri ve özel gruplarda kullanımından bahsedilecektir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Kolşisin, tıbbi özellikleri yüzyıllardır tanınan ve günümüzde halen kullanılmakta olan en eski ilaçlardan biridir. Tarihçesi M.Ö. 1500’lü yıllarda Mısır el yazması olan Ebers Papyrus’a kadar uzanmaktadır (1).</div>
+<div class="cb-content">Kolşisin, sonbahar çiğdemi olarak da bilinen Colchium Autumnale bitkisinin soğanlarından elde edilen ve yağda çözünen bir alkoloiddir. Uzun yıllardır gut ve Ailevi Akdeniz Ateşi başta olmak üzere çeşitli romatolojik hastalıkların tedavisinde kullanılmanın yanı sıra onkoloji, kardiyoloji ve dermatoloji alanında da geniş kullanım alanı bulmaktadır (1).</div>
+<div class="cb-content"><strong>Farmakokinetik ve Farmakodinamiği</strong></div>
+<div class="cb-content">Kolşisin hücre içinde tübülinlere bağlanarak, hücre iskeletini oluşturacak olan mikrotübüllerin polimerize olmasını engeller (2). Bu etkisi ile hücre bölünmesini (mitozun metafaz safhasını) inhibe etmiş olur. Kolşisin bilinen en eski antimitotik ilaçlardandır. Kolşisinin antimitotik etkisinin dışında anti-enflamatuvar etkileri de vardır. Anti-enflamatuvar etkisinden, lökositlerin sitokin salınımı, hücre göçünü ve adezyonunu baskılaması sorumludur (1).</div>
+<div class="cb-content">Kolşisin oral alımdan sonra esas olarak jejenum ve ileumdan emilir. Biyoyararlanımı kişisel olarak değişiklik gösterse de yaklaşık olarak %45’tir (3). Pik konsantrasyona ortalama 1 saat içinde çıkmaktadır. İnce barsak epitel hücrelerinin lümene bakan kısmında bulunan P-glikoprotein ve epitel hücrelerinde kolşisini metabolize eden CYP3A4 absorpsiyon üzerinde en önemli etkenlerdendir. Klirensinin %20’lik bir kısmından böbrekler sorumludur. Kolşisin temel olarak hepatobiliyer sistemden atılır (4).</div>
+<div class="cb-content"><strong>Dermatolojide Sistemik Tedavide Kullanımı</strong></div>
+<div class="cb-content">Kolşisinin, çeşitli dermatolojik hastalıklar için etkili ve iyi tolere edilebilir bir tedavi olduğu bildirilmiştir. Ancak veriler çoğunlukla küçük olgu grupları ile sınırlıdır. Behçet hastalığı, edinsel epidermolizis bülloza (EEB), lökositoklastik vaskülit, Sweet sendromu, palmoplantar püstülozis, püstüler psoriasis ve tekrarlayan aftöz stomatit ise kolşisin tedavisinin daha kapsamlı çalışılmış olduğu dermatolojik hastalıklardandır (1).</div>
+<div class="cb-content"><strong>Behçet Hastalığı</strong></div>
+<div class="cb-content">Behçet hastalığı, tekrarlayan oral ve genital ülserasyonlar, artrit ve üveitin yanı sıra, çeşitli kütanöz, gastrointestinal ve nörolojik tutulumlar ile karekterize sistemik bir vaskülittir (1). Kolşisin, Behçet hastalığında çok sık ve yaygın kullanılan bir ilaçtır. Oral ve genital lezyonlar, artrit ve oküler semptomlar üzerinde etkili bulunmuştur. Çift kör plasebo kontrollü bir çalışmada, kolşisin kullanan kadın hastalarda genital ülser ve eritema nodozum sıklığının azaldığı, hem erkek hem de kadın hastalarda artrit tedavisinde etkili olduğu belirlenmiştir (5). Davatchi ve ark.’nın (6) 169 hasta ile yaptıkları çalışmada ise, kolşisin grubunda kontrol grubuna göre oral ve genital ülserler, psödofolikülit ve eritema nodozum lezyonlarında belirgin azalma olduğu, kadın ve erkek hastalar arasında da belirgin bir fark bulunmadığı belirtilmiştir.</div>
+<div class="cb-content"><strong>Edinsel Epidermolizis Bülloza</strong></div>
+<div class="cb-content">EEB, nadir görülen, travmaya maruz kalan yerlerde subepidermal büllerin oluştuğu kronik otoimmün bir hastalıktır. Patogenezinden tip 7 kollajene karşı gelişen otoantikorlar sorumludur (7). Bu hastalığın tedavisinde kolşisinin etkinliği ilk olarak 1989’da raporlanmıştır (1). EEB tanılı 30 hasta ile yapılan retrospektif bir çalışmada kolşisin düşük yan etki profili nedeni ile birinci basamak tedavi olarak kabul edilmiş, hastalara 1-2 mg/gün dozunda kolşisin uygulanmıştır. Ek olarak oral prednizon ve dapson tedavisi de alan bu hasta grubunda remisyon ortalama 9 ay sürmüştür (8). Kolşisinin EEB’de antikor sekresyonunu baskıladığı düşünülmektedir. Kolşisin tedavisi ile serumda tip 7 kollajene karşı oluşan antikorların seviyesinde azalma gösterilmiştir. Klinik olarak, mukozal erozyonlarda, özafagus stenozunda, disfaji semptomları ve kütanöz erozyonlarda iyileşme saptanmıştır (9).</div>
+<div class="cb-content"><strong>Lökositoklastik Vaskülit</strong></div>
+<div class="cb-content">Lökositoklastik vaskülit palpe edilebilen purpura ve peteşiler ile karekterize, yaygın görülen bir küçük damar vaskülitidir. Kolşisinin lökositoklastik vaskülitte etkili olduğunu gösteren birçok olgu bildirimi yapılmıştır. Kırk bir hastadan oluşan prospektif bir çalışmada ise 0,5 mg/gün kolşisin ile belirgin bir düzelme görülmemiş, tam düzelme gösteren üç hastada ise tedavi sonlandırıldıktan sonra nüks gözlemlenmiştir (10).</div>
+<div class="cb-content"><strong>Sweet Sendromu</strong></div>
+<div class="cb-content">Sweet sendromu (akut febril nötrofilik dermatoz), ilk olarak 1964’te Robert Douglas Sweet tarafından tanımlanan nötrofilik bir dermatozdur (1). Genellikle ekstremite ve yüzde görülen, iyi sınırlı, eritemli plak ve papüller ile karekterizedir. Suehisa ve ark.’nın (11) yaptığı çalışmada, Sweet tanısı konulan dört hastaya 5 mg/gün dozunda kolşisin verilmiş ve 2-5 günde hızlı bir iyileşme gözlemlenmiştir.</div>
+<div class="cb-content"><strong>Palmoplantar Püstülozis</strong></div>
+<div class="cb-content">Palmoplantar püstülozis, psoriasis ile yakından ilişkili bir tür kronik püstüler dermatozdur. Mori ve ark. (12) tarafından 32 hasta üzerinde yapılan bir çalışmada, 1-2 mg/gün kolşisin tedavisi uygulanmış, 2-8 haftalık tedaviden sonra bir hasta dışında hastaların tümünde kısmi ya da tam remisyon görülmüştür. Bu etkiyi nötrofil kemotaksisini baskılaması ile gösterdiği düşünülmektedir.</div>
+<div class="cb-content"><strong>Püstüler Psoriasis</strong></div>
+<div class="cb-content">Kolşisinin püstüler ve palmoplantar psoriasis gibi tedavi edilmesi zor veya inatçı psoriasis formlarında etkili olduğuna inanılmaktadır. Zachariae ve ark. (13) püstüler psoriasisli dört hastadan üçünde tam remisyon bildirmişlerdir.</div>
+<div class="cb-content"><strong>Tekrarlayan Aftöz Stomatit</strong></div>
+<div class="cb-content">Tekrarlayan aftöz stomatit, oral mukozada ağrılı ülseratif veya erozif lezyonlar ile kendini gösterir. Nüfusun %20’sini etkiler. İdiyopatik olabilir ya da Behçet hastalığı gibi altta yatan bir bağışıklık bozukluğuna eşlik edebilir (1). Katz ve ark. (14) tarafından yapılan çalışmada hastaların tümüne 1,5 mg/gün kolşisin verilmiş, ağrıda %77, ülser sayısında %71 azalma saptanmış ve ilaç kesildiğinde tüm hastalarda nüks olduğu bildirilmiştir. Retrospektif olarak, şiddetli aftöz stomatiti olan 54 immünkompetan hasta (Behçet hastalığı olanlar ve idiyopatik olanlar dahil) üzerinde yapılan çalışmada, hastalar en az üç ay olmak üzere 1-1,5 mg/gün kolşisin ile tedavi edilmiştir. Bu üç aylık sürenin sonunda, 12 hastada tam iyileşme, 22 hastada lezyonların süresi ve sıklığında en az %50’lik azalma görülmüştür. Geri kalan 20 hastada ise iyileşme olmadığı ya da tedaviye tolerans göstermedikleri bildirilmiştir. Hastalar 72 ay boyunca takip edilmiş ve hastaların dördünde nüks görülmemiştir (15).</div>
+<div class="cb-content"><strong>Dermatolojide Topikal Tedavide Kullanımı</strong></div>
+<div class="cb-content"><strong>Aktinik Keratoz</strong></div>
+<div class="cb-content">Aktinik keratozlar yaygın görülen premalign lezyonlardır ve 10 yıldan fazla süredir tedavi edilmeyen aktinik keratozların skuamöz hücreli karsinoma dönüşüm riski yaklaşık %10’dur (1). Çift kör randomize bir çalışmada topikal kolşisin jel ile topikal diklofenak jelin aktinik keratoz üzerindeki etkileri karşılaştırılmıştır. Aktinik keratozu olan 70 hasta üzerinde yapılan çalışmada her iki jel de günde iki kez ve üç hafta boyunca uygulanmıştır. Her iki tedavi grubunda da tedavinin sonunda lezyon boyutlarında belirgin azalma saptanmıştır. Lezyon boyutlarında 30, 60 ve 120. günlerde yapılan ölçümlerde her iki grup arasında fark görülmemiştir. Çalışmada kolşisin grubunun diklofenak grubuna göre tedaviyi daha iyi tolere ettiği, diklofenak grubunda yaklaşık %20 hastada görülen eritemin kolşisin grubunda görülmediği de vurgulanmştır (16). Aktinik keratozu olan 16 hastalık başka bir çalışmada ise, kolşisin kremin %0,5’lik ve %1’lik konsantrasyonlarının etkinliği karşılaştırılmış ve aralarında anlamlı bir fark bulunmamıştır (17).</div>
+<div class="cb-content"><strong>Yan Etkileri</strong></div>
+<div class="cb-content">Kolşisinin yan etkileri arasında en sık gastrointestinal sistem ile ilgili yan etkiler görülür. Bulantı, kusma ve diyare yaygın görülen yan etkilerdendir ve tedavi edilen hastaların %5-10’unu etkiler (18). Kolşisin kemik iliği baskılanmasına bağlı pansitopeni yapabilmektedir. Erkek hastalarda kolşisin kullanımına bağlı geçici azospermi bildirilmiştir. Genel kas güçsüzlüğü, artmış kreatinin kinaz yüksekliği ve nöromiyopati de yan etkileri arasında olup nöromiyopati özellikle kolşisin ile etkileşen ilaçlar beraberinde kullanıldığında ya da böbrek fonksiyonu bozuk olan kişilerde tespit edilmektedir (18).</div>
+<div class="cb-content"><strong>Özel Popülasyonlarda Kullanımı</strong></div>
+<div class="cb-content"><strong>Gebelik</strong></div>
+<div class="cb-content">Kolşisinin gebelik kategorisi C’dir. Gebelikte kullanımından kaçınmak daha iyidir ve yalnızca faydaları fetal riskten ağır basarsa reçete edilmelidir (4).</div>
+<div class="cb-content"><strong>Laktasyon</strong></div>
+<div class="cb-content">İlacın yaklaşık %10’u anne sütüne geçer. Bu nedenle, ilacın alınmasıyla birlikte emzirmeden kaçınılması tavsiye edilir (4).</div>
+<div class="cb-content"><strong>Karaciğer Fonksiyon Bozukluğu</strong></div>
+<div class="cb-content">Kolşisin bilinen karaciğer fonksiyon bozukluğu olan veya ilaç tedavisi sırasında transaminaz yükselmesi gösteren hastalarda dikkatli kullanılmalıdır (4).</div>
+<div class="cb-content"><strong>Böbrek Fonksiyon Bozukluğu</strong></div>
+<div class="cb-content">Kreatinin klirensi düşük olan hastalarda kolşisin dozu titre edilmelidir. Kreatinin klirensi 10 mL/dk’de azsa kolşisin kontrendikedir (4).</div>
+<div class="cb-section-title">Sonuç</div>
+<div class="cb-content">Kolşisin dermatolojide geniş kullanım alanına sahip ilaçlardandır. Nötrofiller üzerindeki baskın etkisi ile nötrofilik dermatozlar üzerinde ve diğer immün sistem hücreleri ve sitokin yolakları üzerindeki etkisi ile birçok dermatolojik hastalıkta ucuz, güvenilir, kolay ulaşılabilinir ve yan etki profili düşük bir ilaç olarak günlük pratikte yerini almaktadır.</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Dasgeb B, Kornreich D, McGuinn K, Okon L, Brownell I, Sackett DL. Colchicine: an ancient drug with novel applications. Br J Dermatol 2018; 178: 350-356.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Dalbeth N, Lauterio TJ, Wolfe HR. Mechanism of action of colchicine in the treatment of gout. Clin Ther 2014; 36: 1465-1479.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Ferron GM, Rochdi M, Jusko WJ, Scherrmann. Oral absorption characteristics and pharmacokinetics of colchicine in healthy volunteers after single and multiple doses. J Clin Pharmacol 1996; 36: 874-883.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Sardana K, Sinha S, Sachdeva S. Colchicine in dermatology: rediscovering an old drug with novel uses. Indian Dermatol 2020; 11: 693-700.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Mat MC. Treatment of behcet’s disease. Turkderm 2009; 43: 92-97.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Davatchi F, Sadeghi Abdollahi B, Tehrani Banihashemi A, et al. Colchicine versus placebo in Behçet’s disease: randomized, double-blind, controlled crossover trial. Mod Rheumatol 2009; 19: 542-549.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Gupta R, Woodley DT, Chen M. Epidermolysis bullosa acquisita. Clin Dermatol 2012; 30: 60-69.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Kim JH, Kim YH, Kim SC. Epidermolysis bullosa acquisita: a retrospective clinical analysis of 30 cases. Acta Derm Venereol 2011; 91: 307-312.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Adachi A, Komine M, Suzuki M, et al. Oral colchicine monotherapy for epidermolysis bullosa acquisita: mechanism of action and efficacy. J Dermatol 2016; 43: 1389-1391.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Sais G, Vidaller A, Jucgla A, F Gallardo F, Peyrí J. Colchicine in the treatment of cutaneous leukocytoclastic vasculitis. Results of a prospective, randomized controlled trial. Arch Dermatol 1995;131:1399-1402.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Suehisa S, Tagami H, Inoue F, Matsumoto K, Yoshukini K. Colchicine in the treatment of acute febrile neutrophilic dermatosis (Sweet’s syndrome) Br J Dermatol 1983; 108: 99-101.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Mori S, Hino K, Izumi H. Clinical manifestations and treatment of pustulosis palmaris et plantaris. J Dermatol 1976; 86: 671-676.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Zachariae H, Kragballe K, Herlin T. Colchicine in generalized pustular psoriasis: clinical response and antibody-dependent cytotoxicity by monocytes and neutrophils. Arch Dermatol Res 1982; 274: 327-333.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Katz J, Langevitz P, Shemer J, Barak S, Livneh A. Prevention of recurrent aphthous stomatitis with colchicine: an open trial. J Am Acad Dermatol 1994; 31: 459-461.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Fontes V, Machet L, Huttenberger B, Lorette G Vaillant L. [Recurrent aphthous stomatitis: treatment with colchicine. An open trial of 54 cases]. Ann Dermatol Venereol 2002; 129:1365-1369.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Faghihi G, Elahipoor A, Iraji F, Behfar S, Abtahi-Naeini B. Topical colchicine gel versus diclofenac sodium gel for the treatment of actinic keratoses: a randomized, double-blind study. Adv Med 2016; 2016: 5918393. doi: 10.1155/2016/5918393.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Akar A, Taştan BH, Erbil H, Arca E, Kurumlu Z, Gür AR. Efficacy and safety assessment of 0.5% and 1% colchicine cream in the treatment of actinic keratoses. J Dermatolog Treat 2001; 12: 199-203.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Slobodnick A, Shah B, Pillinger MH, Krasnokutsky S. Colchicine: old and new. Am J Med 2015; 128: 461-470.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Colchicine is an effective, easily accessible and safe drug that has been for many years. It has an antimitotic and anti-inflammatory effect. Studies have emphasized that colchicine is also an effective and well tolerated drug in dermatological diseases. This review will focus on the pharmacological properties of colchicine, its use in dermatology, its side effects and its use in special groups.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Dasgeb B, Kornreich D, McGuinn K, Okon L, Brownell I, Sackett DL. Colchicine: an ancient drug with novel applications. Br J Dermatol 2018; 178: 350-356.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Dalbeth N, Lauterio TJ, Wolfe HR. Mechanism of action of colchicine in the treatment of gout. Clin Ther 2014; 36: 1465-1479.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Ferron GM, Rochdi M, Jusko WJ, Scherrmann. Oral absorption characteristics and pharmacokinetics of colchicine in healthy volunteers after single and multiple doses. J Clin Pharmacol 1996; 36: 874-883.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Sardana K, Sinha S, Sachdeva S. Colchicine in dermatology: rediscovering an old drug with novel uses. Indian Dermatol 2020; 11: 693-700.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Mat MC. Treatment of behcet’s disease. Turkderm 2009; 43: 92-97.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Davatchi F, Sadeghi Abdollahi B, Tehrani Banihashemi A, et al. Colchicine versus placebo in Behçet’s disease: randomized, double-blind, controlled crossover trial. Mod Rheumatol 2009; 19: 542-549.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Gupta R, Woodley DT, Chen M. Epidermolysis bullosa acquisita. Clin Dermatol 2012; 30: 60-69.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Kim JH, Kim YH, Kim SC. Epidermolysis bullosa acquisita: a retrospective clinical analysis of 30 cases. Acta Derm Venereol 2011; 91: 307-312.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Adachi A, Komine M, Suzuki M, et al. Oral colchicine monotherapy for epidermolysis bullosa acquisita: mechanism of action and efficacy. J Dermatol 2016; 43: 1389-1391.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Sais G, Vidaller A, Jucgla A, F Gallardo F, Peyrí J. Colchicine in the treatment of cutaneous leukocytoclastic vasculitis. Results of a prospective, randomized controlled trial. Arch Dermatol 1995;131:1399-1402.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Suehisa S, Tagami H, Inoue F, Matsumoto K, Yoshukini K. Colchicine in the treatment of acute febrile neutrophilic dermatosis (Sweet’s syndrome) Br J Dermatol 1983; 108: 99-101.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Mori S, Hino K, Izumi H. Clinical manifestations and treatment of pustulosis palmaris et plantaris. J Dermatol 1976; 86: 671-676.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Zachariae H, Kragballe K, Herlin T. Colchicine in generalized pustular psoriasis: clinical response and antibody-dependent cytotoxicity by monocytes and neutrophils. Arch Dermatol Res 1982; 274: 327-333.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Katz J, Langevitz P, Shemer J, Barak S, Livneh A. Prevention of recurrent aphthous stomatitis with colchicine: an open trial. J Am Acad Dermatol 1994; 31: 459-461.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Fontes V, Machet L, Huttenberger B, Lorette G Vaillant L. [Recurrent aphthous stomatitis: treatment with colchicine. An open trial of 54 cases]. Ann Dermatol Venereol 2002; 129:1365-1369.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Faghihi G, Elahipoor A, Iraji F, Behfar S, Abtahi-Naeini B. Topical colchicine gel versus diclofenac sodium gel for the treatment of actinic keratoses: a randomized, double-blind study. Adv Med 2016; 2016: 5918393. doi: 10.1155/2016/5918393.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Akar A, Taştan BH, Erbil H, Arca E, Kurumlu Z, Gür AR. Efficacy and safety assessment of 0.5% and 1% colchicine cream in the treatment of actinic keratoses. J Dermatolog Treat 2001; 12: 199-203.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Slobodnick A, Shah B, Pillinger MH, Krasnokutsky S. Colchicine: old and new. Am J Med 2015; 128: 461-470.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

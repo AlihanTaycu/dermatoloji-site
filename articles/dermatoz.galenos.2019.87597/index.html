@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaposi Sarkomu | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-004/index.html">Cilt 10, Sayı 4 - Aralık 2019</a>
+    <span class="sep">›</span>
+    Kaposi Sarkomu
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Kaposi Sarkomu</h1>
+    <div class="article-authors-list"><span class="author-name">Defne Özkoca</span><sup>1*</sup>, <span class="author-name">Özge Aşkın</span><sup>1</sup>, <span class="author-name">Server Serdaroğlu</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Dermatoonkoloji</span><span class="kw-tag">insan herpes virüsü 8</span><span class="kw-tag">Kaposi sarkomu</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Dermatooncology</span><span class="kw-tag">human herpes virüs 8</span><span class="kw-tag">Kaposi’s sarcoma</span></div>
+    <div class="article-dates"><span>Geliş: 13.01.2019</span><span>Kabul: 24.05.2019</span><span>Yayın: 07.10.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 103-106</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-103.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-103-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Kaposi sarkomu (KS), deride sıklıkla pembe mor papül, nodül veya plaklarla karakterize olan, insan herpes virüsü-8 ilişkili vasküler bir neoplazidir. Hastalığın klasik KS, Afrika endemik KS, iyatrojenik KS ve AIDS ilişkili (epidemik) KS olmak üzere 4 klinik alt tipi mevcuttur. Lezyonlar sıklıkla asemptomatik ve yavaş seyir göstermekle birlikte deri ve mukozaları etkileyebilmektedir. Tedavi genellikle semptomların gerilemesi ve hastalığın ilerlemesinin durdurulmasına yöneliktir. Bu derlemede KS’nin klinik bulguları, patolojik özellikleri ve tedavi seçenekleri güncel bilgi ışığında özetlenmeye çalışılmıştır.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Kaposi sarkomu (KS), insan herpes virüsü-8 (HHV-8) ilişkili bir neoplazidir. Hastalığın 4 klinik alt tipi mevcuttur. Bu alt tipler: Klasik KS, Afrika endemik KS, iyatrojenik KS ve AIDS ilişkili (epidemik) KS’dir. Hastalık pembe yama ve mavi-mor-siyah nodül, polip veya plak ile bulgu verir (1).</div>
+<div class="cb-content">Klasik KS’de olguların büyük çoğunluğu 50 yaş sonrasıdır ve kadın/erkek oranı çalışmalar arasında farklılık göstermekle beraber hastalık erkeklerde daha sık gözlenir. Afrika endemik KS erişkin siyahi erkek hastalarda gözlenir; lenfadenopatik varyant ise daha çok erkek çocuk hastalarda gözlenir. İyatrojenik KS ise organ transplantasyonu, kanser veya otoimmün hastalıklar nedeniyle immünosüpresif tedavi alan hastalarda görülüp erkeklerde daha sıktır. AIDS ilişkili (epidemik) KS ise eşcinsel erkek hastalarda ve AIDS’li çocuk hastalarda gözlenir (1). </div>
+<div class="cb-content">Klasik KS ekstremite distallerinde, yavaşça büyüyen mavi-kırmızı, mor maküller ile kendini gösterir. Birleşme eğilimi gösteren geniş plak, nodül, polipoid tümörler görülür. Başlangıçta tek taraflı olan lezyonlar hastalık ilerledikçe yayılım gösterir ve çoklu odaklar gözlenir. Hastalığın seyrinde erken lezyonlar gerileyebilir veya lezyonların evresi ilerleyebilir. Oral mukoza veya gastrointestinal sistemde asemptomatik lezyonlar oluşabilir (1). Hastalığın dört evresi mevcuttur. Evre 1 makülonodüler evredir ve alt ekstremiteye sınırlı küçük maküller ve nodüller mevcuttur. Evre 2 infiltratif evredir ve alt ekstremiteye sınırlı plaklar ve plakların üzerlerinde az sayıda nodüller gözlenir. Evre 3 florid evredir ve alt ekstremiye sınırlı anjiyomatöz plak ve nodüller mevcuttur, lezyonlar çoğu zaman ülseredir. Evre 4 dissemine evredir; alt ekstremine dışına yayılan anjiyomatöz nodül ve plaklar ile seyreder (2). Klasik tip KS kronik ve indolan seyir gösterir. Hastalık beklenen yaşam süresini etkilemez. Klasik KS ile 5 yıl takip edilen 438 hastadan yalnızca %2’si KS nedeniyle ölmüştür (3).</div>
+<div class="cb-content">Afrika endemik tipte KS’nin dört alt grubu mevcuttur. Nodüler alt grup görünüm ve davranış olarak klasik tipte KS’ye benzer. Florid ve infiltratif alt gruplar agresif seyir gösterir. Lenfadenopatik alt grup çocuk hastalarda gözlenir; primer tümör lenf nodunu tutar, ama mukokütanöz lezyonlar da gözlenebilir. Fulminan seyirli ve fataldir. İyatrojenik KS, klasik KS’ye benzer klinik gösterir. Hastalık immünosüpresif tedavinin kesilmesi ile tamamen gerileyebilir. Uzun süre yüksek doz immünosüpresif tedavi alan hastalarda agresif seyir gösterip, iç organ tutulumu görülebilir. Hastalık ölüm ile sonuçlanabilir. AIDS ilişkili KS CD4 T-hücre sayısı 500/mm3’ün altına düştüğünde gözlenir. Değişken klinik seyirlidir; tek lezyon veya dissemine kütanöz hastalık görülebilir. Soluk eritemli makül/papül/plak veya mor-siyah renkli tümör/nodül görülür. Visseral tutulum sıktır, akciğer, lenf nodu, gastrointestinal sistem tutulabilir (1). AIDS ilişkili KS’de en sık kullanılan evreleme sistemi Ulusal Sağlık Enstitüsü tarafından geliştirilmiştir ve üç prognostik parametre vardır (4):</div>
+<div class="cb-content">1- Tümörün yayılımı: Deriye sınırlı/minimal oral mukoz tutulumu iyi prognozlu, oral kavitede yaygın tutulum/visseral organ tutulumu ise kötü prognozlu,</div>
+<div class="cb-content">2- İmmünosüpresyon seviyesi: CD4 sayısı &gt;200 hücre/mikrolitre iyi prognozlu, CD4 sayısı &lt;200 hücre/mikrolitre ise kötü prognozlu,</div>
+<div class="cb-content">3- Sistemik tutulum: Fırsatçı enfeksiyonlar, oral kandida enfeksiyonu, B semptomlarının varlığı kötü prognozlu.</div>
+<div class="cb-content">Hastalığın histopatolojisinde klinik tipler arasında anlamlı farklılık yoktur. Histopatolojik bulgular evreye göre değişkenlik gösterir. Yama evresinde, küçük açılmamış lenfatiklere benzeyen, belirgin olmayan endotel ile döşeli damarların yüzeyel proliferasyonu gözlenir. Plak evresinde derin dermisi de içeren vasküler proliferasyon görülüp subkütiste de tutulum olabilir (1).</div>
+<div class="cb-content">Histopatolojik olarak kesin tanı alan hastalarda tanı sonrasında detaylı fizik muayene ile alt ekstremite, yüz, oral ve genital mukozalar özenle değerlendirilmeli ve lenf nodu muayenesi yapılmalıdır. Tam kan sayımı ve viral seroloji değerlendirilmeli, gastrointestinal tutulum açısından gaitada gizli kan (GGK) bakılmalı ve GGK pozitif ise üst gastrointestinal sistem endoskopi/kolonoskopi yapılmalıdır. Akciğer tutulumu açısından tek yönlü akciğer grafisi çekilmelidir (5).</div>
+<div class="cb-content">Hastalığın tedavisi, latent HHV-8 enfeksiyonunun tedavisi olmadığı için palyatiftir. Tedavi amaçları semptomların gerilemesi, lenfödem tedavisi, fonksiyon kaybının önlenmesi, kutane veya viseral organ lezyonlarının boyutunun küçülmesi ve hastalığının ilerlemesinin durdurulmasıdır. Az sayıda, asemptomatik lezyonlarda “bekle ve gör” rejimi uygulanabilir. Hastalık zamanla ilerleyebilir, ancak hastaların %40’ında ilerleme gözlenmez. Baskılı elastik bandajlar ekstremite ödemi varlığında kullanılabilir. Hastalığın tedavisinde uygulanan lokal tedavi yöntemleri cerrahi, radyoterapi, kriyoterapi, lazer ve intralezyonel tedavilerdir [interferon (IFN), IL2 ve kemoterapötikler]. Topikal olarak da alitretinoin, imiquimod, rapamisin, timolol, propranolol, gümüş nitrat uygulanabilir (6). </div>
+<div class="cb-content">Tourlaki ve ark.’nın (7) yaptığı bir çalışmada KS nodüllerinin cerrahi eksizyonunu takiben hidrojen peroksit uygulanmış ve hastalar sekonder iyileşmeye bırakılmıştır. Çalışmaya 90 hasta dahil edilmiş olup hastaların ortalama yaşı 76 imiş. Alt ekstremitede yerleşik olarak 82 lezyon, yüzde yerleşik olarak beş lezyon ve üst ekstremitede yerleşik üç lezyon tedavi edilmiş olup operasyon sonrası komplikasyon veya hipo/hiperpigmente sikatris ve rekürrans gelişmediği bildirilmiştir.</div>
+<div class="cb-content">KS’nin tüm alt tipleri radyasyona duyarlı olup tek bir anatomik alana sınırlı çoklu lezyonlarda, radyoterapi iyi bir tedavi alternatifidir. En sık kullanılan tedavi rejiminde toplam 30 Gy, 15 günlük tedavi ile 2 Gy/gün dozda uygulanır. Hauerstock ve ark.’nın (8) yapmış olduğu, 16 hastanın yer aldığı (ortalama yaş 74), lezyonların %94’ünün alt ekstremiteye, %6’sının üst ekstremiteye sınırlı olduğu bir çalışmada, toplam 30 Gy doz, 15x2 Gy/gün olacak şekilde uygulanmış ve %88 hastada tam yanıt, %12 hastada ise kısmi yanıt alınırken, yan etki olarak sadece akut radyasyon dermatiti geliştiği rapor edilmiştir.</div>
+<div class="cb-content">Küçük KS lezyonlarının yerel kontrolü amacıyla kriyoterapi uygulanabilir, ancak bu tedavi yönteminin uzun süreli hastalık kontrolü üzerindeki etkisi bilinmemektedir. Ucuz ve kolay erişilebilir bir yöntem olmasına rağmen sikatris riski nedeniyle tercih edilmemektedir (9,10).</div>
+<div class="cb-content">KS lezyonlarının tedavisinde lazer cihazlarından da faydalanılabilir. Özdemir ve Balevi (11) KS tedavisinde uzun atımlı Nd: YAG lazer kullandıkları araştırmalarında, 4-6 mm başlık çapı ile  180-260 J/cm<sup>2</sup>&nbsp;fluans dozda, dört hafta aralıkla 2-4 seans uygulamışlardır. Tüm hastalarda lezyonlarda gerileme gözlendiği ve yan etki olarak hafif atrofik sikatris gelişimi bildirilmiştir. Yazarlar Nd: YAG lazerin derin dokulara ulaşabilmesi nedeniyle derin papülonodüler lezyonlarda tercih edilebilecek güvenli bir tedavi yöntemi olduğu sonucuna varmışlardır.</div>
+<div class="cb-content">Marchell and Alster (12) yüz yerleşimli KS plak lezyonu olan bir hastada 585 nm pulsed dye lazer, 7 mm başlık çapı ile  6-7 J/cm2 fluans dozda, 6 hafta ara ile toplam beş seans tedavi uygulamışlar, son seanstan 12 ay sonra yapılan kontrolde rekürrans saptanmadığını bildirmişlerdir. Karbondioksit lazer de KS’nin tedavisinde denenmiştir. Chun ve ark. (13) tarafından penil KS lezyonu olan 54 yaşındaki erkek hastada 6 mm başlık çapı ile 7 watt enerjide tedavi uygulanmış olup lezyon çapında küçülme saptanmıştır.</div>
+<div class="cb-content">KS’nin tedavisinde intralezyonel tedavi yöntemleri de tercih edilmektedir. Bunlardan en sık kullanılanı intralezyonel IFN olup literatürde doz ve tedavi şeması ile ilgili kesin bilgiler bulunmamaktadır. Trattner ve ark. (14) yaptıkları çalışmada klasik KS tanılı on hastaya 3 milyon ünite IFN-alfa 2a, 3 seans/hafta olacak şekilde 4 hafta süre ile uygulamışlardır. İki hastada tam yanıt gözlenmiş olup bu hastalardan birinin uzak lezyonlarında da gerileme not edilmiştir. Yedi hastada kısmi yanıt görülmüş ve bir hastada tedaviye yanıt alınamadığı bildirilmiştir. Yan etki saptanmamıştır. Ghyka ve ark. (15) klasik KS tanılı 20 hastada yaptıkları çalışmada 12 hastaya 50.000 ünite IFN ve 8 hastaya 50.000 ünite IFN ile IL2 tedavilerini intralezyonel olarak uygulamışlardır. Haftada iki seans olacak şekilde 4-6 hafta süreyle uygulanan tedavi ile KS lezyonlarında anlamlı gerileme saptanmıştır.</div>
+<div class="cb-content">İntralezyonel kemoterapötikler de KS’nin tedavisinde kullanılabilir. Daha önce KS tedavisinde intralezyonel olarak uygulanmış olan ilaçlar vinblastin, vinkristin, doksorubisin ve bleomisindir. İntralezyonel kemoterapötik tedavi için uygun hastalar organ tutulumu olmayan, nodüler karakterde akral lezyonları olan hastalardır ve ideal olan, hastada 10’dan az lezyon olmasıdır. Vassallo ve ark. (16) yaptığı çalışmada altı KS tanılı hastaya intralezyonel vinblastin tedavisi uygulanmış (Her 1 cm<sup>2</sup>’ye 0,5 mg/mL olacak şekilde maksimum 2 mg/gün, nodül başına bir, plak başına iki enjeksiyon olacak şekilde), üç ay sonraki kontrolde tüm hastalarda tam remisyon (lezyon boyutunda %95-100 azalma) gözlendiği bildirilmiştir. Brambilla ve ark. (17) da nodüler KS lezyonları mevcut olan 151 hastada, 0,03-0,08 mL (1 µg/mL) vinkristin sülfat enjeksiyonu tedavisi ile hastalardan %76’sında tam yanıt, %18’inde kısmi yanıt gözlenmiş olup yan etki olarak hastaların %14’ünde eritem ve kaşıntı geliştiği rapor edilmiştir. Yazarlar intralezyonel vinkristinin erken evrelerde güvenilir bir ilk basamak tedavi yöntemi ve ileri evrelerde güvenilir adjuvan tedavi yöntemi olduğuna karar kılmışlardır.</div>
+<div class="cb-content">KS tedavisinde topikal tedavi ajanları da tercih edilebilir, ancak bu tedaviler hakkındaki yayınlar kısıtlıdır. Topikal yöntemler için ideal hastalar, az sayıda lezyonun küçük alana sınırlı olduğu ve kemoterapi/radyoterapinin yan etkilerinin istenmediği veya yan etkileri tolere edemeyecek olan hastalardır. Topikal alitretinoin bir 9 cis-retinoik asit analoğudur. İlacın %0,1’lik jel formu AIDS ile ilişkili KS tedavisinde Amerikan Gıda ve İlaç Kurumu onayı almıştır. İlacın klasik KS hastalarında kullanımı ile ilgili sınırlı deneyim mevcuttur. Yapılan bir çalışmada uygulanan bölge lezyonlarında kısmi/tam remisyon gözlenmiş olup uygulanmayan bölgelerde yeni lezyon çıkışının devam ettiği gözlenmiştir (18).</div>
+<div class="cb-content">Topikal imiquimod da KS tedavisinde kullanılan bir terapötik ajandır. İlacın %5’lik krem formu 17 hastada, 24 hafta boyunca, haftada 3 gün oklüzyon altında uygulanmış olup iki hastada tam, altı hastada kısmi yanıt gözlenmesine rağmen altı hastada tümör progresyonu gözlenmiştir. Yan etki olarak dokuz hastada lokal yanma, kaşıntı ve eritem bildirilmiştir. Yazarlar ilacın etkinliğini tümör alanı ile ters orantılı bulmuşlardır (19). </div>
+<div class="cb-content">KS tedavisinde topikal rapamisin tedavisi de denenmiştir. Rapamisin bir mTOR inhibitörüdür. Díaz-Ley ve ark. (20) tarafından yapılan çalışmada %0,5’lik rapamisin krem, 2x1 pozolojide 16 hafta süreyle uygulanmış olup lokalize hastalıkta etkili ve güvenli tedavi alternatifi olduğu rapor edilmiştir. Timolol jel de KS tedavisinde denenmiştir. Dört hastada %0,1’lik timolol jel, 2x1 pozolojide, altı hafta süreyle uygulanmış olup hastaların takiplerinde rekürrans saptanmamıştır (21).</div>
+<div class="cb-section-title">Sonuç</div>
+<div class="cb-content">KS, özellikle klasik tipi, indolan seyirli bir hastalık olması nedeniyle tedavisiz izlenebileceği gibi lokal tedavi yöntemleri de denenebilir. Cerrahi tedaviler, fiziksel destrüksiyona dayalı yöntemler, intalezyonel ve topikal tedaviler uygulanabilir. Ancak bu tedavi yöntemleri ile ilgili çok fazla çalışma olmadığı için güvenilir bilgiler elde edilmesi adına yeni çalışmalara ihtiyaç vardır.</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Bolognia J, Cerroni L, Schaffer JV. (2018). Dermatology (4th ed.) Philadelphia: Elsevier.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Brambilla L, Boneschi V, Taglioni M, Ferrucci S. Staging of classic Kaposi’s sarcoma: a useful tool for therapeutic choices. Eur J Dermatol 2003; 13: 83-86.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Hiatt KM, Nelson AM, Lichy JH, Fanburg-Smith JC. Classic Kaposi Sarcoma in the United States over the last two decades: a clinicopathologic and molecular study of 438 non-HIV-related Kaposi Sarcoma patients with comparison to HIV-related Kaposi Sarcoma. Mod Pathol 2008; 21: 572-582.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Krown SE, Metroka C, Wernz JC. Kaposi’s sarcoma in the acquired immune deficiency syndrome: a proposal for uniform evaluation, response, and staging criteria. AIDS Clinical Trials Group Oncology Committee. J Clin Oncol 1989; 7: 1201-1207.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Rapaka RR, Fischer M, Finucane TE, Mwakingwe A. Bigger Foot: Kaposi’s Sarcoma. Am J Med 2015; 128: 959-962.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Brenner B, Rakowsky E, Katz A, et al. Tailoring treatment for classical Kaposi’s sarcoma: comprehensive clinical guidelines. Int J Oncol 1999; 14: 1097-1102.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Tourlaki A, Bellinvia M, Brambilla L. Recommended surgery of Kaposi’s sarcoma nodules. J Dermatolog Treat 2015; 26: 354-366.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Hauerstock D, Gerstein W, Vuong T. Results of radiation therapy for treatment of classic Kaposi sarcoma. J Cutan Med Surg 2009; 13: 18-21.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Von Roenn JH, Cianfrocca M. Treatment of Kaposi’s sarcoma. Cancer Treat Res 2001; 104: 127-48.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Webster GF. Local therapy for mucocutaneous Kaposi’s sarcoma in patients with acquired immunodeficiency syndrome. Dermatol Surg 1995; 21: 205-208.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Özdemir M, Balevi A. Successful treatment of classic kaposi sarcoma with long-pulse neodymium-doped yttrium aluminum garnet laser: A preliminary study. Dermatol Surg 2017; 43: 366-370.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Marchell N, Alster TS. Successful treatment of cutaneous Kaposi’s sarcoma by the 585-nm pulsed dye laser. Dermatol Surg 1997; 23: 973-975.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Chun YS, Chang SN, Park WH. A case of classical Kaposi’s sarcoma of the penis showing a good response to high-energy pulsed carbon dioxide laser therapy. J Dermatol 1999; 26: 240-243.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Trattner A, Reizis Z, David M, Ingber A, Hagler J, Sandbank M. The therapeutic effect of intralesional interferon in classical Kaposi’s sarcoma. Br J Dermatol 1993; 129: 590-593.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ghyka G, Alecu M, Halalau F, Coman G. Intralesional human leukocyte interferon treatment alone or associated with IL-2 in non-AIDS related Kaposi’s sarcoma. J Dermatol 1992; 19: 35-39.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Vassallo C, Carugno A, Derlino F, Ciocca O, Brazzelli V, Borroni G. Intralesional vinblastine injections for treatment of classic Kaposi sarcoma in diabetic patients. Cutis 2015; 95: E28-34.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Brambilla L, Bellinvia M, Tourlaki A, Scoppio B, Gaiani F, Boneschi V. Intralesional vincristine as first-line therapy for nodular lesions in classic Kaposi sarcoma: a prospective study in 151 patients. Br J Dermatol 2010; 162: 854-859. doi: 10.1111/j.1365-2133.2009.09601.x. Epub 2009 Nov 25. Erratum in: Br J Dermatol 2010; 162: 907-908. Dosage error in article text. PubMed PMID: 19995366.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Morganroth GS. Topical 0.1% alitretinoin gel for classic Kaposi sarcoma. Arch Dermatol 2002; 138: 542-543.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Célestin Schartz NE, Chevret S, Paz C, et al. Imiquimod 5% cream for treatment of HIV-negative Kaposi’s sarcoma skin lesions: A phase I to II, open-label trial in 17 patients. J Am Acad Dermatol 2008; 58: 585-591.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Díaz-Ley B, Grillo E, Ríos-Buceta L, et al. Classic Kaposi’s sarcoma treated with topical rapamycin. Dermatol Ther 2015; 28: 40-43.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Abdelmaksoud A, Filoni A, Giudice G, Vestita M. Classic and HIV-related Kaposi sarcoma treated with 0.1% topical timolol gel. J Am Acad Dermatol 2017; 76: 153-155.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Kaposi’s sarcoma (KS) is human herpes-8 asscociated vascular tumor which is characterized by pink-livedoid papules, nodules and plaques, clinically. It was classifed into 4 groups including classical KS, endemic- African type KS, iatrogenic KS and AIDS related (epidemic) KS. The lesions are usually asymptomatic and have a slowly growing nature and they may affect both skin and mucosal surfaces. Treatment is generally directed towards regressing the symptoms and stopping the progression of the disease. In this review, the clinical findings, pathological features and treatment options of KS were shortly summarized in light of the recent knowledge.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Bolognia J, Cerroni L, Schaffer JV. (2018). Dermatology (4th ed.) Philadelphia: Elsevier.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Brambilla L, Boneschi V, Taglioni M, Ferrucci S. Staging of classic Kaposi’s sarcoma: a useful tool for therapeutic choices. Eur J Dermatol 2003; 13: 83-86.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Hiatt KM, Nelson AM, Lichy JH, Fanburg-Smith JC. Classic Kaposi Sarcoma in the United States over the last two decades: a clinicopathologic and molecular study of 438 non-HIV-related Kaposi Sarcoma patients with comparison to HIV-related Kaposi Sarcoma. Mod Pathol 2008; 21: 572-582.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Krown SE, Metroka C, Wernz JC. Kaposi’s sarcoma in the acquired immune deficiency syndrome: a proposal for uniform evaluation, response, and staging criteria. AIDS Clinical Trials Group Oncology Committee. J Clin Oncol 1989; 7: 1201-1207.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Rapaka RR, Fischer M, Finucane TE, Mwakingwe A. Bigger Foot: Kaposi’s Sarcoma. Am J Med 2015; 128: 959-962.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Brenner B, Rakowsky E, Katz A, et al. Tailoring treatment for classical Kaposi’s sarcoma: comprehensive clinical guidelines. Int J Oncol 1999; 14: 1097-1102.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Tourlaki A, Bellinvia M, Brambilla L. Recommended surgery of Kaposi’s sarcoma nodules. J Dermatolog Treat 2015; 26: 354-366.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Hauerstock D, Gerstein W, Vuong T. Results of radiation therapy for treatment of classic Kaposi sarcoma. J Cutan Med Surg 2009; 13: 18-21.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Von Roenn JH, Cianfrocca M. Treatment of Kaposi’s sarcoma. Cancer Treat Res 2001; 104: 127-48.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Webster GF. Local therapy for mucocutaneous Kaposi’s sarcoma in patients with acquired immunodeficiency syndrome. Dermatol Surg 1995; 21: 205-208.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Özdemir M, Balevi A. Successful treatment of classic kaposi sarcoma with long-pulse neodymium-doped yttrium aluminum garnet laser: A preliminary study. Dermatol Surg 2017; 43: 366-370.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Marchell N, Alster TS. Successful treatment of cutaneous Kaposi’s sarcoma by the 585-nm pulsed dye laser. Dermatol Surg 1997; 23: 973-975.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Chun YS, Chang SN, Park WH. A case of classical Kaposi’s sarcoma of the penis showing a good response to high-energy pulsed carbon dioxide laser therapy. J Dermatol 1999; 26: 240-243.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Trattner A, Reizis Z, David M, Ingber A, Hagler J, Sandbank M. The therapeutic effect of intralesional interferon in classical Kaposi’s sarcoma. Br J Dermatol 1993; 129: 590-593.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ghyka G, Alecu M, Halalau F, Coman G. Intralesional human leukocyte interferon treatment alone or associated with IL-2 in non-AIDS related Kaposi’s sarcoma. J Dermatol 1992; 19: 35-39.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Vassallo C, Carugno A, Derlino F, Ciocca O, Brazzelli V, Borroni G. Intralesional vinblastine injections for treatment of classic Kaposi sarcoma in diabetic patients. Cutis 2015; 95: E28-34.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Brambilla L, Bellinvia M, Tourlaki A, Scoppio B, Gaiani F, Boneschi V. Intralesional vincristine as first-line therapy for nodular lesions in classic Kaposi sarcoma: a prospective study in 151 patients. Br J Dermatol 2010; 162: 854-859. doi: 10.1111/j.1365-2133.2009.09601.x. Epub 2009 Nov 25. Erratum in: Br J Dermatol 2010; 162: 907-908. Dosage error in article text. PubMed PMID: 19995366.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Morganroth GS. Topical 0.1% alitretinoin gel for classic Kaposi sarcoma. Arch Dermatol 2002; 138: 542-543.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Célestin Schartz NE, Chevret S, Paz C, et al. Imiquimod 5% cream for treatment of HIV-negative Kaposi’s sarcoma skin lesions: A phase I to II, open-label trial in 17 patients. J Am Acad Dermatol 2008; 58: 585-591.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Díaz-Ley B, Grillo E, Ríos-Buceta L, et al. Classic Kaposi’s sarcoma treated with topical rapamycin. Dermatol Ther 2015; 28: 40-43.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Abdelmaksoud A, Filoni A, Giudice G, Vestita M. Classic and HIV-related Kaposi sarcoma treated with 0.1% topical timolol gel. J Am Acad Dermatol 2017; 76: 153-155.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

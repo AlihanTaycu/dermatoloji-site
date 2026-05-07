@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palmoplantar Hastalıklarda Tedavi | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-003/index.html">Cilt 10, Sayı 3 - Eylül 2019</a>
+    <span class="sep">›</span>
+    Palmoplantar Hastalıklarda Tedavi
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Palmoplantar Hastalıklarda Tedavi</h1>
+    <div class="article-authors-list"><span class="author-name">Tuğba Binarbaşı Akın</span><sup>1*</sup>, <span class="author-name">Server Serdaroğlu</span><sup>1</sup>, <span class="author-name">Burhan Engin</span><sup>1</sup>, <span class="author-name">Zekayi Kutlubay</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Dermatoloji</span><span class="kw-tag">el-ayak-ağız</span><span class="kw-tag">palmoplantar</span><span class="kw-tag">pitted keratolizis</span><span class="kw-tag">psoriasis</span><span class="kw-tag">selulit</span><span class="kw-tag">verruka</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Dermatology</span><span class="kw-tag">hand-mouth-foot disease</span><span class="kw-tag">palmoplantar</span><span class="kw-tag">pitted keratolysis</span><span class="kw-tag">psoriasis</span><span class="kw-tag">cellulitis</span><span class="kw-tag">verruca</span></div>
+    <div class="article-dates"><span>Geliş: 07.02.2018</span><span>Kabul: 17.06.2018</span><span>Yayın: 24.09.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 75-82</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-75.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-75-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Palmoplantar bölgeyi ilgilendiren hastalıklar oldukça geniş kapsamlıdır. Bu hastalıklar yalnızca elleri ve ayakları tutabilir veya aynı anda diğer vücut bölgelerini de etkileyebilir. Bu bölgelerde enfeksiyöz hastalıklar, enfeksiyonlara reaksiyonel olarak meydana gelen değişiklikler, ekzematöz lezyonlar, keratotik lezyonlar, püstüler lezyonlar ve eritemli lezyonlar görülebilir. Sınırlı deri tutulum alanına rağmen, bu durum yaşam kalitesi üzerinde belirgin bir olumsuz etki yaratır. Bu bölümde palmoplantar bölgede en sık görülen hastalıkların tedavisi hakkında konuşulacaktır.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-subtitle">Erizipel</div>
+<div class="cb-content">Antibiyotik tedavisinin yanında istirahat, elevasyon, ıslak pansuman da semptomların azalması için önemlidir. Beta hemalitik streptokoklara karşı ampirik antibiyoterapi başlanır ve tedavi süresi en az 10-14 gündür. Enfeksiyona predispozisyon oluşturan tinea pedis, fissür, venöz yetmezlik, lenfödem gibi durumların tedavisi de yapılmalıdır. Hafif şiddetli/ek hastalığı olmayan ve genel sistemik semptomların eşlik etmediği hastalarda oral tedavi olarak penisilin V 500 mg 4x1, amoksisilin 875 mg 2x1, sefaleksin 500 mg 4x1, klindamisin 300-400 mg 4x1 tercih edilir. Şiddetli hastalık, ek sistemik hastalık durumunda veya genel sistemik bulgular (ateş, titreme, taşikardi) eşlik ediyorsa veya oral tedavi ile 48 saatte yanıt alınamaması durumunda parenteral tedavi tercih edilir ve enfeksiyon belirtileri gerilemeye başlayınca oral tedavi ile devam edilebilir. Parenteral olarak sefazolin 1-2 gr 3x1, seftriakson 1-2 gr 1x1, flukloksasilin 2 gr 4x1, klindamisin 600-900 mg 3x1 tercih edilir. Eğer hastada metisiline dirençli <em>Staphylococcus aureus</em> (MRSA) için risk faktörü (son dönemde hastane yatışı ve operasyon hikayesi, HIV, hemodiyaliz) varsa vankomisin, daptomisin, linezolid, klindamisin tercih edilmektedir (1).</div>
+<div class="cb-subtitle">Selülit</div>
+<div class="cb-content">Selülitte ampirik tedavi hem beta hemolitik streptokoklara, hem de MRSA’ya karşı etkili olmalıdır. Eğer MRSA için şüphe ya da risk faktörü varsa antibiyotik seçimi ona göre düzenlenmelidir. Oral tedavide dikloksasilin 500 mg 4x1, sefadroksil 1 gr 1x1, sefaleksin 500 mg 4x1, flukloksasilin 500 mg 4x1, klindamisin 300-400 mg 4x1 tercih edilir. Parenteral tedavide sefazolin 1-2 gr 3x1, flukloksasilin 2 gr 4x1, nafsilin 2 gr 6x1, oksasilin 2 gr 6x1, klindamisin 600-900 mg 3x1 tercih edilir (2).</div>
+<div class="cb-subtitle">Erizipeloid</div>
+<div class="cb-content">Özel bir tedavi olmadan da erizipeloid deri lezyonları düzelebilir; spontan gerileme tipik olarak üç hafta içinde olur. Lokal kütanöz enfeksiyon için oral yol ile penisilin V (her 6 saatte bir 500 mg), sefaleksin (her 6 saatte bir 500 mg) ve penisilin allerjisinde siprofloksasin (12 saatte bir 250 mg) veya klindamisin (her 8 saatte bir 300 mg) uygulanabilir. Yedi günlük tedavi genellikle yeterlidir (3,4).</div>
+<div class="cb-subtitle">Tinea Pedis - Tinea Manum</div>
+<div class="cb-content">Tinea pediste ilk seçenek genel olarak topikal antifungallerdir. Azoller, allilaminler (naftidin, terbinafin), butenafin, siklopiroks, tolnaftat ve amorolfinler kullanılır. Günde 1 veya 2 kez, ortalama 3-4 hafta kullanmak yeterlidir. Enflamasyonun yoğun olduğu lezyonlarda başlangıçta topikal steroid ile kombine edilebilir. Gerekirse hiperkeratozu azaltmaya yönelik keratolitik ajanlarla (salisilik asit, üre) kombine edilebilir. Vezikülasyon veya maserasyonu olan hastalar için yardımcı bir önlem olarak Burow solüsyonu (%1 alüminyum asetat veya %5 alüminyum subasetat) veya potasyum permanganat (1/4.000) ile ıslak pansumanların, günde iki veya üç kez 20 dakika boyunca uygulanması ve sonrasında ayak parmakları arasında gazlı bez veya pamuk yerleştirilmesi yararlı olabilir. Oral tedavide terbinafin iki hafta, günde 250 mg; itrakonazol bir hafta, günde iki kez 200 mg; flukonazol iki-altı hafta boyunca haftada bir kez 150 mg şeklinde kullanılır. Bakteriyel enfeksiyon eklenmişse oral antibiyotik kullanılması da gerekir. Nüksleri engellemek için ayaklar kuru ve temiz tutulmalı, ortak terlik kullanılmamalı ve eşlik eden onikomikoz varsa o da tedavi edilmelidir. Tinea manum tedavisi de tinea pedise benzerdir (5).</div>
+<div class="cb-subtitle">Tinea Nigra</div>
+<div class="cb-content">Topikal antifungal ajanlardan bifonazol, klotrimazol, izokonazol, ketokonazol, mikonazol ve sertakonazol gibi topikal imidazollerin yanı sıra terbinafin, butenafin ve siklopiroks tercih edilebilir. Aynı zamanda %3 salisilik asit, Whitfield merhemi (%6 benzoik asit ve %3 salisilik asit) gibi topikal keratolitikler de tedavide etkilidir. Topikal ajanları 2-3 hafta boyunca günde iki kez uygulamak yeterli olacaktır. Hiperhidroz eşlik ediyorsa onun da tedavisi gereklidir (6,7).</div>
+<div class="cb-subtitle">Pitted Keratoliz</div>
+<div class="cb-content">İlk seçenek tedaviler arasında topikal klindamisin, eritromisin, mupirosin veya fusidik asit bulunur. Bu ajanları günde 2 kez, bir ila sekiz hafta arasında uygulamak gerekir. Aynı zamanda benzoil peroksit de kullanılabilir. Yardımcı tedavi yöntemleri olarak emici pamuklu çorap tercih edilmeli ve çoraplar sık sık değiştirilmeli, çoraplar 60 derecede sabunla yıkanmalı, ayaklar günde en az bir kere su ve sabunla yıkanmalı ve iyi kurulanmalı, uzun süreli kapalı ayakkabı giyilmemeli, friksiyonu engellemek için uygun kalıp ayakkabı giyilmeli, eşlik eden hiperhidroz varsa tedavi edilmelidir (8,9). Topikal tedaviye dirençli hastalarda en az 10 gün sürecek oral antibiyoterapi verilir. Klindamisin 150-300 mg, 4x1; eritromisin 250-500 mg, 4x1; doksisiklin 100 mg, 2x1; tetrasiklin 250-500 mg, 4x1 tercih edilebilir (10).</div>
+<div class="cb-subtitle">Skabiyez</div>
+<div class="cb-content">İlk seçenek topikal permetrindir. Topikal permetrin, oral ivermektin, topikal krotamiton ve topikal lindandan daha etkilidir (%90 üzeri yanıt). Permetrin boyundan itibaren tüm vücuda uygulanır. Tırnak altları ve ayak tabanına da uygulama yapılması önemlidir. Ortalama bir yetişkin için tek uygulamada genellikle 30 gram yeterlidir. Küçük çocuklarda saçlı deri tutulumu sık görülür. Bu nedenle permetrin, küçük çocuklarda kafa derisine ve yüze de (gözleri ve ağzı koruyarak) uygulanmalıdır. Gebe ve emzirende de ilk seçenek topikal permetrin olacaktır. Permetrin, 8-14 saat sonra yıkanarak (duş veya banyo) uzaklaştırılır. Genelde 1-2 hafta sonra ikinci bir uygulama daha yapılır. Bununla birlikte, tek uygulama ile iki uygulama arasındaki etkinlik farkını araştıran çalışma bulunmamaktadır. Genel olarak iyi tolere edilir. Deri irritasyonu yapma ihtimali vardır. Kurutlu skabiyez içinse topikal %5 permetrin, günlük olarak yedi gün boyunca, daha sonra iyileşene kadar haftada iki kez uygulanır (eş zamanlı oral ivermektin rejimiyle beraber) (11).</div>
+<div class="cb-content">Oral ivermektin, topikal permetrine bir alternatiftir. Kullanım kolaylığı açısından özellikle topikal tedavinin pratik olamayacağı bakım evlerinde ve diğer tesislerde görülen salgınlarda yararlı olabilir. Oral ivermektin, gebe veya emziren kadınlar ve 15 kg’den daha küçük ağırlıktaki çocuklar için ilk seçenek olarak önerilmemektedir. Klasik uyuz için 200 mcg/kg tek doz ve 1-2 hafta sonra 2. doz olarak uygulanır. İki doz uygulama ile topikal permetrinin tek doz uygulanmasına eşdeğer düzeyde klinik yanıt elde edilmektedir. Kurutlu skabiyez içinse 1, 2, 8, 9 ve 15. günlerde 200 mcg/kg (eş zamanlı topikal permetrin rejimi ile beraber) şeklinde uygulama yapılır. İvermektin iyi tolere edilir (12).</div>
+<div class="cb-content">Skabiyez tedavisinde kullanılabilecek diğer ajanlar arasında benzil benzoat, topikal kükürt, topikal krotamiton sayılabilir. Benzil benzoat (%10-%25) fakir ülkelerde ilacın düşük maliyeti nedeniyle yaygın olarak kullanılmaktadır. İlaç, iki gece üst üste sürülür, sonraki gün yıkanır. Yedi gün sonra işlem tekrarlanır. Topikal kükürt (%6-%33) öncelikle 2 aydan küçük bebek ve hamile kadınların tedavisinde kullanılır. Merhem 3 gece üst üste uygulanır, sonrasında yıkanır. Topikal krotamiton için standart bir tedavi rejimi yok. İlaç boyundan itibaren tüm vücuda uygulanır, 24 saat sonra tekrar uygulanır ve son uygulamadan 48 saat sonra yıkanır (11).</div>
+<div class="cb-content">Akara yönelik tedavi dışında eş zamanlı kaşıntı için gündüz non-sedatif, gece sedatif antihistaminikler tercih edilir. Akarların yok edilmesinden sonra, kaşıntı için orta-yüksek güçlü topikal kortikosteroidler kullanılabilir. Uygun tedavi ile 1 haftada gece kaşıntısı durur. Bazen başarılı tedaviden sonra 2-4 hafta daha kaşıntı devam edebilir. Dört haftadan sonra devam eden kaşıntı sebepleri arasında tedavi başarısızlığı, tedaviye bağlı deri tahrişi veya kontakt dermatit yer almaktadır. Hastanın yakın temas halinde olduğu kişiler de tedavi edilmelidir (son 6 hafta içinde yakın deri teması olanlar dahil). Son birkaç gün içinde kullanılan eşyalar (giyim eşyaları, çarşaflar, havlular vs.) en az üç gün boyunca plastik torba içinde bekletilebilir veya sıcak su ile yıkanıp, daha sonra ütülenebilir. Alternatif olarak kuru temizleme yapılabilir (13).</div>
+<div class="cb-subtitle">Büllü Distal Daktilit</div>
+<div class="cb-content">En sık etken A grubu beta hemolitik streptokoklar, daha az olarak <em>S. aureus</em>’dur. Bölgenin insizyon ve drenajı gerekir ve ardından ılık kompresler semptomları rahatlatmaya yardımcıdır. Tedavide penisilinaz dirençli oral antibiyotikler tercih edilir (Amoksisilin-klavulanik asit, metisilin, nafsilin, oksasilin, kloksasilin ve flukloksasilin ve sefalosporinler) (14).</div>
+<div class="cb-subtitle">El-ayak-ağız Hastalığı</div>
+<div class="cb-content">Etken olan enterovirüsler için spesifik bir antiviral yoktur. Hastaların çoğu komplikasyonsuz şekilde 7-10 gün içinde iyileşir. Bu süreçte destek tedavisi uygulanır. Ağrı ve ateş kısa sürede geriler. Bu sürede semptomatik olarak ibuprofen, asetaminofen veya ciddi durumlarda oral opioid kullanılabilir. Yeterli hidrasyonu sağlanamayan veya nörolojik veya kardiyovasküler komplikasyon gelişen hastalarda hospitalizasyon gerekir.</div>
+<div class="cb-content">Hastalığın yayılmasının önlenmesi için el hijyeni önemlidir. Oral sekresyon veya dışkıyla temas eden yüzeyler temizlenmeli ve dezenfekte edilmelidir. Bebek bezini değiştirirken el hijyenine dikkat edilmelidir. Çünkü enterovirüsler enfeksiyonu izleyen haftalar boyunca dışkıyla atılmaya devam eder. Bebeğin ve çocuğun kreşten uzaklaştırılması hastalığın yayılmasını engellemez. Etken olan virüsler, semptomları olmayan veya semptomları gerileyen çocuklar tarafından yayılabilir. Çocuğun ateşli olması, kendini iyi hissetmemesi veya çocukta açık erozyonlar olması (sekonder deri enfeksiyonunu önlemek için) veya ağız lezyonlarından fazlaca akıntı olması durumunda kreşten uzaklaştırılması uygundur. Hastaneye yatırılan hastalar için temas izolasyonu uygulanır (15).</div>
+<div class="cb-subtitle">Verruka Plantaris</div>
+<div class="cb-content">Verruka tedavisinde ilk tercih salisilik asit veya kriyoterapidir. %17-50 salisilik asit solüsyon, pomad, patch formunda kullanılabilir. Kuru deriye günlük uygulanır. Belirli aralıklarla üzerindeki debris uzaklaştırılmalıdır. Kriyoterapi uygulanmadan önce verruka üzerindeki keratotik doku uzaklaştırılmalıdır. Otuz-altmış saniye içinde eriyecek şekilde siğilin 2 mm çevresine uzanacak kadar donma halkası oluşturulur. İki donma-erime halkası uygulanır. İki-üç haftada bir tekrarlanır. Altı seans sonrası yanıt yoksa başka yönteme geçilir (16).</div>
+<div class="cb-content">Kontakt alerjenlerle topikal immünoterapi (skuarik asit dibütil ester, difensipron) siğil tedavisinde kullanılabilir. %1-3’lük konsantrasyonlarla lezyonsuz alana yapılan duyarlanmadan 2 hafta sonra düşük konsantrasyonla başlanıp yükseltilerek haftada 1-2 uygulama yapılır (17).</div>
+<div class="cb-content">Alternatif tedaviler arasında intralezyonel bleomisin, topikal 5‐fluorouracil (5-FU), imikimod, %35-80 TCA, koterizasyon, cerrahi, Nd: YAG lazer, pulsed dye lazer sayılabilir (16).</div>
+<div class="cb-subtitle">Reiter Sendromu (Reaktif Artrit)</div>
+<div class="cb-content">Öncelikle altta yatan enteral/genitoüriner enfeksiyonun tedavisi yapılmalıdır. Hafif-orta dereceli keratoderma blenorajikada topikal steroidler, topikal salisilatlar, topikal kalsipotriol tercih edilir. Şiddetli veya topikal tedavilere yanıtsız hastalarda psoriasiste olduğu gibi metotreksat, oral retinoid, TNF alfa inhibitörleri kullanılabilir (18,19).</div>
+<div class="cb-subtitle">Eritema Multiforme</div>
+<div class="cb-content">Akut eritema multiformenin (EM) tedavisi hastalığın şiddetine göre değişir. EM çoğu zaman kendini sınırlar ama nüks etme ihtimali vardır. Hafif hastalığa sahip hastalar için ağrı veya pruritusun azaltılmasına yönelik tedaviler yeterlidir. Buna karşılık, ciddi oral mukozal tutulumu olan hastalar için sistemik kortikosteroid tedavisi düşünülmelidir.</div>
+<div class="cb-content">EM olgularının yaklaşık %90’ı enfeksiyonlar tarafından tetiklenir, ancak tetikleyen enfeksiyonunun akut tedavisinin EM şiddetine veya süresine etkisi hakkında çok az veri vardır. Akut herpes simplex virüs (HSV) enfeksiyonunun oral antivirallerle tedavisinin EM seyrine katkısı saptanmamıştır. <em>Mycoplasma pneumoniae</em> gibi EM’nin diğer enfeksiyöz nedenlerinin tedavisinde mukokütanöz lezyonların süresi veya şiddeti üzerine etkisi hakkında resmi bir çalışma bulunmamaktadır (20).</div>
+<div class="cb-content">Eğer EM’ye sebep olduğu düşünülen şüpheli ilaç varsa kesilmelidir.</div>
+<div class="cb-content">Sadece deri tutulumu olan veya sınırlı mukozal tutulumlu hastalar için semptomatik tedavi verilir. Kütanöz lezyonlar için topikal kortikosteroidler (orta güçlü, yüz veya intertriginöz alanlar için düşük güçlü) ve oral antihistaminikler kullanılabilir. Oral erozyonlar için, lidokain, difenhidramin ve antasitlerden oluşan ağız gargaraları ve yüksek güçlü topikal kortikosteroid jeller tercih edilir.</div>
+<div class="cb-content">Geniş ağız içi erozyonlar ciddi ağrılara neden olabilir, bu da oral beslenmeyi kısıtlar. Sistemik kortikosteroidler, semptomların şiddetini azaltmak ve hastalığın seyrini kısaltmak için sıklıkla kullanılır. Bununla birlikte, EM’de bu yaklaşımın etkinliği hakkında yüksek kaliteli bir çalışma yoktur. 40-60 mg/gün prednizon veya eşdeğer ile başlanır. İki-dört hafta boyunca doz azaltılır. Oral alımı engelleyen ciddi mukozal tutulumda beslenme ve ağrı kontrolü için hastane yatışı gerekebilir (21).</div>
+<div class="cb-content">Sistemik antiviraller, HSV ile tetiklenen EM veya tanımlanabilir tetikleyici olmayan rekürrent EM’nin birinci basamak tedavisinde kullanılır. Asiklovir 2x1, 400 mg; valasiklovir 2x1,500 mg; famsiklovir 2x1,500 mg dozlarında kullanılır. Başlangıç tedavisi olarak üçünden biri tercih edilir. Asiklovir diğerlerine göre daha ucuz olduğu için ilk tercih edilme sebebi olabilir. Valasiklovir ve famsiklovirin asiklovire karşı kanıtlanmış üstünlüğü bulunmamaktadır. Bazı hastaların tedavisi için daha yüksek dozlar gerekli olabilir. Bir antiviral ajan ile ilk tedaviye cevap vermeyen hastalar için, yukarıdaki dozların iki katına çıkartılması önerilir. Bu da etkili değilse, alternatif bir antiviral denenmesi düşünülmelidir. Sürekli antiviral tedaviye yanıt veren hastalarda tedavi süresine ilişkin yeterli veri yoktur. Tedaviyi kesmeye kalkışmadan önce genellikle bir-iki yıl tedaviye devam edilir. Tedavi kesildikten sonra EM tekrarlarsa, antiviral ilacın en düşük etkin dozu ile yeniden başlanır ve tedavinin kesilmesi her 6-12 ayda bir tekrar denenebilir. Antiviral ilaçlarla iyileşmeyen hastalar için immünosüpresif veya immünomodülatör tedaviler uygulanır. Azotiopürin (2 mg/kg/gün), mikofenolat mofetil (1000-1500 mg/gün, 2x1) veya dapson (100-200 mg/gün) kullanılabilir ancak etkinlikleri ile ilgili veriler sınırlıdır (22,23).</div>
+<div class="cb-subtitle">Akut Palmoplantar Ekzema (Dishidrotik Ekzema)</div>
+<div class="cb-content">Genel koruyucu önlemler olarak şunlara dikkat edilmelidir: eller ılık su ve sabunsuz temizleyicilerle yıkanmalı, yıkadıktan sonra elleri iyice kurutulmalı, el kurutma işleminden hemen sonra ve olabildiğince sık olarak nemlendiriciler kullanılmalı (örneğin; vazelin), su ile iş yaparken vinil veya diğer non-latex eldivenlerin altına pamuk eldiven giyilmeli (özellikle 10 dakikadan uzun sürecek kullanımlarda), su ile iş yapmadan önce yüzük, saat ve bilezikler çıkarılmalı, soğuk havalarda koruyucu eldiven takılmalı, sürtünme maruziyetlerine göre mesleğe özel eldiven giyilmeli (örneğin; bahçe işleri, marangozluk), tahriş edici maddelere maruz kalınmamalı (örneğin; deterjanlar, çözücüler, saç losyonları veya boyalar, asitli yiyecekler).</div>
+<div class="cb-content">Alüminyum subasetat (Burow çözeltisi) vb. astrenjan solüsyonlar dishidrotik lezyonları kurutmak için kullanılabilir. Eller veya ayaklar, günde 2-4 kez 15 dakika süreyle çözeltiye batırılır. Büyük büller, ağrıyı azaltmak ve spontan rüptürü önlemek için ile steril bir şırınga kullanarak boşaltılabilir veya aspire edilebilir.</div>
+<div class="cb-content">Hafif-orta şiddetli hastalık için ilk seçenek topikal kortikosteroidlerdir. Yüksek güçlüler tercih edilir. Günde iki kez, 2-4 hafta kullanılır. İkinci seçenek olarak topikal takrolimus %0,1 pomad kullanılır. Şiddetli hastalık için sistemik steroid tercih edilir. Genellikle 40 ila 60 mg prednizon/gün ile başlayıp bir hafta sonra yeterli yanıt varsa, doz sonraki beş ila yedi gün içinde yüzde 50 oranında azaltılır ve iki hafta boyunca kademeli düşülerek kesilir. Eğer sistemik steroid kontrendikasyonu varsa süper güçlü topikal kortikosteroidler, günde iki kez uygulanabilir (24-26).</div>
+<div class="cb-subtitle">Allerjik ve İrritan Kontakt Dermatit</div>
+<div class="cb-content">Genel önlemler dishidrotik ekzema ile aynıdır. Alerjen veya irritan madde tanımlanabiliyorsa ondan uzak durulmalıdır.</div>
+<div class="cb-content">İş öncesi bariyer kremler- iş sonrası nemlendiriciler irritan kontakt dermatiti engellemeye yardımcı olur. Bariyer kremleri, zararlı maddelerin deriye nüfuz etmesini azaltmak için tasarlanmıştır. Genel olarak, bariyer kremler, silikon (örneğin; dimetikon), sıvı parafin, alüminyum klorohidrat veya perfloropolieterler gibi su itici bileşikleri içerir. Yumuşatıcılar ve nemlendiriciler stratum korneumu yumuşatır, transepidermal su kaybını azaltırlar ve stratum korneuma su çekerler. Yumuşatıcılar ve nemlendiriciler tahrişi azaltmak ve deri bariyer fonksiyonunu iyileştirmek için kullanılırlar. Sadece deri üzerinde mevcut olduklarında etkili oldukları için, yumuşatıcılar ve nemlendiriciler günde birkaç kez, özellikle el yıkamadan sonra ve iş bittikten sonra bolca uygulanmalıdır.</div>
+<div class="cb-content">Oklüziv yumuşatıcılar (örneğin; vazelin, lanolin, mineral yağ, bitkisel yağ, balmumu, seramidler ve silikonlar) transepidermal su kaybını geciktirir; humektanlar (örneğin; gliserin, sorbitol, propilen glikol ve üre) atmosferden ve derin epidermis ve dermisten stratum korneuma su çeken higroskopik maddelerdir. Yapılan bir çalışmada fizyolojik lipidleri (örneğin; kolesterol, seramid, oleik asit veya palmitik asit) içeren nemlendiriciler ile vazelin gibi non-fizyolojik lipidleri içeren nemlendiriciler arasında irritan kontakt dermatite ait eritem, skuam, transepidermal su kaybı konusunda fark bulunmamıştır. Sağlık çalışanları üzerinde yapılan bir çalışmada, tekrarlayan el yıkamalar sonrası nemlendirici uygulanmasının (günde 15 kez) irritan kontakt dermatit gelişimini engellediği gösterilmiştir (27-30).</div>
+<div class="cb-content">Aktif dermatitin tedavisinde palmoplantar bölge için yüksek güçlü topikal kortikosteroidler tercih edilir. Akut ekzemada krem, kronik ekzemada pomad formunda olanlar tercih edilir. Ortalama 2-4 hafta, günde iki kez şeklinde kullanılır. Akut-sulantılı lezyonlarda beraberinde astrenjanlar ile ıslak pansuman önerilir. Topikal kortikosteroidlere dirençli kronik allerjik kontakt dermatitte topikal kalsinörün inhibitörleri alternatif olarak kullanılabilir ancak irritan kontakt dermatitte yeri yoktur. Şiddetli tablolarda ve el ayak fonksiyonlarını etkileyen durumlarda oral prednizon 0,5-1 mg/kg/gün (maksimum 60 mg/gün) şeklinde başlanır, 5-7 gün sonra doz %50 oranında azaltılabilir ve daha sonra iki hafta boyunca azaltılmaya devam edilip kesilir (31).</div>
+<div class="cb-subtitle">Kronik El Ekzeması</div>
+<div class="cb-content">Genel önlemler dishidrotik ekzema ile aynıdır. Hafif-orta şiddet hastalıkta ilk tercih süper güçlü-güçlü topikal kortikosteroidlerdir. Günde iki kez uygulamaya başlanır, ortalama iki ila 4 hafta boyunca gerileyene kadar uygulanır. Remisyon sağlandıktan sonra aralıklı uygulama ile aylarca devam edilir (32).</div>
+<div class="cb-content">Ciddi veya dirençli hastalığı olan hastalarda oral kortikosteroidler, metotreksat, siklosporin, azatiopürin immünosüpresanlar ve oral retinoidler, dar bant ultraviyole B (DB-UVB) veya psoralen ultraviyole A (PUVA) tercih edilebilmektedir. Ciddi veya dirençli hastalarda hızlı bir klinik yanıt için kısa süreli oral kortikosteroidler tercih edilir. 0,5-1 mg/kg (günde maksimum 60 mg) dozunda prednizon ile başlanır. İki hafta içinde doz azaltılarak kesilir. Oral tedavi kesilirken topikal kortikosteroidlerle devam edilir. Alitretinoin (9-cis-retinoik asit), potent topikal kortikosteroidlere yanıt vermeyen ciddi kronik el ekzemasının tedavisinde Avrupa ve Kanada’da ruhsat verilen oral retinoiddir. Topikallere yanıtsız ve oral kortikosteroid kullanılamayan veya istenmeyen durumlarda lokal db-UVB veya lokal PUVA önerilir. En az 12 hafta, haftada 2 veya 3 seans uygulama yapılır (33,34).</div>
+<div class="cb-subtitle">Nörodermatit</div>
+<div class="cb-content">Tedavide dermatolog ve pskiyatristin beraber rolleri vardır. Oklüzyonla veya oklüzyonsuz uygulanan güçlü topikal kortikosteroidler veya intralezyonel triamsinolon ilk tercihtir. Farmakolojik tedavide ilk basamak selektif serotonin gerialım inhibitörleridir (SSRI). Genellikle minimum etkili dozla başlanır. Fluoksetin 20 mg, paroksetin 20 mg, sitalopram 20 mg, esitalopram 10 mg, fluvoksamin 50 mg ve sertralin 50 mg kullanılır. Doz tolere edildikçe gerekirse her hafta veya 2 haftada bir artırılabilir. Altı-sekiz hafta boyunca yanıt yoksa, başka bir antidepresan sınıfına geçilebilir. Özellikle delüzyonel hastalarda antipsikotikler tercih edilmektedir. Olanzapin, risperidon gibi atipik antipskotikler SSRI’lar ile beraber ya da tek başına kullanılır. Glutamat düzenleyici ilaçlardan olan N-asetil sistein, özellikle obsesif kompulsif hastalarda SSRI’lar ile beraber ya da tek başına kullanılır. Anksiyolitiklerlerden akut durumlarda lorazepam, kronik durumlarda buspiron tercih edilir. Gerekli durumlarda davranışsal tedavilere başvurulur (35-37).</div>
+<div class="cb-subtitle">Akrodermatitis Enteropatika</div>
+<div class="cb-content">1-3 mg/kg/gün çinko sülfat veya glukonat kullanılır. Üç-altı ayda bir serum veya idrar çinko düzeyi ve alkalen fosfataz ölçülür. Normal aralıktaysa doz düşülerek devam edilir. Gebelik ve mental/fiziksel stres durumlarında tedavi dozunu artırmak gerekir. Uzun süreli yüksek doz çinko alımına bağlı toksisite meydana gelebilir. Bakır emilimi bozulur. Tolere edilebilir üst sınırlar yaşa göre değişir. Kronik süreçlerde bu üst sınırlar geçilmemelidir. Tedavi ile 24 saat içinde diyare kesilir, bebeğin huzursuzluğu rahatlar. Deri lezyonları 1-2 hafta içinde iyileşir. Lezyonlar iyileşene kadar ıslak pansumanlar, topikal vazelin uygulanması epitelizasyonu hızlandırır. Lezyonlarda sekonder bakteriyel veya fungal enfeksiyonlar mevcutsa onlara uygun tedavi de verilmelidir. Topikal çinko uygulanmasının faydası yoktur (38,39).</div>
+<div class="cb-subtitle">Kallus ve Klavus (Korn)</div>
+<div class="cb-content">İyi kalıplı, rahat, düz ayakkabı tercih edilmelidir. Elde sürtünmeye bağlı keratozu engellemek için iş sırasında koruyucu deri eldiven kullanımı ve travma bölgesine koruyucu flaster veya yastıkçık yerleştirilmesi önerilebilir. Gerekli durumlarda ortopedik konsültasyon istenebilir ve lezyonun altındaki olası kemik anomalisi için direk grafi gerekebilir. %40 salisilik asit içeren flasterler reçetesiz olarak uygulanabilen bir tedavi seçeneğidir. Lezyon üzerine yapıştırılır, 48-72 saat sonra çıkartılır, altta çıkan beyaz ölü deri kaldırılır. Bir-iki hafta içinde gerileme yoksa tekrar edilir. Periferal nöropatisi olan hastalarda kullanılmamalıdır. %12-40 salisilik asitli solüsyonlar, %20-50 üreli preparatlar hazırlatılıp kullandırılabilir. Topikal keratolitikler dışında kriyoterapi veya koterizasyon veya ablatif lazer uygulanabilir (40,41).</div>
+<div class="cb-subtitle">Palmoplantar Keratodermalar</div>
+<div class="cb-content">Tedavi zor ve nüksler sıktır. Keratodermaya sebep olan altta yatan sifiliz, uyuz, dermatofit, malignite gibi primer hastalık varsa öncelikle onun tedavisi yapılmalıdır. Sınırlı lezyonlarda topikal keratolitikler (%5-10 salisilik asit, %10-40 propilen glikol, %10 laktik asit) uygulanır. Topikal retinoidler denenebilir. Ekzema ve psoriasise bağlı keratodermalarda topikal keratolitiklerle kombine topikal kortikosteroidler tercih edilir. Yaygın lezyonlarda ikinci seçenek sistemik retinoidlerdir. Asitretin yetişkinde 25-35 mg/gün dozunda, çocukta 0,5-0,7 mg/kg/gün dozunda başlanır. Yanıt aldıktan sonra dozlar düşülebilir. Ek seçenekler arasında topikal kalsipotriol, PUVA, rePUVA, 5-FU, CO2 lazer, cerrahi yer alır (42,43).</div>
+<div class="cb-subtitle">Juvenil Plantar Dermatoz</div>
+<div class="cb-content">Juvenil plantar dermatozun yaş ilerledikçe iyileşme şansı vardır. Bu süreçte tedavi semptomatiktir. Terleme ve sürtünme engellenmelidir. Sürtünmeyi azaltmak için iki çift pamuklu çorap ile iyi bir ayakkabı (tercihen deri) tercih edilmelidir. Özellikle banyo sonrası ve yatmadan önce vazelin, gün içinde de sık sık bariyer kremlerin uygulanması önemlidir. Fissürlerin iyileşmesi için istirahat dönemleri gerekir. Fissürler oklüde edildiğinde daha hızlı iyileşir. Çinko oksitli pomadlar veya sprey ve likit bandajlar bu amaçla fissürlere uygulanabilir. Topikal steroidlerin nemlendiricilere üstünlüğü yoktur. O yüzden sadece eritemli kaşıntılı dönemlerde işe yarıyorsa kısa süreli kullanılıp kesilir (44,45).</div>
+<div class="cb-subtitle">Palmoplantar Püstüloz</div>
+<div class="cb-content">Genel önlemler olarak nemlendiricilerin kullanımı ve irritan ajanlardan uzak durulması önemlidir. Sigarayı bırakmanın da etkisi olacaktır (46).</div>
+<div class="cb-content">İlk seçenek tedaviler arasında topikal kortikosteroidler, oral retinoidler ve PUVA yer alır. İkinci seçenek tedaviler arasında re-puva ve siklosporin, metotreksatlar gibi immünosüpresanlar vardır.</div>
+<div class="cb-content">Topikal tedavide ilk olarak süper güçlü topikal kortikosteroidler tercih edilir. Üç günde bir değiştirilen hidrokolloid yara örtüsü ile oklüzyon şeklinde veya alternatif olarak plastik sargılarla da oklüzyon şeklinde uygulanabilir. Bir hafta her gece uygulama sonrası, sıklık azaltılarak devam edilmelidir. Ortalama 2 haftada yanıt elde edilmesi beklenir, 4 hafta içinde yanıt alınamazsa başka tedaviye geçilir. Yanıt alındıktan sonra idame tedavide yüksek güçlü kortikosteroidler oklüzyon olmadan haftada 2 uygulanır.</div>
+<div class="cb-content">Asitretin, 25 mg/gün ile başlanıp haftalık doz 10 mg artırılabilir. En az 3 ay tedavi devam ettirilir. Tatmin edici yanıt alındıktan sonra idameyi sağlayacak en düşük doz ile devam edilir. Fotokemoterapide oral veya topikal psorolen sonrası UVA uygulaması yapılır. Oral psoralen ile olan protokoller, topikale göre daha etkili bulunmuştur. En az 12 hafta, haftada 2 veya 3 uygulama yapılır.</div>
+<div class="cb-content">Bu tedavilere yanıt yoksa oral retinoidlerle beraber PUVA tedavisi başlanabilir. PUVA’dan 2-4 hafta önce 25-50 mg/gün retinoid başlanır. PUVA dozu retinoidsiz fototerapiye göre %30- 50 daha düşük dozdan başlatılır. Siklosporin için 3 mg/kg şeklinde doz ayarlanarak tedaviye başlanır. On gün sonra en az %75 iyileşme varsa doz haftalık 25 ila 50 mg azaltılır. Toplam tedavi süresi 12-24 haftadır. Metotreksat 7,5-25 mg/hafta başlanır. On iki-on altı haftada yanıt beklenir. İyileşmeden sonra doz haftalık 5-7,5 mg azaltılarak idameye geçilir (47,48).</div>
+<div class="cb-subtitle">Akrodermatitis Kontinua Hallopeau</div>
+<div class="cb-content">İlk seçenek süper güçlü topikal kortikosteroidlerdir. İki-dört hafta boyunca günde 2 kez uygulanır. Tercihen ilk haftalar gece oklüzyon şeklinde uygulama yapılabilir. Tedaviye iyi yanıt verilirse, uygulama sıklığı haftada bir veya iki kez şeklinde azaltılarak idameye geçilir. Alternatif olarak, tedaviye başından itibaren kalsipotriol ile kombine potent steroidle başlanıp, yanıt alındıktan sonra sadece kalsipotriol ile idame devam ettirilir.</div>
+<div class="cb-content">Topikal tedaviye yanıt yoksa lokal fototerapi veya sistemik tedaviye geçilir. Sistemik tedavide ilk seçenek oral asitretin, alternatif olarak siklosporin ve metotreksat kullanılır. Klasik sistemik tedavilere yanıt yoksa anti-TNF ajanlar ve ustekinumab denenebilir (49,50).</div>
+<div class="cb-subtitle">İnfantil Akropüstüloz</div>
+<div class="cb-content">Genel olarak 2 yılda geriler. İlk seçenek orta-yüksek güçlü topikal kortikosteroidlerdir. Günde bir veya iki kez uygulanır. Ortalama 3-14 gün içinde yanıt elde edilir. Topikal kortikosteroidlere alternatif olarak antienflamatuvar etkisinden dolayı oral eritromisin ve sedasyon yapıcı dozlarda oral antihistaminikler kullanılabilir. Ciddi-dirençli hastalarda 1-2 mg/kg/gün dozunda dapson kullanılır (51-53).</div>
+<div class="cb-subtitle">Eritromelalji</div>
+<div class="cb-content">Eritromelalji için küratif bir tedavi yoktur. Bu nedenle, tedavilerin amacı yaşam kalitesini iyileştirmeye ve semptomları azaltmaya yöneliktir. Eritromelaljisi olan hastalar miyeloproliferatif hastalık gelişimi açısından izlenmelidir. En azından yıllık tam kan sayımı tekrarlanmalıdır. Eğer altta yatan miyeloproliferatif hastalıklar gibi bir durum varsa onun tedavisi ile gerileme şansı vardır.</div>
+<div class="cb-content">İlaç dışı tedavi yöntemleri olarak durumu alevlendiren faktörlerden (artan çevre ısısı, egzersiz) kaçınılmalı, etkilenen bölgenin kısa sürelerle soğuk suyla teması (örneğin; her 1-2 saatte 5-10 dakika), bacak elevasyonu, kısa sürelerle fan kullanımı (örneğin; her 1-2 saatte 5-10 dakika) önerilebilir.</div>
+<div class="cb-content">Özellikle miyeloproliferatif hastalığı olanlarda aspirin 325 mg/gün dozunda kullanılır (54). Bir ay sonra yanıt yoksa kesilir. Topikal olarak amitriptin %2 ve ketamin %0,5 krem karışımı, midodrin %0,2 krem, lidokain patchler kullanılabilir. Oral tedavide diğer seçenekler gabapentin, pregabalin ve venlafaksindir (55-58).</div>
+<div class="cb-subtitle">El-ayak Sendromu (Palmoplantar Eritrodizestezi) (Akral Eritem)</div>
+<div class="cb-content">Temel tedavi neden olan ilacın kesilmesi veya doz ayarlanmasıdır. Enflamasyonu azaltmak için topikal kortikosteroidler, erozyon için yara bakımı, hiperkeratozu azaltmak için yumuşatıcılar ve topikal keratolitikler ve ağrı kontrolü için analjezikler kullanılır. Genellikle neden olan ilacın kesilmesinden sonra 2-4 hafta içinde düzelir. İyileşme sıklıkla yüzeyel deskuamasyon ile olur. Genellikle uzun süreli sekelleri yoktur. Ancak uzun süredir devam eden lezyonların bir sonucu olarak palmoplantar keratoderma gelişebilir. El-ayak sendromunu engellemek için kemoterapi sırasında el bileklerine ve ayak bileklerine buz paketleri koyarak soğuk uygulama yapılmasının, el ve ayaklara kan akışını azaltarak yardımcı olabileceği gösterilmiştir (59-61).</div>
+<div class="cb-subtitle">Akral Peeling Deri Sendromu</div>
+<div class="cb-content">Özel bir tedavisi yoktur. Hastalar, ısı, sürtünme, nem, mekanik travma ve aşırı ter gibi faktörlerden kaçınma konusunda eğitilmelidir. Etkilenen bölgelere nemlendiricilerin uygulanması faydalı olabilir (62).</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Stevens DL, Bisno AL, Chambers HF, et al. Practice guidelines for the diagnosis and management of skin and soft tissue infections: 2014 update by the infectious diseases society of America. Clin Infect Dis 2014; 59: e10-52.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Raff AB, Kroshinsky D. Cellulitis: A Review. JAMA 2016; 316: 325-337.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Klauder JV. Erysipeloid as an occupational disease. JAMA 1938; 111: 1345.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Venditti M, Gelfusa V, Tarasi A, et al. Antimicrobial susceptibilities of erysipelothrix rhusiopathiae. Antimicrob Agents Chemother 1990; 34: 2038-2040.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Gupta AK, Cooper EA. Update in antifungal therapy of dermatophytosis. Mycopathologia 2008; 166: 353-367.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Bonifaz A, Badali H, de Hoog GS, et al. Tinea nigra by Hortaea werneckii, a report of 22 cases from Mexico. Stud Mycol 2008; 61: 77-82.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Sayegh-Carreño R, Abramovits-Ackerman W, Girón GP. Therapy of tinea nigra plantaris. Int J Dermatol 1989; 28: 46-48.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Kaptanoglu AF, Yuksel O, Ozyurt S. Plantar pitted keratolysis: a study from non-risk groups. Dermatol Reports 2012; 4: e4.</div>
+<div class="ref-item"><span class="ref-number">9.</span>De Luca JF, Adams BB, Yosipovitch G. Skin manifestations of athletes competing in the summer olympics: what a sports medicine physician should know. Sports Med 2012; 42: 399.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Blaise G, Nikkels AF, Hermanns-Lê T, Nikkels-Tassoudji N, Piérard GE. Corynebacterium-associated skin infections. Int J Dermatol 2008; 47: 884.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Salavastru CM, Chosidow O, Boffa MJ, Janier M, Tiplica GS. European guideline for the management of scabies. J Eur Acad Dermatol Venereol 2017; 31: 1248-1253.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Usha V, Gopalakrishnan Nair TV. A comparative study of oral ivermectin and topical permethrin cream in the treatment of scabies. J Am Acad Dermatol 2000; 42: 236-240.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Johnston G, Sladden M. Scabies: diagnosis and treatment. BMJ 2005; 331: 619-622.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Scheinfeld NS. Is blistering distal dactylitis a variant of bullous impetigo? Clin Exp Dermatol 2007; 32: 314-316.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ferson MJ, Bell SM. Outbreak of Coxsackievirus A16 hand, foot, and mouth disease in a child day-care center. Am J Public Health 1991; 81: 1675-1676.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Sterling JC, Gibbs S, Haque Hussain SS, Mohd Mustapa MF, Handfield-Jones SE. British Association of Dermatologists’ guidelines for the management of cutaneous warts 2014. Br J Dermatol 2014; 171: 696-712.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Choi MH, Seo SH, Kim IH, Son SW. Comparative study on the sustained efficacy of diphencyprone immunotherapy versus cryotherapy in viral warts. Pediatr Dermatol 2008; 25: 398-399.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Thiers BH. The use of topical calcipotriene/calcipotriol in conditions other than plaque-type psoriasis. J Am Acad Dermatol 1997; 37: S69-71.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Meyer A, Chatelus E, Wendling D, et al. Safety and efficacy of anti-tumor necrosis factor α therapy in ten patients with recent-onset refractory reactive arthritis. Arthritis Rheum 2011; 63: 1274-1280.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Schofield JK, Tatnall FM, Leigh IM. Recurrent erythema multiforme: clinical features and treatment in a large series of patients. Br J Dermatol 1993; 128: 542-545.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Wetter DA, Davis MD. Recurrent erythema multiforme: clinical characteristics, etiologic associations, and treatment in a series of 48 patients at Mayo Clinic, 2000 to 2007. J Am Acad Dermatol 2010; 62: 45-53.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Kerob D, Assier-Bonnet H, Esnault-Gelly P, Blanc F, Saiag P. Recurrent erythema multiforme unresponsive to acyclovir prophylaxis and responsive to valacyclovir continuous therapy. Arch Dermatol 1998; 134: 876-877.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Sen P, Chua SH. A case of recurrent erythema multiforme and its therapeutic complications. Ann Acad Med Singap 2004; 33: 793-796.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Veien NK. Acute and recurrent vesicular hand dermatitis. Dermatol Clin 2009; 27: 337-353.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Warshaw EM. Therapeutic options for chronic hand dermatitis. Dermatol Ther 2004; 17: 240-250.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Schnopp C, Remling R, Möhrenschlager M, Weigl L, Ring J, Abeck D. Topical tacrolimus (FK506) and mometasone furoate in treatment of dyshidrotic palmar eczema: a randomized, observer-blinded trial. J Am Acad Dermatol 2002; 46: 73-77.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Mollerup A, Johansen JD, Thing LF. Knowledge, attitudes and behaviour in everyday life with chronic hand eczema: a qualitative study. Br J Dermatol 2013; 169: 1056-1065.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Kampf G, Löffler H. Prevention of irritant contact dermatitis among health care workers by using evidence-based hand hygiene practices: a review. Ind Health 2007; 45: 645-652.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Lodén M, Wirén K, Smerud K, et al. Treatment with a barrier-strengthening moisturizer prevents relapse of hand-eczema. An open, randomized, prospective, parallel group study. Acta Derm Venereol 2010; 90: 602-606.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Draelos ZD. New treatments for restoring impaired epidermal barrier permeability: skin barrier repair creams. Clin Dermatol 2012; 30: 345-348.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Katsarou A, Makris M, Papagiannaki K, Lagogianni E, Tagka A, Kalogeromitros D. Tacrolimus 0.1% vs mometasone furoate topical treatment in allergic contact hand eczema: a prospective randomized clinical study. Eur J Dermatol 2012; 22: 192-196.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Bissonnette R, Diepgen TL, Elsner P, et al. Redefining treatment options in chronic hand eczema (CHE). J Eur Acad Dermatol Venereol 2010; 24 Suppl 3: 1-20.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Sezer E, Etikan I. Local narrowband UVB phototherapy vs. local PUVA in the treatment of chronic hand eczema. Photodermatol Photoimmunol Photomed 2007; 23: 10-14.</div>
+<div class="ref-item"><span class="ref-number">34.</span>Veien NK, Hattel T, Laurberg G. Hand eczema: causes, course, and prognosis I. Contact Dermatitis 2008; 58: 330-334.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Koo JY, Ng TC. Psychotropic and neurotropic agents in dermatology: unapproved uses, dosages, or indications. Clin Dermatol 2002; 20: 582-594.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Selles RR, McGuire JF, Small BJ, Storch EA. A systematic review and meta-analysis of psychiatric treatments for excoriation (skin-picking) disorder. Gen Hosp Psychiatry 2016; 41: 29-37.</div>
+<div class="ref-item"><span class="ref-number">37.</span>Gupta MA, Gupta AK. Olanzapine is effective in the management of some self-induced dermatoses: three case reports. Cutis 2000; 66: 143-146.</div>
+<div class="ref-item"><span class="ref-number">38.</span>Maverakis E, Fung MA, Lynch PJ, et al. Acrodermatitis enteropathica and an overview of zinc metabolism. J Am Acad Dermatol 2007; 56: 116-124.</div>
+<div class="ref-item"><span class="ref-number">39.</span>Neldner KH, Hambidge KM. Zinc therapy of acrodermatitis enteropathica. N Engl J Med 1975; 292: 879-882.</div>
+<div class="ref-item"><span class="ref-number">40.</span>Arosi I, Hiner G, Rajbhandari S. Pathogenesis and treatment of callus in the diabetic foot. Curr Diabetes Rev 2016; 12: 179-183.</div>
+<div class="ref-item"><span class="ref-number">41.</span>Freeman DB. Corns and calluses resulting from mechanical hyperkeratosis. Am Fam Physician 2002; 65: 2277-2280.</div>
+<div class="ref-item"><span class="ref-number">42.</span>Patel S, Zirwas M, English JC. Acquired palmoplantar keratoderma. Am J Clin Dermatol 2007; 8: 1-11.</div>
+<div class="ref-item"><span class="ref-number">43.</span>Braun-Falco M. Hereditary palmoplantar keratodermas. J Dtsch Dermatol Ges 2009; 7: 971-984.</div>
+<div class="ref-item"><span class="ref-number">44.</span>Kalia S, Adams SP. Dermacase. Juvenile plantar dermatosis. Can Fam Physician 2005; 51: 1203-1213.</div>
+<div class="ref-item"><span class="ref-number">45.</span>Gibbs NF. Juvenile plantar dermatosis. Can sweat cause foot rash and peeling? Postgrad Med 2004; 115: 73-75.</div>
+<div class="ref-item"><span class="ref-number">46.</span>Michaëlsson G, Gustafsson K, Hagforsen E. The psoriasis variant palmoplantar pustulosis can be improved after cessation of smoking. J Am Acad Dermatol 2006; 54: 737-738.</div>
+<div class="ref-item"><span class="ref-number">47.</span>Sevrain M, Richard MA, Barnetche T, et al. Treatment for palmoplantar pustular psoriasis: systematic literature review, evidence-based recommendations and expert opinion. J Eur Acad Dermatol Venereol 2014; 28 Suppl 5: 13-16.</div>
+<div class="ref-item"><span class="ref-number">48.</span>Lassus A, Geiger JM. Acitretin and etretinate in the treatment of palmoplantar pustulosis: a double-blind comparative trial. Br J Dermatol 1988; 119: 755-759.</div>
+<div class="ref-item"><span class="ref-number">49.</span>Sehgal VN, Verma P, Sharma S, et al. Acrodermatitis continua of Hallopeau: evolution of treatment options. Int J Dermatol 2011; 50: 1195-1211.</div>
+<div class="ref-item"><span class="ref-number">50.</span>Bertelsen T, Kragballe K, Johansen C, Iversen L. Efficacy of ustekinumab in palmoplantar pustulosis and palmoplantar pustular psoriasis. Int J Dermatol 2014; 53: e464-466.</div>
+<div class="ref-item"><span class="ref-number">51.</span>Mancini AJ, Frieden IJ, Paller AS. Infantile acropustulosis revisited: history of scabies and response to topical corticosteroids. Pediatr Dermatol 1998; 15: 337-341.</div>
+<div class="ref-item"><span class="ref-number">52.</span>Van Praag MC, Van Rooij RW, Folkers E, Spritzer R, Menke HE, Oranje AP. Diagnosis and treatment of pustular disorders in the neonate. Pediatr Dermatol 1997; 14: 131-143.</div>
+<div class="ref-item"><span class="ref-number">53.</span>Kahn G, Rywlin AM. Acropustulosis of infancy. Arch Dermatol 1979; 115: 831-833.</div>
+<div class="ref-item"><span class="ref-number">54.</span>Krishnan SG, Yesudian DP, Jayaraman M, Janaki VR, Raj BJ. Erythromelalgia responding to aspirin. Indian J Dermatol Venereol Leprol 1996; 62: 204-205.</div>
+<div class="ref-item"><span class="ref-number">55.</span>Poterucha TJ, Weiss WT, Warndahl RA, et al. Topical amitriptyline combined with ketamine for the treatment of erythromelalgia: a retrospective study of 36 patients at Mayo Clinic. J Drugs Dermatol 2013; 12: 308-310.</div>
+<div class="ref-item"><span class="ref-number">56.</span>Davis MD, Morr CS, Warndahl RA, Sandroni P. Topically applied midodrine, 0.2%, an α1-agonist, for the treatment of erythromelalgia. JAMA Dermatol 2015; 151: 1025-1026.</div>
+<div class="ref-item"><span class="ref-number">57.</span>Gales A, Chaaban B, Husson H, et al. Lidocaine-medicated plaster for treating acute autonomic and sensory neuropathy with erythromelalgia-like presentations. Rev Neurol (Paris) 2016; 172: 399-400.</div>
+<div class="ref-item"><span class="ref-number">58.</span>Davis MD, Rooke T. Erythromelalgia. Curr Treat Options Cardiovasc Med 2002; 4: 207-222.</div>
+<div class="ref-item"><span class="ref-number">59.</span>Dranitsaris G, Vincent MD, Yu J, Huang L, Fang F, Lacouture ME. Development and validation of a prediction index for hand-foot skin reaction in cancer patients receiving sorafenib. Ann Oncol 2012; 23: 2103-2108.</div>
+<div class="ref-item"><span class="ref-number">60.</span>McLellan B, Ciardiello F, Lacouture ME, Segaert S, Van Cutsem E. Regorafenib-associated hand-foot skin reaction: practical advice on diagnosis, prevention, and management. Ann Oncol 2015; 26: 2017-2026.</div>
+<div class="ref-item"><span class="ref-number">61.</span>Manchen E, Robert C, Porta C. Management of tyrosine kinase inhibitor-induced hand-foot skin reaction: viewpoints from the medical oncologist, dermatologist, and oncology nurse. J Support Oncol 2011; 9: 13-23.</div>
+<div class="ref-item"><span class="ref-number">62.</span>Garg K, Singh D, Mishra D. Peeling skin syndrome: Current status. Dermatol Online J 2010; 16: 10.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Diseases that involve the palmoplantar region are quite extensive. These diseases can only hold hands and feet, as well as other areas of simultaneous hold. In these regions, infectious disease, changes in reaction to infections, exzematized lesions, keratotic lesions, pustular lesions and erythematous lesions can be seen. Despite the limited area of skin involvement, the condition can have a significant negative effect on quality of life. This section will talk about the treatment of the most common diseases.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Stevens DL, Bisno AL, Chambers HF, et al. Practice guidelines for the diagnosis and management of skin and soft tissue infections: 2014 update by the infectious diseases society of America. Clin Infect Dis 2014; 59: e10-52.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Raff AB, Kroshinsky D. Cellulitis: A Review. JAMA 2016; 316: 325-337.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Klauder JV. Erysipeloid as an occupational disease. JAMA 1938; 111: 1345.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Venditti M, Gelfusa V, Tarasi A, et al. Antimicrobial susceptibilities of erysipelothrix rhusiopathiae. Antimicrob Agents Chemother 1990; 34: 2038-2040.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Gupta AK, Cooper EA. Update in antifungal therapy of dermatophytosis. Mycopathologia 2008; 166: 353-367.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Bonifaz A, Badali H, de Hoog GS, et al. Tinea nigra by Hortaea werneckii, a report of 22 cases from Mexico. Stud Mycol 2008; 61: 77-82.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Sayegh-Carreño R, Abramovits-Ackerman W, Girón GP. Therapy of tinea nigra plantaris. Int J Dermatol 1989; 28: 46-48.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Kaptanoglu AF, Yuksel O, Ozyurt S. Plantar pitted keratolysis: a study from non-risk groups. Dermatol Reports 2012; 4: e4.</div>
+<div class="ref-item"><span class="ref-number">9.</span>De Luca JF, Adams BB, Yosipovitch G. Skin manifestations of athletes competing in the summer olympics: what a sports medicine physician should know. Sports Med 2012; 42: 399.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Blaise G, Nikkels AF, Hermanns-Lê T, Nikkels-Tassoudji N, Piérard GE. Corynebacterium-associated skin infections. Int J Dermatol 2008; 47: 884.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Salavastru CM, Chosidow O, Boffa MJ, Janier M, Tiplica GS. European guideline for the management of scabies. J Eur Acad Dermatol Venereol 2017; 31: 1248-1253.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Usha V, Gopalakrishnan Nair TV. A comparative study of oral ivermectin and topical permethrin cream in the treatment of scabies. J Am Acad Dermatol 2000; 42: 236-240.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Johnston G, Sladden M. Scabies: diagnosis and treatment. BMJ 2005; 331: 619-622.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Scheinfeld NS. Is blistering distal dactylitis a variant of bullous impetigo? Clin Exp Dermatol 2007; 32: 314-316.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ferson MJ, Bell SM. Outbreak of Coxsackievirus A16 hand, foot, and mouth disease in a child day-care center. Am J Public Health 1991; 81: 1675-1676.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Sterling JC, Gibbs S, Haque Hussain SS, Mohd Mustapa MF, Handfield-Jones SE. British Association of Dermatologists’ guidelines for the management of cutaneous warts 2014. Br J Dermatol 2014; 171: 696-712.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Choi MH, Seo SH, Kim IH, Son SW. Comparative study on the sustained efficacy of diphencyprone immunotherapy versus cryotherapy in viral warts. Pediatr Dermatol 2008; 25: 398-399.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Thiers BH. The use of topical calcipotriene/calcipotriol in conditions other than plaque-type psoriasis. J Am Acad Dermatol 1997; 37: S69-71.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Meyer A, Chatelus E, Wendling D, et al. Safety and efficacy of anti-tumor necrosis factor α therapy in ten patients with recent-onset refractory reactive arthritis. Arthritis Rheum 2011; 63: 1274-1280.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Schofield JK, Tatnall FM, Leigh IM. Recurrent erythema multiforme: clinical features and treatment in a large series of patients. Br J Dermatol 1993; 128: 542-545.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Wetter DA, Davis MD. Recurrent erythema multiforme: clinical characteristics, etiologic associations, and treatment in a series of 48 patients at Mayo Clinic, 2000 to 2007. J Am Acad Dermatol 2010; 62: 45-53.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Kerob D, Assier-Bonnet H, Esnault-Gelly P, Blanc F, Saiag P. Recurrent erythema multiforme unresponsive to acyclovir prophylaxis and responsive to valacyclovir continuous therapy. Arch Dermatol 1998; 134: 876-877.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Sen P, Chua SH. A case of recurrent erythema multiforme and its therapeutic complications. Ann Acad Med Singap 2004; 33: 793-796.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Veien NK. Acute and recurrent vesicular hand dermatitis. Dermatol Clin 2009; 27: 337-353.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Warshaw EM. Therapeutic options for chronic hand dermatitis. Dermatol Ther 2004; 17: 240-250.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Schnopp C, Remling R, Möhrenschlager M, Weigl L, Ring J, Abeck D. Topical tacrolimus (FK506) and mometasone furoate in treatment of dyshidrotic palmar eczema: a randomized, observer-blinded trial. J Am Acad Dermatol 2002; 46: 73-77.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Mollerup A, Johansen JD, Thing LF. Knowledge, attitudes and behaviour in everyday life with chronic hand eczema: a qualitative study. Br J Dermatol 2013; 169: 1056-1065.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Kampf G, Löffler H. Prevention of irritant contact dermatitis among health care workers by using evidence-based hand hygiene practices: a review. Ind Health 2007; 45: 645-652.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Lodén M, Wirén K, Smerud K, et al. Treatment with a barrier-strengthening moisturizer prevents relapse of hand-eczema. An open, randomized, prospective, parallel group study. Acta Derm Venereol 2010; 90: 602-606.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Draelos ZD. New treatments for restoring impaired epidermal barrier permeability: skin barrier repair creams. Clin Dermatol 2012; 30: 345-348.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Katsarou A, Makris M, Papagiannaki K, Lagogianni E, Tagka A, Kalogeromitros D. Tacrolimus 0.1% vs mometasone furoate topical treatment in allergic contact hand eczema: a prospective randomized clinical study. Eur J Dermatol 2012; 22: 192-196.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Bissonnette R, Diepgen TL, Elsner P, et al. Redefining treatment options in chronic hand eczema (CHE). J Eur Acad Dermatol Venereol 2010; 24 Suppl 3: 1-20.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Sezer E, Etikan I. Local narrowband UVB phototherapy vs. local PUVA in the treatment of chronic hand eczema. Photodermatol Photoimmunol Photomed 2007; 23: 10-14.</div>
+<div class="ref-item"><span class="ref-number">34.</span>Veien NK, Hattel T, Laurberg G. Hand eczema: causes, course, and prognosis I. Contact Dermatitis 2008; 58: 330-334.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Koo JY, Ng TC. Psychotropic and neurotropic agents in dermatology: unapproved uses, dosages, or indications. Clin Dermatol 2002; 20: 582-594.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Selles RR, McGuire JF, Small BJ, Storch EA. A systematic review and meta-analysis of psychiatric treatments for excoriation (skin-picking) disorder. Gen Hosp Psychiatry 2016; 41: 29-37.</div>
+<div class="ref-item"><span class="ref-number">37.</span>Gupta MA, Gupta AK. Olanzapine is effective in the management of some self-induced dermatoses: three case reports. Cutis 2000; 66: 143-146.</div>
+<div class="ref-item"><span class="ref-number">38.</span>Maverakis E, Fung MA, Lynch PJ, et al. Acrodermatitis enteropathica and an overview of zinc metabolism. J Am Acad Dermatol 2007; 56: 116-124.</div>
+<div class="ref-item"><span class="ref-number">39.</span>Neldner KH, Hambidge KM. Zinc therapy of acrodermatitis enteropathica. N Engl J Med 1975; 292: 879-882.</div>
+<div class="ref-item"><span class="ref-number">40.</span>Arosi I, Hiner G, Rajbhandari S. Pathogenesis and treatment of callus in the diabetic foot. Curr Diabetes Rev 2016; 12: 179-183.</div>
+<div class="ref-item"><span class="ref-number">41.</span>Freeman DB. Corns and calluses resulting from mechanical hyperkeratosis. Am Fam Physician 2002; 65: 2277-2280.</div>
+<div class="ref-item"><span class="ref-number">42.</span>Patel S, Zirwas M, English JC. Acquired palmoplantar keratoderma. Am J Clin Dermatol 2007; 8: 1-11.</div>
+<div class="ref-item"><span class="ref-number">43.</span>Braun-Falco M. Hereditary palmoplantar keratodermas. J Dtsch Dermatol Ges 2009; 7: 971-984.</div>
+<div class="ref-item"><span class="ref-number">44.</span>Kalia S, Adams SP. Dermacase. Juvenile plantar dermatosis. Can Fam Physician 2005; 51: 1203-1213.</div>
+<div class="ref-item"><span class="ref-number">45.</span>Gibbs NF. Juvenile plantar dermatosis. Can sweat cause foot rash and peeling? Postgrad Med 2004; 115: 73-75.</div>
+<div class="ref-item"><span class="ref-number">46.</span>Michaëlsson G, Gustafsson K, Hagforsen E. The psoriasis variant palmoplantar pustulosis can be improved after cessation of smoking. J Am Acad Dermatol 2006; 54: 737-738.</div>
+<div class="ref-item"><span class="ref-number">47.</span>Sevrain M, Richard MA, Barnetche T, et al. Treatment for palmoplantar pustular psoriasis: systematic literature review, evidence-based recommendations and expert opinion. J Eur Acad Dermatol Venereol 2014; 28 Suppl 5: 13-16.</div>
+<div class="ref-item"><span class="ref-number">48.</span>Lassus A, Geiger JM. Acitretin and etretinate in the treatment of palmoplantar pustulosis: a double-blind comparative trial. Br J Dermatol 1988; 119: 755-759.</div>
+<div class="ref-item"><span class="ref-number">49.</span>Sehgal VN, Verma P, Sharma S, et al. Acrodermatitis continua of Hallopeau: evolution of treatment options. Int J Dermatol 2011; 50: 1195-1211.</div>
+<div class="ref-item"><span class="ref-number">50.</span>Bertelsen T, Kragballe K, Johansen C, Iversen L. Efficacy of ustekinumab in palmoplantar pustulosis and palmoplantar pustular psoriasis. Int J Dermatol 2014; 53: e464-466.</div>
+<div class="ref-item"><span class="ref-number">51.</span>Mancini AJ, Frieden IJ, Paller AS. Infantile acropustulosis revisited: history of scabies and response to topical corticosteroids. Pediatr Dermatol 1998; 15: 337-341.</div>
+<div class="ref-item"><span class="ref-number">52.</span>Van Praag MC, Van Rooij RW, Folkers E, Spritzer R, Menke HE, Oranje AP. Diagnosis and treatment of pustular disorders in the neonate. Pediatr Dermatol 1997; 14: 131-143.</div>
+<div class="ref-item"><span class="ref-number">53.</span>Kahn G, Rywlin AM. Acropustulosis of infancy. Arch Dermatol 1979; 115: 831-833.</div>
+<div class="ref-item"><span class="ref-number">54.</span>Krishnan SG, Yesudian DP, Jayaraman M, Janaki VR, Raj BJ. Erythromelalgia responding to aspirin. Indian J Dermatol Venereol Leprol 1996; 62: 204-205.</div>
+<div class="ref-item"><span class="ref-number">55.</span>Poterucha TJ, Weiss WT, Warndahl RA, et al. Topical amitriptyline combined with ketamine for the treatment of erythromelalgia: a retrospective study of 36 patients at Mayo Clinic. J Drugs Dermatol 2013; 12: 308-310.</div>
+<div class="ref-item"><span class="ref-number">56.</span>Davis MD, Morr CS, Warndahl RA, Sandroni P. Topically applied midodrine, 0.2%, an α1-agonist, for the treatment of erythromelalgia. JAMA Dermatol 2015; 151: 1025-1026.</div>
+<div class="ref-item"><span class="ref-number">57.</span>Gales A, Chaaban B, Husson H, et al. Lidocaine-medicated plaster for treating acute autonomic and sensory neuropathy with erythromelalgia-like presentations. Rev Neurol (Paris) 2016; 172: 399-400.</div>
+<div class="ref-item"><span class="ref-number">58.</span>Davis MD, Rooke T. Erythromelalgia. Curr Treat Options Cardiovasc Med 2002; 4: 207-222.</div>
+<div class="ref-item"><span class="ref-number">59.</span>Dranitsaris G, Vincent MD, Yu J, Huang L, Fang F, Lacouture ME. Development and validation of a prediction index for hand-foot skin reaction in cancer patients receiving sorafenib. Ann Oncol 2012; 23: 2103-2108.</div>
+<div class="ref-item"><span class="ref-number">60.</span>McLellan B, Ciardiello F, Lacouture ME, Segaert S, Van Cutsem E. Regorafenib-associated hand-foot skin reaction: practical advice on diagnosis, prevention, and management. Ann Oncol 2015; 26: 2017-2026.</div>
+<div class="ref-item"><span class="ref-number">61.</span>Manchen E, Robert C, Porta C. Management of tyrosine kinase inhibitor-induced hand-foot skin reaction: viewpoints from the medical oncologist, dermatologist, and oncology nurse. J Support Oncol 2011; 9: 13-23.</div>
+<div class="ref-item"><span class="ref-number">62.</span>Garg K, Singh D, Mishra D. Peeling skin syndrome: Current status. Dermatol Online J 2010; 16: 10.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

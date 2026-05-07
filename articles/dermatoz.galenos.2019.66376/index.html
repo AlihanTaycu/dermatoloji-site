@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dermatolojide İnterferon Tedavisi | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-003/index.html">Cilt 10, Sayı 3 - Eylül 2019</a>
+    <span class="sep">›</span>
+    Dermatolojide İnterferon Tedavisi
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Dermatolojide İnterferon Tedavisi</h1>
+    <div class="article-authors-list"><span class="author-name">Güllü Gencebay</span><sup>1*</sup>, <span class="author-name">Özge Aşkın</span><sup>1</sup>, <span class="author-name">Server Serdaroğlu</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Dermatoloji</span><span class="kw-tag">dermatoonkoloji</span><span class="kw-tag">interferon</span><span class="kw-tag">tedavi</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Dermatology</span><span class="kw-tag">dermatooncology</span><span class="kw-tag">interferons</span><span class="kw-tag">treatment</span></div>
+    <div class="article-dates"><span>Geliş: 12.02.2019</span><span>Kabul: 22.05.2019</span><span>Yayın: 24.09.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 90-95</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-90.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-90-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">İnterferon (IFN), antiviral, antiproliferatif ve immünoregulatuvar etkileri bulunan terapötik olarak kullanılan ilk sitokindir. Dermatolojide Amerikan Gıda ve İlaç Dairesi onaylı olarak kondiloma aküminata, AIDS ilişkili Kaposi sarkomu, melanom ve kronik granülomatöz hastalıkta kullanılmaktadır. Endikasyon dışı kullanımda kütanöz T-hücreli lenfoma, bazal hücreli karsinom, skuamöz hücreli karsinom, aktinik keratoz, keratoakantom, keloid, verruka vulgaris, hemanjiomlar ve Behçet hastalığı gibi sistemik hastalıklar bulunmaktadır. IFN-α2a, α2b, β ve γ en sık kullanılan formlardır. Bu derlemede IFN’nin etki mekanizması, antiviral, antiproliferatif, immünoregulatuvar etkileri, dermatolojideki klinik kullanımı, yan etkileri ve kontraendikasyonlarından bahsedilecektir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">İnterferonlar (IFN), 1957 yılında Isaacs ve Lindenmann tarafından keşfedilen, çeşitli uyaranlara karşı hücrelerden salgılanan antiviral etkiye sahip proteinlerdir. Terapötik olarak kullanılan ilk sitokindir (1). Antiviral, antiproliferatif ve immünoregülatuvar etkileri bulunmaktadır (2).</div>
+<div class="cb-content">Nükleotid dizilerine, spesifik reseptörlerine ve kimyasal yapılarına göre tip 1 IFN, tip 2 IFN ve IFN benzeri sitokinler olmak üzere sınıflandırılır (3). Tip 1 IFN’ler, insanlarda IFN-α, β, ω, ε, κ, tip 2 IFN ise IFN-γ’den oluşmaktadır. IFN benzeri sitokinler ise interlökin (IL)-28A, IL-28B ve IL-29 olmak üzere tip 1 IFN gibi işlev gören sitokinlerden oluşmaktadır (1). Tip 1 veya tip 2 IFN tarafından kullanılan reseptörlerden farklı olan bir heterodimerik reseptör kompleksi üzerinden sinyal vermeleri nedeniyle hem tip 1 hem de tip 2 IFN’lerden farklıdırlar (4).</div>
+<div class="cb-content">Orijinlerine göre bakıldığında IFN-α, insanda en sık bulunan sitokin olup lökosit kökenlidir. IFN-β fibroblast, IFN-γ ise T lenfositlerde üretilir. IFN-γ, intraselüler patojenlere karşı hücresel immün cevapta rol oynarken, IFN-α ve β’nin antiviral aktivitelerini artırmaktadır (5).</div>
+<div class="cb-subtitle">Farmakoloji ve Etki Mekanizması</div>
+<div class="cb-content">Her biri 165-172 aminoasitten oluşan 30’dan fazla IFN-α alt tipi vardır. IFN-α-2a ve IFN-α-2b sadece bir amino aside göre farklılık gösterir. IFN-β, IFN-α ile %29 oranında yapısal olarak benzer özelliklere sahip iken IFN-γ ile hiçbir yapısal benzerliği yoktur (6).</div>
+<div class="cb-content">IFN’lerin etki edebilmesi için, hedef hücre yüzeyindeki spesifik reseptörlere bağlanması gerekir. Tip 1 IFN’ler, IFN-αR1 ve IFN-αR2 gibi iki peptidden oluşan bir reseptör tarafından tanınırlar. Tip 2 IFN olan IFN-γ, IFNGR-1ve IFNGR-2 zincirlerinden oluşan reseptörlerine bağlanır. IFN benzeri sitokinler ise λR1 IFN ve IL-10R2 alt birimleri tarafından oluşturulan reseptörler üzerinde etkilidir. Bu reseptörler yoluyla JAK-STAT bağımlı ve bağımsız sinyal yolakları üzerinden gen ekspresyonunu düzenleyerek antiviral, antiproliferatif ve immünoregülatuvar etki gösterirler (3).</div>
+<div class="cb-subtitle">Antiviral Etkileri</div>
+<div class="cb-content">IFN-α, IFN-β ve IFN-γ yüksek düzeyde antiviral etki göstermektedir. Antiviral aktivite, doğal ve kazanılmış immünitenin aktivasyonu sonucu oluşur. Bu aktivasyon ile protein kinaz RNA, ribonükleaz 2-5A yolağı ve Mx protein gibi bazı antiviral ajanlar ve birçok apoptotik yolak indüklenir. Virüslerin hücrelere bağlanması ve viral partiküllerin hücrelere penetrasyonu engellenir. Transkripsiyon ve translasyon aşamalarının bozulması ile virion oluşumu önlenir ve viral m-RNA yıkımı ile viral protein zincir sentezi engellenmiş olur (3).</div>
+<div class="cb-subtitle">Antiproliferatif Etkileri</div>
+<div class="cb-content">Mitoz inhibisyonu, çeşitli büyüme faktörlerinin inhibisyonu, c-myc, c-ras, c-fos gibi onkogenlerin Down-regülasyonu yolu ile antiproliferatif etki gösterirler (5). MHC klas 1 antijenlerinin ekspresyonunu, NK ve sitotoksik T-hücrelerinin aktivasyonunu, sitokin indüksiyonu ve endojen IFN üretimini artırırlar (7,8).</div>
+<div class="cb-subtitle">İmmünoregülatuvar Etkileri</div>
+<div class="cb-content">Sağlam hücreler ve tümör hücreleri üzerinde MHC klas 1 ve 2 antijen ekspresyonunu artırma ve NK hücre sayısı ve aktivitesinde artış göstermektedirler (5).</div>
+<div class="cb-subtitle">Klinik Kullanımı</div>
+<div class="cb-content">IFN’ler, intralezyonel veya parenteral olarak kullanılmaktadır. İntramusküler veya subkütan uygulama ile IFN-α’nın sistemik emilimi %80, IFN-γ’nin %70’tir. Enjeksiyondan 3-12 saat sonra maksimum seviyeye ulaşır ve 24 saatte kandan tamamen temizlenir. Renal katabolizmaya uğrarlar. Pegile edilmiş IFN-α formları, terapötik etkilerini uzatan polietilen glikol yan zincirleri içerir. Bu formlar ile haftada bir uygulama kolaylığı sağlanır (5,7). IFN’nin dermatoloji alanındaki kullanımı <a class="xref" data-type="table" data-target="table-1">Tablo 1</a>’de gösterilmiştir.</div>
+<div class="cb-subtitle">FDA Onaylı Endikasyonlar</div>
+<div class="cb-subtitle">Kondiloma Aküminata</div>
+<div class="cb-content">Sıklıkla IFN-α tedavisi uygulanmaktadır. İntralezyonel veya topikal uygulama önerilmektedir. Lokal bir hastalık olduğu için yerel uygulamaya daha duyarlıdır ve sistemik uygulama ile daha düşük intralezyonel etki oluşmaktadır. Yapılan bir derlemede lokal uygulamanın sistemik IFN tedavisi ve plaseboya göre daha etkili ve etki süresinin uzun olduğu bildirilmiştir (9). Tedavi maliyeti ve uygulama sıklığı nedeniyle diğer tedavilerden fayda görmeyen hastalarda kullanılmaktadır.</div>
+<div class="cb-subtitle">AIDS İlişkili Kaposi Sarkomu</div>
+<div class="cb-content">IFN-α2a ve 2b tek başına veya antiretroviral tedavi ile kombine olarak kullanılmaktadır. Zidovudin ile kombine veya vinblastin ve bleomisin tedavisi sonrası idame tedavi olarak kullanılabilmektedir. Antiretroviral tedavi ile birlikte kullanıldığında, plazma HIV p24 antijenlerinin baskılandığı tespit edilmiştir. Yüksek doz IFN tedavisi yerine, düşük doz IFN ile zidovudinin kombine kullanılması Kaposi sarkomunun gerilemesinde daha etkilidir (10,11). Yapılan bir çalışmada zidovudin tedavisi altında olan HIV ile enfekte Kaposi olgularından bir gruba 1 MiU/gün IFN-α, diğer gruba 8 MiU/gün IFN-α tedavisi verilerek yanıtları karşılaştırılmış ve daha yüksek doz kullanan grupta yanıt %31 oranda yüksek bulunmuştur (12).</div>
+<div class="cb-subtitle">Melanom</div>
+<div class="cb-content">Yüksek riskli melanomlarda adjuvan tedavi olarak IFN-α tedavisi kullanılmaktadır. Evre 2B ve evre 3 melanomlarda cerrahi sonrası nüks gelişen olgularda önerilmektedir (13). En etkili doz şeması net olarak belirlenememiştir. Yüksek doz tedavi Amerika ve Avustralya’da kullanılırken, orta ve düşük doz tedavi Avrupa’da kullanılmaktadır. Pegile IFN ise sadece İsviçre’de mikrometastaz ve ülsere primer tümörler için kullanımı onaylanmıştır (14). Yüksek doz tedavi 20 MiU/m2&nbsp;intravenöz yolla haftada 5 gün süreyle 4 hafta uygulanır. İdame tedavi 10 MiU/m2/gün subkütan yolla 48 hafta devam edilmektedir (13). Yüksek riskli melanomda IFN kullanımı ile ilgili yapılmış bir meta-analiz çalışmasında IFN’nin relaps riskini azalttığı ve daha az oranda toplam surviye katkı sağladığı gösterilmiştir. Ülsere tümörler üzerinde, ülsere olmayan tümörlere göre etkinliğin daha yüksek olduğu belirtilmiştir (15).</div>
+<div class="cb-content">Melanom ve immün hücreler üzerindeki MHC-1 ekspresyonu üzerinde uyarıcı etki, melanom hücrelerinin proliferasyonunun inhibisyonu ve doz bağımlı proapoptotik mekanizmasıyla etki göstermektedir (16).</div>
+<div class="cb-subtitle">Kronik Granülomatöz Hastalık</div>
+<div class="cb-content">NADPH oksidaz bağımlı fagosit fonksiyonunun bozukluğu ile karakterize, yenidoğan veya çocukluk döneminden itibaren ciddi bakteriyel ve fungal enfeksiyonlar ile seyreden bir hastalıktır. Atopik dermatit benzeri semptomlar, sistemik ya da derin yerleşimli deri enfeksiyonları, fasiyal granülom, diskoid lupus eritematozus ve seboreik dermatit gibi deri bulguları hastalığa eşlik etmektedir.</div>
+<div class="cb-content">Bu hastalıkta IFN-γ’nin makrofajlardaki reaktif oksijen ara ürünleri üretimini artırdığı ve mikroorganizmaların ölümüne yol açtığı gösterilmiştir. IFN-γ tedavisi ile belirgin bir toksisite göstermeksizin, enfeksiyon sıklığında, hastaneye yatış sıklığında ve yaşam kalitesinde düzelme sağlandığı saptanmıştır. Vücut yüzey alanı &gt;0,5 m<sup>2</sup> çocuklarda 50 mcg/m2, yüzey alanı &lt;0,5 m<sup>2</sup> çocuklarda 1,5 mcg/m<sup>2</sup> şeklinde subkütan yolla haftada 3 gün uygulanmaktadır (17).</div>
+<div class="cb-subtitle">Endikasyon Dışı Dermatolojik Kullanımlar</div>
+<div class="cb-subtitle">Bazal Hücreli Karsinom</div>
+<div class="cb-content">İlk tedavi seçeneği cerrahi olsa da intralezyonel olarak IFN, 5-flurourasil, bleomisin tedavileri monoterapi veya kombine tedavi şeklinde uygulanabilmektedir. IFN-α2a ve α2b, IFN-β, IFN-γ bazal hücreli karsinom tedavisinde kullanılmaktadır. Önerilen tedavi rejimi, intralezyonel olarak 1,5 MiU haftada 3 kez, 3 hafta boyuncadır. Bazal hücreli karsinomun yüksek riskli grupları olan morfeiform, infiltratif ve rekürren olgular çalışmalara dahil edilmemiştir. Tedaviden 3 ay sonrasında dermatolojik muayene ile birlikte histopatolojik değerlendirmenin yapılması önerilir (5,18).</div>
+<div class="cb-subtitle">Skuamöz Hücreli Karsinom</div>
+<div class="cb-content">Cerrahi tedavinin uygulanamadığı veya diğer tedavilerin başarısız olduğu durumlarda kullanılabilmektedir. IFN-α en sık kullanılan ajandır. Yapılan bir çalışmada baş-boyun skuamöz hücreli karsinomunda hücrelerin HLA-1 aleli ve tümör antijeni ekspresyonuna rağmen, kütanöz T-lenfositler tarafından in vitro olarak iyi tanınamamaktadır (19). IFN-γ ile T-lenfositlerin antijen sunumunun arttığı gösterilmiştir (5). Bir derlemede 31 invaziv ve 9 <em>in situ</em> skuamöz hücreli karsinom olgusuna IFN-α tedavisi uygulanmış, invaziv olgularda %90, <em>in situ</em> olgularda ise %89 oranında tam yanıt elde edilmiştir (18). Beş yıl içerisinde 9 kez nükseden skuamöz hücreli karsinom olgusunda intralezyonel olarak IFN- α2b, 1,5 MiU, haftada 3 kez, 8 hafta süreyle uygulanmış ve 8 yıl takipte relaps gözlenmemiştir (20).</div>
+<div class="cb-subtitle">Aktinik Keratoz</div>
+<div class="cb-content">IFN’nin aktinik keratozdaki kullanımı sınırlıdır. IFN-α2b ve β kullanılmaktadır. İntralezyonel olarak kullanılmakla birlikte bir çalışmada, içerisinde 30 MiU IFN-α2b bulunan topikal jel günde 4 kez, toplam 4 hafta süreyle, 24 aktinik keratoz olgusuna uygulanmıştır. Klinik yanıt gözlenmiş fakat plaseboya göre istatistiksel olarak anlamlı saptanmamıştır (21).</div>
+<div class="cb-subtitle">Kütanöz T-hücreli Lenfoma</div>
+<div class="cb-content">IFN-α ve γ, kütanöz T-hücreli lenfoma tedavisinde primer olarak kullanılan IFN’lerdir. IFN-γ ile ilgili çalışmalar sınırlıdır, birkaç olgu serisi bildirilmiştir.</div>
+<div class="cb-content">IFN-α, Th2 aktivitesini baskılarken, CD8-T hücrelerini ve NK hücrelerini aktive eder. Sezary hücrelerini ve normal T-hücresinin IL-4 ve IL-5 üretimini inhibe eder. Monoterapi veya kombine tedavi olarak fototerapi, retinoid veya fotoferez ile birlikte kullanılmaktadır (22). Optimal doz ve süre belirtilmemiş olsa da, IFN-α genellikle uzun süreli uygulanmaktadır. Başlangıçta düşük doz başlanıp, dozu yükseltilen hastalar, başlangıçta yüksek doz ile başlanan hastalara kıyasla yüksek doz tedaviyi daha iyi tolere edebilmektedirler. Haftada 3 kez 1-3 MiU şeklinde düşük doz başlanıp, tolere edilebilirse 9-12 MiU/gün dozuna çıkılmaktadır. IFN-α monoterapide tüm evrelerde etkinlik göstermekle birlikte erken evrede daha etkilidir. %29-80 arasında yanıt oranı bildirilmiştir. IFN-α tedavisi en az 3 ay sürekli devam ettirildikten sonra 6-12 ayda kademeli bir şekilde doz düşürülerek, nüks gelişmediği takdirde sonlandırılmaktadır (23).</div>
+<div class="cb-subtitle">Keratoakantom</div>
+<div class="cb-content">Sıklıkla spontan gerilemekle birlikte ilk tedavi seçeneği cerrahidir. Ancak cerrahi yapılamayan perioral veya periorbital bölgeler gibi anatomik alanlarda veya geniş tümörlerde IFN tercih edilebilir. IFN-α2a ve 2b kullanılmaktadır. Bir olgu serisine 3 MiU/hafta dozda IFN-α2b tedavisi uygulanmış, 5-7 enjeksiyon sonrası tama yakın iyileşme gözlenmiştir (24).</div>
+<div class="cb-subtitle">Buschke-Löwenstein Tümörü</div>
+<div class="cb-content">Nadiren metastatik olabilen lokal agresif bir tümördür. Cerrahi, radyoterapi ve kemoterapi tedavi seçenekleridir. Ancak tedavilerin etkinliği düşük ve nüks riski bulunmaktadır. IFN tedavisi sistemik veya intralezyonel uygulanabilmektedir. Haftada 3 kere 10 MiU IFN-α uygulanan bir olguda 12 ayda tam yanıt alınmış, tedaviye 28 ay devam edilerek 4 aylık gözlemde nüks olmadığı belirtilmiştir (25). Oral retinoid ile kombine olarak kullanılan intramüsküler IFN-γ tedavisi sonrası 3 ayda lezyonlar tamamen gerilemiş, 2 yıldan uzun süreli takipte nüks gözlenmemiştir (26).</div>
+<div class="cb-subtitle">Keloid/Hipertrofik Skar</div>
+<div class="cb-content"><em>İn vitro</em> çalışmalar, IFN-α, IFN-β ve IFN-γ’nin keloidal fibroblastlar tarafından üretilen kollajen tip 1 mesajcı RNA üretimini azalttığı ve IFN-α2b’nin kollajenaz aktivitesini artırdığını göstermiştir (27). IFN-α ve IFN-γ tedavide kullanılmaktadır. Cerrahi tedaviler ya da intralezyonel steroid enjeksiyonlarına yanıt vermeyen hastalarda denenebilir. IFN-α2b, keloidlerde intralezyonel olarak 1,5 MiU günde 2 kez veya hipertrofik skarda haftada 3 kez uygulanmaktadır (28).</div>
+<div class="cb-content">İki haftada bir intralezyonel steroid yapılan 20 keloid olgusu ile intralezyonel steroid ile birlikte haftada 2 kez intralezyonel IFN-α2b uygulanan 20 keloid olgusunun karşılaştırıldığı bir çalışmada, keloid lezyonlarının kalınlık ve hacim azalmasında kombine grupta tek başına intralezyonel steroid verilen gruba göre belirgin şekilde azalma gösterdiği belirtilmiştir (29).</div>
+<div class="cb-subtitle">Hemanjiom</div>
+<div class="cb-content">IFN-α2a anjiyogenezis inhibisyonu nedeniyle hayatı tehdit edici veya kortikosteroidlere yanıt vermeyen olguların tedavisinde kullanılmıştır. Spastik dipleji komplikasyonu gelişen olgular ortaya çıkması nedeniyle kullanımı sınırlanmıştır (30).</div>
+<div class="cb-subtitle">Behçet Hastalığı</div>
+<div class="cb-content">Haftada 3 kez subkütan yolla 3 MiU ile başlanıp 18 MiU’ya çıkılarak verilen IFN-α2a uygulamasında başarılı sonuçlar bildirilmiştir. Göz, mukokütanöz ve eklem tutulumunda IFN tedavisi kullanılmaktadır (31). Erken relapsları önlemek için haftalık 1 veya 2 kez idame dozları gereklidir.</div>
+<div class="cb-subtitle">Yan Etkileri (6)</div>
+<div class="cb-content">Yan etkiler, doza bağımlıdır. Tedavinin ilerleyen dönemlerinde azalır veya kaybolurlar. Tedavi kesildikten sonra hızla kaybolurlar (6).</div>
+<div class="cb-content">⇒ <strong>Deri bulguları:</strong> IFN uygulama bölgesinde psoriasis plağı gelişebileceği gibi, psoriasisinde alevlenme görülebilir. Diğer görülen deri bulguları alopesi, kserosiz ve vitiligodur. Enjeksiyon yapılan bölgede postenflamatuvar pigmentasyon, ülserasyon ve granülom görülebilmektedir (6).</div>
+<div class="cb-content">⇒ <strong>Grip benzeri semptomlar:</strong> En sık görülen yan etkidir. Eklem ağrısı, baş ağrısı, kas ağrısı, halsizlik, titreme ve ateş ortaya çıkabilmektedir. Enjeksiyondan 1-2 saat önce profilaktik olarak alınan asetaminofen, aspirin ya da non-steroidal antienflamatuvar ilaçlar (örneğin; ibuprofen) bu yan etkileri önleme açısından faydalı olmaktadır (6).</div>
+<div class="cb-content">⇒ <strong>Nörolojik ve psikiyatrik yan etkiler:</strong> Spastik dipleji, 1,0- 3,6 MiU dozunda IFN-α2a ile tedavi edilen infantil hemanjiom hastalarında raporlanmıştır. Bu durumdan enjeksiyonların içinde koruyucu olarak görev yapan benzil veya fenil alkolün sorumlu olabileceği, bu nedenle koruyucu içermeyen tuzlu solüsyonlar kullanılması önerilmiştir. Yenidoğanların santral sinir sisteminin henüz yeterince olgunlaşmamasına bağlı da gelişebileceği bildirilmiştir (6). İntihar düşüncesi, intihar girişimi ve depresif davranış bozuklukları, görülebilen diğer yan etkiler arasındadır (6).</div>
+<div class="cb-content">⇒ <strong>Gastrointestinal yan etkiler ve kemik iliği süpresyonu:</strong> Bulantı, kusma, diyare, anoreksi, hepatit görülebilmektedir. Yüksek doz IFN kullanan hastalarda veya kemik iliği süpresyonu yapabilecek ek ilaç kullanımı olan hastalarda kemik iliği süpresyonu gelişebilmektedir. Karaciğer fonksiyon testleri ve tam kan sayımı rutin aralıklarla bakılmalıdır (6).</div>
+<div class="cb-content">⇒ <strong>Kardiyovasküler yan etkiler:</strong> Ciddi hipotansiyon, aritmi veya taşikardi IFN tedavisi ile ortaya çıkabilmektedir. Aritmi hikayesi olan veya yakın zamanda miyokard enfarktüsü gelişen hastalar yakın takip edilmelidir. Dozun azaltılması veya tedavinin sonlandırılması ile bu yan etkiler düzelmektedir (6).</div>
+<div class="cb-content">⇒ <strong>Rabdomiyoliz: </strong>Rabdomiyoliz bazen görülmekle birlikte yüksek doz IFN-α2b (20 MiU IV, günde 2 kez, 5 gün) en az bir hastada fatal seyredebilmektedir. Artmış serum kreatin kinaz seviyeleri, dozun düşürülmesi veya tedavinin kesilmesi için uyarıcı olmalıdır (6).</div>
+<div class="cb-subtitle">İlaç Etkileşimleri (6)</div>
+<div class="cb-content">IFN-α2a, sitokrom p450 enzim inhibisyonu ile aminofilinin atılımını azaltır. İnterferon diğer miyelosüpresif (zidovudin gibi) veya nörotoksik (örneğin; vinka alkaloidler) ilaçlarla birlikte kullanıldığında dikkatli olunmalıdır. Aynı zamanda IL-2 ile birlikte uygulandığında böbrek yetmezliği riski artabilir (6).</div>
+<div class="cb-subtitle">Gebelik (6)</div>
+<div class="cb-content">Gebelik kategorisi C’dir. Fare sütüne geçmesine rağmen insan sütüne geçip geçmediği bilinmemektedir (6).</div>
+<div class="cb-subtitle">Kontraendikasyonları (6)</div>
+<div class="cb-content">Kesin kontraendikasyonları, fare immünoglobülinleri, IFN-α ve IFN-γ formülasyonlarına karşı hipersensitivite gelişimidir. Rölatif kontraendikasyonları, kardiyak aritmiler, depresyon ve diğer psikiyatrik hastalıklar, lökopeni, koagülopatiler, organ transplantasyonu ve gebeliktir.</div>
+<div class="cb-section-title">Sonuç</div>
+<div class="cb-content">IFN’lerin farklı reseptörler üzerinden etki etmesiyle dermatolojide değişik klinik kullanımları bulunmaktadır. Çalışmaların genişletilmesiyle selektif reseptörlerin keşfi, dermatolojide farklı klinik kullanımların ortaya çıkmasına olanak verecektir. Aynı zamanda doz şemasının standardize edilebilmesi için daha geniş çalışmalara ihtiyaç vardır.</div><div class="figures-section"><div class="figure-block"><img src="Dermatoz-10-90-g1.png" alt="Dermatoz-10-90-g1.png"></div></div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Pestka S, Krause CD, Walter MR. Interferons, interferon-like cytokines, and their receptors. Immunol Rev 2004; 202: 8-32.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Ismail A, Yusuf N. Type I Interferons: Key Players in Normal Skin and Select Cutaneous Malignancies. Dermatol Res Pract 2014; 2014: 847545.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Bandurska K, Król I, Myga-Nowak M. [Interferons: between structure and function]. Postepy Hig Med Dosw (Online) 2014; 68: 428-440.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Donnelly RP, Kotenko SV. Interferon-lambda: a new addition to an old family. J Interferon Cytokine Res 2010; 30: 555-564.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Kaçar S, Özuğuz P. İnterferonlar. Turkiye Klinikleri J Dermatol-Special Topics 2014; 7: 71-79.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Jackson J, Callen J. Systemic immunomodulators. Bolognia Ed. 4th edition. London, Elsevier, 2242-2244.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Arnaud P. [The interferons: pharmacology, mechanism of action, tolerance and side effects]. Rev Med Interne 2002;(23 Suppl 4): 449s-458s.</div>
+<div class="ref-item"><span class="ref-number">8.</span>De Andrea M, Ravera R, Gioia D, Gariglio M, Landolfo S. The interferon system: an overview. Eur J Paediatr Neurol 2002;6 Suppl A:A41-6; discussion A55-8.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Yang J, Pu YG, Zeng ZM, Yu ZJ, Huang N, Deng QW. Interferon for the treatment of genital warts: a systematic review. BMC Infect Dis 2009; 9: 156.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Krown SE. AIDS-associated Kaposi’s sarcoma: is there still a role for interferon alfa? Cytokine Growth Factor Rev 2007; 18: 395-402.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Kirkwood J. Cancer immunotherapy: the interferon-alpha experience. Semin Oncol 2002; 29(3 Suppl 7): 18-26.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Shepherd FA, Beaulieu R, Gelmon K, et al. Prospective randomized trial of two dose levels of interferon alfa with zidovudine for the treatment of Kaposi’s sarcoma associated with human immunodeficiency virus infection: a Canadian HIV Clinical Trials Network study. J Clin Oncol 1998; 16: 1736-1742.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Di Trolio R, Simeone E, Di Lorenzo G, Buonerba C, Ascierto PA. The use of interferon in melanoma patients: a systematic review. Cytokine Growth Factor Rev 2015; 26: 203-212.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Dimitriou F, Braun RP, Mangana J. Update on adjuvant melanoma therapy. Curr Opin Oncol 2018; 30: 118-124.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ives NJ, Suciu S, Eggermont AMM, et al. Adjuvant interferon-α for the treatment of high-risk melanoma: An individual patient data meta-analysis. Eur J Cancer 2017; 82: 171-183.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Domingues B, Lopes JM, Soares P, Pópulo H. Melanoma treatment in review. Immunotargets Ther 2018; 7: 35-49.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Filiz S, Uygun DF, Yeğin O. Chronic Granulomatous Disease. Turk J Immunol 2013; 1: 22-31.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Kirby JS, Miller CJ. Intralesional chemotherapy for nonmelanoma skin cancer: a practical review. J Am Acad Dermatol 2010; 63: 689-702.</div>
+<div class="ref-item"><span class="ref-number">19.</span>López-Albaitero A, Nayak JV, Ogino T, et al. Role of antigenprocessing machinery in the in vitro resistance of squamous cell carcinoma of the head and neck cells to recognition by CTL. J Immunol 2006; 176: 3402-3409.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Hanlon A, Kim J, Leffell DJ. Intralesional interferon alfa-2b for refractory, recurrent squamous cell carcinoma of the face. J Am Acad Dermatol 2013; 69: 1070-1072.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Edwards L, Levine N, Smiles KA. The effect of topical interferon alpha 2b on actinic keratoses. J Dermatol Surg Oncol 1990; 16: 446-449.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Spaccarelli N, Rook AH. The Use of Interferons in the Treatment of Cutaneous T-Cell Lymphoma. Dermatol Clin 2015; 33: 731-745.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Jawed SI, Myskowski PL, Horwitz S, Moskowitz A, Querfeld C. Primary cutaneous T-cell lymphoma (mycosis fungoides and Sézary syndrome): part II. Prognosis, management, and future directions. J Am Acad Dermatol 2014; 70:223.e1-17; quiz 240-242.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Oh CK, Son HS, Lee JB, Jang HS, Kwon KS. Intralesional interferon alfa-2b treatment of keratoacanthomas. J Am Acad Dermatol 2004; 51(5 Suppl): S177-80.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Geusau A, Heinz-Peer G, Volc-Platzer B, Stingl G, Kirnbauer R. Regression of deeply infiltrating giant condyloma (Buschke-Lowenstein tumor) following long-term intralesional interferon α therapy. Arch Dermatol 2000; 136: 707-710.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Tian YP, Yao L, Malla P, Song Y, Li SS. Successful treatment of giant condyloma acuminatum with combination retinoid and interferon-γ therapy. Int J STD AIDS 2012; 23: 445-447.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Berman B. Biological agents for controlling excessive scarring. Am J Clin Dermatol 2010; 11(Suppl 1): 31-34.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Arno AI, Gauglitz GG, Barret JP, Jeschke MG. Up-to-date approach to manage keloids and hypertrophic scars: a useful guide. Burns 2014; 40: 1255-1266.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Lee JH, Kim SE, Lee AY. Effects of interferon-alpha2b on keloid treatment with triamcinolone acetonide intralesional injection. Int J Dermatol 2008; 47: 183-186.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Grimal I, Duveau E, Enjolras O, Verret JL, Giniès JL. [Effectiveness and dangers of interferon-alpha in the treatment of severe hemangiomas in infants]. Arch Pediatr 2000; 7: 163-167.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Wechsler B, Du-Boutin LT. [Interferons and Behçet’s disease]. Rev Med Interne 2002;(23 Suppl 4): 495s-499s.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Interferon (IFN) is the first cytokine to be used therapeutically with antiviral, antiproliferative and immunoregulatory effects. Dermatologic Food and Drug Administration approved indications for IFNs include condyloma accuminata, AIDS-related Kaposi sarcoma, melanoma, chronic granulomatous disease. Off-label dermatologic uses are cutaneous T-cell lymphoma, basal cell carcinoma, squamous cell carcinoma, actinic keratosis, keratoacanthoma, keloid, verruca vulgaris, hemangioma and Behçet disease. IFN-α2a, α2b, β and γ are the most common forms used in skin diseases. This review will focus on mechanism of action for IFNs, antiviral, antiproliferative and immunoregulatory effects, the dermatologic indications, side effects and contraindications.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Pestka S, Krause CD, Walter MR. Interferons, interferon-like cytokines, and their receptors. Immunol Rev 2004; 202: 8-32.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Ismail A, Yusuf N. Type I Interferons: Key Players in Normal Skin and Select Cutaneous Malignancies. Dermatol Res Pract 2014; 2014: 847545.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Bandurska K, Król I, Myga-Nowak M. [Interferons: between structure and function]. Postepy Hig Med Dosw (Online) 2014; 68: 428-440.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Donnelly RP, Kotenko SV. Interferon-lambda: a new addition to an old family. J Interferon Cytokine Res 2010; 30: 555-564.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Kaçar S, Özuğuz P. İnterferonlar. Turkiye Klinikleri J Dermatol-Special Topics 2014; 7: 71-79.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Jackson J, Callen J. Systemic immunomodulators. Bolognia Ed. 4th edition. London, Elsevier, 2242-2244.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Arnaud P. [The interferons: pharmacology, mechanism of action, tolerance and side effects]. Rev Med Interne 2002;(23 Suppl 4): 449s-458s.</div>
+<div class="ref-item"><span class="ref-number">8.</span>De Andrea M, Ravera R, Gioia D, Gariglio M, Landolfo S. The interferon system: an overview. Eur J Paediatr Neurol 2002;6 Suppl A:A41-6; discussion A55-8.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Yang J, Pu YG, Zeng ZM, Yu ZJ, Huang N, Deng QW. Interferon for the treatment of genital warts: a systematic review. BMC Infect Dis 2009; 9: 156.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Krown SE. AIDS-associated Kaposi’s sarcoma: is there still a role for interferon alfa? Cytokine Growth Factor Rev 2007; 18: 395-402.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Kirkwood J. Cancer immunotherapy: the interferon-alpha experience. Semin Oncol 2002; 29(3 Suppl 7): 18-26.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Shepherd FA, Beaulieu R, Gelmon K, et al. Prospective randomized trial of two dose levels of interferon alfa with zidovudine for the treatment of Kaposi’s sarcoma associated with human immunodeficiency virus infection: a Canadian HIV Clinical Trials Network study. J Clin Oncol 1998; 16: 1736-1742.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Di Trolio R, Simeone E, Di Lorenzo G, Buonerba C, Ascierto PA. The use of interferon in melanoma patients: a systematic review. Cytokine Growth Factor Rev 2015; 26: 203-212.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Dimitriou F, Braun RP, Mangana J. Update on adjuvant melanoma therapy. Curr Opin Oncol 2018; 30: 118-124.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Ives NJ, Suciu S, Eggermont AMM, et al. Adjuvant interferon-α for the treatment of high-risk melanoma: An individual patient data meta-analysis. Eur J Cancer 2017; 82: 171-183.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Domingues B, Lopes JM, Soares P, Pópulo H. Melanoma treatment in review. Immunotargets Ther 2018; 7: 35-49.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Filiz S, Uygun DF, Yeğin O. Chronic Granulomatous Disease. Turk J Immunol 2013; 1: 22-31.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Kirby JS, Miller CJ. Intralesional chemotherapy for nonmelanoma skin cancer: a practical review. J Am Acad Dermatol 2010; 63: 689-702.</div>
+<div class="ref-item"><span class="ref-number">19.</span>López-Albaitero A, Nayak JV, Ogino T, et al. Role of antigenprocessing machinery in the in vitro resistance of squamous cell carcinoma of the head and neck cells to recognition by CTL. J Immunol 2006; 176: 3402-3409.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Hanlon A, Kim J, Leffell DJ. Intralesional interferon alfa-2b for refractory, recurrent squamous cell carcinoma of the face. J Am Acad Dermatol 2013; 69: 1070-1072.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Edwards L, Levine N, Smiles KA. The effect of topical interferon alpha 2b on actinic keratoses. J Dermatol Surg Oncol 1990; 16: 446-449.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Spaccarelli N, Rook AH. The Use of Interferons in the Treatment of Cutaneous T-Cell Lymphoma. Dermatol Clin 2015; 33: 731-745.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Jawed SI, Myskowski PL, Horwitz S, Moskowitz A, Querfeld C. Primary cutaneous T-cell lymphoma (mycosis fungoides and Sézary syndrome): part II. Prognosis, management, and future directions. J Am Acad Dermatol 2014; 70:223.e1-17; quiz 240-242.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Oh CK, Son HS, Lee JB, Jang HS, Kwon KS. Intralesional interferon alfa-2b treatment of keratoacanthomas. J Am Acad Dermatol 2004; 51(5 Suppl): S177-80.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Geusau A, Heinz-Peer G, Volc-Platzer B, Stingl G, Kirnbauer R. Regression of deeply infiltrating giant condyloma (Buschke-Lowenstein tumor) following long-term intralesional interferon α therapy. Arch Dermatol 2000; 136: 707-710.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Tian YP, Yao L, Malla P, Song Y, Li SS. Successful treatment of giant condyloma acuminatum with combination retinoid and interferon-γ therapy. Int J STD AIDS 2012; 23: 445-447.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Berman B. Biological agents for controlling excessive scarring. Am J Clin Dermatol 2010; 11(Suppl 1): 31-34.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Arno AI, Gauglitz GG, Barret JP, Jeschke MG. Up-to-date approach to manage keloids and hypertrophic scars: a useful guide. Burns 2014; 40: 1255-1266.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Lee JH, Kim SE, Lee AY. Effects of interferon-alpha2b on keloid treatment with triamcinolone acetonide intralesional injection. Int J Dermatol 2008; 47: 183-186.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Grimal I, Duveau E, Enjolras O, Verret JL, Giniès JL. [Effectiveness and dangers of interferon-alpha in the treatment of severe hemangiomas in infants]. Arch Pediatr 2000; 7: 163-167.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Wechsler B, Du-Boutin LT. [Interferons and Behçet’s disease]. Rev Med Interne 2002;(23 Suppl 4): 495s-499s.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

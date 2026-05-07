@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Sendromu ve Farklı Klinik Yüzleri | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-004/index.html">Cilt 10, Sayı 4 - Aralık 2019</a>
+    <span class="sep">›</span>
+    Sweet Sendromu ve Farklı Klinik Yüzleri
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Sweet Sendromu ve Farklı Klinik Yüzleri</h1>
+    <div class="article-authors-list"><span class="author-name">Fatma Aydın</span><sup>1*</sup>, <span class="author-name">Nalan Saraç</span><sup>2</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Ondokuz Mayıs Üniversitesi Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, Samsun, Türkiye</div><div class="affil-item"><sup>2</sup> Sağlık Bilimleri Üniversitesi, Samsun Eğitim ve Araştırma Hastanesi, Dermatoloji Kliniği, Samsun, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Sweet sendromu</span><span class="kw-tag">farklı klinik yüzleri</span><span class="kw-tag">akut febril nötrofilik dermatoz</span><span class="kw-tag">büllöz</span><span class="kw-tag">nekrotizan</span><span class="kw-tag">subkütan</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Sweet syndrome</span><span class="kw-tag">different clinical aspects</span><span class="kw-tag">acute febril neutrophilic dermatosis</span><span class="kw-tag">bullous</span><span class="kw-tag">necrotizing</span><span class="kw-tag">subcutane</span></div>
+    <div class="article-dates"><span>Geliş: 28.10.2018</span><span>Kabul: 01.06.2019</span><span>Yayın: 07.10.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 111-114</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-111.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-111-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Akut febril nötrofilik dermatoz olarak da bilinen Sweet sendromu, ani başlangıçlı ağrılı, eritemli, papül ve plaklar, ateş, nötrofilik lökositoz ve dermiste yoğun nötrofil infiltrasyonu ile karakterize enflamatuvar bir hastalıktır. Sweet sendromunun semptom ve lezyonları sistemik steroid tedavisi başlandıktan sonra hızlıca düzeldiğinden bu sendromun akılda tutulması ve farklı klinik yüzlerinin bilinmesi gereksiz cerrahi ve medikal tedavilerin önlenmesi açısından önemlidir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Sweet sendromu (SS) ilk kez Dr. Robert Douglas Sweet tarafından 1964 yılında “akut febril nötrofilik dermatoz” olarak tanımlanan, ağrılı enflamatuvar papül ve nodüllerden oluşmuş, eritemli plaklar, ateş, nötrofilik lökositoz ve dermiste yoğun nötrofil infiltrasyonu ile karakterize sistemik enflamatuvar bir hastalıktır (1-7).</div>
+<div class="cb-content">SS’nin insidansı tam olarak bilinmemektedir, yaygın olmayan bir hastalık olup tüm dünyada ve tüm ırklarda görülebilmekle birlikte Japonya’da daha sıktır (3). SS’nin patogenezi tam olarak bilinmemektedir, ancak genetik yatkınlık, hipersensitivite reaksiyonu ve sitokinlerin bozulmuş regülasyonu ile ilgili olduğunu düşündüren bazı teoriler vardır (1-7).</div>
+<div class="cb-content">Klasik (idiyopatik), malignite ve ilaç ile ilişkili olmak üzere etiyolojisine göre üç alt tipe ayrılmaktadır (1-7).</div>
+<div class="cb-content">Klasik SS en sık görülen (%70-80) tip olup, 30-60 yaş arası kadınlarda daha fazladır. Enfeksiyonlar, enflamatuvar barsak hastalıkları, otoimmün hastalıklar ve gebelik ile ilişkilendirilmektedir. Kliniğinde 38 °C ateş, nötrofili, hassas, ağrılı, eritemli veya morumsu papül, plak, nodül şeklinde deri lezyonları oluşur (1-7).</div>
+<div class="cb-content">Malignite ilişkili (paraneoplastik) SS sıklığı %10-40 arasında değişmektedir (4,6). Yaşlılarda daha sık, erkek ve kadınlarda eşit sıklıkta görülür. Hematolojik malignitelerle özellikle de akut myelositik lösemi ile birliktelik sıktır (1-7). Solid tümörlerden ise en sık genitoüriner sistem, gastrointestinal sistem ve meme kanserleri ile birliktelik görülmektedir (1-8). Bu tipte deri lezyonları klasik SS’den farklı olarak vezikülobüllöz, ülseratif veya püstüler karakterde atipik lezyonlardır (8). Pyoderma gangrenozum lezyonlarını taklit edebilir. Kliniğinde ateş görülmeyebilir, oral mukoza, deri ve diğer organ tutulumları daha yaygın ve daha şiddetli olma eğilimindedir. Nüksler sıktır. Beraberinde anemi, trombositopeni gözlenebilir (1-8).</div>
+<div class="cb-content">İlaçla ilişkili SS ise ilk defa 1986 yılında Su ve Liu (9) tarafından trimetoprim-sülfometaksazol ile ilişkili olarak bildirilmiştir. Daha sonra retinoidler, diazepam, karbamezepin gibi birçok ilaçlarla ve en sık da granülosit koloni stimüle edici faktör ile birlikteliği bildirilmiştir (2,6,7). Deri lezyonları klasik SS’ye benzer, ancak lezyonlar bazen ödemden dolayı psödo-veziküler veya psödo-püstüler görünüşte olabileceği gibi bazı hastalarda veziküler veya püstüler döküntüler, ekzemaya benzer değişiklikler şeklinde de görülebilir. Nadiren plaklarda hedef benzeri görünüm de olabilir (2-7).</div>
+<div class="cb-content">SS’de lezyonlar sıklıkla tipik olarak baş, boyun ve üst ekstremitelere asimetrik olarak yerleşmekle birlikte vücudun herhangi bir yerinde görülebilirler (1-8). Koebner fenomeni ve paterji pozitifliği tespit edilebilir. Ayrıca eski skarlar üzerinde, lenfödem ve radyoterapi alanlarında da deri lezyonları oluşabilir (1-9). Oral, genital lezyonlar ve tırnak değişiklikleri görülebilir (1,2).</div>
+<div class="cb-content">Artralji, miyalji, genel halsizlik ve baş ağrısı gibi sistemik semptomlar eşlik edebilir (1-7). Deri dışında en sık göz tutulumu, ikinci sıklıkta kas-iskelet sistemi tutulumu olur (2,10-12). Daha nadir olarak da santral sinir sistemi, kardiyovasküler sistem, solunum sistemi ve gastrointestinal sistem tutulumu olabilir (2,13-15). Bu organlarda da nötrofilik infiltrasyonlar görülebilir, bu nedenle bazı otörler tarafından “nötrofilik hastalık” olarak isimlendirilmesi önerilmiştir (2-7).</div>
+<div class="cb-content">Histopatolojisinde, vaskülit olmaksızın üst dermiste matür nötrofillerin yoğun ve diffüz infiltrasyonu ve papiller dermiste ödem olması karakteristik özelliktir, ancak nadiren lökositoklastik vaskülit bulguları görülebilir (1-7,16,17). Epidermis genellikle normaldir, nadiren nötrofiller epidermiste ve adipoz dokuda da görülebilir (1-4). Malignite ile ilişkili SS’de subkütan dokuda da nötrofilik infiltrasyon, hematolojik malignite ilişkili SS’de olgun nötrofillere ek olarak anormal (immatür) nötrofiller olabilir, klasik ve ilaçla ilişkili SS’de ise dermal infiltratta nötrofillere ilaveten eozinofiller de görülebilir (7). Ayrıca ilk defa Requena ve ark. (18) tarafından tanımlanan son zamanlarda histiyositoid SS olarak adlandırılan, immatür nötrofillerden zengin bir patolojik varyant da vardır (4).</div>
+<div class="cb-content">SS’de laboratuvarda en sık nötrofili ile birlikte lökositoz ve eritrosit&nbsp; sedimentasyon hızında (ESH) veya C-reaktif proteinde (CRP) artış görülür (1-8).</div>
+<div class="cb-content">Hastalığın tanısında, 1986 yılında Su ve Liu (9) tarafından geliştirilmiş olan tanı kriterleri kullanılır. Tanı için klasik ya da malignite ile ilişkili SS’de iki majör ve iki minör kriterin, ilaca bağlı SS’de ise beş kriterin varlığı gereklidir.</div>
+<div class="cb-content">Majör kriterler:</div>
+<div class="cb-content">Minör kriterler:</div>
+<div class="cb-content">İlaca bağlı SS’de ise tanı ilk üç maddeye ilaveten alttaki iki maddenin de olması ile konulmaktadır:</div>
+<div class="cb-content">Ayırıcı tanıda enfeksiyoz ve enflamatuvar bozukluklar, neoplaziler, sistemik hastalıklar, reaktif eritem/vaskülitler yer almaktadır (1-9).</div>
+<div class="cb-content">Lezyonlar genellikle spontan veya tedavi ile skar bırakmadan iyileşirler. Rekürrensler 1/3 oranında görülür (1-9). Steroid tedavisine hem deri lezyonlarında, hem de deri dışı tutulumlarda dramatik cevap alınır. Lokalize deri lezyonları güçlü etkili topikal veya intralezyonel kortikosteroidler ile tedavi edilebilir. Antibiyotikler genellikle etkisizdir. Potasyum iyodür, kolşisin, indometazin, siklosporin, klofazimin ve dapson diğer tedavi seçenekleri arasında yer alır. Etretinat, interferon-gamma, intravenöz immünoglobulin,&nbsp; siklofosfamid, doksisiklin, metotreksat, biyolojik ajanlar (etanercept, adalimumab, infliksimab), anakinra tedavide etkili olduğu bildirilen diğer ajanlardır (19).</div>
+<div class="cb-subtitle">Sweet Sendromunun Farklı Klinik Görünümleri</div>
+<div class="cb-content"><strong>Büllöz Sweet sendromu:</strong> SS’nin daha çok hematolojik malignitelerde görülen nadir bir formudur. Klasik SS lezyonları üzerinde vezikül ve büller ve pyoderma gangrenozuma benzeyen ülserasyonlar ile karakterizedir (20).</div>
+<div class="cb-content"><strong>El dorsalinin nötrofilik dermatozu:</strong> SS’nin genellikle el dorsaline, nadiren de palmar bölgeye yerleşimli lokalize formudur. Strutton tarafından 1995 yılında “elin püstüler vasküliti” olarak tanımlanmış, 2000 yılında Galaria tarafından “el dorsalinin nötrofilik dermatozu” olarak adlandırılmıştır. Günümüze kadar 100’den fazla olgu bildirilmiştir. Genellikle klinikte bül, erozyon ve ülserler ile karşımıza çıkar. Lezyonlar çoğunlukla ağrılıdır, nadiren de kaşıntılı olabilir. Lezyon kültüründe üreme olmaz. Demografik özellikleri, etiyolojisi ve histopatolojik bulguları klasik SS ile benzerlik gösterir. Ancak SS’de görülen klasik laboratuvar bulgularına ve ateşe daha az rastlanır. Ayırıcı tanıda el dorsaline yerleşmesi, bül ve ülserlerin bulunması ve vaskülitin tespit edilememesi ile atipik pyoderma gangrenozumdan ayrılır. Tedavisi klasik SS’ye benzerdir. Çoğunlukla skar bırakmadan, bazen de pigmentasyon bırakarak iyileşir. Genellikle nüks görülmez (21-24).</div>
+<div class="cb-content"><strong>Dev selülit benzeri Sweet sendromu:</strong> Surovy ve ark. (25) tarafından (2013) obez ve malignite tespit edilen üç olguda bildirilmiştir. Klinikte tekrarlayıcı, gövde veya ekstremitelerde, yaygın, dev selülit benzeri 50-100 cm çapında, eritematöz infiltratif plak ve büller şeklinde görülür. Nadiren purpurik lezyonlar da olabilir. Enfeksiyon tespit edilemez ve tedavide sistemik steroide cevap alınır. Bildirilen olguların tümü obez hastalardır (25).</div>
+<div class="cb-content"><strong>Nekrotizan Sweet sendromu:</strong> 2012 yılında Kronshinsky ve ark. (26) tarafından immünsüprese üç olguda bildirilmiştir. Daha sonra kazanılmış immün yetmezlik sendromu, dermatomyozit, enflamatuvar barsak hastalıkları, tekrarlayan polikondrit, romatoid artrit ve tiroid hastalıkları ile birliktelik tariflenmiştir. Ateş, ani başlangıçlı eritemli/viyolase, ısı artışı olan plaklar şeklinde başlar ve doku nekrozu gelişir. Kliniği nekrotizan fasiite benzemekle birlikte enfeksiyon tespit edilemez. Paterji pozitifliği görülebilir. Histopatolojik incelemede derin nötrofilik infiltrasyon görülür. Antibiyotik tedavisine cevap alınamaz. Sistemik steroid tedavisine hızlı cevap verir (27).</div>
+<div class="cb-content"><strong>Histiyositoid Sweet sendromu: </strong>2005 yılında Requena ve ark. (18) tarafından SS’li 41 olguda dermal infiltratın histiositlerden (monositlerin çeşitli organlarda farklılaşması) değil de, histiositoid olarak tariflenen immatür miyeloid hücrelerden (immatür nötrofil) oluştuğu bildirilmiştir. Bu olguların 11’inde hematolojik malignite tespit edilmiştir. Daha sonra otoimmün hastalıklar, malignite, enflamasyon, enflamatuvar barsak hastalıkları, ilaçlar ile ilişkili olgular da bildirilmiştir. Yapılan retrospektif bir çalışmada miyelodisplastik hastalıklar ile klasik tip SS %3, histiyositoid tip SS %32 birliktelik gösterdiği rapor edilmiştir (2,19).</div>
+<div class="cb-content">Histiyositoid SS’nin deri lezyonları ve tedavisi, klasik SS’ye benzerlik göstermekle birlikte lökopeni, hepatosplenomegali ve lenfadenopati de görülebilir.</div>
+<div class="cb-content">Leukemia kutis ve histiyositten zengin dermatozlardan ayırıcı tanısı yapılmalıdır. Periferik kanda immatür miyeloid hücrelerin olmayışı ve bcr/abl füzyon geninin negatif olması ile lösemiden ayırt edilir. Histiyositoid SS’de miyeloperoksidaz ekspresyonunun olması histiyositten zengin dermatozlarla karışmasını önlemek açısından önemlidir (18,28,29).</div>
+<div class="cb-content"><strong>Subkütan Sweet sendromu:</strong> Subkütan SS’de, subkütan dokuda daha sık lobüler alanda olmak üzere hem lobüler, hem de septal alanda yoğun nötrofilik infiltrasyon ile karakterizedir. Çoğunlukla miyeloid bozukluklara ve ilaçlara bağlı gelişir. Klinikte alt ekstremitelerde 2-3 cm çaplı eritemli nodül şeklinde karşımıza çıkar. Klinik olarak eritema nodozuma benzemekle birlikte, eritema nodozum histopatolojisinde septal lenfositik infiltrasyon görülür. Nötrofilik pannükülitlerin özellikle de alt tipi olan nötrofilik lobüler pannikülitlerden, leukemia kutis ve id reaksiyonuyla da ayırıcı tanısı yapılmalıdır. Tanıda eksizyonel biyopsi tercih edilir (2,30).</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Cohen PR, Hongsmann H, Kurzrock R. Acute febrile neutrophilic dermatosis (Sweet syndrome). Fitzpatrick’s Dermatology in General Medicine. Ed. Goldsmith LA, Katz SI, Gilchrest BA, et al. 8th ed. McGraw Hill, 2012; Vol 1: 362.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Merola JF, Callen J, Ofori AO. Sweet syndrome (acute febrile neutrophilic dermatosis): Pathogenesis, clinical manifestations, and diagnosis. UpToDate website. https://www.uptodate.com/contents/sweet-syndrome-acute-febrile-neutrophilic-dermatosis-pathogenesis-clinical-manifestations-and-diagnosis. Accessed date: 01.09.2017.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Moschella SL, Davis MDP. Nötrofilik dermatozlar. Dermatology. Ed. Bolognia JL, Jorizzo JL, Rapini RP. 1st ed. St Louis, Mosby; 2003; Vol 1: 411-415.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Villarreal-Villarreal CD, Ocampo-Candiani J, Villarreal-Martínez A. Sweet Syndrome: a review and update. Actas Dermosifiliogr 2016; 107: 369-378.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Bilgili SG, Karadağ AS, Çalka Ö, Bayram İ. Sweet sendromu: 31 hastanın klinik ve laboratuvar bulgularının değerlendirilmesi. Türkderm 2013; 47: 33-8.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Gökalp H, Bulutay P. Granülosit koloni stimule edici faktör ile tetiklenen Sweet sendromu. Turkiye Klinikleri J Dermatol 2017; 27: 28-32.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Günaştı Topal S. Sweet sendromu. Türkiye Klinikleri J Dermatol-Special Topics 2017; 10: 217-222.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Marcoval J, Martín-Callizo C, Valentí-Medina F, Bonfill-Orti M, Martinez-Molina L. Sweet syndrome: long-term follow-up of 138 patients. Clin Exp Dermatol 2016; 41: 741-746.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Su WP, Liu HN. Diagnostic criteria for Sweet’s syndrome. Cutis 1986; 37: 167-174.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Gottlieb CC, Mishra A, Belliveau D, Green P, Heathcote JG. Ocular ınvovement in acute febrile neutrophilic dermatosis (sweet syndrome): new cases and review of the literature. Surv Ophthalmol 2008; 53: 219-226.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Baartman B, Kosari P, Warren CC, et al. Sight-threatening ocular manifestations of acute febrile neutrophilic dermatosis (Sweet’s syndrome). Dermatology 2014; 228: 193-197.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Matsumiya W, Kusuhara S, Yamada Y, Azumi A, Negi A. Sweet’s syndrome with panuveitis resembling Behçet’s disease. Jpn J Ophthalmol 2012; 56: 268-272.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Drago F, Ciccarese G, Agnoletti AF, Sarocchi F, Parodi A. Neuro sweet syndrome: a systematic review. A rare complication of sweet syndrome. Acta Neurol Belg 2017; 117: 33-42.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Li B, Ma Z, Xu X, et al. Multi-organ involvement of Sweet’s syndrome: a case report and literature review. Intern Med 2015; 54: 339-343.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Yang M, Zhang J, He Z, et al. Lung involvement of 3 cases of idiopathic sweet syndrome and literature review. Zhonghua Jie He He Hu Xi Za Zhi 2015; 38: 589-594.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Malone JC, Slone SP, Wills-Frank LA, et al. Vascular inflammation (vasculitis) in sweet syndrome. A clinicopathologic study of 28 biopsy specimens from 21 patients Arch Dermatol 2002; 138: 345-349.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Von den Driesch P. Sweet’s syndrome and vasculitis. J Am Acad Dermatol 1996; 34: 539.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Requena L, Kutzner H, Palmedo G, et al. Histiocytoid Sweet syndrome: a dermal infiltration of immature neutrophilic granulocytes. Arch Dermatol 2005; 141: 834-842.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Maalouf D, Battistella M, Bouaziz JD. Neutrophilic dermatosis: disease mechanism and treatment. Curr Opin Hematol 2015; 22: 23-29.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Voelter-Mahlknecht S, Bauer J, Metzler G, Fierlbeck G, Rassner G. Bullous variant of sweet’s syndrome. Int J Dermatol 2005; 44: 946-947.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Aydin F, Senturk N, Yildiz L, Canturk M, Turanli A. Neutrophilic dermatosis of the dorsal hands in a farmer. J Eur Acad Dermatol Venereol 2004; 18: 716-717.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Walling HW, Snipes CJ, Gerami P, Piette WW. The relationship between neutrophilic dermatosis of the dorsal hands and sweet syndrome: report of 9 cases and comparison to atypical pyoderma gangrenosum. Arch Dermatol 2006; 142: 57-63.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Wolf R, Tüzün Y. Acral manifestations of Sweet syndrome (neutrophilic dermatosis of the hands). Clin Dermatol 2017; 35: 81-84.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Koca R, Elgörmüş CB. El dorsalinin nötrofilik dermatozu. Türkiye Klinikleri J Dermatol 2017; 10: 234-237.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Surovy AM, Pelivani N, Hegyi I, Buettiker U, Beltraminelli H, Borradori L. Giant cellulitis-like Sweet Syndrome, a new variant of neutrophilic dermatosis. JAMA Dermatol 2013; 149: 79-83.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Kroshinsky D, Alloo A, Rothschild B, et al. Necrotizing Sweet syndrome: a new variant of neutrophilic dermatosis mimicking necrotizing fasciitis. J Am Acad Dermatol 2012; 67: 945-954.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Villarreal-Villarreal CD, Ocampo-Candiani J, Villarreal-Martínez A. Sweet Syndrome: A Review and Update. Actas Dermosifiliogr 2016; 107: 369-378.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Lin J, Zhang Q, Chen M. Subcutaneous histiocytoid Sweet’s syndrome in a patient associated with myelodysplastic syndrome-refractory anemia. J Dermatol 2012; 39: 99-101.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Kaiser R, Connolly K, Linker C, Maldonado J, Fye K. Stem cell transplant for myelodysplastic syndrome-associated histiocytoid Sweet’s syndrome in a patient with arthritis and myalgias. Arthritis Rheum 2008; 59: 1832-1834.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Chan MP, Duncan LM, Nazarian RM. Subcutaneous sweet syndrome in the setting of myeloid disorders: a case series and review of the literature. J Am Acad Dermatol 2013; 68: 1006-1015.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Sweets syndrome, also referred to as acute febril neutrophilic dermatosis, is an inflammatory disease characterized by abrupt onset of pain, red papules and plaques, fever, neutrophilic leukocytosis, and dermal neutrophilic infiltrate. Since the symptoms and lesions of Sweet syndrome resolve rapidly after the systemic steroid therapy, knowing the different clinical aspects of this syndrome is important for preventing unnecessary surgery and medical treatment.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Cohen PR, Hongsmann H, Kurzrock R. Acute febrile neutrophilic dermatosis (Sweet syndrome). Fitzpatrick’s Dermatology in General Medicine. Ed. Goldsmith LA, Katz SI, Gilchrest BA, et al. 8th ed. McGraw Hill, 2012; Vol 1: 362.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Merola JF, Callen J, Ofori AO. Sweet syndrome (acute febrile neutrophilic dermatosis): Pathogenesis, clinical manifestations, and diagnosis. UpToDate website. https://www.uptodate.com/contents/sweet-syndrome-acute-febrile-neutrophilic-dermatosis-pathogenesis-clinical-manifestations-and-diagnosis. Accessed date: 01.09.2017.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Moschella SL, Davis MDP. Nötrofilik dermatozlar. Dermatology. Ed. Bolognia JL, Jorizzo JL, Rapini RP. 1st ed. St Louis, Mosby; 2003; Vol 1: 411-415.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Villarreal-Villarreal CD, Ocampo-Candiani J, Villarreal-Martínez A. Sweet Syndrome: a review and update. Actas Dermosifiliogr 2016; 107: 369-378.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Bilgili SG, Karadağ AS, Çalka Ö, Bayram İ. Sweet sendromu: 31 hastanın klinik ve laboratuvar bulgularının değerlendirilmesi. Türkderm 2013; 47: 33-8.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Gökalp H, Bulutay P. Granülosit koloni stimule edici faktör ile tetiklenen Sweet sendromu. Turkiye Klinikleri J Dermatol 2017; 27: 28-32.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Günaştı Topal S. Sweet sendromu. Türkiye Klinikleri J Dermatol-Special Topics 2017; 10: 217-222.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Marcoval J, Martín-Callizo C, Valentí-Medina F, Bonfill-Orti M, Martinez-Molina L. Sweet syndrome: long-term follow-up of 138 patients. Clin Exp Dermatol 2016; 41: 741-746.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Su WP, Liu HN. Diagnostic criteria for Sweet’s syndrome. Cutis 1986; 37: 167-174.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Gottlieb CC, Mishra A, Belliveau D, Green P, Heathcote JG. Ocular ınvovement in acute febrile neutrophilic dermatosis (sweet syndrome): new cases and review of the literature. Surv Ophthalmol 2008; 53: 219-226.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Baartman B, Kosari P, Warren CC, et al. Sight-threatening ocular manifestations of acute febrile neutrophilic dermatosis (Sweet’s syndrome). Dermatology 2014; 228: 193-197.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Matsumiya W, Kusuhara S, Yamada Y, Azumi A, Negi A. Sweet’s syndrome with panuveitis resembling Behçet’s disease. Jpn J Ophthalmol 2012; 56: 268-272.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Drago F, Ciccarese G, Agnoletti AF, Sarocchi F, Parodi A. Neuro sweet syndrome: a systematic review. A rare complication of sweet syndrome. Acta Neurol Belg 2017; 117: 33-42.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Li B, Ma Z, Xu X, et al. Multi-organ involvement of Sweet’s syndrome: a case report and literature review. Intern Med 2015; 54: 339-343.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Yang M, Zhang J, He Z, et al. Lung involvement of 3 cases of idiopathic sweet syndrome and literature review. Zhonghua Jie He He Hu Xi Za Zhi 2015; 38: 589-594.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Malone JC, Slone SP, Wills-Frank LA, et al. Vascular inflammation (vasculitis) in sweet syndrome. A clinicopathologic study of 28 biopsy specimens from 21 patients Arch Dermatol 2002; 138: 345-349.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Von den Driesch P. Sweet’s syndrome and vasculitis. J Am Acad Dermatol 1996; 34: 539.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Requena L, Kutzner H, Palmedo G, et al. Histiocytoid Sweet syndrome: a dermal infiltration of immature neutrophilic granulocytes. Arch Dermatol 2005; 141: 834-842.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Maalouf D, Battistella M, Bouaziz JD. Neutrophilic dermatosis: disease mechanism and treatment. Curr Opin Hematol 2015; 22: 23-29.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Voelter-Mahlknecht S, Bauer J, Metzler G, Fierlbeck G, Rassner G. Bullous variant of sweet’s syndrome. Int J Dermatol 2005; 44: 946-947.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Aydin F, Senturk N, Yildiz L, Canturk M, Turanli A. Neutrophilic dermatosis of the dorsal hands in a farmer. J Eur Acad Dermatol Venereol 2004; 18: 716-717.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Walling HW, Snipes CJ, Gerami P, Piette WW. The relationship between neutrophilic dermatosis of the dorsal hands and sweet syndrome: report of 9 cases and comparison to atypical pyoderma gangrenosum. Arch Dermatol 2006; 142: 57-63.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Wolf R, Tüzün Y. Acral manifestations of Sweet syndrome (neutrophilic dermatosis of the hands). Clin Dermatol 2017; 35: 81-84.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Koca R, Elgörmüş CB. El dorsalinin nötrofilik dermatozu. Türkiye Klinikleri J Dermatol 2017; 10: 234-237.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Surovy AM, Pelivani N, Hegyi I, Buettiker U, Beltraminelli H, Borradori L. Giant cellulitis-like Sweet Syndrome, a new variant of neutrophilic dermatosis. JAMA Dermatol 2013; 149: 79-83.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Kroshinsky D, Alloo A, Rothschild B, et al. Necrotizing Sweet syndrome: a new variant of neutrophilic dermatosis mimicking necrotizing fasciitis. J Am Acad Dermatol 2012; 67: 945-954.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Villarreal-Villarreal CD, Ocampo-Candiani J, Villarreal-Martínez A. Sweet Syndrome: A Review and Update. Actas Dermosifiliogr 2016; 107: 369-378.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Lin J, Zhang Q, Chen M. Subcutaneous histiocytoid Sweet’s syndrome in a patient associated with myelodysplastic syndrome-refractory anemia. J Dermatol 2012; 39: 99-101.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Kaiser R, Connolly K, Linker C, Maldonado J, Fye K. Stem cell transplant for myelodysplastic syndrome-associated histiocytoid Sweet’s syndrome in a patient with arthritis and myalgias. Arthritis Rheum 2008; 59: 1832-1834.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Chan MP, Duncan LM, Nazarian RM. Subcutaneous sweet syndrome in the setting of myeloid disorders: a case series and review of the literature. J Am Acad Dermatol 2013; 68: 1006-1015.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

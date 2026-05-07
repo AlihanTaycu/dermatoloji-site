@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botulinum Toksini | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2019-010-004/index.html">Cilt 10, Sayı 4 - Aralık 2019</a>
+    <span class="sep">›</span>
+    Botulinum Toksini
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Botulinum Toksini</h1>
+    <div class="article-authors-list"><span class="author-name">Ali Tanakol</span><sup>1*</sup>, <span class="author-name">Zekayi Kutlubay</span><sup>2</sup>, <span class="author-name">Burhan Engin</span><sup>2</sup>, <span class="author-name">Server Serdaroğlu</span><sup>2</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Selahaddin Eyyübi Devlet Hastanesi, Deri ve Zührevi Hastalıklar Kliniği, Diyarbakır, Türkiye</div><div class="affil-item"><sup>2</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi, Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Botulinum toksin</span><span class="kw-tag">kozmetoloji</span><span class="kw-tag">primer hiperhidroz</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Botulinum toxin</span><span class="kw-tag">cosmetology</span><span class="kw-tag">primary hyperhidrosis</span></div>
+    <div class="article-dates"><span>Geliş: 04.02.2019</span><span>Kabul: 01.06.2019</span><span>Yayın: 07.10.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 107-110</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-10-107.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-10-107-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Botulinum toksini medikal anlamda birçok alanda kullanılmaktadır. Yüz bölgesi uygulamaları sırasında kozmetik etkisi fark edilmiştir. Toksin, kas hareketleri sırasında oluşan kırışıklıkları azaltır. Botoksun ekrin ter bezleri üzerinde baskılayıcı etkisi vardır. Bu etkisinden yararlanılarak primer hiperhidroz tedavisinde de botoks kullanılabilir. Botoks enjeksiyonunda uygun dozlar kullanması sonrasında, diğer kozmetik işlemlerde olduğu gibi hastanın takibi gerekmektedir. İşlem sonrasında kas inhibisyonuna bağlı çeşitli komplikasyonlar saptanabilmektedir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Botoks, bilinen en güçlü biyolojik toksinlerden biridir. İlk defa sosis zehirlenmesine bağlı gastroenterit salgınında botulus kavramı bildirilmiştir (botulus, Latincede sosis demektir). Toksin gram pozitif anaerob sporlu bakteri olan <em>Clostridium botulinum</em> tarafından salgılanır. Bakteri 8 farklı antijenik özellikte ekzotoksin (A, B, C1, C2, D, E, F and G) üretir (1). Bu nörotoksinler ağır ve hafif zincirlerden oluşan protein yapısındadırlar. Bu yüzden kolayca denatüre olabilirler. Temel etki mekanizması asetilkolin salınımının inhibisyonudur (1). Dermatolojide nöromüsküler bileşke ve ekrin ter bezleri üzerindeki etkisinden yararlanılır. Dinamik kırışıklıklar ve hiperhidrozun tedavisinde dermatolojide kullanım alanı bulmuştur. Nörotoksin ağır zinciri kolinerjik nöronların presinaptik yüzeyine bağlanır. Oluşan toksin reseptör kompleksi endositozla hücre içine alınır. Nörotoksin hafif zincir endopeptidaz aktivitesi göstererek SNARE proteinlerine etki eder. SNARE proteinleri transport veziküllerinin doğru hedef membranı tanımaları ve o membran ile kaynaşması için özel reseptörlerdir. Botulinum toksin-A, SNAP-25 proteinini bloke eder (2). Botulinum toksin-B ise vezikül ilişkili membran proteinini bloke eder (2).</div>
+<div class="cb-content">Botulinum toksini 2002 yılında 18-65 yaşları arasında orta ve şiddetli dinamik glabellar çatık kaş çizgileri olan erişkinlerde Amerikan Gıda ve İlaç Kurumu (FDA) tarafından geçici tedavi olarak onaylanmıştır. Primer aksiller hiperhidroz geçici tedavisinde FDA tarafından 2004 yılında onaylanmıştır.</div>
+<div class="cb-content">Temel uygulamalar, yüzün üst kısmında bulunan kaş çatma çizgileri, kaz ayakları, horizontal alın çizgilerini hedefler (3). Bu kaslar, hiperdinamik kaslardır. En iyi yanıt ve en az yan etki bu uygulamalar sırasında elde edilir.</div>
+<div class="cb-content">Alt yüz uygulamaları, yüz ifadesi, çiğneme, konuşmadan sorumlu kasları hedefler. Düşük dozlarda uygulanması gereken bu teknikte, kasların fonksiyonelliği korunmalıdır. Aksi takdirde ciddi komplikasyonlar oluşabilir. En iyi sonuç, dinamik kırışıkları olan statik kırışıkları en az düzeyde olan hastalardan alınır. Botoks uygulamasının bazı kontraendikasyonları arasında gebelik, emzirme, aktif enfeksiyon varlığı, keloid veya hipertrofik sikatris, kanama bozukluğu, yara iyileşme bozukluğu, deri atrofisi, aktif dermatoz, bileşenlere karşı aşırı duyarlılık, süt allerjisi, tedavi alanında ciddi güçsüzlük (Bell’s palsi), nöromüsküler hastalıklar, tedavi öncesi tedavi alanındaki kası aktif kasamama, son 6 ay içinde göz veya göz cerrahisi geçirmek, aminoglikozid, penisilamin, kinin, kalsiyum kanal blokerleri, kontrolsüz sistemik durumlar, yüz ifadesinin önemli olduğu meslekler, gerçek dışı beklentiler bulunur (4). Botoks, FDA tarafından gebelik kategorisi C olarak belirlenmiş olup gebelik sırasında kontrollü ve yeterli çalışma mevcut değildir (5). Botoks uygulamasına bağlı faydalar olası yan etkilerinden fazlaysa kullanılması önerilir (5).</div>
+<div class="cb-content">Ticari olarak botulinum toksin tip A’nın 2 tipi vardır. Bunlar, onabotulinum toksin A (BOTOX<sup>®</sup>), ve abobotulinum toksin A’dır (DYSPORT<sup>®</sup>). Onabotulinum toksin A’nın bir flakonunda 100 ünite, 5 nörotoksin proteini bulunur. Raf ömrü soğuk zincirde 24 aydır. Abobotulinum toksin A’nın bir flakonunda 500 ünite ve 12,5 nörotoksin proteini vardır. Raf ömrü soğuk zincirde 15 aydır. Onabotulinum toksin A’nın bir ünitesi yaklaşık 4 abobotulinum toksin A ünitesine denk gelir (6).</div>
+<div class="cb-content">Uygulama öncesinde, sırasında ve sonrasında yapılması gereken bazı işlemler vardır. İşlemden önce yazılı onam alınır. İşlem sırasında hedef bölgeler, alkol içermeyen bir temizleyici ile temizlenir ve kurumaya bırakılmalıdır. Bir hafta önceden tüm kanama yapıcı ilaçlar bırakılmalıdır. İşlem bölgeleri işaretlenir. Enjeksiyon kaslar gevşek durumdayken yapılır. İşlemin etkisini artırmak ve hızlandırmak amacıyla 2 saat boyunca işlem yapılan bölge kaslarının sık kullanılması önerilir. Uygulama sonrası diffüzyon riskini en aza indirmek amacıyla hastalara 2-4 saat dik pozisyonda durmaları, 1 gün boyunca masaj gibi travmatik işlemlerden uzak durmaları tembihlenmelidir. Bir BOTOX<sup>®</sup>&nbsp;flakon için ideal olarak 2,5 mL serum fizyolojik kullanılmalıdır.</div>
+<div class="cb-content">İşlemden 2-3 gün sonra kasların işlevinde kısmi kayıp, bir veya iki hafta sonra maksimum kayıp yaşanır. İşlemden 2 hafta sonra hasta değerlendirilerek düzeltme yapılabilir. Kas fonksiyonu yaklaşık 2-5 ay sonra geri döner. </div>
+<div class="cb-content">Yüzün üst bölgesinde Botoks-A uygulamaları glabellar, frontal, kaz ayağı bölgelerini ve kaş elevasyonunu hedefler.</div>
+<div class="cb-subtitle">Frontal Bölge</div>
+<div class="cb-content">Hedef, alın çizgileridir. Alın bölgesi tedavisinde mutlaka glabellar kompleks de tedavi edilmelidir. Frontal kasın tamamının blokajı pitoza neden olabilir. Alna, glabellaya aşırı doz uygulamalarda kaş hareketleri kaybolursa maske surat ifadesi oluşabilir. Bu yüzden hedef, yüzeyel düşük doz uygulamalarla kası zayıflatmak olmalıdır. Hastadan kaşlarını kaldırması istenir. Oluşan ilk horizontal çizginin üstüne uygulama yapmak gerekir. Subkütan enjeksiyonlar yapılır. Toplam 10-20 ünite Botoks-A dozu kullanılır. Uygulama midpupiller hattın mediyaline yapılır. Orta bölgede yoğunlaşan işlemlerde kaşın yapısı değişebilir. Kaşın lateral kısmının kalkması ile Mephisto bulgusu oluşabilir. Midpupiller hattın hemen lateraline yapılan enjeksiyonlarla bu durum engellenir (7).</div>
+<div class="cb-subtitle">Glabella</div>
+<div class="cb-content">Botoksun kozmetik amaçlı ilk onaylı endikasyonudur. Ana hedef kaslar, corrugator supercilii ve procerus supercilii’dir. Üç veya beş noktaya enjeksiyon yapılır. Her enjeksiyon noktası için 2,5-5 ünite, toplamda 12,5-20 ünite Botoks-A uygulanır. Komplikasyonları arasında, blefaropitozis vardır. Bu yan etki yaklaşık 6 hafta içinde spontan geriler. Tedavide a- adrenerjik göz damlaları kullanılabilir. Kaş pitozu bir başka komplikasyon olup lateral limbus lateraline yapılan enjeksiyonlara bağlı oluşur (8).</div>
+<div class="cb-subtitle">Kaz Ayağı Çizgileri</div>
+<div class="cb-content">Göz dış kısmında yerleşen kaz ayakları orbikularis okuli kasının kasılmasına bağlı oluşurlar. Orbital rimin 1 cm dışında, zigomanın üst kenarının üzerinde ve kaşın altında lateral limbus çizgisine doğru olan alanda uygulama yapılır. Enfraorbital bölge kırışıklıklarında, tedavi öncesinde SNAP test yapılır ve göz kapağında anormal bir gevşeklik tespit edilmeyen hastalarda işlem yapılabilir (8). Uygun hastalara orta pupilla hattında alt göz kapağının 3 mm altında 1-2 ünite Botoks-A enjeksiyonu yapılabilir. Bir cm aralıklarla 3 noktaya uygulama yapılır. Her noktaya 2-5 ünite Botoks-A kullanılır, toplamda ise 5-15 ünite uygulanır. Komplikasyonları arasında en sık ekimoz (9) olmakla beraber, fotofobi, dudak ve yanak düşüklüğü, blefaroptozis, daha nadir olarak kseroftalmi, lagoftalmus, ektropion görülür (7,10).</div>
+<div class="cb-subtitle">Tavşan Çizgileri</div>
+<div class="cb-content">Üst nazal kasın ve procerus kasının kasılmasıyla oluşurlar. Güvenli hat, burun duvar lateralinde nasion ala çizgisinin hemen medialindedir. Her bir alana 2-4 ünite Botoks-A yapılır (7). Komplikasyonları arasında lakrimal drenaj bozukluğu, üst dudak sarkması bulunur (11).</div>
+<div class="cb-subtitle">Kaş Elevasyonu</div>
+<div class="cb-content">Hedef kas superolateral orbicularis okulidir. Uygulama, orbital kenarın en az 1 cm dışı, supraorbital çıkıntının aşağısı ve lateral limbus çizgisinin lateraline olmalıdır (7).</div>
+<div class="cb-subtitle">Perioral Uygulamalar</div>
+<div class="cb-content">Orbikularis oris kasının inhibisyonu hedeflenir. Enjeksiyonlar, ağız lateral kenarlarından en az 1 cm uzakta, vermilyon hattında dudaklara paralel olmalıdır. Filtrum bölgesine işlem yapılmaz. Üst dudakta tercihen 4 noktaya, alt dudakta ise toplam 2 nokta simetrik olarak seçilerek her noktaya 1-2 ünite enjeksiyon yapılır. Subdermal enjeksiyonlar tercih edilmelidir (12). Ağız fonksiyon bozukluğu olabilir. Ağız çalkalama, tükürme, kaşıkla yeme gibi fonksiyonlarda bozukluklar yan etki olarak görülebilir (13).</div>
+<div class="cb-subtitle">Gummy Smile (Diş Eti Gülüşü)</div>
+<div class="cb-content">Gülme sırasında diş eti santral kesici dişlerin üzerinden 3 mm’nin üzerinde görüldüğünde diş eti gülüşü kavramı kullanılmaktadır. Levator labii superioris alaeque nasi kası inhibe edilir. Her bir kasa 1-2 ünite Botoks-A uygulanabilir (7,14).</div>
+<div class="cb-subtitle">Marionette Çizgileri</div>
+<div class="cb-content">Ağız köşesini aşağı çekerek üzüntülü yüz görünümü oluşur. Depressor anguli oris kası hedeflenir. Her bir kas grubuna 2-3 ünite Botoks-A enjeksiyonu yapılır. Ağız kenarına yakın yapılan enjeksiyonlarda konuşma, telaffuzda değişiklikler ve oral kommissurlarda asimetri görülebilir (13).</div>
+<div class="cb-subtitle">Çene Bölgesi</div>
+<div class="cb-content">Mental kasın kontraksiyonları çenede portakal kabuğu görünümüne neden olabilir. Toplam 5-10 ünite Botoks-A enjeksiyonu orta hatta tek veya orta hattan simetrik uzaklıkta 2 noktaya doz bölünerek yapılabilir. Enjeksiyonlar, orbicularis oris kasının distalinde mental kasa yapılmalıdır (15).</div>
+<div class="cb-subtitle">Burun Ucu Kaldırma</div>
+<div class="cb-content">Depressor septi nasi kasının inhibisyonu amaçlanır. Kolumellanın tabanına 3 ünite Botoks-A enjekte edilir (11,16).</div>
+<div class="cb-subtitle">Boyun Uygulamaları</div>
+<div class="cb-content">Platisma kası alt çenenin aşağı doğru çekilmesini sağlar. Bu kas boyun sarkmalarına neden olur. Kas bandı boyunca 1-1,5 cm aralarla 2-5 ünite Botoks-A enjeksiyon yapılır. İki platismal banda yapılan total doz 30 üniteyi geçmemelidir. Yüksek dozlarda, dizartri, disfaji, boyun fleksiyon güçsüzlüğü görülebilir (13).</div>
+<div class="cb-subtitle">Primer Hiperhidroz</div>
+<div class="cb-content">Primer hiperhidrozda, ekrin ter bezlerinin yoğunluğu normaldir. Sempatik sinir hiperreaktivitesi ve disregülasyonu mevcuttur. Koltuk altı, palmoplantar bölge, yüz etkilenebilir. Terlemenin en az 6 aydır devam etmesi, bilateral olması, fokal yoğun terlemenin olduğu, günlük aktivitenin bozulması, 25 yaşın altında görülmesi, aile hikayesi, uykuda fokal terlemenin kesilmesi tanıda klinisyene yardımcı olur (17).</div>
+<div class="cb-content">Tanı amacıyla aksillar bölgeye iyot solüsyonu uygulanır. İyot kuruduktan sonra nişasta serpilir. Koyu mor alan işaretlenir. Bu alanda 20 tane enjeksiyon noktası 1-2 cm aralıklarla işaretlenir. Her bir noktaya 2,5 ünite onabotulinum toksin A intradermal papül oluşturacak şekilde enjekte edilir (17). Her aksilla için 50 ünite uygulanır (18). Her ayak tabanı veya el için 50-100 ünite uygulanır bir flakon paylaştırılarak yapılabilir. Geçici kas güçsüzlüğü en sık görülen komplikasyondur. Uygulama alanı dışında kompansatuvar hiperhidroz da yan etki olarak görülebilir (17).</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Huang W, Foster JA, Rogachefsky AS. Pharmacology of botulinum toxin. J Am Acad Dermatol 2000; 43: 249-259.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Dressler D, Adib Saberi F. Botulinum toxin: mechanisms of action. Eur Neurol 2005; 53: 3-9.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Kartal Durmazlar SP, Eskioglu F. Botulinum toxin (fundamentals before practice). Turkiye Klinikleri J Med Sci 2009; 29: 702-707.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Klein AW. Contraindications and complications with the use of botulinum toxin. Clin Dermatol 2004; 22: 66-75.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Brin MF, Kirby RS, Slavotinek A, et al. Pregnancy outcomes following exposure to onabotulinumtoxinA. Pharmacoepidemiol Drug Saf 2016; 25: 179-187.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Ranoux D, Gury C, Fondarai J, Mas J, Zuber M. Respective potencies of Botox and Dysport: a double blind, randomised, crossover study in cervical dystonia. J Neurol Neurosurg Psych 2002; 72: 459-462.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Carruthers J, Carruthers A. Practical cosmetic botox techniques. J Cutan Med Surg 1999; 4: 4-9.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Beer K, Cohen JL, Carruthers A. Cosmetic uses of botulinum toxin A. Clinical Uses of Botulinum toxins’ de. Ed. Ward AB, Barnes MP. Cambridge, Cambridge University Press 2007; 15: 328-348.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Flynn TC, Carruthers JA, Carruthers JA, Clark RE II. Botulinum A toxin (Botox) in the lower eyelid: Dose-finding study. Dermatol Surg 2003; 29: 943-950.</div>
+<div class="ref-item"><span class="ref-number">10.</span>10- Klein AW. Complications, adverse reactions, and insights with the use of botulinum toxin. Dermatol Surg 2003; 29: 549-556.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Ahn BK, Kim YS, Kim HJ, Rho NK, Kim HS. Consensus recommendations on the aesthetic usage of botulinum toxin type A in Asians. Dermatol Surg 2013; 39: 1843-1860.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Ascher B, Talarico S, Cassuto D, et al. International consensus recommendations on the aesthetic usage of botulinum toxin type A (Speywood Unit) - part II: wrinkles on the middle and lower face, neck and chest. J Eur Acad Dermatol Venereol 2010; 24: 1285-1295.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Carruthers J, Carruthers A. Aesthetic botulinum A toxin in the mid and lower face and neck. Dermatol Surg 2003; 29: 468-476.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Mazucco R, Hexsel D. Gummy smile and botulinum toxin: a new approach based on the gingival exposure area. J Am Acad Dermatol 2010; 63: 1042-1051.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Carruthers J, Carruthers A. BOTOX treatment for expressive facial lines and wrinkles. Curr Opin Otolaryngol Head Neck Surg 2000; 8: 357-361.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Dayan SH, Kempiners JJ. Treatment of the lower third of the nose and dynamic nasal tip ptosis with Botox. Plast Reconstr Surg 2005; 115: 1784-1785.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Grunfeld A, Murray CA, Solish N. Botulinum toxin for hyperhidrosis: a review. Am J Clin Dermatol 2009; 10: 87-102.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Connolly M, de Berker D. Management of primary hyperhidrosis: a summary of the different treatment modalities. Am J Clin Dermatol 2003; 4: 681-697.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Botulinum toxin can be used for different medical aims. Cosmetic aspects were noticed after facial application. Toxin can reduce active muscle induced wrinkles. Botox has got inhibitory effect on eccrine sweat glands. According to this effect, it can also be used in the treatment of primary hyperhidrosis. After botox injection is applied in appropriate dosages, patients should be followed up such as other cosmetic procedures. After application several side effects can be detected according to muscle inhibition.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Huang W, Foster JA, Rogachefsky AS. Pharmacology of botulinum toxin. J Am Acad Dermatol 2000; 43: 249-259.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Dressler D, Adib Saberi F. Botulinum toxin: mechanisms of action. Eur Neurol 2005; 53: 3-9.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Kartal Durmazlar SP, Eskioglu F. Botulinum toxin (fundamentals before practice). Turkiye Klinikleri J Med Sci 2009; 29: 702-707.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Klein AW. Contraindications and complications with the use of botulinum toxin. Clin Dermatol 2004; 22: 66-75.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Brin MF, Kirby RS, Slavotinek A, et al. Pregnancy outcomes following exposure to onabotulinumtoxinA. Pharmacoepidemiol Drug Saf 2016; 25: 179-187.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Ranoux D, Gury C, Fondarai J, Mas J, Zuber M. Respective potencies of Botox and Dysport: a double blind, randomised, crossover study in cervical dystonia. J Neurol Neurosurg Psych 2002; 72: 459-462.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Carruthers J, Carruthers A. Practical cosmetic botox techniques. J Cutan Med Surg 1999; 4: 4-9.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Beer K, Cohen JL, Carruthers A. Cosmetic uses of botulinum toxin A. Clinical Uses of Botulinum toxins’ de. Ed. Ward AB, Barnes MP. Cambridge, Cambridge University Press 2007; 15: 328-348.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Flynn TC, Carruthers JA, Carruthers JA, Clark RE II. Botulinum A toxin (Botox) in the lower eyelid: Dose-finding study. Dermatol Surg 2003; 29: 943-950.</div>
+<div class="ref-item"><span class="ref-number">10.</span>10- Klein AW. Complications, adverse reactions, and insights with the use of botulinum toxin. Dermatol Surg 2003; 29: 549-556.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Ahn BK, Kim YS, Kim HJ, Rho NK, Kim HS. Consensus recommendations on the aesthetic usage of botulinum toxin type A in Asians. Dermatol Surg 2013; 39: 1843-1860.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Ascher B, Talarico S, Cassuto D, et al. International consensus recommendations on the aesthetic usage of botulinum toxin type A (Speywood Unit) - part II: wrinkles on the middle and lower face, neck and chest. J Eur Acad Dermatol Venereol 2010; 24: 1285-1295.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Carruthers J, Carruthers A. Aesthetic botulinum A toxin in the mid and lower face and neck. Dermatol Surg 2003; 29: 468-476.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Mazucco R, Hexsel D. Gummy smile and botulinum toxin: a new approach based on the gingival exposure area. J Am Acad Dermatol 2010; 63: 1042-1051.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Carruthers J, Carruthers A. BOTOX treatment for expressive facial lines and wrinkles. Curr Opin Otolaryngol Head Neck Surg 2000; 8: 357-361.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Dayan SH, Kempiners JJ. Treatment of the lower third of the nose and dynamic nasal tip ptosis with Botox. Plast Reconstr Surg 2005; 115: 1784-1785.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Grunfeld A, Murray CA, Solish N. Botulinum toxin for hyperhidrosis: a review. Am J Clin Dermatol 2009; 10: 87-102.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Connolly M, de Berker D. Management of primary hyperhidrosis: a summary of the different treatment modalities. Am J Clin Dermatol 2003; 4: 681-697.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

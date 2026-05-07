@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saçlı Derinin Malign Deri Tümörleri | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2020-011-004/index.html">Cilt 11, Sayı 4 - Aralık 2020</a>
+    <span class="sep">›</span>
+    Saçlı Derinin Malign Deri Tümörleri
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Saçlı Derinin Malign Deri Tümörleri</h1>
+    <div class="article-authors-list"><span class="author-name">Güllü Gencebay</span><sup>1*</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> Şırnak Devlet Hastanesi, Deri ve Zührevi Hastalıkları Kliniği, Şırnak, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Malign deri tümörü</span><span class="kw-tag">saçlı deri</span><span class="kw-tag">prognoz</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Malignant cutaneous tumours</span><span class="kw-tag">scalp</span><span class="kw-tag">prognosis</span></div>
+    <div class="article-dates"><span>Geliş: 12.01.2021</span><span>Kabul: 18.02.2021</span><span>Yayın: 17.03.2021</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 52-55</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-11-52.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-11-52-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Saçlı deri malign deri tümörlerinin prognoz ve yayılımı nedeniyle erken tanısının konması önem taşımaktadır. Yüz bölgesinde sıklıkla görülen malign deri tümörleri saçlı deride de görülmektedir. Dermatolojik muayenede saçlı derideki lezyonlar bazen dermatologlar tarafından atlanabilmektedir. Ayrıca hastaların da bu bölgede gelişebilecek bir lezyonu farketmesi zor olmaktadır. Bu derlemede saçlı deride sıklıkla görülen malign deri tümörlerinden bahsedilmiştir.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Deri tümörlerinin yaklaşık %2’si saçlı deride görülmektedir. Primer veya metastatik tümörler şeklinde ortaya çıkmaktadırlar (1). Saçlı derinin epitel, adneks, damar ve lenfatik ağdan oluşan tabakalı yapısı, gelişebilecek tüm tümör tipleri için zemin oluşturur (2).</div>
+<div class="cb-content">Bu tabakalı yapı tümörün yayılımını da etkilemektedir. Saçlı deri ile kafatası arasındaki subaponörotik boşluk, tümörün kemiğe vertikal olarak yayılması yerine horizontal olarak büyümesine neden olur ve tümörün uzak metastazını kolaylaştırır (1,2).</div>
+<div class="cb-content">Dermatolojik muayenede dermatologlar tarafından saçlı derideki lezyonlar atlanabilmektedir. Ayrıca hastaların bu bölgede çıkan yeni bir lezyonu farketmesi de zor olmaktadır.</div>
+<div class="cb-content">Tüm bu özellikler saçlı derideki tümörlerin prognozunu, diğer bölgelerde gelişen malign tümörlere kıyasla daha kötü yapmaktadır (1).</div>
+<div class="cb-content"><strong>Epidemiyoloji</strong></div>
+<div class="cb-content">Tüm saçlı deri tümörlerinin %1-2’si malign iken, tüm malign deri tümörlerinin %13’ünü saçlı deri tümörleri oluşturur (2). Saçlı deride en sık görülen malign deri tümörü bazal hücreli karsinom (BHK) iken, ikinci sıklıkta skuamöz hücreli karsinom (SHK) görülmektedir (1). Üç yüz on altı hasta üzerinde yapılan çok merkezli bir çalışmada, hastaların %57,9’unda BHK, %35,8’inde SHK, %4,1’inde Bowen hastalığı, %1,6’sında ise atipik fibroksantom saptanmıştır (3). Başka bir çalışmada da aynı şekilde bazal ve SHK saçlı deride en sık görülen malign deri tümörleri olarak saptanırken, üçüncü sıklıkta metastastik tümörler saptanmıştır. Bu tümörlerin çoğunluğu 50 yaş üzeri olgularda gözlenmiştir (4).</div>
+<div class="cb-content">Saçlı derinin dikkatli muayenesi, hastalığın prognozunu etkileyebileceği için dermatologların bu konudaki hassasiyeti önem taşımaktadır. Bu derlemede saçlı deride en sık görülen malign deri tümörlerinden bahsedilmiştir.</div>
+<div class="cb-content"><strong>Bazal Hücreli Karsinom</strong></div>
+<div class="cb-content">Saçlı derideki malign deri tümörlerinin %85-90’ını BHK oluşturur. Bu bölgedeki lezyonlarda ölüm riski düşüktür (&lt;%0,1) (1).</div>
+<div class="cb-content">Saçlı deri BHK prevalansı %1,1-2,7 arasında değişmektedir. Risk faktörleri ultraviyole (UV) ışığı, radyoterapi, immünsüpresyon ve genetik yatkınlıktır (5). Bazı çalışmalar saçlı deri BHK gelişiminin, saçı kısa veya androgenetik alopesisi olan erkeklerde daha yüksek oranda olduğunu göstermiştir. Kadınlarda ise daha genç yaşta ve sıklıkla frontal ve verteks bölgesinde görülmektedir (1). UV ışığına maruziyetin miktarı ve süresi, BHK alt tipinin oluşumunu etkiler. UV ışığına uzun süreli maruziyet nodüler tip BHK oluştururken, aralıklı ancak yoğun UV ışığı yüzeyel BHK gelişimine neden olur. Bu nedenle saçlı deride nodüler tip BHK daha sık görülmektedir (6). Kadınlar ise saçın UV ışığından koruması nedeniyle saçlı deriden ziyade yüzün orta hattında ve yüzeyel tip BHK oluşturmaya yatkındırlar (7). Nodüler tip BHK genellikle pigmentasyon ile birlikte görülmektedir ve amelanotik melanom ve Merkel hücreli karsinom ile ayırıcı tanıya girmektedir (1).</div>
+<div class="cb-content">Radyoterapinin uzun dönem komplikasyonlarından birinin BHK gelişimi olduğu bilinmektedir. Yapılan bazı çalışmalarda BHK gelişmiş hastaların öykülerinde çocukluk döneminde tinea capitis tedavisi için radyoterapi aldığı ortaya çıkmıştır (5). Radyasyon nedeniyle oluşan BHK tümörleri, radyasyon öyküsü olmayanlara kıyasla daha agresif seyretmektedir (8).</div>
+<div class="cb-content">İdiyopatik saçlı deri BHK’si çocuklarda seyrek olarak görülür. Kseroderma pigmentozum, albinizm veya Gorlin sendromu gibi hastalıklar ile ilişkilidir (1). Ayrıca çocuklarda saçlı derideki nevüs sebaseus lezyonları üzerinde az da olsa BHK gelişim riski bulunmaktadır. Bu lezyonlara profilaktik olarak eksizyon önerilmemekle birlikte klinik takibi iyi yapılmalı, şüpheli lezyonlardan biyopsi alınmalıdır (9).</div>
+<div class="cb-content">BHK yavaş büyüyen, agresif invazyon göstermeyen bir tümör olması nedeniyle intrakraniyal invazyon nadirdir. Metastaz veya lokal invazyon insidansı %0,03’tür. Kemik ve dura mater invazyonu, nadir görülen dev BHK tümörlerinde ortaya çıkmaktadır (10).</div>
+<div class="cb-content"><strong>Skuamöz Hücreli Karsinom</strong></div>
+<div class="cb-content">Saçlı deride ikinci sıklıkta görülen malign deri tümörüdür (1). Risk faktörleri uzun süreli UV ışığı ve iyonize radyasyon maruziyeti, düşük Fitzpatrick deri tipi, immünsüpresyon ve kronik lezyonlardır (11). İnsan papilloma virüs enfeksiyonları da patogenezde rol oynamaktadır (12).</div>
+<div class="cb-content">SHK, genellikle saçlı deride yoğun güneş hasarı olan yaşlı kişilerde görülür. Genellikle aktinik keratoz zemininde gelişirler (12). Aktinik keratozlardan SHK gelişme riski yılda %0,025 ile %16 arasında değişmektedir (13).</div>
+<div class="cb-content">Üzerinde ülserasyon ve nekroz gösteren kronik, iyileşmeyen lezyonlar şeklinde ortaya çıkarlar (11). Dermoskopi SHK tanısı koymada yardımcı bir yöntemdir. Özellikle az saçı olan veya androgenetik alopesisi olan kişilerde dermoskopide beyaz halkalar, beyaz yapısız alanlar, keratin ve damarların gözlenmesi SHK’yi akla getirmelidir. Ayırıcı tanıda saçlı derinin püstüler dermatozu, Brunsting-Perry müköz membran pemfigoidi ve pemfigus gibi saçlı deride görülebilen enflamatuvar durumlar düşünülmelidir (1).</div>
+<div class="cb-content">Genel sağkalıma bakıldığında baş-boyun bölgesindeki tümörlerde sağkalım daha düşüktür (14). Özellikle erkeklerde saçlı deri ve kulaklarda kötü differansiye tip SHK daha sık oranda görülmektedir (15). Ayrıca immünsüprese hastalarda görülen SHK daha agresif seyirlidir. Bu nedenle bu hastalarda erken tanı ve tedavi çok önemlidir. Verilen agresif tedaviye rağmen bölgesel veya uzak rekürrens riski yüksektir (16).</div>
+<div class="cb-content"><strong>Malign Melanom</strong></div>
+<div class="cb-content">Melanomların yaklaşık %10-25’i baş-boyun bölgesinde ortaya çıkar. Sporadik olabilecekleri gibi premalign lezyonlardan da gelişebilirler. En sık oksipital bölge ve yanaklarda görülmektedir (17).</div>
+<div class="cb-content">Saçlı derideki melanomlar diğer baş-boyun bölgesindeki melanomlara kıyasla daha kötü prognoza sahiptir (18). Bir retrospektif kohort çalışmasında saçlı deri melanomu olan hastaların diğer melanomlara göre sağkalım oranlarının düşük olduğu ve bunun daha geniş Breslow kalınlığı ile ilişkili olabileceği belirtilmiştir (19). Ayrıca bu bölgenin lenfatik sistem yapısının karmaşık olması nedeniyle sentinel lenf nodu biyopsisinin yapılmasının zor olması ve bu nedenle adjuvan tedavilere başlanmasının gecikmesi de prognozu etkilemektedir (1). Başka bir çalışma, saçlı deri melanomlarının erkeklerde daha sık ortaya çıktığını ve nodüler tipte ve yüksek mitotik aktiviteli bir histolojiye sahip olduklarını göstermiştir (20). Daha sık olarak yaşlı kişilerde ortaya çıkma eğilimindedir ve genellikle hızlı büyür ve amelanotiktir. Gözden kaçması muhtemel olduğundan saçlı derideki atipik görünümlü lezyonların erken tanınması önem taşımaktadır (21). Dermoskopi melanom tanısını koymada yardımcı bir yöntemdir fakat saçlı deride kullanımı zor olabilmektedir. Atipik pigment ağı, düzensiz çizgiler ve mavi-grimsi yapı dermoskopide görülen özelliklerdir (1).</div>
+<div class="cb-content">Risk faktörleri, premalign nevüs varlığı, çocukluk döneminde güneş yanığı öyküsü, çillerin varlığı, göz, saç rengi ve genetik yatkınlıktır (22).</div>
+<div class="cb-content"><strong>Metastatik Tümörler</strong></div>
+<div class="cb-content">Kütanöz metastazlar, tüm metastazların %0,7-9’unu oluşturur. İç organ malignitelerinin ilk bulgusu veya rekürrens ve kötü prognoz belirtisi olabilirler (23). Uzak organlardan kaynaklanabileceği gibi komşu dokulardaki neoplazmların yayılmasıyla da ortaya çıkabilirler. Uzak organ metastazlarının %5’ini saçlı deri oluşturur (1). Literatürde saçlı deri tutulumu gösteren bazı maligniteler meme kanseri, akciğer adenokarsinomu, papiller tiroid karsinomu, pankreas adenokarsinomu, kolorektal kanserler, servikal karsinom, özofageal karsinom gibi neoplazmlardır (23-29).</div>
+<div class="cb-content">Dermoskopik muayenede genellikle atipik vasküler paterne rastlanır. En sık lineer düzensiz damarlar ve dallanan damarlar, daha az sıklıkla noktasal ve virgül benzeri damarlar gözlenir. Bazen de melanositik paterne ait kahverengi çizgiler veya mavi-gri globüller saptanabilir (30).&nbsp; Ayrıca trikoskopi yapılan saçlı deri metastazı olan bir olguda atipik vasküler paternin yanında makro-komedo benzeri periferal siyah noktalar gözlenmiştir (31).</div>
+<div class="cb-content">İç organ maligniteleri dışında Langerhans hücreli histiyositoz gibi bazı hematolojik maligniteler de saçlı deride ortaya çıkabilir. Langerhans hücreli histiyositoz, androgenetik alopesi veya seboreik dermatit gibi benign, kaşıntılı durumları taklit edebilir (1).</div>
+<div class="cb-content"><strong>Adneksiyel Tümörler</strong></div>
+<div class="cb-content">Adneksiyel tümörler, saçlı deride pilosebase üniteden veya ekrin/apokrin bezlerden kaynaklanır. Kompozit tümörler olarak birden fazla orjinden ortaya çıkarlar. Histolojik olarak baskın olan komponente göre isimlendirilirler.</div>
+<div class="cb-content">Etiyoloji tam olarak bilinmemekle birlikte UV ışığı ve radyasyonun patogenezde rol oynadığı düşünülmektedir. Sınırı düzensiz, derin, infiltratif, asimetrik tümörlerdir (32).</div>
+<div class="cb-content">Foliküler ünite kaynaklı en sık görülen malign adneksiyel tümörler pilomatriks karsinoma, trikoblastik karsinoma, trikilemmal karsinomadır. Sebase bez kaynaklı ise sebase karsinomdur. Genellikle asemptomatik, pembe-sarımtırak nodül şeklinde görülür. Bazen ülsere olabilir.</div>
+<div class="cb-section-title">Sonuç</div>
+<div class="cb-content">Saçlı deri tümörlerinin kötü prognozu nedeniyle, erken tanı şansı sağladığı için saçlı derinin dermatolojik muayenesine ayrıca özen gösterilmelidir. Tümör gelişiminde UV ışığının rolü nedeniyle, saçlı derinin korunması yönünde hastalar bilgilendirilmelidir. Ayrıca tümör gelişiminde farklı mekanizmalar da rol oynadığından genç hastaların muayenesi de ihmal edilmemelidir.</div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Dika E, Patrizi A, Veronesi G, Manuelpillai N, Lambertini M. Malignant cutaneous tumours of the scalp: always remember to examine the head. J Eur Acad Dermatol Venereol 2020; 34: 2208-2215.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Prodinger CM, Koller J, Laimer M. Scalp tumors. J Dtsch Dermatol Ges 2018; 16: 730-753.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Leibovitch I, Huilgol SC, Richards S, Paver R, Selva D. Scalp tumors treated with Mohs micrographic surgery: clinical features and surgical outcome. Dermatol Surg 2006; 32: 1369-1374.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Chiu CS, Lin CY, Kuo TT, et al. Malignant cutaneous tumors of the scalp: a study of demographic characteristics and histologic distributions of 398 Taiwanese patients. J Am Acad Dermatol 2007; 56: 448-452.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Castanheira A, Soares P, Boaventura P. Scalp basal cell carcinoma: a different entity? Dermatol Ther 2019; 32: e12828. doi: 10.1111/dth.12828</div>
+<div class="ref-item"><span class="ref-number">6.</span>Cho M, Lee J, James CL, Marshman G, Huilgol SC. Scalp basal cell carcinoma: review of 2,202 cases. Dermatol Surg 2016; 42: 834-841.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Mina MA, Picariello A, Fewkes JL. Superficial basal cell carcinomas of the head and neck. Dermatol Surg 2013; 39: 1003-1008.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Hassanpour SE, Kalantar-Hormozi A, Motamed S, Moosavizadeh SM, Shahverdiani R. Basal cell carcinoma of scalp in patients with history of childhood therapeutic radiation: a retrospective study and comparison to nonirradiated patients. Ann Plast Surg 2006; 57: 509-512.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Yang CC, Chen YA, Tsai YL, Shih IH, Chen W. Neoplastic skin lesions of the scalp in children: a retrospective study of 265 cases in Taiwan. Eur J Dermatol 2014; 24: 70-75.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Kwon CS, Awar OA, Ripa V, Said G, Rocka S. Basal cell carcinoma of the scalp with destruction and invasion into the calvarium and dura mater: report of 7 cases and review of literature. J Clin Neurosci 2018; 47: 190-197.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Kotamarti VS, Feintisch AM, Ciminello F. Invasive Squamous Cell Carcinoma of the Scalp. Eplasty 2015; 20:15: ic39. eCollection 2015.</div>
+<div class="ref-item"><span class="ref-number">12.</span>La Placa M, Venturoli S, Barbieri D, et al. Presence of cutaneous human papillomavirus DNA in squamous cell carcinoma of the scalp: a case series. J Eur Acad Dermatol Venereol 2017; 31: e369-e371. doi 10.1111/jdv.14168</div>
+<div class="ref-item"><span class="ref-number">13.</span>Schmitz L, Gambichler T, Kost C, et al. Cutaneous squamous cell carcinomas are associated with basal proliferating actinic keratoses. Br J Dermatol 2019; 180: 916-921.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sullivan CB, Andresen NS, Kendell N, Al-Qurayshi Z, Pagedar NA. Survival outcomes for advanced cutaneous squamous cell carcinoma of the head and Neck. Ann Otol Rhinol Laryngol 2019; 128: 949-955.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Pyne JH, Barr E, Myint E, Clark SP, David M, Na R. Invasive squamous cell carcinoma: comparison of differentiation grade and tumour depth by anatomical site in 1666 tumours. Clin Exp Dermatol 2018; 43: 3-10.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Kadakia S, Ducic Y, Marra D, et al. Cutaneous squamous cell carcinoma of the scalp in the immunocompromised patient: review of 53 cases. Oral Maxillofac Surg 2016; 20: 171-175.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Zito PM, Scharf R. Melanoma of the head and neck. In: StatPearls 2020 Sep 29 [Internet]. Treasure Island, FL: StatPearls Publishing; 2020 Jan. PMID: 30020620.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Ozao-Choy J, Nelson DW, Hiles J, et al. The prognostic importance of scalp location in primary head and neck melanoma. J Surg Oncol 2017; 116: 337-343.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Xie C, Pan Y, McLean C, Mar V, Wolfe R, Kelly J. Impact of scalp location on survival in head and neck melanoma: a retrospective cohort study. J Am Acad Dermatol 2017; 76: 494-498.e2</div>
+<div class="ref-item"><span class="ref-number">20.</span>Tas F, Erturk K. Scalp melanoma is associated with high mitotic rate and is a poor prognostic factor for recurrence and outcome. Melanoma Res 2017; 27: 387-390.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Xie C, Pan Y, McLean C, Mar V, Wolfe R, Kelly JW. Scalp melanoma: distinctive high risk clinical and histological features. Australas J Dermatol 2017; 58: 181-188.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Wood RP, Heyworth JS, McCarthy NS, et al. Association of known melanoma risk factors with primary melanoma of the scalp and neck. Cancer Epidemiol Biomarkers Prev 2020; 29: 2203-2210.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Alizadeh N, Mirpour H, Azimi SZ. Scalp metastasis from occult primary breast carcinoma: A case report and review of the literature. Int J Womens Dermatol 2018; 4: 230-235.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Yu Q, Subedi S, Tong Y, et al. Scalp metastases as first presentation of pulmonary adenocarcinomas: a case report. Onco Targets Ther 2018; 11: 6147-6151.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Phelan PS, Mull JL, Rajput MZ, Musiek AC. Concurrent metastases of papillary thyroid carcinoma to the scalp and Meckel’s cave. BMJ Case Rep 2018; 2018: bcr2017222552. doi: 10.1136/bcr-2017-222552.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Tavío-Hernández E, Cañete-Ruiz Á, Moreno C, Urech M, Cano-Ruiz A. Multiple scalp metastases as a first manifestation of pancreatic adenocarcinoma. Rev Gastroenterol Mex 2015; 80: 287-289.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Shah SR, Applebaum DS, Potenziani S, Huttenbach YT, Wolf J, Orengo IF. Cutaneous metastasis to the scalp as the primary presentation of colorectal adenocarcinoma. Dermatol Online J 2017; 23: 13030/qt31p698nz. PMID: 29447644.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Díaz JFR, Zelaya AH, Rosas AMA. Scalp and skull bone metastasis in cervical carcinoma-a rare entity. Ecancermedicalscience 2019; 13: 969.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Tarantino IS, Tennill T, Fraga G, Fischer R. Cutaneous metastases from esophageal adenocarcinoma on the scalp. Cutis 2020; 105: E3-E4.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Chernoff KA, Marghoob AA, Lacouture ME, Deng L, Busam KJ, Myskowski PL. Dermoscopic findings in cutaneous metastases. JAMA Dermatol 2014; 150: 429-433.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Ravaioli GM, Starace M, Alessandrini AM, et al. trichoscopy of scalp metastases. Int J Trichology. 2019; 11: 86-87.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Waqas O, Faisal M, Haider I, Amjad A, Jamshed A, Hussain R. Retrospective study of rare cutaneous malignant adnexal tumors of the head and neck in a tertiary care cancer hospital: a case series. J Med Case Rep 2017; 11: 67.</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Malignant cutaneous tumours of the scalp are worse prognosis compared with other locations. Thus, early diagnosis of scalp tumours is important. Malignant cutaneous tumors, which are frequently occured in the face, are also observed in the scalp. The anatomic location is usually poorly examined during dermatological consultations. It is also difficult for patients to notice a lesion that may develop in this location. In this review, malignant cutaneous tumors frequently occured in the scalp are discussed.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Dika E, Patrizi A, Veronesi G, Manuelpillai N, Lambertini M. Malignant cutaneous tumours of the scalp: always remember to examine the head. J Eur Acad Dermatol Venereol 2020; 34: 2208-2215.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Prodinger CM, Koller J, Laimer M. Scalp tumors. J Dtsch Dermatol Ges 2018; 16: 730-753.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Leibovitch I, Huilgol SC, Richards S, Paver R, Selva D. Scalp tumors treated with Mohs micrographic surgery: clinical features and surgical outcome. Dermatol Surg 2006; 32: 1369-1374.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Chiu CS, Lin CY, Kuo TT, et al. Malignant cutaneous tumors of the scalp: a study of demographic characteristics and histologic distributions of 398 Taiwanese patients. J Am Acad Dermatol 2007; 56: 448-452.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Castanheira A, Soares P, Boaventura P. Scalp basal cell carcinoma: a different entity? Dermatol Ther 2019; 32: e12828. doi: 10.1111/dth.12828</div>
+<div class="ref-item"><span class="ref-number">6.</span>Cho M, Lee J, James CL, Marshman G, Huilgol SC. Scalp basal cell carcinoma: review of 2,202 cases. Dermatol Surg 2016; 42: 834-841.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Mina MA, Picariello A, Fewkes JL. Superficial basal cell carcinomas of the head and neck. Dermatol Surg 2013; 39: 1003-1008.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Hassanpour SE, Kalantar-Hormozi A, Motamed S, Moosavizadeh SM, Shahverdiani R. Basal cell carcinoma of scalp in patients with history of childhood therapeutic radiation: a retrospective study and comparison to nonirradiated patients. Ann Plast Surg 2006; 57: 509-512.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Yang CC, Chen YA, Tsai YL, Shih IH, Chen W. Neoplastic skin lesions of the scalp in children: a retrospective study of 265 cases in Taiwan. Eur J Dermatol 2014; 24: 70-75.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Kwon CS, Awar OA, Ripa V, Said G, Rocka S. Basal cell carcinoma of the scalp with destruction and invasion into the calvarium and dura mater: report of 7 cases and review of literature. J Clin Neurosci 2018; 47: 190-197.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Kotamarti VS, Feintisch AM, Ciminello F. Invasive Squamous Cell Carcinoma of the Scalp. Eplasty 2015; 20:15: ic39. eCollection 2015.</div>
+<div class="ref-item"><span class="ref-number">12.</span>La Placa M, Venturoli S, Barbieri D, et al. Presence of cutaneous human papillomavirus DNA in squamous cell carcinoma of the scalp: a case series. J Eur Acad Dermatol Venereol 2017; 31: e369-e371. doi 10.1111/jdv.14168</div>
+<div class="ref-item"><span class="ref-number">13.</span>Schmitz L, Gambichler T, Kost C, et al. Cutaneous squamous cell carcinomas are associated with basal proliferating actinic keratoses. Br J Dermatol 2019; 180: 916-921.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sullivan CB, Andresen NS, Kendell N, Al-Qurayshi Z, Pagedar NA. Survival outcomes for advanced cutaneous squamous cell carcinoma of the head and Neck. Ann Otol Rhinol Laryngol 2019; 128: 949-955.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Pyne JH, Barr E, Myint E, Clark SP, David M, Na R. Invasive squamous cell carcinoma: comparison of differentiation grade and tumour depth by anatomical site in 1666 tumours. Clin Exp Dermatol 2018; 43: 3-10.</div>
+<div class="ref-item"><span class="ref-number">16.</span>Kadakia S, Ducic Y, Marra D, et al. Cutaneous squamous cell carcinoma of the scalp in the immunocompromised patient: review of 53 cases. Oral Maxillofac Surg 2016; 20: 171-175.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Zito PM, Scharf R. Melanoma of the head and neck. In: StatPearls 2020 Sep 29 [Internet]. Treasure Island, FL: StatPearls Publishing; 2020 Jan. PMID: 30020620.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Ozao-Choy J, Nelson DW, Hiles J, et al. The prognostic importance of scalp location in primary head and neck melanoma. J Surg Oncol 2017; 116: 337-343.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Xie C, Pan Y, McLean C, Mar V, Wolfe R, Kelly J. Impact of scalp location on survival in head and neck melanoma: a retrospective cohort study. J Am Acad Dermatol 2017; 76: 494-498.e2</div>
+<div class="ref-item"><span class="ref-number">20.</span>Tas F, Erturk K. Scalp melanoma is associated with high mitotic rate and is a poor prognostic factor for recurrence and outcome. Melanoma Res 2017; 27: 387-390.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Xie C, Pan Y, McLean C, Mar V, Wolfe R, Kelly JW. Scalp melanoma: distinctive high risk clinical and histological features. Australas J Dermatol 2017; 58: 181-188.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Wood RP, Heyworth JS, McCarthy NS, et al. Association of known melanoma risk factors with primary melanoma of the scalp and neck. Cancer Epidemiol Biomarkers Prev 2020; 29: 2203-2210.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Alizadeh N, Mirpour H, Azimi SZ. Scalp metastasis from occult primary breast carcinoma: A case report and review of the literature. Int J Womens Dermatol 2018; 4: 230-235.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Yu Q, Subedi S, Tong Y, et al. Scalp metastases as first presentation of pulmonary adenocarcinomas: a case report. Onco Targets Ther 2018; 11: 6147-6151.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Phelan PS, Mull JL, Rajput MZ, Musiek AC. Concurrent metastases of papillary thyroid carcinoma to the scalp and Meckel’s cave. BMJ Case Rep 2018; 2018: bcr2017222552. doi: 10.1136/bcr-2017-222552.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Tavío-Hernández E, Cañete-Ruiz Á, Moreno C, Urech M, Cano-Ruiz A. Multiple scalp metastases as a first manifestation of pancreatic adenocarcinoma. Rev Gastroenterol Mex 2015; 80: 287-289.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Shah SR, Applebaum DS, Potenziani S, Huttenbach YT, Wolf J, Orengo IF. Cutaneous metastasis to the scalp as the primary presentation of colorectal adenocarcinoma. Dermatol Online J 2017; 23: 13030/qt31p698nz. PMID: 29447644.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Díaz JFR, Zelaya AH, Rosas AMA. Scalp and skull bone metastasis in cervical carcinoma-a rare entity. Ecancermedicalscience 2019; 13: 969.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Tarantino IS, Tennill T, Fraga G, Fischer R. Cutaneous metastases from esophageal adenocarcinoma on the scalp. Cutis 2020; 105: E3-E4.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Chernoff KA, Marghoob AA, Lacouture ME, Deng L, Busam KJ, Myskowski PL. Dermoscopic findings in cutaneous metastases. JAMA Dermatol 2014; 150: 429-433.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Ravaioli GM, Starace M, Alessandrini AM, et al. trichoscopy of scalp metastases. Int J Trichology. 2019; 11: 86-87.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Waqas O, Faisal M, Haider I, Amjad A, Jamshed A, Hussain R. Retrospective study of rare cutaneous malignant adnexal tumors of the head and neck in a tertiary care cancer hospital: a case series. J Med Case Rep 2017; 11: 67.</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>

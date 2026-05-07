@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dermatolojide Dolgu Uygulamaları ve Komplikasyonları | Dermatoz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-highest": "#d9e3f6",
+                "surface-dim": "#d0dbed",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c7eade",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#dee9fc",
+                "secondary-fixed": "#ffdada",
+                "on-primary-container": "#82a499",
+                "inverse-primary": "#abcec2",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#ffb3b5",
+                "outline": "#717975",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#984449",
+                "secondary-container": "#fe969a",
+                "on-tertiary-fixed": "#061f1c",
+                "primary": "#02241d",
+                "inverse-surface": "#27313f",
+                "tertiary-container": "#213935",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#414846",
+                "on-secondary-fixed": "#3f010c",
+                "surface-bright": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#abcec2",
+                "on-secondary-fixed-variant": "#7a2d33",
+                "on-primary-fixed": "#002019",
+                "outline-variant": "#c1c8c4",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#334b47",
+                "surface-variant": "#d9e3f6",
+                "on-primary-fixed-variant": "#2d4d44",
+                "primary-container": "#1a3a32",
+                "on-surface": "#121c2a",
+                "tertiary-fixed-dim": "#b1ccc6",
+                "background": "#f8f9ff",
+                "on-tertiary-container": "#89a39d",
+                "surface-container": "#e6eeff",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed": "#cde8e2",
+                "on-background": "#121c2a",
+                "surface": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#0b2320",
+                "surface-tint": "#45655b",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#782b32"
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            spacing: {
+                "unit": "4px",
+                "xl": "40px",
+                "sm": "8px",
+                "md": "16px",
+                "xs": "4px",
+                "lg": "24px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "xxl": "80px"
+            },
+            fontFamily: {
+                "label-bold": ["Inter"],
+                "headline-md": ["Manrope"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-xl": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-sm": ["Inter"],
+                "label-mono": ["Space Grotesk"]
+            },
+            fontSize: {
+                "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-mono": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+        }
+    }
+}
+</script>
+  <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+}
+.ambient-shadow {
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.1);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(26, 58, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 12px 30px rgba(26, 58, 50, 0.1);
+    border-color: #abcec2;
+}
+</style>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-xxl">
+
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/5">
+  <div class="flex justify-between items-center max-w-container-max mx-auto px-lg py-md">
+    <a href="../../index.html" class="flex items-center flex-shrink-0">
+      <img src="../../logo.png" alt="Dermatoz" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-xl">
+      <a href="../../archive.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Arşiv</a>
+      <a href="../../about.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Hakkımızda</a>
+      <a href="../../editorial-board.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Editöryal Kurul</a>
+      <a href="../../instructions.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">Yazarlara Talimatlar</a>
+      <a href="../../contact.html" class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 text-sm">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-md">
+      <span class="hidden sm:block font-label-mono text-label-mono text-on-surface-variant/60 text-xs">E-ISSN: 1309-4262</span>
+      <button class="bg-secondary text-on-primary font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 transition-opacity shadow-sm text-xs">
+        Makale Gönder
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div class="breadcrumb">
+    <a href="../../index.html">Ana Sayfa</a>
+    <span class="sep">›</span>
+    <a href="../../archive.html">Arşiv</a>
+    <span class="sep">›</span> <a href="../../issues/2020-011-002/index.html">Cilt 11, Sayı 2 - Haziran 2020</a>
+    <span class="sep">›</span>
+    Dermatolojide Dolgu Uygulamaları ve Komplikasyonları
+  </div>
+
+  <div class="article-header">
+    <div class="article-type-badge">Derleme</div>
+    <h1>Dermatolojide Dolgu Uygulamaları ve Komplikasyonları</h1>
+    <div class="article-authors-list"><span class="author-name">Aslıhan Özge Birben</span><sup>1</sup>, <span class="author-name">Zekayi Kutlubay</span><sup>1</sup>, <span class="author-name">Burhan Engin</span><sup>1*</sup>, <span class="author-name">Server Serdaroğlu</span><sup>1</sup></div>
+    <div class="article-affiliations"><div class="affil-item"><sup>1</sup> İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi Deri ve Zührevi Hastalıkları Anabilim Dalı, İstanbul, Türkiye</div></div>
+    <div class="keywords-block"><span class="keywords-label">Anahtar Kelimeler: </span><span class="kw-tag">Kozmetik uygulama</span><span class="kw-tag">komplikasyon</span><span class="kw-tag">dolgu uygulaması</span><span class="kw-tag">estetik</span></div><div class="keywords-block"><span class="keywords-label">Keywords: </span><span class="kw-tag">Cosmetic procedure</span><span class="kw-tag">complication</span><span class="kw-tag">filler application</span><span class="kw-tag">esthetics</span></div>
+    <div class="article-dates"><span>Geliş: 23.07.2019</span><span>Kabul: 23.09.2019</span><span>Yayın: 24.12.2020</span></div>
+    <div style="font-size:12px;color:var(--text-light);margin-top:4px;">s. 14-20</div>
+    <div class="article-pdf-buttons"><a href="Dermatoz-11-14.pdf" class="btn btn-primary" target="_blank">TR PDF İndir</a><a href="Dermatoz-11-14-En.pdf" class="btn btn-outline" target="_blank">EN PDF İndir</a></div>
+  </div>
+
+  
+        <div class="lang-tabs">
+          <button class="lang-tab active" onclick="switchLang('tr',this)">Türkçe</button>
+          <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+        </div>
+        <div id="lang-tr"><div class="content-section"><h3>Özet</h3><div class="content-blocks"><div class="cb-section-title">ÖZET</div>
+<div class="cb-content">Dolgu enjeksiyonları, çeşitli dolgu maddelerinin dermise yerleştirilmesi işlemidir. Enjeksiyon uygulanacak lokalizasyona göre doğru ürünün seçilmesi, kullanılan enjeksiyon tekniği, uygun hasta seçimi ve hastanın beklentileri, hekimin deneyimi, birlikte uygulanan botulinum toksini enjeksiyonu, lazer, kimyasal soyma gibi işlemler dolgu işleminde kozmetik sonucu etkilemektedir. Dolgu ürünleri oldukça güvenli ürünler olmasına karşın, uygulamanın yapıldığı kişiye, dolgunun yapıldığı yere, ürüne ya da uygulama tekniğine bağlı olarak çeşitli yan etki ve komplikasyonlar oluşabilmektedir. Oluşabilecek komplikasyonları en aza indirmek amacıyla hastanın durumu, uygulanacak dolgu materyali ve uygulama tekniği en iyi şekilde değerlendirilmeli, kullanıcılar ürünler hakkında yeterli seviyede teorik bilgi ve uygulama becerisine sahip olmalıdır.</div></div></div><div class="content-section"><h3>Tam Metin</h3><div class="content-blocks"><div class="cb-section-title">Giriş</div>
+<div class="cb-content">Derimizde doğal yaşlanma süreci boyunca subkütan yağ dokusu ve dermal destek dokusunda azalma olur; deri incelir ve elastikiyetini kaybeder. Yüz görünümünde bozuklukları belirir; yanaklar ve dudaklar dolgunluğunu kaybetmeye başlar; derin kışıklıklar, nazolabiyal kıvrımların belirginliği ve diğer istenmeyen deri kusurları ortaya çıkabilir. Günümüzde yüz estetiğinde, daha genç ve daha kusursuz görünmek amacıyla pek çok yöntem geliştirilmiştir. Bu yöntemlerden dermal dolgu maddesi enjeksiyonları, estetik cerrahi operasyonları tercih etmeyenler için alternatif oluşturmaktadır. Bazı olgularda cerrahi operasyonların geciktirilmesi için ya da cerrahiye ek tedavi olarak da dolgu uygulanabilir (1,2).</div>
+<div class="cb-content">Dolgu enjeksiyonları, çeşitli dolgu maddelerinin dermise yerleştirilmesi işlemidir. Enjekte edilen materyal dermiste hacim oluşturarak çizgilerin ve kırışıklıkların yüzeyelleşmesini sağlar. Derideki statik kırışıklıklar için ideal bir tedavidir. Bu maddeler sadece kırışıklıkların giderilmesinde değil, bazı dermal depresyonların, travma ile oluşan sikatrislerin, yüz konturlarının düzeltilmesi ve deriyi nemlendirmek amacıyla da kullanılabilir (3).</div>
+<div class="cb-content">Dolgu işleminde kozmetik sonucu etkileyen bazı önemli faktörler vardır. Bu faktörler enjeksiyon uygulanacak lokalizasyona göre doğru ürünün seçilmesi, kullanılan enjeksiyon tekniği, uygun hasta seçimi ve hastanın beklentileri, hekimin deneyimi, birlikte uygulanan botulinum toksini enjeksiyonu, lazer, kimyasal soyma gibi işlemlerdir (4).</div>
+<div class="cb-content">Uygun dolgu seçiminde materyalin partikül boyutları, konsantrasyonu, kalıcılığı, yan etkileri ve geç komplikasyonları iyi değerlendirilmelidir. Küçük partiküllü ürünler ince çizgilerin (göz ve ağız çevresi çizgileri) tedavisinde yüzeyel dermise, büyük partiküllü ürünler ise daha derin çizgilerin (derin gülümseme çizgileri, nazolabiyal çizgiler gibi) tedavisinde orta dermise enjeksiyonu uygundur. Uygulama yapılacak bölgeye göre uygun ürün seçilmelidir. Bölge derisinin özellikleri; vaskülarizasyonu, kalınlığı, gerginliği, mekanik hareketleri, doku yüzeyi, çizgi ve/veya kırışıklığın derinliği önemlidir. Kalın iğneli (27G) yüksek viskoziteli ürünler büyük bir atrofik sikatris ya da nazolabiyal sulkusta uygun bir seçimdir. Göz çevresi ve ağız çevresi gibi ince, yüzeysel çizgilerin düzeltilmesinde, akışkanlığı fazla olan ürünler, ince uçlu iğnelerle (30G-33G) yüzeyel dermise enjekte edilmelidir. Çok yüzeyel yapılan dolgular yüzeyde renk değişimi şeklinde belli olurken, çok derine yapılanlar ise doku içinde kaybolabilir (1,2,4,5).</div>
+<div class="cb-content">Hastanın yaşı, yaşam tarzı, alışkanlıkları (sigara içimi), beklentileri (talep ettiği düzelme), deri tipi ve elastikiyeti, tıbbi geçmişi (allerji öyküsü, kullandığı ilaçları) iyi değerlendirilmelidir. İşlem sonucundaki tahmin edilen düzelme iyi anlatılmalıdır. Deriye ait kontur bozukluğu ya da elastikiyet “germe testi” ile değerlendirilebilir. En iyi sonuçlar, uygulama yapılacak bölge iki parmak arasında gerildiğinde kırışıklık kayboluyorsa elde edilir (4,5).</div>
+<div class="cb-content">Günümüzde dermal dolgular kalıcı, yarı kalıcı ve geçici (biyo-parçalanabilir) olabilirler. Kalıcı dolgular iki yıldan uzun süre kalıcıdır ve partiküllü dolgulardır. Silikon, polimetilmetakrilat, mikroküreler gibi ürünler bu gruba örneklerdir. Yarı kalıcı dolgular ince küçük parçacıklar ve mikrokürelerden oluşan sentetik ürünlerdir. Bir-iki yıl süreyle kalıcıdırlar. Bunlar arasında kalsiyum hidroksiapatit ve poli-L-laktik asit bulunur (3). Geçici biyo-parçalanabilir dolgular 1 yıldan az bir süre kalıcı olan ürünlerdir. Bu grupta kullanılan iki ürün kollajen ve hyalüronik asittir (HA). Dermal dolgu maddeleri tabloda özetlenmiştir (<a class="xref" data-type="table" data-target="table-1">Tablo 1</a>) (1,2).</div>
+<div class="cb-content">Kollajen deri içine enjekte edilir ve yaşlanma süresince kaybedilen doğal kollajenin yerini alır. Sığır, domuz ve insan çeşitleri mevcuttur ancak sığır ve domuz çeşitleri hipersensivite reaksiyonuna neden olabilir. Günümüzde en çok kullanılan dermal dolgu maddeleri HA içeren ürünlerdir (1,5). HA dermiste doğal olarak bulunan polisakkarit yapısında temel bir bileşendir. Derinin hidrasyonunu sağlar, hacim kazandırır, yastık görevi yapar. Kollajenden farklı olarak tüm canlılarda aynı yapıya sahiptir, tür ya da doku spesifikliği göstermemektedir. Polisakkarit zincir içerisinde çapraz bağlamalar yaparak HA’nın stabilizasyonu sağlanır. Dermise enjekte edilirse, uygulama sonrasında kalıcılığı 6 ile 18 ay arasında devam eder. Dolgu maddesi olarak otolog yağ greftleri kullanılabilir. Yağ greftleri karın, bacak, diz veya gövde yan yüzden elde edilebilir (1,6,7). İdeal dolgu maddesinin özelikleri aşağıdaki tabloda özetlenmiştir (<a class="xref" data-type="table" data-target="table-2">Tablo 2</a>) (5).</div>
+<div class="cb-content">Dolgu tedavisinde, farklı uygulama teknikleri bildirilmiştir. Enjeksiyon uygulayıcısının seçimine göre nokta/seri delme, tünel açma, yelpaze veya çapraz tarama teknikleri uygulanabilir (4).</div>
+<div class="cb-subtitle">Periorbital Bölge Dolgu Uygulamaları</div>
+<div class="cb-subtitle">Kaş Şekillendirme</div>
+<div class="cb-content">Kaş kaldırmak için en iyi yöntem toksin enjeksiyonudur. Eğer kaşın lateral kısmını kaldırmak için toksin yeterli değilse dolgu enjeksiyonu eklenebilir. Kaş bölgesine dolgu enjeksiyonu yapılacaksa kaşın lateral bölümünün derinine (orbicularis oculi kasının altına) (subkütan ya da preperiostal alana) uygulama yapılmalıdır. Bu şekilde kaş vertikal olarak kaldırılır ve horizontal bir kaş projeksiyonu elde edilir. Supraorbital sinir hasarından kaçınılmalıdır. O nedenle enjeksiyon öncesi supraorbital delik palpe edilir ve yeri saptanır (8). Enjeksiyon iğne ya da kanül ile yapılabilir. Orta veya yüksek molekül ağırlıklı dolgu materyalleri kullanılabilir. Eğer dolgu miktarı fazla olursa göz kapağı ödemi, aşırı dolgun göz kapakları olabilir (9-11).</div>
+<div class="cb-subtitle">Üst Göz Kapağında Çukurlaşma</div>
+<div class="cb-content">Üst göz kapağına dolgu uygulamaları yeni uygulanan bir tekniktir. Bazen blefaroplasti ameliyatlarından sonra yağ dokunun fazla miktarda alımına bağlı şekil bozuklukları olabilir (9,12). HA enjeksiyonu ile bu bölgede düzeltme yapılabilir ve bu bölgedeki HA kalıcılık süresi 2-4 yıldır. Önerilen, 1 ay içinde 2 ayrı seans uygulaması ile düşük molekül ağırlıklı HA kullanılmasıdır. Enjeksiyon subkütan planda ya da supraorbital rimin enferior kısmına uygulanabilir. Enjeksiyon sırasında supratroklear ve supraorbital arterlere dikkat edilmelidir. Kanül ile uygulama yapılabilir. En önemli komplikasyon göz kapağı ödemidir. Fazla miktarda dolgu kullanılması kaş bölgesinde ağırlık ve kötü estetik görünüme neden olur (12).</div>
+<div class="cb-subtitle">Gözyaşı Oluğu (Tear Trough) Deformitesi</div>
+<div class="cb-content">Gözyaşı oluğu deformitesi, periorbital çukurun 1/3 medialinde kalan kısım olarak tanımlanır ve periorbital bölge yaşlanmasında ilk görülen bulgularından biridir. Alt göz kapağında koyu gölgelenme ile birliktedir, göz altında çökme görüntüsü nedeniyle kişiye yorgun bir ifade verir ve kapatıcı ile geçmez. Her zaman ileri yaşlarda görülmez. Bazen genç yaşlarda da görülür. Gözyaşı oluğu deformitesini dolgu uygulamaları ile düzeltmek mümkündür (13-15). Gözyaşı oluğu deformitesi için enfraorbital bölgede kas altına 30G iğne ya da 25-27G kanül kullanılarak derin lineer retrograd enjeksiyon, enfraorbital oluk boyunca seri nokta enjeksiyonları veya midpupiller hattın 1,5 cm altında giriş noktası belirlenerek bu noktadan oluğun medialine, oluğa vertikal yönde ve oluğun lateral bölümüne supraperiostal derinlikte nokta enjeksiyonlar yapılabilir. Gözyaşı oluğu deformitesinde düşük molekül ağırlıklı HA dolgular kullanılmalıdır (16).</div>
+<div class="cb-subtitle">Perioral Bölge Dolgu Uygulamaları</div>
+<div class="cb-content">Perioral yaşlanma dermiste kollajen ve elastin liflerinin kaybı, kemik ve kaslarda atrofi şeklinde belirir. Bazı bireylerde; daha çok sigara tiryakileri ve üflemeli müzik aleti çalanlarda perioral çizgiler daha fazla görülür (17). Perioral bölgede ve nazolabiyal sulkusta en sık tercih edilen genellikle HA, kalsiyum hidroksiapatit içeren dolgulardır. Perioral bölgenin ince kırışıklıklarında ideal tedavi kombinasyon tedavisi olup botulinum toksini ve HA içeren dolgu uygulamasıdır. Bu bölgede aşırı düzeltmeden kaçınmak gerekir. Bu bölgedeki yüzeyel çizgilerin tedavisinde viskozitesi daha az yoğun olan dolgular kanülle veya iğne ile yüzeyel dermise uygulanır. Seri nokta, tünel veya yelpaze tekniği uygulanabilir (18,19).</div>
+<div class="cb-subtitle">Nazolabiyal Sulkusların Rejuvenasyonu</div>
+<div class="cb-content">Nazolabiyal sulkusların rejuvenasyonunda derin ve yüzeyel uygulamalar bir arada yapılmaktadır. Orta yüzde pitozis olmasını önlemek amacıyla enjeksiyonların sulkusun medialine yapılması daha uygundur, ancak bu bölgede fasyal artere ve proksimal kısımda anguler artere özellikle dikkat etmek gerekmektedir. Orta yüze ve yanağa yapılan hacim artırıcı uygulamalardan sonra genellikle nazolabiyallere uygulama yapmaya gerek kalmamaktadır (20,21).</div>
+<div class="cb-subtitle">Dudak Rejuvenasyonu</div>
+<div class="cb-content">Dudak rejuvenasyonunda önemli üç bölge vardır; vermilyon sınırı, kırmızı dudak bölgesi (dudak mukozası) ve filtrumlar. Kural olarak üst dudak alt dudağın %75-80’i kadar olması ideal ölçüdür. Dudağa hacim kazandırmak için dolgu submukozaya verilir. Aşırı hacim kazandırmak ördek dudağı görünümüne neden olabilir ve ince dudak hareketleri kaybolabilir. Dudak konturu için daha ince dolgular seçilir ve daha yüzeyel verilir. Vermilyon sınırına uygulama üst ve alt dudak köşelerinde yükselme sağlar. Filtrumlara enjeksiyon ile dudağın merkezi daha da belirgin hale getirilir. Uygulama sonrası masajla dolgu homojen bir şekilde dağıtılabilir. Lidokain içeren dolgular ile uygulama daha az ağrılı olmakla beraber sinir bloğu yapılarak da ağrısız uygulama yapılabilir. Bu bölgede komplikasyonlardan kaçınmak için fazla hacim verilmesinden ve derin dermal uygulamadan kaçınılmalıdır (22,23).</div>
+<div class="cb-subtitle">Dolgu Komplikasyonları</div>
+<div class="cb-content">Dolgu ürünleri oldukça güvenli ürünler olmasına karşın, uygulamanın yapıldığı kişiye, dolgunun yapıldığı yere (anatomik bölge), ürüne ya da uygulama tekniğine bağlı olarak çeşitli yan etki ve komplikasyonlar oluşabilmektedir. Dolgu maddeleri uygulamasında karşılaşılan bu komplikasyonlar klinik tablonun şiddetine göre (hafif, ciddi), ortaya çıkış zamanına göre (erken dönem, geç dönem), nedenlerine göre çeşitli şekillerde sınıflandırılabilir (<a class="xref" data-type="table" data-target="table-3">Tablo 3</a>,<a class="xref" data-type="table" data-target="table-4">4</a>) (24).</div>
+<div class="cb-subtitle">Ekimoz</div>
+<div class="cb-content">Bütün dermal dolgularda ekimoz oluşma riski vardır. Kollajen içeren dolgular trombosit aktivasyonunu uyardıkları için HA’ya göre daha az ekimoz yaparlar. Oluşan ekimoz uygulama sonrası da hemen soğuk kompres uygulaması ve K vitamini kremleri ile tedavi edilebilir. Kalıcı lekelenme olursa pigment spesifik lazerlerle tedavi edilebilir (24). Ekimoz oluşumunu azaltmak için uygulamadan 1 hafta önce kan viskozitesini azaltan aspirin, varfarin, dipiridamol, klopidogrel, non-steroid anti-enflamatuvar, balık yağı, vitamin E, sarımsak tabletleri, gingko biloba ve ginseng içeren ilaçlar alınmamalıdır. Lidokain ve epinefrin içeren dolgu maddeleri enjeksiyon sonrası oluşan morluğu azaltabilir, epinefrin eozinofil aktivasyonunu baskılayıp vazokonstriksiyon yaparak morluk oluşumunu azaltır. Hastanın başı kalkık durumda iken işlem yapılmalıdır. Ayrıca ince uçlu iğnelerin kullanılması, enjeksiyonun yavaş yapılması, künt uçlu kanüllerin kullanılması, iğne giriş sayısının azaltılması morluk oluşumunu azaltan önlemlerdir (25,26).</div>
+<div class="cb-subtitle">Eritem</div>
+<div class="cb-content">Enjeksiyondan hemen sonra deride hafif eritem görülmesi normaldir. Eğer eritem 5 günden fazla sürüyorsa hipersensitivite reaksiyonu akla gelmelidir. Kalıcı eritem için orta potent steroidler etkili olabilir. Lazer tedavisi ve vitamin K kremleri de eritemin tedavisinde kullanılabilir (25).</div>
+<div class="cb-subtitle">Kısa Süreli Post-travmatik Ödem</div>
+<div class="cb-content">Uygulamanın hemen sonrasında geçici ödem oluşması normaldir ve hemen hemen tüm dolgularda olur. Uygulamanın hemen sonrasında ortaya çıkar, enjeksiyon volümüne ve tekniğine bağlıdır. Tedavi ve alınacak önlemler morarmadaki ile aynıdır. Post-enjeksiyon travmaya bağlı ödem 1 hafta içinde geriler (27).</div>
+<div class="cb-subtitle">Antikor Aracılı Ödem (Anjiyoödem)</div>
+<div class="cb-content">Dolgu maddeleri yabancı maddeler olduğu için bazı hastalarda bu maddelere karşı hipersensitivite reaksiyonu gelişip IgE aracılı immün yanıt oluşabilir (Tip 1 hipersensitivite reaksiyonu). Uygulamadan saatler sonra ortaya çıkar. Enjeksiyon bölgesine sınırlı ya da yaygın olabilir. Ödem anti-histaminlere yanıt verir, daha uzun süreli ise sistemik prednizolon kullanılabilir. Ödemin enfeksiyöz orijinli olmadığından emin olunmalıdır (27).</div>
+<div class="cb-subtitle">Telenjiyektazi</div>
+<div class="cb-content">Dermal enjeksiyon bölgesinde yeni kapiller oluşumu gözlenebilir. Uygulamadan haftalar sonra ortaya çıkar ve 3-12 ayda kaybolur. Bunlar doku travması ve ekspansiyonuna bağlı olarak ortaya çıkar (27).</div>
+<div class="cb-subtitle">Hiperpigmentasyon</div>
+<div class="cb-content">Özellikle koyu tenlilerde uygulama sonrası post-enflamatuvar hiperpigmentasyon gelişebilir. Eğer pigmentasyon kalıcı ise topikal hidrokinon (%2-4), topikal retinoidler gibi renk açıcı ajanlar ve güneşten koruyucular önerilebilir.</div>
+<div class="cb-subtitle">Renk Değişikliği</div>
+<div class="cb-content">Eğer partiküllü HA dolguları yüzeyel dermise veya epidermise enjekte edilirse Tyndall etkisi ile mavi renk değişikliği oluşabilir. Dermal dokunun kısıtlı olduğu bölgeler renk değişikliği açısından yüksek riskli bölgelerdir. Bunlar; nazal dorsum, dudaklar, göz altı olukları, periorbital ve perioral ince yüzeyel çizgilerdir. Kullanılan dolgu HA ise hyaluronidaz ilk tedavi seçeneğidir. Yüksek oranda çapraz bağ içeren veya partikül boyutu büyük olan HA dolgularında daha fazla sayıda hyaluronidaz enjeksiyonuna ihtiyaç vardır. Diğer bir yöntem iğne ya da ince uçlu bisturi ile insizyon yapıp dolgunun boşaltılmasıdır (27).</div>
+<div class="cb-subtitle">Allerjik Reaksiyon ve Hipersensitivite</div>
+<div class="cb-content">Sığır kollajen enjeksiyonu nadiren allerjik reaksiyonlara neden olabilir. Eritem, ödem, indurasyon, kaşıntı ve ağrı gelişmesi hipersensitivite bulgusudur. HA dolguları genelde teste gereksinim duymazlar, eğer bunlara bağlı hipersensitivite reaksiyonu olursa hyaluronidaz enjeksiyonu ile tedavi edilebilir (27).</div>
+<div class="cb-subtitle">Nodüler Kitleler</div>
+<div class="cb-content">Dolgu enjeksiyonlarına bağlı enflamatuvar ve non-enflamatuvar nodüller oluşabilir.&nbsp;</div>
+<div class="cb-subtitle">Non-enflamatuvar Nodüller</div>
+<div class="cb-content">Uygulanan alanda teknik hatalar (aşırı düzeltme, dolgunun çok yüzeyel yapılması, uygun olmayan dolgu malzemesi seçimi) nedeni ile fazla miktarda materyal depolanmasına bağlı olarak ortaya çıkar. Enjeksiyondan hemen sonra ortaya çıktıkları için geç dönemde ortaya çıkan yabancı cisim granulomları veya biyofilmlerden ayırt edilebilir. Eğer HA uygulanmışsa bu nodüller hyaluronidaz ile eritilebilir. HA olmayan dolgularla erken dönemde ortaya çıkan nodüller masaj uygulaması ile gerileyebilir veya materyal çıkarılabilir. Dolgular lidokain, serum fizyolojik veya masaj uygulaması ile parçalanabilir. Bu şekilde gerilemeyen nodüllere az miktarda intralezyonel steroid enjeksiyonu yapılabilir. Dirençli olgularda 3 veya daha fazla sayıda 5-fluorouracil (5-FU) ve lidokain yapılabilir (27).</div>
+<div class="cb-subtitle">Enflamatuvar Nodüller</div>
+<div class="cb-content">Biyofilmler, etrafı salgıladıkları polimerle çevrilmiş bakteri paketleridir. Dermis ya da subkütan dokuya madde enjekte edildiğinde bakteri ile kaplanıp biyofilm oluşturabilir. Bu bakteri topluluğu canlı dokulara bağlanır ve antibiyotiklere dirençli düşük seviyede kronik bir enfeksiyon oluşturur (28,29). Eğer biyofilmler travma veya yeni dolgu enjeksiyonu ile aktive olursa lokal, sistemik enfeksiyon ya da granülomatöz reaksiyona neden olabilir. Eğer enjeksiyon bölgesinde eritemli endüre alanlar ortaya çıkmışsa, süresine bakılmaksızın biyofilmden şüphe edilmelidir. Diğer tedavilerle iyileşmeyen ya da rezolüsyondan sonra rekürrens gösteren enflamatuvar nodüller biyofilmi işaret eder (30).</div>
+<div class="cb-content">Genellikle kültür negatiftir. Biyofilmden şüpheleniliyorsa kültür negatif bile olsa geniş spektrumlu antibiyotik tedavisi ilk seçenektir (siprofloksasin 500 mg 2x1 ve klaritromisin 500 mg 2x1 4-6 hafta). Eğer biyofilmden şüphe ediliyora IL steroidlerden kaçınılmalıdır. Enjekte edilen maddenin çıkarılması, HA için hyaluronidaz kullanılması ve IL 5-FU diğer tedavi seçenekleridir. Son çare olarak cerrahi eksizyon düşünülebilir. Biyofilm oluşumunu azaltmak için enjeksiyon öncesi deri dezenfeksiyonu, oral veya nazal mukozadan enjeksiyon yapılmaması, var olan dolgu üzerine enjeksiyon yapılmaması ve dolgu sonrası ortaya çıkan enfeksiyonun etkili tedavisi gibi noktalara dikkat edilmelidir. Eğer nodül tedaviye dirençli ve giderek fibrotik bir hal alıyorsa yabancı cisim granülomundan şüphelenilmelidir (31).</div>
+<div class="cb-subtitle">Parestezi</div>
+<div class="cb-content">Enjeksiyon sonrasında sinirlerin travmatize olması, dolgunun direkt olarak sinir içine yapılması, dokunun dolgu maddesi ile kompresyona uğraması sonucu oluşabilir. Motor hasarlar özellikle tehlike zonlarında agresif işlemler nedeniyle ortaya çıkar. Ancak sinir dağılım varyasyonlarının olabileceği de unutulmamalıdır. Tedavide düşük doz intralezyonel steroidler, materyelin lidokain veya serum fizyolojik ile parçalanması ya da nörotrofik etkisi olan vitamin B12, folik asit ve üridin monofosfat içeren ajanlar etkili olabilir.</div>
+<div class="cb-subtitle">Enfeksiyon</div>
+<div class="cb-content">Dolgu uygulamasının herpes enfeksiyonlarını tetiklemesi olasıdır. Bu nedenle herpes öyküsü olan hastalarda dudak dolgusu öncesi profilaktik antiviral tedavi önerilmektedir. Dolgulama yapılacak bölgede aktif herpes lezyonu varsa bu lezyonlar tamamen kaybolana kadar beklenmelidir. Dolgu sonrası enfeksiyon ve kontaminasyon, uygulama uygun şartlarda yapıldığında nadiren ortaya çıkar. En sık olarak <em>Staphylococcus aureus</em> gibi deri ve yumuşak doku patojenleri etkendir. Enfeksiyondan şüphelenildiğinde hemen antibiyotik başlanmalı, eğer fluktuasyon varsa önce kültür yapılmalı, kültür sonucu gelene kadar da klaritromisin gibi bir antibiyotik ampirik olarak başlanmalıdır (32). Atipik ya da tüberküloz dışı mikobakteriler toprak ve suda sıklıkla bulunmaktadır. Bu organizmaların normalde patojenitesi düşüktür. Çok sık olmasa da kozmetik cerrahi işlemler sonrası bu bakterilerle enfeksiyonlara rastlanmaktadır. Eğer enfeksiyon bulguları 2 hafta sistemik antibiyotik kullanılmasına rağmen devam ediyorsa atipik mikobakterilerden şüphelenilmelidir. Muhtemel kaynak çeşme suyu ya da hastanın kendi yüz derisi olabilir (33).</div>
+<div class="cb-subtitle">Dolgunun Yer Değiştirmesi</div>
+<div class="cb-content">Dolgu maddelerinin yer değiştirmesi hem dolgu maddesinin türüne hem de kullanılan tekniğe bağlıdır. Özellikle silikon ve kalsiyum hidroksiapatit gibi kalıcı dolgu maddeleri bu açıdan risk taşır. Kas aktivitesinin yoğun olduğu bölgelerde daha sık rastlanır. Hareket eden dolguların tedavisinde en basit yöntem küçük bir kesi ile çıkarılmasıdır. Hyaluronidaz enjeksiyonu HA için etkili bir çözümdür (25).</div>
+<div class="cb-subtitle">Nekroz</div>
+<div class="cb-content">Enjeksiyona bağlı komplikasyon nadir ama ciddi bir komplikasyondur. Enjeksiyon bölgesinde bası ya da damarın obstrüksiyonuna bağlı kan akımının azalması ile ortaya çıkar. Vasküler komplikasyon sonucu nekroz gelişimi genellikle bölgenin kanlanmasının tek bir arteriyel dalla sağlandığı ve anastomozların az olduğu alanlarda gelişir. Bu bölgelerin başında glabella ve nazolabiyal sulkuslar gelir. Nekroz her tip dolgu ile görülebilir. Özellikle glabellar alanda, bu bölgenin altından geçen santral arterin blokajı oftalmik arterde embolizasyona ve görme kaybına neden olabilir.</div>
+<div class="cb-content">Enjeksiyon sırasında ani şiddetli ağrı, renkte soluklaşma ve ardında viyole renk gelişimi vasküler oklüzyonun erken belirtileridir. Ardından erozyon ve ülserasyon oluşur (34). Eğer obstrüksiyondan şüphe ediliyorsa enjeksiyon hemen sonlandırılmalı, oluşan tıkacı dağıtmak için sert masaj yapılmalıdır. Bu dönemde masaj sonrası ortaya çıkan eritem damarın açıldığının önemli bir göstergesidir. Kalınlığı göz önüne alındığında kollajen dolguları HA göre masajla dağıtmak daha zordur. Lokal vazodilatasyon sağlamak amacı ile ılık kompres ve %2 nitrogliserin ile masaj uygulanabilir. Hiyaluronidaz enjeksiyonu HA dolgularına bağlı oklüzyonları açmak için kullanılabilir. Daha fazla kan akımı sağlamak için enoksoparin ve aspirin uygulanabilir. Sildenafil (100 mg) vazodilatasyon amacı ile kullanılabilir. Ciddi olgularda hiperbarik oksijen tedavisi nekroze dokuların kurtarılmasına yardım edebilir. Profilaktik antibiyotik ve antiviral tedavi başlanmalıdır.</div>
+<div class="cb-content">Uygulama tekniğine çok dikkat etmek nekroz riskini azaltacaktır, riskli bölgelere enjeksiyon yaparken 30G veya daha ince iğne uçlarının kullanılması oluşan basıncı azaltması açısından daha uygundur. Çok fazla miktarda hacim enjekte etmekten kaçınılmalıdır. Dolguyu enjekte etmeden önce damara girilmediğinden emin olmak için şırınganın geri çekilmesi önerilmektedir. Deri yüzeyi işlem boyunca dikkatle gözlenmelidir (35). Dolgu uygulamalarında komplikasyonlardan kaçınmak için alınması gereken tedbirler aşağıda özetlenmiştir (<a class="xref" data-type="table" data-target="table-5">Tablo 5</a>) (36).</div>
+<div class="cb-content">Sonuç olarak dolgu uygulamalarının son yıllarda yüz rejuvinasyonuna olan katkıları giderek artmakta ve bunun neticesinde hem daha etkili hem de daha doğal sonuçlar alınabilmektedir. Bu şekilde, bir yandan birçok hasta cerrahi olmaksızın daha genç yüzlere kavuşurken, cerrahi uygulananlarda ise daha doğal sonuçlar için dolgu uygulamaları tedaviye eklenmektedir. Her ürünün kendine ait kullanım alanları, kalıcılığı, etkileri, yan etkileri ve komplikasyonları vardır. Oluşabilecek komplikasyonları en aza indirmek amacıyla hastanın durumu, uygulanacak dolgu materyali ve uygulama tekniği en iyi şekilde değerlendirilmeli, kullanıcılar ürünler hakkında yeterli seviyede teorik bilgi ve uygulama becerisine sahip olmalıdır.</div><div class="figures-section"><div class="figure-block"><img src="Dermatoz-11-14-g1.png" alt="Dermatoz-11-14-g1.png"></div><div class="figure-block"><img src="Dermatoz-11-14-g2.png" alt="Dermatoz-11-14-g2.png"></div><div class="figure-block"><img src="Dermatoz-11-14-g3.png" alt="Dermatoz-11-14-g3.png"></div><div class="figure-block"><img src="Dermatoz-11-14-g4.png" alt="Dermatoz-11-14-g4.png"></div><div class="figure-block"><img src="Dermatoz-11-14-g5.png" alt="Dermatoz-11-14-g5.png"></div></div></div></div><div class="content-section"><h3>Kaynaklar</h3><div class="ref-item"><span class="ref-number">1.</span>Baumann L. Soft tissue augmentation. Turkiye Klinikleri J Cosm Dermatol Special Topics 2003; 4: 186-204.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Klein AW. Soft tissue augmentation 2006: filler fantasy. Dermatol Ther 2006; 19: 129-133.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Eken A. Yüz estetiğinde dolgu enjeksiyonları ve uygun dolgu materyalinin seçimi. Turkiye Klinikleri J Med Sci 2008; 28(Suppl): S188-S191.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Tunca M, Koç E, Kurumlu Z. Yaşlanmış deride dolgu maddeleri; Türkiye Klinikleri Kozmetik Dermatoloji-Özel Konular; 2008; 1.1: 35-39.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Klein AW, Elson ML. The history of substances for soft tissue augmentation. Dermatol Surg 2000; 26: 1096-1105.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Frank P, Gendler E. Hyaluronic acid for softtissue augmentation. Clin Plast Surg 2001; 28: 121-126.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Birol A. Hyaluronic acid derivatives. Turkiye Klinikleri J Int Med Sci 2005; 1: 6-10.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Sykes JM, Cotofana S, Trevidic P, et al. Upper face: clinical anatomy and regional approacheswith injectable fillers. Plast Reconstr Surg 2015; 136: 204S-218S.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Kane MAC. Nonsurgical periorbital and brow rejuvenation. Plast Reconstr Surg 2015; 135: 63-71.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Raspaldo H, Gassia V, Niforos FR, Michaud T. Global, 3-dimensional approach to natural rejuvenation: part I-recommendations for volume restoration and periocular area. J Cosmetic Dermatol 2012; 11: 279-289.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Sundaram H, Signorini M, Liew S, et al. Global Aesthetics Consensus: botulinum toxin type A-evidence based review, emerging concepts, and consensus recommandations for aestheticuse, including updates oncomplications. Plast Reconstr Surg 2016; 137: 518e-529e.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Morley AMS, Tban M, Malhotra R, Goldberg RA. Use of hyaluronic acid gel for upper eyelid filling and contouring. Ophtal Plast Reconstr Surg 2009; 25: 440-444.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Hirmand H. Anatomy and nonsurgical correctionof the tear trough deformity. Plast Reconstr Surg 2010; 125: 699-708.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sharad J. Dermal fillers for the treatment oftear trough deformity: a review of anatomy, treatment techniques, and their outcomes. J Cutan Aesthet Surg 2012; 5: 229-238.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Sattler G, Gout U. Regional applications. Illustratedguide to injectable fillers. 1st ed. NewMalden: Quintessence Publishing; 2016; 123-218. (nette bulamadım.)</div>
+<div class="ref-item"><span class="ref-number">16.</span>Hwang CJ. Periorbital injectables: understandingand avoiding complications. J Cutan Aesthet Surg 2016; 9: 73-79.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Hotta TA. Understanding the perioral anatomy. Plast Surg Nurs 2016; 36: 12-18.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Gassia V, Raspaldo H, Niforos FR, Michaud T. Global 3-dimensional approach to natural rejuvenation: recommendations for perioral, nose, and ear rejuvenation. J Cosmet Dermatol 2013; 12: 123-136.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Dayan S, Bruce S, Kilmer S, et al. Safety and effectiveness of the hyaluronic acid filler, HYC-24L, for lip and perioral augmentation. Dermatol Surg 2015; 41 Suppl 1: S293-S301.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Ali MJ, Ende K, Maas CS. Perioral rejuvenation and lip augmentation. Facial Plast Surg Clin North Am 2007; 15: 491-500.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Jacovella PF. Use of calcium hydroxylapatite (Radiesse) for facial augmentation. Clin Interv Aging 2008; 3: 161-174.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Mannino GN, Lipner SR. Current concepts in lip augmentation. Cutis 2016; 98: 325-329.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Ünal İ, Ertam İ. Yüz estetiğinde dolgu maddeleri ve dudak dolgulaması. Turkiye Klinikleri J Cosm Dermatol Special Topics 2009; 2: 44-49.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Lowe NJ, Maxwell CA, Patnaik R. Adverse reactions to dermal fillers: review. Dermatol Surg 2005; 31: 1616-1625.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Gladstone HB, Cohen JL. Adverse effects when injecting facial fillers. Semin Cutan Med Surg 2007; 26: 34-39.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Funt DK. Avoiding malar edema during midface/cheek augmentation with dermal fillers. J Clin Aesthet Dermatol 2011; 4: 32-36.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Şentürk N. Kozmetik dermatolojide komplikasyon yönetimi. Turkiye Klinikleri J Cosm Dermatol Special Topics 2016; 9: 99-107.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Christensen LH. Host tissue interaction, fate, and risks of degradable and nondegradablegel fillers. Dermatol Surg 2009; 35 Suppl 2: 1612-1619.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Monheit GD, Rohrich RJ. The nature of long-term fillers and the risk of complications. Dermatol Surg 2009; 35 Suppl 2: 1598-1604.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Narins RS, Coleman WP 3rd, Glogau RG. Recommendations and treatment options for nodules and other filler complications. Dermatol Surg 2009; 35 Suppl 2: 1667-1671.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Dayan SH, Arkins JP, Brindise R. Soft tissue fillers and biofilms. Facial Plast Surg 2011; 27: 23-28.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Cohen JL. Understanding, avoiding, and managing dermal filler complications. Dermatol Surg 2008; 34: 92-99.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Cox SE, Lawrance N. Complications of soft tissue fillers. Soft Tissue Augmentation. Ed. Carruthers J, Carruthers A; 2nd Edition. Saunders - Elsevier Inc. Philadelphia, PA, 2008; 151-60.</div>
+<div class="ref-item"><span class="ref-number">34.</span>Brody HJ. Use of hyaluronidase in thetreatment of granulomatous hyaluronic acid reactions or unwanted hyaluronic acid misplacement. Dermatol Surg 2005; 31(8 Pt 1): 893-897.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Funt D, Pavicic T. Dermal fillers in aesthetics: an overview of adverse events and treatment approaches. Plast Surg Nurs 2015; 35: 13-32.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Erbil H, Dincer Rota D. Dolgu uygulamalarında görülen komplikasyonlar ve hasta yönetimi. Turkiye Klinikleri J Cosm Dermatol Special Topics 2017; 10: 71-77.&nbsp;&nbsp;</div></div></div>
+        <div id="lang-en" style="display:none"><div class="content-section"><h3>Abstract</h3><div class="content-blocks"><div class="cb-section-title">ABSTRACT</div>
+<div class="cb-content">Filling injections are the process of implanting various fillers into the dermis. The selection of the correct product according to localization to be injected, the injection technique used, appropriate patient selection and patient expectations, physician experience, joint botulinum toxin injection, laser, chemical peeling affect the cosmetic result in filling process. Although the filling products are quite safe products, various side effects and complications can occur depending on the application made, the place where the filling is made, the product or the application technique. In order to minimize any complications that may arise, the patient’s condition, the filler material to be applied and the technique of application should be assessed in the best possible way, and the users should have theoretical knowledge and application skills at a sufficient level about the products.</div></div></div><div class="content-section"><h3>References</h3><div class="ref-item"><span class="ref-number">1.</span>Baumann L. Soft tissue augmentation. Turkiye Klinikleri J Cosm Dermatol Special Topics 2003; 4: 186-204.</div>
+<div class="ref-item"><span class="ref-number">2.</span>Klein AW. Soft tissue augmentation 2006: filler fantasy. Dermatol Ther 2006; 19: 129-133.</div>
+<div class="ref-item"><span class="ref-number">3.</span>Eken A. Yüz estetiğinde dolgu enjeksiyonları ve uygun dolgu materyalinin seçimi. Turkiye Klinikleri J Med Sci 2008; 28(Suppl): S188-S191.</div>
+<div class="ref-item"><span class="ref-number">4.</span>Tunca M, Koç E, Kurumlu Z. Yaşlanmış deride dolgu maddeleri; Türkiye Klinikleri Kozmetik Dermatoloji-Özel Konular; 2008; 1.1: 35-39.</div>
+<div class="ref-item"><span class="ref-number">5.</span>Klein AW, Elson ML. The history of substances for soft tissue augmentation. Dermatol Surg 2000; 26: 1096-1105.</div>
+<div class="ref-item"><span class="ref-number">6.</span>Frank P, Gendler E. Hyaluronic acid for softtissue augmentation. Clin Plast Surg 2001; 28: 121-126.</div>
+<div class="ref-item"><span class="ref-number">7.</span>Birol A. Hyaluronic acid derivatives. Turkiye Klinikleri J Int Med Sci 2005; 1: 6-10.</div>
+<div class="ref-item"><span class="ref-number">8.</span>Sykes JM, Cotofana S, Trevidic P, et al. Upper face: clinical anatomy and regional approacheswith injectable fillers. Plast Reconstr Surg 2015; 136: 204S-218S.</div>
+<div class="ref-item"><span class="ref-number">9.</span>Kane MAC. Nonsurgical periorbital and brow rejuvenation. Plast Reconstr Surg 2015; 135: 63-71.</div>
+<div class="ref-item"><span class="ref-number">10.</span>Raspaldo H, Gassia V, Niforos FR, Michaud T. Global, 3-dimensional approach to natural rejuvenation: part I-recommendations for volume restoration and periocular area. J Cosmetic Dermatol 2012; 11: 279-289.</div>
+<div class="ref-item"><span class="ref-number">11.</span>Sundaram H, Signorini M, Liew S, et al. Global Aesthetics Consensus: botulinum toxin type A-evidence based review, emerging concepts, and consensus recommandations for aestheticuse, including updates oncomplications. Plast Reconstr Surg 2016; 137: 518e-529e.</div>
+<div class="ref-item"><span class="ref-number">12.</span>Morley AMS, Tban M, Malhotra R, Goldberg RA. Use of hyaluronic acid gel for upper eyelid filling and contouring. Ophtal Plast Reconstr Surg 2009; 25: 440-444.</div>
+<div class="ref-item"><span class="ref-number">13.</span>Hirmand H. Anatomy and nonsurgical correctionof the tear trough deformity. Plast Reconstr Surg 2010; 125: 699-708.</div>
+<div class="ref-item"><span class="ref-number">14.</span>Sharad J. Dermal fillers for the treatment oftear trough deformity: a review of anatomy, treatment techniques, and their outcomes. J Cutan Aesthet Surg 2012; 5: 229-238.</div>
+<div class="ref-item"><span class="ref-number">15.</span>Sattler G, Gout U. Regional applications. Illustratedguide to injectable fillers. 1st ed. NewMalden: Quintessence Publishing; 2016; 123-218. (nette bulamadım.)</div>
+<div class="ref-item"><span class="ref-number">16.</span>Hwang CJ. Periorbital injectables: understandingand avoiding complications. J Cutan Aesthet Surg 2016; 9: 73-79.</div>
+<div class="ref-item"><span class="ref-number">17.</span>Hotta TA. Understanding the perioral anatomy. Plast Surg Nurs 2016; 36: 12-18.</div>
+<div class="ref-item"><span class="ref-number">18.</span>Gassia V, Raspaldo H, Niforos FR, Michaud T. Global 3-dimensional approach to natural rejuvenation: recommendations for perioral, nose, and ear rejuvenation. J Cosmet Dermatol 2013; 12: 123-136.</div>
+<div class="ref-item"><span class="ref-number">19.</span>Dayan S, Bruce S, Kilmer S, et al. Safety and effectiveness of the hyaluronic acid filler, HYC-24L, for lip and perioral augmentation. Dermatol Surg 2015; 41 Suppl 1: S293-S301.</div>
+<div class="ref-item"><span class="ref-number">20.</span>Ali MJ, Ende K, Maas CS. Perioral rejuvenation and lip augmentation. Facial Plast Surg Clin North Am 2007; 15: 491-500.</div>
+<div class="ref-item"><span class="ref-number">21.</span>Jacovella PF. Use of calcium hydroxylapatite (Radiesse) for facial augmentation. Clin Interv Aging 2008; 3: 161-174.</div>
+<div class="ref-item"><span class="ref-number">22.</span>Mannino GN, Lipner SR. Current concepts in lip augmentation. Cutis 2016; 98: 325-329.</div>
+<div class="ref-item"><span class="ref-number">23.</span>Ünal İ, Ertam İ. Yüz estetiğinde dolgu maddeleri ve dudak dolgulaması. Turkiye Klinikleri J Cosm Dermatol Special Topics 2009; 2: 44-49.</div>
+<div class="ref-item"><span class="ref-number">24.</span>Lowe NJ, Maxwell CA, Patnaik R. Adverse reactions to dermal fillers: review. Dermatol Surg 2005; 31: 1616-1625.</div>
+<div class="ref-item"><span class="ref-number">25.</span>Gladstone HB, Cohen JL. Adverse effects when injecting facial fillers. Semin Cutan Med Surg 2007; 26: 34-39.</div>
+<div class="ref-item"><span class="ref-number">26.</span>Funt DK. Avoiding malar edema during midface/cheek augmentation with dermal fillers. J Clin Aesthet Dermatol 2011; 4: 32-36.</div>
+<div class="ref-item"><span class="ref-number">27.</span>Şentürk N. Kozmetik dermatolojide komplikasyon yönetimi. Turkiye Klinikleri J Cosm Dermatol Special Topics 2016; 9: 99-107.</div>
+<div class="ref-item"><span class="ref-number">28.</span>Christensen LH. Host tissue interaction, fate, and risks of degradable and nondegradablegel fillers. Dermatol Surg 2009; 35 Suppl 2: 1612-1619.</div>
+<div class="ref-item"><span class="ref-number">29.</span>Monheit GD, Rohrich RJ. The nature of long-term fillers and the risk of complications. Dermatol Surg 2009; 35 Suppl 2: 1598-1604.</div>
+<div class="ref-item"><span class="ref-number">30.</span>Narins RS, Coleman WP 3rd, Glogau RG. Recommendations and treatment options for nodules and other filler complications. Dermatol Surg 2009; 35 Suppl 2: 1667-1671.</div>
+<div class="ref-item"><span class="ref-number">31.</span>Dayan SH, Arkins JP, Brindise R. Soft tissue fillers and biofilms. Facial Plast Surg 2011; 27: 23-28.</div>
+<div class="ref-item"><span class="ref-number">32.</span>Cohen JL. Understanding, avoiding, and managing dermal filler complications. Dermatol Surg 2008; 34: 92-99.</div>
+<div class="ref-item"><span class="ref-number">33.</span>Cox SE, Lawrance N. Complications of soft tissue fillers. Soft Tissue Augmentation. Ed. Carruthers J, Carruthers A; 2nd Edition. Saunders - Elsevier Inc. Philadelphia, PA, 2008; 151-60.</div>
+<div class="ref-item"><span class="ref-number">34.</span>Brody HJ. Use of hyaluronidase in thetreatment of granulomatous hyaluronic acid reactions or unwanted hyaluronic acid misplacement. Dermatol Surg 2005; 31(8 Pt 1): 893-897.</div>
+<div class="ref-item"><span class="ref-number">35.</span>Funt D, Pavicic T. Dermal fillers in aesthetics: an overview of adverse events and treatment approaches. Plast Surg Nurs 2015; 35: 13-32.</div>
+<div class="ref-item"><span class="ref-number">36.</span>Erbil H, Dincer Rota D. Dolgu uygulamalarında görülen komplikasyonlar ve hasta yönetimi. Turkiye Klinikleri J Cosm Dermatol Special Topics 2017; 10: 71-77.&nbsp;&nbsp;</div></div></div>
+        <script>
+          function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('lang-tr').style.display = lang==='tr' ? '' : 'none';
+            document.getElementById('lang-en').style.display = lang==='en' ? '' : 'none';
+          }
+        </script>
+        
+</main>
+
+<footer class="bg-primary w-full border-t border-primary-container flex flex-col items-center justify-center py-xxl px-lg text-center gap-md mt-auto">
+  <span class="font-headline-md text-headline-md text-on-primary">Dermatoz</span>
+  <p class="font-body-sm text-body-sm text-on-primary/60 max-w-md">Kozmetoloji ve Dermatoloji Akademisi Derneği'nin hakemli, açık erişimli dergisi.</p>
+  <div class="flex flex-wrap justify-center gap-lg mt-md">
+    <a href="../../archive.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Arşiv</a>
+    <a href="../../about.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Hakkımızda</a>
+    <a href="../../editorial-board.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Editöryal Kurul</a>
+    <a href="../../instructions.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">Yazarlara Talimatlar</a>
+    <a href="../../contact.html" class="font-label-mono text-label-mono text-on-primary/70 hover:text-on-primary transition-colors opacity-80 hover:opacity-100">İletişim</a>
+  </div>
+  <p class="font-body-sm text-body-sm text-on-primary/40 mt-md">
+    &copy; 2026 Dermatoz · Kozmetoloji ve Dermatoloji Akademisi Derneği. E-ISSN: 1309-4262
+  </p>
+</footer>
+</body>
+</html>
